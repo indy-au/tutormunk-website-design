@@ -10,33 +10,336 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BecomeATutorRouteImport } from './routes/become-a-tutor'
+import { Route as CancellationAndRefundRouteImport } from './routes/cancellation-and-refund'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DataCollectionRouteImport } from './routes/data-collection'
+import { Route as EnrolRouteImport } from './routes/enrol'
+import { Route as ExamPrepRouteImport } from './routes/exam-prep'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HighSchoolRouteImport } from './routes/high-school'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as HscMathsAdvancedRouteImport } from './routes/hsc-maths-advanced'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrimaryEnglishRouteImport } from './routes/primary-english'
+import { Route as PrimarySchoolRouteImport } from './routes/primary-school'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SeniorSchoolRouteImport } from './routes/senior-school'
+import { Route as StudentAgreementRouteImport } from './routes/student-agreement'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as LocationsIndexRouteImport } from './routes/locations.index'
+import { Route as LocationsOranParkRouteImport } from './routes/locations.oran-park'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BecomeATutorRoute = BecomeATutorRouteImport.update({
+  id: '/become-a-tutor',
+  path: '/become-a-tutor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CancellationAndRefundRoute = CancellationAndRefundRouteImport.update({
+  id: '/cancellation-and-refund',
+  path: '/cancellation-and-refund',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataCollectionRoute = DataCollectionRouteImport.update({
+  id: '/data-collection',
+  path: '/data-collection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnrolRoute = EnrolRouteImport.update({
+  id: '/enrol',
+  path: '/enrol',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExamPrepRoute = ExamPrepRouteImport.update({
+  id: '/exam-prep',
+  path: '/exam-prep',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HighSchoolRoute = HighSchoolRouteImport.update({
+  id: '/high-school',
+  path: '/high-school',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HscMathsAdvancedRoute = HscMathsAdvancedRouteImport.update({
+  id: '/hsc-maths-advanced',
+  path: '/hsc-maths-advanced',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrimaryEnglishRoute = PrimaryEnglishRouteImport.update({
+  id: '/primary-english',
+  path: '/primary-english',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrimarySchoolRoute = PrimarySchoolRouteImport.update({
+  id: '/primary-school',
+  path: '/primary-school',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeniorSchoolRoute = SeniorSchoolRouteImport.update({
+  id: '/senior-school',
+  path: '/senior-school',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentAgreementRoute = StudentAgreementRouteImport.update({
+  id: '/student-agreement',
+  path: '/student-agreement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsIndexRoute = LocationsIndexRouteImport.update({
+  id: '/locations/',
+  path: '/locations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsOranParkRoute = LocationsOranParkRouteImport.update({
+  id: '/locations/oran-park',
+  path: '/locations/oran-park',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/become-a-tutor': typeof BecomeATutorRoute
+  '/cancellation-and-refund': typeof CancellationAndRefundRoute
+  '/contact': typeof ContactRoute
+  '/data-collection': typeof DataCollectionRoute
+  '/enrol': typeof EnrolRoute
+  '/exam-prep': typeof ExamPrepRoute
+  '/faq': typeof FaqRoute
+  '/high-school': typeof HighSchoolRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
+  '/pricing': typeof PricingRoute
+  '/primary-english': typeof PrimaryEnglishRoute
+  '/primary-school': typeof PrimarySchoolRoute
+  '/privacy': typeof PrivacyRoute
+  '/senior-school': typeof SeniorSchoolRoute
+  '/student-agreement': typeof StudentAgreementRoute
+  '/terms': typeof TermsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/locations/oran-park': typeof LocationsOranParkRoute
+  '/blog/': typeof BlogIndexRoute
+  '/locations/': typeof LocationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/become-a-tutor': typeof BecomeATutorRoute
+  '/cancellation-and-refund': typeof CancellationAndRefundRoute
+  '/contact': typeof ContactRoute
+  '/data-collection': typeof DataCollectionRoute
+  '/enrol': typeof EnrolRoute
+  '/exam-prep': typeof ExamPrepRoute
+  '/faq': typeof FaqRoute
+  '/high-school': typeof HighSchoolRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
+  '/pricing': typeof PricingRoute
+  '/primary-english': typeof PrimaryEnglishRoute
+  '/primary-school': typeof PrimarySchoolRoute
+  '/privacy': typeof PrivacyRoute
+  '/senior-school': typeof SeniorSchoolRoute
+  '/student-agreement': typeof StudentAgreementRoute
+  '/terms': typeof TermsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/locations/oran-park': typeof LocationsOranParkRoute
+  '/blog': typeof BlogIndexRoute
+  '/locations': typeof LocationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/become-a-tutor': typeof BecomeATutorRoute
+  '/cancellation-and-refund': typeof CancellationAndRefundRoute
+  '/contact': typeof ContactRoute
+  '/data-collection': typeof DataCollectionRoute
+  '/enrol': typeof EnrolRoute
+  '/exam-prep': typeof ExamPrepRoute
+  '/faq': typeof FaqRoute
+  '/high-school': typeof HighSchoolRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
+  '/pricing': typeof PricingRoute
+  '/primary-english': typeof PrimaryEnglishRoute
+  '/primary-school': typeof PrimarySchoolRoute
+  '/privacy': typeof PrivacyRoute
+  '/senior-school': typeof SeniorSchoolRoute
+  '/student-agreement': typeof StudentAgreementRoute
+  '/terms': typeof TermsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/locations/oran-park': typeof LocationsOranParkRoute
+  '/blog/': typeof BlogIndexRoute
+  '/locations/': typeof LocationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/become-a-tutor'
+    | '/cancellation-and-refund'
+    | '/contact'
+    | '/data-collection'
+    | '/enrol'
+    | '/exam-prep'
+    | '/faq'
+    | '/high-school'
+    | '/how-it-works'
+    | '/hsc-maths-advanced'
+    | '/pricing'
+    | '/primary-english'
+    | '/primary-school'
+    | '/privacy'
+    | '/senior-school'
+    | '/student-agreement'
+    | '/terms'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/locations/oran-park'
+    | '/blog/'
+    | '/locations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/become-a-tutor'
+    | '/cancellation-and-refund'
+    | '/contact'
+    | '/data-collection'
+    | '/enrol'
+    | '/exam-prep'
+    | '/faq'
+    | '/high-school'
+    | '/how-it-works'
+    | '/hsc-maths-advanced'
+    | '/pricing'
+    | '/primary-english'
+    | '/primary-school'
+    | '/privacy'
+    | '/senior-school'
+    | '/student-agreement'
+    | '/terms'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/locations/oran-park'
+    | '/blog'
+    | '/locations'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/become-a-tutor'
+    | '/cancellation-and-refund'
+    | '/contact'
+    | '/data-collection'
+    | '/enrol'
+    | '/exam-prep'
+    | '/faq'
+    | '/high-school'
+    | '/how-it-works'
+    | '/hsc-maths-advanced'
+    | '/pricing'
+    | '/primary-english'
+    | '/primary-school'
+    | '/privacy'
+    | '/senior-school'
+    | '/student-agreement'
+    | '/terms'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/locations/oran-park'
+    | '/blog/'
+    | '/locations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BecomeATutorRoute: typeof BecomeATutorRoute
+  CancellationAndRefundRoute: typeof CancellationAndRefundRoute
+  ContactRoute: typeof ContactRoute
+  DataCollectionRoute: typeof DataCollectionRoute
+  EnrolRoute: typeof EnrolRoute
+  ExamPrepRoute: typeof ExamPrepRoute
+  FaqRoute: typeof FaqRoute
+  HighSchoolRoute: typeof HighSchoolRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  HscMathsAdvancedRoute: typeof HscMathsAdvancedRoute
+  PricingRoute: typeof PricingRoute
+  PrimaryEnglishRoute: typeof PrimaryEnglishRoute
+  PrimarySchoolRoute: typeof PrimarySchoolRoute
+  PrivacyRoute: typeof PrivacyRoute
+  SeniorSchoolRoute: typeof SeniorSchoolRoute
+  StudentAgreementRoute: typeof StudentAgreementRoute
+  TermsRoute: typeof TermsRoute
+  TestimonialsRoute: typeof TestimonialsRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  LocationsOranParkRoute: typeof LocationsOranParkRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  LocationsIndexRoute: typeof LocationsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +351,195 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/become-a-tutor': {
+      id: '/become-a-tutor'
+      path: '/become-a-tutor'
+      fullPath: '/become-a-tutor'
+      preLoaderRoute: typeof BecomeATutorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cancellation-and-refund': {
+      id: '/cancellation-and-refund'
+      path: '/cancellation-and-refund'
+      fullPath: '/cancellation-and-refund'
+      preLoaderRoute: typeof CancellationAndRefundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data-collection': {
+      id: '/data-collection'
+      path: '/data-collection'
+      fullPath: '/data-collection'
+      preLoaderRoute: typeof DataCollectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enrol': {
+      id: '/enrol'
+      path: '/enrol'
+      fullPath: '/enrol'
+      preLoaderRoute: typeof EnrolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/exam-prep': {
+      id: '/exam-prep'
+      path: '/exam-prep'
+      fullPath: '/exam-prep'
+      preLoaderRoute: typeof ExamPrepRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/high-school': {
+      id: '/high-school'
+      path: '/high-school'
+      fullPath: '/high-school'
+      preLoaderRoute: typeof HighSchoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hsc-maths-advanced': {
+      id: '/hsc-maths-advanced'
+      path: '/hsc-maths-advanced'
+      fullPath: '/hsc-maths-advanced'
+      preLoaderRoute: typeof HscMathsAdvancedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/primary-english': {
+      id: '/primary-english'
+      path: '/primary-english'
+      fullPath: '/primary-english'
+      preLoaderRoute: typeof PrimaryEnglishRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/primary-school': {
+      id: '/primary-school'
+      path: '/primary-school'
+      fullPath: '/primary-school'
+      preLoaderRoute: typeof PrimarySchoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/senior-school': {
+      id: '/senior-school'
+      path: '/senior-school'
+      fullPath: '/senior-school'
+      preLoaderRoute: typeof SeniorSchoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student-agreement': {
+      id: '/student-agreement'
+      path: '/student-agreement'
+      fullPath: '/student-agreement'
+      preLoaderRoute: typeof StudentAgreementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/': {
+      id: '/locations/'
+      path: '/locations'
+      fullPath: '/locations/'
+      preLoaderRoute: typeof LocationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/oran-park': {
+      id: '/locations/oran-park'
+      path: '/locations/oran-park'
+      fullPath: '/locations/oran-park'
+      preLoaderRoute: typeof LocationsOranParkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BecomeATutorRoute: BecomeATutorRoute,
+  CancellationAndRefundRoute: CancellationAndRefundRoute,
+  ContactRoute: ContactRoute,
+  DataCollectionRoute: DataCollectionRoute,
+  EnrolRoute: EnrolRoute,
+  ExamPrepRoute: ExamPrepRoute,
+  FaqRoute: FaqRoute,
+  HighSchoolRoute: HighSchoolRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  HscMathsAdvancedRoute: HscMathsAdvancedRoute,
+  PricingRoute: PricingRoute,
+  PrimaryEnglishRoute: PrimaryEnglishRoute,
+  PrimarySchoolRoute: PrimarySchoolRoute,
+  PrivacyRoute: PrivacyRoute,
+  SeniorSchoolRoute: SeniorSchoolRoute,
+  StudentAgreementRoute: StudentAgreementRoute,
+  TermsRoute: TermsRoute,
+  TestimonialsRoute: TestimonialsRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  LocationsOranParkRoute: LocationsOranParkRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  LocationsIndexRoute: LocationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
