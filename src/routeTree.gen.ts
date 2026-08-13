@@ -22,7 +22,6 @@ import { Route as HighSchoolRouteImport } from './routes/high-school'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as HscMathsAdvancedRouteImport } from './routes/hsc-maths-advanced'
 import { Route as OurMunksRouteImport } from './routes/our-munks'
-import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrimaryEnglishRouteImport } from './routes/primary-english'
 import { Route as PrimarySchoolRouteImport } from './routes/primary-school'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -101,11 +100,6 @@ const OurMunksRoute = OurMunksRouteImport.update({
   path: '/our-munks',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PrimaryEnglishRoute = PrimaryEnglishRouteImport.update({
   id: '/primary-english',
   path: '/primary-english',
@@ -181,7 +175,6 @@ export interface FileRoutesByFullPath {
   '/how-it-works': typeof HowItWorksRoute
   '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
   '/our-munks': typeof OurMunksRoute
-  '/pricing': typeof PricingRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
   '/privacy': typeof PrivacyRoute
@@ -209,7 +202,6 @@ export interface FileRoutesByTo {
   '/how-it-works': typeof HowItWorksRoute
   '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
   '/our-munks': typeof OurMunksRoute
-  '/pricing': typeof PricingRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
   '/privacy': typeof PrivacyRoute
@@ -238,7 +230,6 @@ export interface FileRoutesById {
   '/how-it-works': typeof HowItWorksRoute
   '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
   '/our-munks': typeof OurMunksRoute
-  '/pricing': typeof PricingRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
   '/privacy': typeof PrivacyRoute
@@ -268,7 +259,6 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/hsc-maths-advanced'
     | '/our-munks'
-    | '/pricing'
     | '/primary-english'
     | '/primary-school'
     | '/privacy'
@@ -296,7 +286,6 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/hsc-maths-advanced'
     | '/our-munks'
-    | '/pricing'
     | '/primary-english'
     | '/primary-school'
     | '/privacy'
@@ -324,7 +313,6 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/hsc-maths-advanced'
     | '/our-munks'
-    | '/pricing'
     | '/primary-english'
     | '/primary-school'
     | '/privacy'
@@ -353,7 +341,6 @@ export interface RootRouteChildren {
   HowItWorksRoute: typeof HowItWorksRoute
   HscMathsAdvancedRoute: typeof HscMathsAdvancedRoute
   OurMunksRoute: typeof OurMunksRoute
-  PricingRoute: typeof PricingRoute
   PrimaryEnglishRoute: typeof PrimaryEnglishRoute
   PrimarySchoolRoute: typeof PrimarySchoolRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -461,13 +448,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurMunksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/primary-english': {
       id: '/primary-english'
       path: '/primary-english'
@@ -569,7 +549,6 @@ const rootRouteChildren: RootRouteChildren = {
   HowItWorksRoute: HowItWorksRoute,
   HscMathsAdvancedRoute: HscMathsAdvancedRoute,
   OurMunksRoute: OurMunksRoute,
-  PricingRoute: PricingRoute,
   PrimaryEnglishRoute: PrimaryEnglishRoute,
   PrimarySchoolRoute: PrimarySchoolRoute,
   PrivacyRoute: PrivacyRoute,
