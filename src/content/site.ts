@@ -236,22 +236,34 @@ export const footer = {
 export const deliveryModes = [
   {
     name: "Your home 1-to-1",
-    icon: "house",
+    icon: "one-to-one",
+    setting: "Your home",
+    settingIcon: "house",
+    format: "1-to-1",
     detail: "A tutor comes to you for a 60-minute session. Full attention on one student, with no travel for the family.",
   },
   {
     name: "Your home group",
-    icon: "users",
+    icon: "small-group",
+    setting: "Your home",
+    settingIcon: "house",
+    format: "Small group",
     detail: "Up to three students, often siblings or neighbours, taught together at your kitchen table.",
   },
   {
     name: "Our centre 1-to-1",
-    icon: "building",
+    icon: "one-to-one",
+    setting: "Our centre",
+    settingIcon: "building",
+    format: "1-to-1",
     detail: "Quiet rooms at Oran Park, with printed resources and past papers on hand.",
   },
   {
     name: "Our centre group",
-    icon: "school",
+    icon: "small-group",
+    setting: "Our centre",
+    settingIcon: "building",
+    format: "Small group",
     detail: "Groups of four to six students in the same stage, grouped by ability.",
   },
 ];

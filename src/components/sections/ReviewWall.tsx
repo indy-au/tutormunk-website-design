@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Star } from "lucide-react";
-import { reviewFilters, reviewSummary, reviewWall } from "@/content/reviews";
+import { allReviews, reviewFilters, reviewSummary } from "@/content/reviews";
 
 function GoogleMark({ className = "h-6 w-6" }: { className?: string }) {
   return (
@@ -32,7 +32,7 @@ export function ReviewWall() {
   const [visible, setVisible] = useState(9);
 
   const filtered = useMemo(
-    () => (active === reviewFilters[0] ? reviewWall : reviewWall.filter((r) => r.stage === active)),
+    () => (active === reviewFilters[0] ? allReviews : allReviews.filter((r) => r.stage === active)),
     [active],
   );
   const shown = filtered.slice(0, visible);
@@ -110,9 +110,9 @@ export function ReviewWall() {
         </div>
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {shown.map((review) => (
+          {shown.map((review, index) => (
             <li
-              key={`${review.name}-${review.when}`}
+              key={`${review.name}-${review.when}-${index}`}
               className="flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-card transition-shadow hover:shadow-lift"
             >
               <div className="flex items-center gap-3">
