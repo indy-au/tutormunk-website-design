@@ -33,6 +33,7 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as LocationsIndexRouteImport } from './routes/locations.index'
 import { Route as LocationsOranParkRouteImport } from './routes/locations.oran-park'
+import { Route as TopicsSlugRouteImport } from './routes/topics.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -154,6 +155,11 @@ const LocationsOranParkRoute = LocationsOranParkRouteImport.update({
   path: '/locations/oran-park',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TopicsSlugRoute = TopicsSlugRouteImport.update({
+  id: '/topics/$slug',
+  path: '/topics/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -178,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/locations/oran-park': typeof LocationsOranParkRoute
+  '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
 }
@@ -204,6 +211,7 @@ export interface FileRoutesByTo {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/locations/oran-park': typeof LocationsOranParkRoute
+  '/topics/$slug': typeof TopicsSlugRoute
   '/blog': typeof BlogIndexRoute
   '/locations': typeof LocationsIndexRoute
 }
@@ -231,6 +239,7 @@ export interface FileRoutesById {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/locations/oran-park': typeof LocationsOranParkRoute
+  '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
 }
@@ -259,6 +268,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/locations/oran-park'
+    | '/topics/$slug'
     | '/blog/'
     | '/locations/'
   fileRoutesByTo: FileRoutesByTo
@@ -285,6 +295,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/locations/oran-park'
+    | '/topics/$slug'
     | '/blog'
     | '/locations'
   id:
@@ -311,6 +322,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/locations/oran-park'
+    | '/topics/$slug'
     | '/blog/'
     | '/locations/'
   fileRoutesById: FileRoutesById
@@ -338,6 +350,7 @@ export interface RootRouteChildren {
   TestimonialsRoute: typeof TestimonialsRoute
   BlogSlugRoute: typeof BlogSlugRoute
   LocationsOranParkRoute: typeof LocationsOranParkRoute
+  TopicsSlugRoute: typeof TopicsSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
 }
@@ -512,6 +525,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsOranParkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/topics/$slug': {
+      id: '/topics/$slug'
+      path: '/topics/$slug'
+      fullPath: '/topics/$slug'
+      preLoaderRoute: typeof TopicsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -538,6 +558,7 @@ const rootRouteChildren: RootRouteChildren = {
   TestimonialsRoute: TestimonialsRoute,
   BlogSlugRoute: BlogSlugRoute,
   LocationsOranParkRoute: LocationsOranParkRoute,
+  TopicsSlugRoute: TopicsSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,
 }
