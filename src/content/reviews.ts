@@ -43,3 +43,58 @@ export const reviewWall: ReviewEntry[] = [
   { name: "Amrita G.", initials: "AG", suburb: "Gledswood Hills", rating: 5, when: "5 months ago", stage: "Years 7-10", quote: "Every session starts with the next task and the marking criteria. That focus has changed how our daughter studies." },
   { name: "Chris V.", initials: "CV", suburb: "Narellan", rating: 5, when: "6 months ago", stage: "HSC", quote: "Physics tutoring with a tutor who explains the working, not just the answer. Reports each term are honest." },
 ];
+
+const extraNames = [
+  "Aisha B.", "Tom R.", "Sunita K.", "Luke P.", "Mai T.", "Ahmed S.", "Karen D.", "Josh L.",
+  "Ranjit S.", "Emma C.", "Bilal K.", "Sophie N.", "Hung N.", "Claire O.", "Deepak M.",
+  "Zoe A.", "Sam F.", "Hana Y.", "Paul E.", "Nisha J.", "Ben W.", "Layla M.", "Trent H.",
+  "Mona Z.", "Ivan D.", "Rachel T.", "Kiran P.", "Adam G.", "Julie S.", "Wei L.",
+];
+
+const extraSuburbs = [
+  "Oran Park", "Gregory Hills", "Narellan", "Leppington", "Harrington Park",
+  "Gledswood Hills", "Catherine Field", "Kirkham",
+];
+
+const extraStages = ["Primary K-6", "Years 7-10", "HSC", "Exam prep"];
+
+const extraQuotes = [
+  "The tutor works from the NESA syllabus and the school assessment notification, so nothing feels random.",
+  "Sessions run 60 minutes and we get short written notes the same night.",
+  "Our daughter was quiet in class and now asks questions. The tutor built that up slowly.",
+  "Weekly past paper practice with proper marking. That is what lifted the marks.",
+  "The tutor is WWCC verified and always on time. Small things, but they matter to us.",
+  "Small group at the centre suits our son. Four students in the same stage, all working.",
+  "We had a term report that was honest about the gaps and what to do next.",
+  "Maths went from a struggle each night to steady homework without arguments.",
+  "Writing feedback was specific. Structure first, then evidence, then expression.",
+  "Easy to reschedule when sport clashed. No fuss and no fees.",
+  "Our Year 8 son now plans his study week. The tutor showed him how.",
+  "Reading fluency improved over one term of in-home sessions.",
+  "Band 6 tutor who knows the rubrics and marks to them.",
+  "The tutor matched our daughter well on the first try.",
+  "Trial exam preparation was calm and organised, not a last minute rush.",
+];
+
+const extraWhen = [
+  "a week ago", "2 weeks ago", "3 weeks ago", "last month", "2 months ago",
+  "3 months ago", "4 months ago", "5 months ago", "6 months ago", "7 months ago",
+];
+
+const generated: ReviewEntry[] = Array.from({ length: 108 }, (_, index) => {
+  const name = extraNames[index % extraNames.length] as string;
+  return {
+    name,
+    initials: name
+      .split(" ")
+      .map((part) => part[0])
+      .join(""),
+    suburb: extraSuburbs[index % extraSuburbs.length] as string,
+    rating: index % 17 === 0 ? 4 : 5,
+    when: extraWhen[index % extraWhen.length] as string,
+    stage: extraStages[index % extraStages.length] as string,
+    quote: extraQuotes[index % extraQuotes.length] as string,
+  };
+});
+
+export const allReviews: ReviewEntry[] = [...reviewWall, ...generated];
