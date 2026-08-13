@@ -33,7 +33,7 @@ export function Hero({
   return (
     <section className="bg-background">
       <div className="grid items-center gap-12 lg:grid-cols-2">
-        <div className="w-full px-5 py-14 md:py-24 lg:pl-[max(1.25rem,calc((100vw-78rem)/2))] lg:pr-12">
+        <div className="w-full px-5 py-14 md:py-24 lg:pl-[max(1.25rem,calc((100vw-78rem)/2+1.25rem))] lg:pr-12">
           <RatingRow />
           {eyebrow ? <p className="eyebrow mt-6">{eyebrow}</p> : null}
           <h1 className="mt-4 text-4xl leading-[1.05] md:text-5xl lg:text-6xl">{heading}</h1>
