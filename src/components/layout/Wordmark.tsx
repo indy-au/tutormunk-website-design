@@ -9,7 +9,7 @@ export function Wordmark({ tone = "light" }: { tone?: "light" | "dark" }) {
       aria-label={`${brand.name} home`}
     >
       <span className={tone === "dark" ? "text-surface-foreground" : "text-primary"}>Tutor</span>
-      <span className="text-accent">Munk</span>
+      <span className={tone === "dark" ? "text-accent" : "text-accent-ink"}>Munk</span>
     </Link>
   );
 }
