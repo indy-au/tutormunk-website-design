@@ -1,4 +1,5 @@
 import type { StagePageContent } from "./types";
+import heroSenior from "@/assets/hero-senior.jpg";
 
 export const seniorSchool: StagePageContent = {
   title: "Senior School and HSC Tutoring Years 11-12 | TutorMunk",
@@ -10,7 +11,15 @@ export const seniorSchool: StagePageContent = {
     body: "Every senior tutor achieved a Band 6 in the course they teach. Sessions cover content, past papers and marking feedback.",
     ctaLabel: "Request a Call",
     points: ["Band 6 tutors", "Past paper marking", "Trial and HSC preparation"],
+    image: heroSenior,
+    imageAlt: "A senior student working through a past HSC paper with a tutor",
   },
+  trustTicks: [
+    "In person only, never online",
+    "NSW NESA aligned",
+    "Working with Children Checked",
+    "Notes after every session",
+  ],
   subjects: {
     eyebrow: "Courses",
     heading: "HSC courses we tutor.",
