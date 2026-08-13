@@ -109,3 +109,11 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 - No em dashes or en dashes anywhere in the copy.
 - Plain, factual sentences and short paragraphs. No hype words and no rhetorical headings.
 - Rates, reviews, addresses and policy bodies are placeholders for client sign off.
+
+## Update: light restyle, full navigation, new sections
+
+- Palette: white background, dark green text, one fresh-green accent. Tokens only in `src/styles.css`. Typography is Outfit for all text (no serif).
+- Header nav: Primary School, High School, Senior School (three-column panel), Exam Prep, How It Works. Mobile menu mirrors this as accordions.
+- Subject and program pages are served by `src/routes/topics.$slug.tsx` with copy in `src/content/topics.ts`.
+- New home sections: `StatsBand`, `MunkCards`, `GuaranteeCard` (content in `src/content/munks.ts`).
+- New page: `/our-munks`, also linked from the footer Company column.
