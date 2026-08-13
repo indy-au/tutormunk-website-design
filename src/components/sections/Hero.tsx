@@ -9,13 +9,13 @@ export function Hero({
   secondary,
   illustrationLabel = "Illustration placeholder: tutor and student working at a table",
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   body: string;
-  ctaLabel?: string;
-  points?: string[];
+  ctaLabel?: string | undefined;
+  points?: string[] | undefined;
   secondary?: { label: string; to: string };
-  illustrationLabel?: string;
+  illustrationLabel?: string | undefined;
 }) {
   return (
     <section className="border-b border-border bg-primary-soft/60">

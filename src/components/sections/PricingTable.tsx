@@ -7,11 +7,11 @@ export function PricingTable({
   rows,
   notes,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   columns: string[];
   rows: { mode: string; detail: string; rates: string[] }[];
-  notes?: string[];
+  notes?: string[] | undefined;
 }) {
   return (
     <section className="section-y">

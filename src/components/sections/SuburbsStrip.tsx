@@ -7,9 +7,9 @@ export function SuburbsStrip({
   heading,
   body,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
 }) {
   return (
     <section className="section-y bg-secondary">

@@ -6,7 +6,7 @@ export function StorySection({
   paragraphs,
   stats,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   paragraphs: string[];
   stats?: { value: string; label: string }[];

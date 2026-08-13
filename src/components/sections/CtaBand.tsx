@@ -10,8 +10,8 @@ export function CtaBand({
   heading: string;
   body: string;
   ctaLabel: string;
-  secondaryLabel?: string;
-  secondaryTo?: string;
+  secondaryLabel?: string | undefined;
+  secondaryTo?: string | undefined;
 }) {
   return (
     <section className="section-y">

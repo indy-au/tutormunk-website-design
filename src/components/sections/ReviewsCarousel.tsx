@@ -7,9 +7,9 @@ export function ReviewsCarousel({
   heading,
   body,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
 }) {
   const trackRef = useRef<HTMLUListElement>(null);
 

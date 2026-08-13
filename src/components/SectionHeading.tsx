@@ -5,11 +5,11 @@ export function SectionHeading({
   align = "left",
   tone = "light",
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
-  align?: "left" | "center";
-  tone?: "light" | "dark";
+  body?: string | undefined;
+  align?: "left" | "center" | undefined;
+  tone?: "light" | "dark" | undefined;
 }) {
   return (
     <div

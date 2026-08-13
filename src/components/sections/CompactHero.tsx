@@ -7,10 +7,10 @@ export function CompactHero({
   ctaLabel,
   facts,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   body: string;
-  ctaLabel?: string;
+  ctaLabel?: string | undefined;
   facts?: { label: string; value: string }[];
 }) {
   return (

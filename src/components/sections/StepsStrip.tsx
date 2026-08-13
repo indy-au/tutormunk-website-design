@@ -9,12 +9,12 @@ export function StepsStrip({
   ctaTo,
   variant = "strip",
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   items: { title: string; body: string }[];
-  ctaLabel?: string;
-  ctaTo?: string;
-  variant?: "strip" | "detailed";
+  ctaLabel?: string | undefined;
+  ctaTo?: string | undefined;
+  variant?: "strip" | "detailed" | undefined;
 }) {
   return (
     <section className={variant === "strip" ? "section-y bg-secondary" : "section-y"}>

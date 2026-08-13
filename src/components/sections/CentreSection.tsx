@@ -8,7 +8,7 @@ export function CentreSection({
   details,
   mapLabel,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   address: string;
   body: string;

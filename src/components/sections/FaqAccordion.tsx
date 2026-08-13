@@ -7,9 +7,9 @@ export function FaqAccordion({
   body,
   items,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
   items: FaqItem[];
 }) {
   return (

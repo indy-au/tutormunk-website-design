@@ -7,9 +7,9 @@ export function ProgramCards({
   body,
   items,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
   items: { name: string; body: string; tag: string }[];
 }) {
   return (

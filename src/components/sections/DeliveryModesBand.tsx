@@ -7,10 +7,10 @@ export function DeliveryModesBand({
   body,
   showRates = true,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
-  showRates?: boolean;
+  body?: string | undefined;
+  showRates?: boolean | undefined;
 }) {
   return (
     <section className="section-y bg-surface text-surface-foreground">

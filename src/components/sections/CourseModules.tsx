@@ -6,9 +6,9 @@ export function CourseModules({
   body,
   items,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
   items: { title: string; body: string }[];
 }) {
   return (

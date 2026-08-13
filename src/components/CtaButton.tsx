@@ -18,7 +18,7 @@ export function CallbackButton({
   variant = "primary",
 }: {
   label: string;
-  variant?: CtaVariant;
+  variant?: CtaVariant | undefined;
 }) {
   const { open } = useCallbackModal();
   return (
@@ -35,7 +35,7 @@ export function LinkButton({
 }: {
   label: string;
   to: string;
-  variant?: CtaVariant;
+  variant?: CtaVariant | undefined;
 }) {
   return (
     <Link to={to} className={styles[variant]}>

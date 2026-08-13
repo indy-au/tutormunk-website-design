@@ -6,7 +6,7 @@ export function TutorPitch({
   body,
   points,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   body: string;
   points: string[];

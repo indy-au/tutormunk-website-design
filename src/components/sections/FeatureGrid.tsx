@@ -7,11 +7,11 @@ export function FeatureGrid({
   items,
   tone = "light",
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
   items: { title: string; body: string }[];
-  tone?: "light" | "muted";
+  tone?: "light" | "muted" | undefined;
 }) {
   return (
     <section className={tone === "muted" ? "section-y bg-secondary" : "section-y"}>

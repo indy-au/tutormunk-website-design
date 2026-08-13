@@ -28,11 +28,11 @@ export function SubjectCards({
   items,
   groups,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
-  items?: SubjectCard[];
-  groups?: SubjectGroup[];
+  body?: string | undefined;
+  items?: SubjectCard[] | undefined;
+  groups?: SubjectGroup[] | undefined;
 }) {
   return (
     <section className="section-y">

@@ -7,9 +7,9 @@ export function SuburbGrid({
   body,
   items,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
   items: { name: string; to: string }[];
 }) {
   return (

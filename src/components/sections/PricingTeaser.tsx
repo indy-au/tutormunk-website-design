@@ -9,9 +9,9 @@ export function PricingTeaser({
   ctaLabel,
   ctaTo,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
   rows: { name: string; rate: string }[];
   ctaLabel: string;
   ctaTo: string;

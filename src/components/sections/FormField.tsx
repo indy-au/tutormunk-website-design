@@ -1,8 +1,8 @@
 export type FieldSpec = {
   label: string;
   type: string;
-  placeholder?: string;
-  options?: string[];
+  placeholder?: string | undefined;
+  options?: string[] | undefined;
 };
 
 export function FormField({ field, idPrefix }: { field: FieldSpec; idPrefix: string }) {

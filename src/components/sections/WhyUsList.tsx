@@ -5,7 +5,7 @@ export function WhyUsList({
   heading,
   items,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   items: { title: string; body: string }[];
 }) {

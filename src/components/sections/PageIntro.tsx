@@ -3,9 +3,9 @@ export function PageIntro({
   heading,
   body,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
-  body?: string;
+  body?: string | undefined;
 }) {
   return (
     <section className="border-b border-border bg-primary-soft/50">

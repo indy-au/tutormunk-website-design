@@ -13,7 +13,7 @@ export function MultiStepFormShell({
   note: string;
 }) {
   const [active, setActive] = useState(0);
-  const step = steps[active];
+  const step = steps[active] ?? steps[0]!;
   const isLast = active === steps.length - 1;
 
   return (

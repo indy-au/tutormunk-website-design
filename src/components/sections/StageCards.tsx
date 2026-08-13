@@ -6,7 +6,7 @@ export function StageCards({
   heading,
   items,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   heading: string;
   items: { stage: string; years: string; body: string; to: string; linkLabel: string }[];
 }) {
