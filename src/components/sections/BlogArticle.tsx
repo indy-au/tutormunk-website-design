@@ -1,8 +1,4 @@
-type Block =
-  | { type: "p"; text: string }
-  | { type: "h2"; text: string }
-  | { type: "quote"; text: string }
-  | { type: "ul"; items: string[] };
+type Block = { type: string; text?: string | undefined; items?: string[] | undefined };
 
 export function BlogArticle({
   meta,
@@ -58,7 +54,7 @@ export function BlogArticle({
             if (block.type === "ul") {
               return (
                 <ul key={index} className="mt-5 list-disc space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
-                  {block.items.map((item) => (
+                  {(block.items ?? []).map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>

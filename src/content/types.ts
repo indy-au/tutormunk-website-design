@@ -1,11 +1,11 @@
-export type SubjectCard = { name: string; body: string; to?: string | undefined; linkLabel?: string } | undefined;
+export type SubjectCard = { name: string; body: string; to?: string | undefined; linkLabel?: string };
 
 export type SubjectGroup = { heading: string; body?: string | undefined; items: SubjectCard[] };
 
 export type StagePageContent = {
   title: string;
   metaDescription: string;
-  hero: { eyebrow: string; heading: string; body: string; ctaLabel: string; points?: string[] } | undefined;
+  hero: { eyebrow: string; heading: string; body: string; ctaLabel: string; points?: string[] };
   subjects: {
     eyebrow: string;
     heading: string;
@@ -22,7 +22,7 @@ export type StagePageContent = {
     ctaLabel: string;
     ctaTo: string;
   };
-  cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string } | undefined;
+  cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string };
 };
 
 export type FaqItem = { question: string; answer: string };

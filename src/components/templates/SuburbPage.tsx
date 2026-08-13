@@ -4,10 +4,10 @@ import { ReviewsCarousel } from "../sections/ReviewsCarousel";
 import { CtaBand } from "../sections/CtaBand";
 
 type SuburbPageContent = {
-  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; points?: string[] } | undefined;
+  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; points?: string[] };
   whatWeCover: { eyebrow?: string | undefined; heading: string; items: { title: string; body: string }[] };
-  reviewsSection: { eyebrow?: string | undefined; heading: string; body?: string } | undefined;
-  cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string } | undefined;
+  reviewsSection: { eyebrow?: string | undefined; heading: string; body?: string };
+  cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string };
 };
 
 export function SuburbPage({ content }: { content: SuburbPageContent }) {
