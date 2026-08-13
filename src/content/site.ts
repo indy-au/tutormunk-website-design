@@ -1,7 +1,9 @@
 export const brand = {
   name: "TutorMunk",
   tagline: "Premium in-person tutoring in South-West Sydney",
-  phone: "02 4000 0000",
+  phone: "1300 00MUNK",
+  phoneDial: "1300006865",
+  phoneDialDisplay: "1300 006 865",
   email: "hello@tutormunk.com.au",
   centreAddress: "Suite 3, 12 Central Avenue, Oran Park NSW 2570",
   ratingLine: "4.9 from 180+ Google reviews",
