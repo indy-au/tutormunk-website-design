@@ -60,7 +60,7 @@ export const home = {
   reviewsSection: {
     eyebrow: "Google reviews",
     heading: "What local parents say.",
-    body: "Placeholder reviews shown for design purposes.",
+    body: "Scroll through reviews from families across South-West Sydney. Placeholder copy shown for design review.",
   },
   suburbsSection: {
     eyebrow: "Suburbs we serve",
