@@ -9,104 +9,152 @@ export const brand = {
   ratingLine: "4.9 from 180+ Google reviews",
 };
 
+export type MegaLink = {
+  label: string;
+  to: string;
+  icon: string;
+  description?: string | undefined;
+};
+
+export type MegaColumn = { heading?: string | undefined; links: MegaLink[] };
+
 export type NavItem = {
   label: string;
   to: string;
-  wide?: boolean;
-  groups?: { heading: string; links: { label: string; to: string }[] }[];
+  panel?: {
+    columns: MegaColumn[];
+    compact?: boolean;
+    width?: "wide" | "extra";
+    note: string;
+    footerLabel: string;
+    footerTo: string;
+  };
 };
+
+const nesaNote = "All programs are NSW NESA curriculum aligned";
 
 export const primaryNav: NavItem[] = [
   {
     label: "Primary School",
     to: "/primary-school",
-    groups: [
-      {
-        heading: "Primary K-6",
-        links: [
-          { label: "Primary overview", to: "/primary-school" },
-          { label: "English Tutoring", to: "/primary-english" },
-          { label: "Maths Tutoring", to: "/topics/primary-maths" },
-          { label: "Selective School Prep", to: "/topics/selective-school-prep" },
-          { label: "OC Prep", to: "/topics/oc-prep" },
-          { label: "NAPLAN", to: "/topics/naplan" },
-          { label: "Writing Program", to: "/topics/writing-program" },
-        ],
-      },
-    ],
+    panel: {
+      width: "wide",
+      note: nesaNote,
+      footerLabel: "View all primary school",
+      footerTo: "/primary-school",
+      columns: [
+        {
+          links: [
+            { label: "English Tutoring", to: "/primary-english", icon: "En", description: "Year 2 to 6 reading, writing and comprehension" },
+            { label: "Maths Tutoring", to: "/topics/primary-maths", icon: "Ma", description: "Number, fractions and word problems to Year 6" },
+            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "Se", description: "Thinking skills and reasoning for the Year 6 test" },
+          ],
+        },
+        {
+          links: [
+            { label: "OC Prep", to: "/topics/oc-prep", icon: "OC", description: "Timed practice for Opportunity Class placement" },
+            { label: "NAPLAN", to: "/topics/naplan", icon: "Na", description: "Question types and technique for Years 3 and 5" },
+            { label: "Writing Program", to: "/topics/writing-program", icon: "Wr", description: "A marked writing piece every week" },
+          ],
+        },
+      ],
+    },
   },
   {
     label: "High School",
     to: "/high-school",
-    groups: [
-      {
-        heading: "Years 7-10",
-        links: [
-          { label: "High School overview", to: "/high-school" },
-          { label: "English Tutoring", to: "/topics/high-school-english" },
-          { label: "Maths Tutoring", to: "/topics/high-school-maths" },
-          { label: "Science Tutoring", to: "/topics/high-school-science" },
-          { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9" },
-        ],
-      },
-    ],
+    panel: {
+      width: "wide",
+      note: nesaNote,
+      footerLabel: "View all high school",
+      footerTo: "/high-school",
+      columns: [
+        {
+          links: [
+            { label: "English Tutoring", to: "/topics/high-school-english", icon: "En", description: "Text analysis and essay structure for Years 7 to 10" },
+            { label: "Maths Tutoring", to: "/topics/high-school-maths", icon: "Ma", description: "Algebra, geometry and trigonometry to Stage 5.3" },
+          ],
+        },
+        {
+          links: [
+            { label: "Science Tutoring", to: "/topics/high-school-science", icon: "Sc", description: "Working scientifically, plus core biology and chemistry" },
+            { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9", icon: "Na", description: "Practice tests with marked writing feedback" },
+          ],
+        },
+      ],
+    },
   },
   {
     label: "Senior School",
     to: "/senior-school",
-    wide: true,
-    groups: [
-      {
-        heading: "English",
-        links: [
-          { label: "English Studies", to: "/topics/english-studies" },
-          { label: "English Std", to: "/topics/english-standard" },
-          { label: "English Advanced", to: "/topics/english-advanced" },
-          { label: "English Ext 1", to: "/topics/english-extension-1" },
-          { label: "English Ext 2", to: "/topics/english-extension-2" },
-          { label: "English EAL-D", to: "/topics/english-eal-d" },
-        ],
-      },
-      {
-        heading: "Maths",
-        links: [
-          { label: "Maths Std", to: "/topics/maths-standard" },
-          { label: "Maths Std 1", to: "/topics/maths-standard-1" },
-          { label: "Maths Std 2", to: "/topics/maths-standard-2" },
-          { label: "Maths Advanced", to: "/hsc-maths-advanced" },
-          { label: "Maths Ext 1", to: "/topics/maths-extension-1" },
-          { label: "Maths Ext 2", to: "/topics/maths-extension-2" },
-        ],
-      },
-      {
-        heading: "Science",
-        links: [
-          { label: "Biology", to: "/topics/biology" },
-          { label: "Chemistry", to: "/topics/chemistry" },
-          { label: "Physics", to: "/topics/physics" },
-          { label: "Earth and Environmental", to: "/topics/earth-and-environmental" },
-          { label: "Investigating Science", to: "/topics/investigating-science" },
-        ],
-      },
-    ],
+    panel: {
+      width: "extra",
+      compact: true,
+      note: nesaNote,
+      footerLabel: "View all senior school",
+      footerTo: "/senior-school",
+      columns: [
+        {
+          heading: "English",
+          links: [
+            { label: "English Studies", to: "/topics/english-studies", icon: "En" },
+            { label: "English Std", to: "/topics/english-standard", icon: "En" },
+            { label: "English Advanced", to: "/topics/english-advanced", icon: "En" },
+            { label: "English Ext 1", to: "/topics/english-extension-1", icon: "E1" },
+            { label: "English Ext 2", to: "/topics/english-extension-2", icon: "E2" },
+            { label: "English EAL-D", to: "/topics/english-eal-d", icon: "EA" },
+          ],
+        },
+        {
+          heading: "Maths",
+          links: [
+            { label: "Maths Std", to: "/topics/maths-standard", icon: "Ma" },
+            { label: "Maths Std 1", to: "/topics/maths-standard-1", icon: "M1" },
+            { label: "Maths Std 2", to: "/topics/maths-standard-2", icon: "M2" },
+            { label: "Maths Advanced", to: "/hsc-maths-advanced", icon: "MA" },
+            { label: "Maths Ext 1", to: "/topics/maths-extension-1", icon: "X1" },
+            { label: "Maths Ext 2", to: "/topics/maths-extension-2", icon: "X2" },
+          ],
+        },
+        {
+          heading: "Science",
+          links: [
+            { label: "Biology", to: "/topics/biology", icon: "Bi" },
+            { label: "Chemistry", to: "/topics/chemistry", icon: "Ch" },
+            { label: "Physics", to: "/topics/physics", icon: "Ph" },
+            { label: "Earth and Environmental", to: "/topics/earth-and-environmental", icon: "Ee" },
+            { label: "Investigating Science", to: "/topics/investigating-science", icon: "Is" },
+          ],
+        },
+      ],
+    },
   },
   {
     label: "Exam Prep",
     to: "/exam-prep",
-    groups: [
-      {
-        heading: "Programs",
-        links: [
-          { label: "Selective School Prep", to: "/topics/selective-school-prep" },
-          { label: "OC Prep", to: "/topics/oc-prep" },
-          { label: "Writing", to: "/topics/writing-program" },
-          { label: "NAPLAN", to: "/topics/naplan" },
-          { label: "ICAS", to: "/topics/icas" },
-          { label: "HSC Sprint", to: "/topics/hsc-sprint" },
-          { label: "Ask Munk", to: "/topics/ask-munk" },
-        ],
-      },
-    ],
+    panel: {
+      width: "wide",
+      note: "Targeted preparation for exams and competitions",
+      footerLabel: "View all exam prep",
+      footerTo: "/exam-prep",
+      columns: [
+        {
+          links: [
+            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "Se", description: "Year 5 and 6 practice for the placement test" },
+            { label: "OC Prep", to: "/topics/oc-prep", icon: "OC", description: "Year 3 and 4 preparation for Opportunity Class" },
+            { label: "Writing", to: "/topics/writing-program", icon: "Wr", description: "Narrative, persuasive and informative writing" },
+            { label: "NAPLAN", to: "/topics/naplan", icon: "Na", description: "Years 3, 5, 7 and 9 familiarisation" },
+          ],
+        },
+        {
+          links: [
+            { label: "ICAS", to: "/topics/icas", icon: "IC", description: "Extension style questions in English, Maths and Science" },
+            { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "HS", description: "An intensive block before trials and the HSC" },
+            { label: "Ask Munk", to: "/topics/ask-munk", icon: "AM", description: "Drop-in homework help at our Oran Park centre" },
+          ],
+        },
+      ],
+    },
   },
   { label: "How It Works", to: "/how-it-works" },
 ];
