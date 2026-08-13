@@ -16,7 +16,11 @@ export type MegaLink = {
   description?: string | undefined;
 };
 
-export type MegaColumn = { heading?: string | undefined; links: MegaLink[] };
+export type MegaColumn = {
+  heading?: string | undefined;
+  icon?: string | undefined;
+  links: MegaLink[];
+};
 
 export type NavItem = {
   label: string;
@@ -45,16 +49,16 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
-            { label: "English Tutoring", to: "/primary-english", icon: "En", description: "Year 2 to 6 reading, writing and comprehension" },
-            { label: "Maths Tutoring", to: "/topics/primary-maths", icon: "Ma", description: "Number, fractions and word problems to Year 6" },
-            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "Se", description: "Thinking skills and reasoning for the Year 6 test" },
+            { label: "English Tutoring", to: "/primary-english", icon: "book", description: "Year 2 to 6 reading, writing and comprehension" },
+            { label: "Maths Tutoring", to: "/topics/primary-maths", icon: "calculator", description: "Number, fractions and word problems to Year 6" },
+            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Thinking skills and reasoning for the Year 6 test" },
           ],
         },
         {
           links: [
-            { label: "OC Prep", to: "/topics/oc-prep", icon: "OC", description: "Timed practice for Opportunity Class placement" },
-            { label: "NAPLAN", to: "/topics/naplan", icon: "Na", description: "Question types and technique for Years 3 and 5" },
-            { label: "Writing Program", to: "/topics/writing-program", icon: "Wr", description: "A marked writing piece every week" },
+            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Timed practice for Opportunity Class placement" },
+            { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Question types and technique for Years 3 and 5" },
+            { label: "Writing Program", to: "/topics/writing-program", icon: "pen", description: "A marked writing piece every week" },
           ],
         },
       ],
@@ -71,14 +75,14 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
-            { label: "English Tutoring", to: "/topics/high-school-english", icon: "En", description: "Text analysis and essay structure for Years 7 to 10" },
-            { label: "Maths Tutoring", to: "/topics/high-school-maths", icon: "Ma", description: "Algebra, geometry and trigonometry to Stage 5.3" },
+            { label: "English Tutoring", to: "/topics/high-school-english", icon: "book", description: "Text analysis and essay structure for Years 7 to 10" },
+            { label: "Maths Tutoring", to: "/topics/high-school-maths", icon: "calculator", description: "Algebra, geometry and trigonometry to Stage 5.3" },
           ],
         },
         {
           links: [
-            { label: "Science Tutoring", to: "/topics/high-school-science", icon: "Sc", description: "Working scientifically, plus core biology and chemistry" },
-            { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9", icon: "Na", description: "Practice tests with marked writing feedback" },
+            { label: "Science Tutoring", to: "/topics/high-school-science", icon: "flask", description: "Working scientifically, plus core biology and chemistry" },
+            { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9", icon: "clipboard-check", description: "Practice tests with marked writing feedback" },
           ],
         },
       ],
@@ -96,34 +100,37 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           heading: "English",
+          icon: "book",
           links: [
-            { label: "English Studies", to: "/topics/english-studies", icon: "En" },
-            { label: "English Std", to: "/topics/english-standard", icon: "En" },
-            { label: "English Advanced", to: "/topics/english-advanced", icon: "En" },
-            { label: "English Ext 1", to: "/topics/english-extension-1", icon: "E1" },
-            { label: "English Ext 2", to: "/topics/english-extension-2", icon: "E2" },
-            { label: "English EAL-D", to: "/topics/english-eal-d", icon: "EA" },
+            { label: "English Studies", to: "/topics/english-studies", icon: "book" },
+            { label: "English Std", to: "/topics/english-standard", icon: "book" },
+            { label: "English Advanced", to: "/topics/english-advanced", icon: "book" },
+            { label: "English Ext 1", to: "/topics/english-extension-1", icon: "book" },
+            { label: "English Ext 2", to: "/topics/english-extension-2", icon: "book" },
+            { label: "English EAL-D", to: "/topics/english-eal-d", icon: "book" },
           ],
         },
         {
           heading: "Maths",
+          icon: "calculator",
           links: [
-            { label: "Maths Std", to: "/topics/maths-standard", icon: "Ma" },
-            { label: "Maths Std 1", to: "/topics/maths-standard-1", icon: "M1" },
-            { label: "Maths Std 2", to: "/topics/maths-standard-2", icon: "M2" },
-            { label: "Maths Advanced", to: "/hsc-maths-advanced", icon: "MA" },
-            { label: "Maths Ext 1", to: "/topics/maths-extension-1", icon: "X1" },
-            { label: "Maths Ext 2", to: "/topics/maths-extension-2", icon: "X2" },
+            { label: "Maths Std", to: "/topics/maths-standard", icon: "calculator" },
+            { label: "Maths Std 1", to: "/topics/maths-standard-1", icon: "calculator" },
+            { label: "Maths Std 2", to: "/topics/maths-standard-2", icon: "calculator" },
+            { label: "Maths Advanced", to: "/hsc-maths-advanced", icon: "calculator" },
+            { label: "Maths Ext 1", to: "/topics/maths-extension-1", icon: "calculator" },
+            { label: "Maths Ext 2", to: "/topics/maths-extension-2", icon: "calculator" },
           ],
         },
         {
           heading: "Science",
+          icon: "flask",
           links: [
-            { label: "Biology", to: "/topics/biology", icon: "Bi" },
-            { label: "Chemistry", to: "/topics/chemistry", icon: "Ch" },
-            { label: "Physics", to: "/topics/physics", icon: "Ph" },
-            { label: "Earth and Environmental", to: "/topics/earth-and-environmental", icon: "Ee" },
-            { label: "Investigating Science", to: "/topics/investigating-science", icon: "Is" },
+            { label: "Biology", to: "/topics/biology", icon: "flask" },
+            { label: "Chemistry", to: "/topics/chemistry", icon: "flask" },
+            { label: "Physics", to: "/topics/physics", icon: "flask" },
+            { label: "Earth and Environmental", to: "/topics/earth-and-environmental", icon: "flask" },
+            { label: "Investigating Science", to: "/topics/investigating-science", icon: "flask" },
           ],
         },
       ],
@@ -140,17 +147,17 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
-            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "Se", description: "Year 5 and 6 practice for the placement test" },
-            { label: "OC Prep", to: "/topics/oc-prep", icon: "OC", description: "Year 3 and 4 preparation for Opportunity Class" },
-            { label: "Writing", to: "/topics/writing-program", icon: "Wr", description: "Narrative, persuasive and informative writing" },
-            { label: "NAPLAN", to: "/topics/naplan", icon: "Na", description: "Years 3, 5, 7 and 9 familiarisation" },
+            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Year 5 and 6 practice for the placement test" },
+            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Year 3 and 4 preparation for Opportunity Class" },
+            { label: "Writing", to: "/topics/writing-program", icon: "pen", description: "Narrative, persuasive and informative writing" },
+            { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Years 3, 5, 7 and 9 familiarisation" },
           ],
         },
         {
           links: [
-            { label: "ICAS", to: "/topics/icas", icon: "IC", description: "Extension style questions in English, Maths and Science" },
-            { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "HS", description: "An intensive block before trials and the HSC" },
-            { label: "Ask Munk", to: "/topics/ask-munk", icon: "AM", description: "Drop-in homework help at our Oran Park centre" },
+            { label: "ICAS", to: "/topics/icas", icon: "medal", description: "Extension style questions in English, Maths and Science" },
+            { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "timer", description: "An intensive block before trials and the HSC" },
+            { label: "Ask Munk", to: "/topics/ask-munk", icon: "message-circle-question", description: "Drop-in homework help at our Oran Park centre" },
           ],
         },
       ],
@@ -228,26 +235,32 @@ export const footer = {
 
 export const deliveryModes = [
   {
-    name: "1-to-1 in your home",
-    detail: "A tutor comes to you. Full attention on one student, with no travel for the family.",
-    rate: "$XX per hour",
+    name: "Your home 1-to-1",
+    icon: "house",
+    detail: "A tutor comes to you for a 60-minute session. Full attention on one student, with no travel for the family.",
   },
   {
-    name: "Small group in your home",
+    name: "Your home group",
+    icon: "users",
     detail: "Up to three students, often siblings or neighbours, taught together at your kitchen table.",
-    rate: "$XX per student per hour",
   },
   {
-    name: "1-to-1 at our centre",
+    name: "Our centre 1-to-1",
+    icon: "building",
     detail: "Quiet rooms at Oran Park, with printed resources and past papers on hand.",
-    rate: "$XX per hour",
   },
   {
-    name: "Small group at our centre",
+    name: "Our centre group",
+    icon: "school",
     detail: "Groups of four to six students in the same stage, grouped by ability.",
-    rate: "$XX per student per hour",
   },
 ];
+
+export const talkToUs = {
+  eyebrow: "Talk to us",
+  heading: "Every family is different.",
+  body: "Call us and we will tailor a plan and walk you through the options. We talk through session times, delivery mode and tutor matching on the phone.",
+};
 
 export const reviews = [
   { name: "Melissa T.", suburb: "Oran Park", rating: 5, quote: "Our Year 5 daughter went from avoiding maths homework to asking for extra questions. The tutor is patient and very organised." },
