@@ -1,20 +1,44 @@
 import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "../SectionHeading";
+import { getIcon } from "../icons";
 import type { SubjectCard, SubjectGroup } from "@/content/types";
 
+function iconFor(name: string): string {
+  const key = name.toLowerCase();
+  if (key.includes("english") || key.includes("read")) return "book";
+  if (key.includes("math")) return "calculator";
+  if (key.includes("biolog") || key.includes("chem") || key.includes("phys") || key.includes("scien") || key.includes("environment")) return "flask";
+  if (key.includes("writ")) return "pen";
+  if (key.includes("selective")) return "trophy";
+  if (key.includes("oc ") || key.includes("opportunity")) return "target";
+  if (key.includes("naplan") || key.includes("test") || key.includes("exam")) return "clipboard-check";
+  if (key.includes("study") || key.includes("skill")) return "clipboard-list";
+  if (key.includes("selection") || key.includes("subject")) return "graduation-cap";
+  if (key.includes("hsc") || key.includes("atar") || key.includes("senior")) return "award";
+  return "school";
+}
+
 function Card({ item }: { item: SubjectCard }) {
+  const Icon = getIcon(iconFor(item.name));
   return (
-    <article className="flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-card transition-shadow hover:shadow-lift">
-      <div
-        role="img"
-        aria-label={`Colour block for ${item.name}`}
-        className="h-12 w-12 rounded-xl bg-accent-soft"
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-lift">
+      <span
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-1 bg-accent opacity-0 transition-opacity group-hover:opacity-100"
       />
+      <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent-soft text-accent-ink">
+        <Icon className="h-5 w-5" aria-hidden="true" />
+      </span>
       <h3 className="mt-5 text-xl">{item.name}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
       {item.to && item.linkLabel ? (
-        <Link to={item.to} className="mt-5 text-sm font-semibold text-primary underline underline-offset-4">
+        <Link
+          to={item.to}
+          className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent-ink"
+        >
           {item.linkLabel}
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </Link>
       ) : null}
     </article>

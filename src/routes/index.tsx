@@ -9,9 +9,7 @@ import { SuburbsStrip } from "@/components/sections/SuburbsStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { StatsBand } from "@/components/sections/StatsBand";
 import { MunkCards } from "@/components/sections/MunkCards";
-import { TalkToUsBand } from "@/components/sections/TalkToUsBand";
-import { GuaranteeCard } from "@/components/sections/GuaranteeCard";
-import { munks, munksSection, guarantee, statsSection } from "@/content/munks";
+import { munks, munksSection, statsSection } from "@/content/munks";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,8 +34,6 @@ function HomePage() {
       <StepsStrip {...home.steps} />
       <DeliveryModesBand {...home.delivery} />
       <MunkCards {...munksSection} items={munks} />
-      <TalkToUsBand />
-      <GuaranteeCard {...guarantee} />
       <ReviewsCarousel {...home.reviewsSection} />
       <SuburbsStrip {...home.suburbsSection} />
       <CtaBand {...home.cta} />
