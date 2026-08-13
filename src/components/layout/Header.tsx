@@ -22,8 +22,8 @@ export function Header() {
                   activeProps={{ className: "bg-primary-soft" }}
                 >
                   {item.label}
-                  <span aria-hidden="true" className="text-xs">
-                    v
+                  <span aria-hidden="true" className="text-[0.6rem]">
+                    &#9662;
                   </span>
                 </Link>
                 <div className="invisible absolute left-0 top-full w-[34rem] pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
