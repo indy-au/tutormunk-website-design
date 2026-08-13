@@ -6,6 +6,7 @@ import { Wordmark } from "./Wordmark";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
@@ -26,8 +27,18 @@ export function Header() {
                     &#9662;
                   </span>
                 </Link>
-                <div className="invisible absolute left-0 top-full w-[34rem] pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  <div className="grid grid-cols-3 gap-5 rounded-2xl border border-border bg-card p-5 shadow-lift">
+                <div
+                  className={[
+                    "invisible absolute left-0 top-full pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
+                    item.wide ? "w-[42rem]" : "w-72",
+                  ].join(" ")}
+                >
+                  <div
+                    className={[
+                      "grid gap-5 rounded-3xl border border-border bg-card p-6 shadow-lift",
+                      item.wide ? "grid-cols-3" : "grid-cols-1",
+                    ].join(" ")}
+                  >
                     {item.groups.map((group) => (
                       <div key={group.heading}>
                         <p className="eyebrow">{group.heading}</p>
