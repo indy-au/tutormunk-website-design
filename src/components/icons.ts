@@ -1,0 +1,56 @@
+import {
+  ArrowRight,
+  Award,
+  BookOpen,
+  Building,
+  Calculator,
+  CalendarCheck,
+  ClipboardCheck,
+  ClipboardList,
+  FlaskConical,
+  GraduationCap,
+  House,
+  Medal,
+  MessageCircleQuestionMark,
+  PenLine,
+  Phone,
+  School,
+  Sparkles,
+  Target,
+  Timer,
+  Trophy,
+  UserCheck,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+
+export const iconMap = {
+  "arrow-right": ArrowRight,
+  award: Award,
+  book: BookOpen,
+  building: Building,
+  calculator: Calculator,
+  "calendar-check": CalendarCheck,
+  "clipboard-check": ClipboardCheck,
+  "clipboard-list": ClipboardList,
+  flask: FlaskConical,
+  "graduation-cap": GraduationCap,
+  house: House,
+  medal: Medal,
+  "message-circle-question": MessageCircleQuestionMark,
+  pen: PenLine,
+  phone: Phone,
+  school: School,
+  sparkles: Sparkles,
+  target: Target,
+  timer: Timer,
+  trophy: Trophy,
+  "user-check": UserCheck,
+  users: Users,
+} satisfies Record<string, LucideIcon>;
+
+export type IconKey = keyof typeof iconMap;
+
+export function getIcon(key: string): LucideIcon {
+  return (iconMap as Record<string, LucideIcon>)[key] ?? BookOpen;
+}
