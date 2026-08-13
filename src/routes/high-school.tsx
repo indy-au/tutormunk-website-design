@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { highSchool } from "@/content/highSchool";
-import { StagePage } from "@/components/templates/StagePage";
+import { HubPage } from "@/components/templates/HubPage";
 
 export const Route = createFileRoute("/high-school")({
   head: () => ({
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/high-school")({
 function HighSchoolPage() {
   return (
     <>
-      <StagePage content={highSchool} />
+      <HubPage content={highSchool} />
     </>
   );
 }
