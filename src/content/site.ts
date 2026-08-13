@@ -20,7 +20,7 @@ export const primaryNav: NavItem[] = [
     to: "/primary-school",
     groups: [
       {
-        heading: "Primary K-6.",
+        heading: "Primary K-6",
         links: [
           { label: "Primary overview", to: "/primary-school" },
           { label: "English Tutoring", to: "/primary-english" },
@@ -38,7 +38,7 @@ export const primaryNav: NavItem[] = [
     to: "/high-school",
     groups: [
       {
-        heading: "Years 7-10.",
+        heading: "Years 7-10",
         links: [
           { label: "High School overview", to: "/high-school" },
           { label: "English Tutoring", to: "/topics/high-school-english" },
@@ -55,7 +55,7 @@ export const primaryNav: NavItem[] = [
     wide: true,
     groups: [
       {
-        heading: "English.",
+        heading: "English",
         links: [
           { label: "English Studies", to: "/topics/english-studies" },
           { label: "English Std", to: "/topics/english-standard" },
@@ -66,7 +66,7 @@ export const primaryNav: NavItem[] = [
         ],
       },
       {
-        heading: "Maths.",
+        heading: "Maths",
         links: [
           { label: "Maths Std", to: "/topics/maths-standard" },
           { label: "Maths Std 1", to: "/topics/maths-standard-1" },
@@ -77,7 +77,7 @@ export const primaryNav: NavItem[] = [
         ],
       },
       {
-        heading: "Science.",
+        heading: "Science",
         links: [
           { label: "Biology", to: "/topics/biology" },
           { label: "Chemistry", to: "/topics/chemistry" },
@@ -93,7 +93,7 @@ export const primaryNav: NavItem[] = [
     to: "/exam-prep",
     groups: [
       {
-        heading: "Programs.",
+        heading: "Programs",
         links: [
           { label: "Selective School Prep", to: "/topics/selective-school-prep" },
           { label: "OC Prep", to: "/topics/oc-prep" },
@@ -126,7 +126,7 @@ export const footer = {
     "In-person tutoring for K-12 students across South-West Sydney, in your home or at our Oran Park centre. We do not run online lessons.",
   columns: [
     {
-      heading: "Programs.",
+      heading: "Programs",
       links: [
         { label: "Exam Prep", to: "/exam-prep" },
         { label: "Selective Prep", to: "/exam-prep" },
@@ -139,7 +139,7 @@ export const footer = {
       ],
     },
     {
-      heading: "Locations.",
+      heading: "Locations",
       links: [
         { label: "Oran Park", to: "/locations/oran-park" },
         { label: "Gregory Hills", to: "/locations" },
@@ -152,7 +152,7 @@ export const footer = {
       ],
     },
     {
-      heading: "Company.",
+      heading: "Company",
       links: [
         { label: "About", to: "/about" },
         { label: "Our Munks", to: "/our-munks" },
@@ -163,7 +163,7 @@ export const footer = {
       ],
     },
     {
-      heading: "Policies.",
+      heading: "Policies",
       links: [
         { label: "Privacy", to: "/privacy" },
         { label: "Terms", to: "/terms" },
