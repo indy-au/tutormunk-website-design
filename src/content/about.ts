@@ -4,13 +4,13 @@ export const about = {
     "TutorMunk is an in-person tutoring company in South-West Sydney offering 1-to-1 and small group sessions for K-12 students.",
   hero: {
     eyebrow: "About us",
-    heading: "We tutor in person, on purpose",
+    heading: "We tutor in person, on purpose.",
     body: "TutorMunk started in Oran Park because local families wanted tutoring that happened in the room, with a tutor who could see the working.",
     ctaLabel: "Request a Call",
   },
   story: {
     eyebrow: "Our story",
-    heading: "Built around local families",
+    heading: "Built around local families.",
     paragraphs: [
       "We began with two tutors visiting homes in Oran Park and Harrington Park. Word spread, and we opened a small centre so students who study better outside the house had somewhere quiet to go.",
       "Today we tutor Kindergarten to Year 12 across South-West Sydney. Every session is face to face. We do not run online lessons, because we found that younger students drift and senior students hide gaps in their working.",
@@ -19,7 +19,7 @@ export const about = {
   },
   values: {
     eyebrow: "What we stand for",
-    heading: "Four commitments",
+    heading: "Four commitments.",
     items: [
       { title: "In person, always", body: "Face to face sessions in your home or at our centre." },
       { title: "Honest reporting", body: "Short written notes after every session, and a plain conversation if progress stalls." },
@@ -34,7 +34,7 @@ export const about = {
     { value: "K-12", label: "Every stage of school" },
   ],
   cta: {
-    heading: "Come and meet us",
+    heading: "Come and meet us.",
     body: "Request a call, or visit the centre at Oran Park during opening hours.",
     ctaLabel: "Request a Call",
     secondaryLabel: "Contact us",
@@ -48,7 +48,7 @@ export const contact = {
     "Contact TutorMunk in Oran Park by phone or email, or send an enquiry about in-person tutoring in South-West Sydney.",
   hero: {
     eyebrow: "Contact",
-    heading: "Get in touch",
+    heading: "Get in touch.",
     body: "Call during centre hours or send an enquiry and we will reply within one business day.",
   },
   details: [
@@ -59,7 +59,7 @@ export const contact = {
   ],
   mapLabel: "Map placeholder: Oran Park centre location",
   form: {
-    heading: "Send an enquiry",
+    heading: "Send an enquiry.",
     fields: [
       { label: "Your name", type: "text", placeholder: "Jane Nguyen" },
       { label: "Email", type: "email", placeholder: "jane@example.com.au" },

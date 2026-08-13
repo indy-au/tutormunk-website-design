@@ -4,7 +4,7 @@ export const blogIndex = {
     "Practical advice for South-West Sydney parents on Selective and OC tests, NAPLAN, HSC study and choosing a tutor.",
   hero: {
     eyebrow: "Blog",
-    heading: "Plain advice for parents",
+    heading: "Plain advice for parents.",
     body: "Short articles on tests, term planning and study habits. No jargon.",
   },
   posts: [
@@ -69,7 +69,7 @@ export const blogPost = {
     readingTime: "6 min read",
     author: "TutorMunk Education Team",
   },
-  heading: "A term by term timeline for the Selective test",
+  heading: "A term by term timeline for the Selective test.",
   standfirst:
     "Most families start Selective preparation too late, then try to fit two years of work into one term. Here is a calmer plan.",
   imageCaption: "Illustration placeholder: a study plan pinned to a kitchen wall.",
@@ -93,7 +93,7 @@ export const blogPost = {
     { type: "p", text: "Avoid stacking three programs at once. Two focused sessions a week, done properly, beat five rushed ones. If your child is losing confidence, cut the volume and go back to the basics." },
   ],
   cta: {
-    heading: "Talk to us about Selective preparation",
+    heading: "Talk to us about Selective preparation.",
     body: "We will tell you honestly whether your child is ready to start.",
     ctaLabel: "Request a Call",
     secondaryLabel: "Exam prep programs",

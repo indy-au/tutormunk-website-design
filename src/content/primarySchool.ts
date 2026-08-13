@@ -6,14 +6,14 @@ export const primarySchool: StagePageContent = {
     "In-person primary school tutoring for K-6 students in South-West Sydney, covering English, Maths, OC Prep, Selective Prep, NAPLAN and writing.",
   hero: {
     eyebrow: "Primary School, K-6",
-    heading: "Strong foundations in reading, writing and number",
+    heading: "Strong foundations in reading, writing and number.",
     body: "Our primary tutors work through the NSW syllabus at your child's pace. Sessions are calm, structured and always in person.",
     ctaLabel: "Request a Call",
     points: ["Kindergarten to Year 6", "OC and Selective preparation", "Weekly written feedback"],
   },
   subjects: {
     eyebrow: "Subjects",
-    heading: "What we tutor in primary school",
+    heading: "What we tutor in primary school.",
     body: "Choose one subject or combine two in a longer session.",
     items: [
       { name: "English", body: "Reading comprehension, spelling, grammar and vocabulary building.", to: "/primary-english", linkLabel: "Primary English Tutoring" },
@@ -26,7 +26,7 @@ export const primarySchool: StagePageContent = {
   },
   whyUs: {
     eyebrow: "Why families choose us",
-    heading: "Practical tutoring, no gimmicks",
+    heading: "Practical tutoring, no gimmicks.",
     items: [
       { title: "In person only", body: "Every session is face to face, so tutors can see the working, not just the answer." },
       { title: "Local tutors", body: "Our tutors teach and study nearby, and they know the local schools." },
@@ -37,7 +37,7 @@ export const primarySchool: StagePageContent = {
   },
   pricingTeaser: {
     eyebrow: "Pricing",
-    heading: "Simple hourly rates",
+    heading: "Simple hourly rates.",
     body: "Rates below are placeholders for design review.",
     rows: [
       { name: "1-to-1 in your home", rate: "$XX per hour" },
@@ -48,7 +48,7 @@ export const primarySchool: StagePageContent = {
     ctaTo: "/pricing",
   },
   cta: {
-    heading: "Talk to us about your child's primary years",
+    heading: "Talk to us about your child's primary years.",
     body: "We will suggest a tutor, a session length and a starting point based on your child's last report.",
     ctaLabel: "Request a Call",
     secondaryLabel: "How it works",

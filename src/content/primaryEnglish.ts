@@ -4,14 +4,14 @@ export const primaryEnglish = {
     "In-person primary English tutoring for K-6 students in South-West Sydney, covering reading comprehension, grammar, spelling and writing.",
   hero: {
     eyebrow: "Primary English, K-6",
-    heading: "Primary English tutoring that starts with reading",
+    heading: "Primary English tutoring that starts with reading.",
     body: "Comprehension, grammar and writing taught in a set order, so each session builds on the last.",
     ctaLabel: "Request a Call",
     points: ["Reading and writing", "Marked writing samples", "Years K to 6"],
   },
   whatWeCover: {
     eyebrow: "What we cover",
-    heading: "The English skills we teach",
+    heading: "The English skills we teach.",
     items: [
       { title: "Reading comprehension", body: "Finding evidence, inferring meaning and answering in full sentences." },
       { title: "Grammar and punctuation", body: "Sentence types, tense, clauses and correct punctuation." },
@@ -23,7 +23,7 @@ export const primaryEnglish = {
   },
   howSessions: {
     eyebrow: "How sessions work",
-    heading: "A typical one hour session",
+    heading: "A typical one hour session.",
     steps: [
       { title: "Warm up (5 minutes)", body: "Quick review of last week's spelling and vocabulary." },
       { title: "Reading task (20 minutes)", body: "A short text, then comprehension questions with the tutor." },
@@ -34,7 +34,7 @@ export const primaryEnglish = {
   },
   faq: {
     eyebrow: "FAQ",
-    heading: "Common questions about primary English",
+    heading: "Common questions about primary English.",
     items: [
       { question: "How long are sessions?", answer: "Most primary students do one hour a week. Some do 90 minutes when we cover English and Maths together." },
       { question: "Do you set home practice?", answer: "Yes, around 15 to 20 minutes a week. It is short on purpose so it gets done." },
@@ -44,7 +44,7 @@ export const primaryEnglish = {
     ],
   },
   cta: {
-    heading: "Ask about primary English tutoring",
+    heading: "Ask about primary English tutoring.",
     body: "Request a call and we will suggest a starting point based on your child's last school report.",
     ctaLabel: "Request a Call",
     secondaryLabel: "Primary School K-6",

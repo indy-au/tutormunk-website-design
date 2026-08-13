@@ -4,12 +4,12 @@ export const faqPage = {
     "Answers to common questions about TutorMunk in-person tutoring, rates, session times, tutor matching and cancellations.",
   hero: {
     eyebrow: "FAQ",
-    heading: "Frequently asked questions",
+    heading: "Frequently asked questions.",
     body: "If your question is not answered here, request a call and we will explain.",
   },
   faq: {
     eyebrow: "Questions",
-    heading: "Everything parents ask us",
+    heading: "Everything parents ask us.",
     items: [
       { question: "Do you offer online tutoring?", answer: "No. Every session is in person, either in your home or at our Oran Park centre." },
       { question: "How do you match tutors?", answer: "We shortlist by subject, stage, suburb and availability, then send you profiles so you can choose." },
@@ -36,16 +36,16 @@ export const testimonialsPage = {
     "Reviews from South-West Sydney parents about in-person tutoring with TutorMunk in Oran Park and surrounding suburbs.",
   hero: {
     eyebrow: "Testimonials",
-    heading: "What families tell us",
+    heading: "What families tell us.",
     body: "Placeholder reviews shown for design review.",
   },
   reviewsSection: {
     eyebrow: "Google reviews",
-    heading: "Reviews from local parents",
+    heading: "Reviews from local parents.",
     body: "Every review below is placeholder copy.",
   },
   cta: {
-    heading: "Join the families we tutor",
+    heading: "Join the families we tutor.",
     body: "Request a call and we will find a tutor near you.",
     ctaLabel: "Request a Call",
     secondaryLabel: "How it works",

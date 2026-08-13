@@ -4,14 +4,14 @@ export const home = {
     "TutorMunk provides in-person K-12 tutoring in South-West Sydney, in your home or at our Oran Park centre, 1-to-1 or in small groups.",
   hero: {
     eyebrow: "In-home and centre based, K to Year 12",
-    heading: "Tutoring that happens in the room, not on a screen",
+    heading: "Tutoring that happens in the room, not on a screen.",
     body: "We match your child with a tutor who teaches face to face, follows the NESA syllabus and reports back to you every term. Sessions run in your home or at our Oran Park centre.",
     ctaLabel: "Request a Call",
     points: ["No online lessons", "Tutors from local schools", "1-to-1 or small groups"],
   },
   stages: {
     eyebrow: "Choose a stage",
-    heading: "Support for every stage of school",
+    heading: "Support for every stage of school.",
     items: [
       {
         stage: "Primary",
@@ -38,7 +38,7 @@ export const home = {
   },
   steps: {
     eyebrow: "How it works",
-    heading: "Five steps to your first session",
+    heading: "Five steps to your first session.",
     items: [
       { title: "Tell us what your child needs", body: "A short call about year, subjects and goals." },
       { title: "We match you with the right Munks", body: "We shortlist tutors by subject, stage and suburb." },
@@ -51,17 +51,17 @@ export const home = {
   },
   delivery: {
     eyebrow: "Four ways to learn",
-    heading: "Your home or our centre, 1-to-1 or small group",
+    heading: "Your home or our centre, 1-to-1 or small group.",
     body: "Every option is in person. Choose the setting that suits your family and swap later if you need to.",
   },
   reviewsSection: {
     eyebrow: "Google reviews",
-    heading: "What local parents say",
+    heading: "What local parents say.",
     body: "Placeholder reviews shown for design purposes.",
   },
   suburbsSection: {
     eyebrow: "Suburbs we serve",
-    heading: "Tutors across South-West Sydney",
+    heading: "Tutors across South-West Sydney.",
     body: "We travel to homes in these suburbs and welcome families at our Oran Park centre.",
   },
   cta: {

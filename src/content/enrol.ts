@@ -4,12 +4,12 @@ export const enrol = {
     "Start your enrolment with TutorMunk. Tell us about your child, choose a delivery mode and set a session time.",
   hero: {
     eyebrow: "Enrolment",
-    heading: "Enrol with TutorMunk",
+    heading: "Enrol with TutorMunk.",
     body: "Five short steps. The form below is a visual shell for design review and does not submit.",
     ctaLabel: "Request a Call",
   },
   form: {
-    heading: "Enrolment form",
+    heading: "Enrolment form.",
     steps: [
       {
         title: "Parent details",

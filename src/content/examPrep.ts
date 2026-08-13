@@ -4,13 +4,13 @@ export const examPrep = {
     "In-person exam preparation in South-West Sydney: Selective Prep, OC Prep, Writing, NAPLAN, ICAS, HSC Sprint and Ask Munk sessions.",
   hero: {
     eyebrow: "Exam prep",
-    heading: "Preparation programs with real practice papers",
+    heading: "Preparation programs with real practice papers.",
     body: "Each program runs in person, on a fixed timetable, with timed practice and marked feedback.",
     ctaLabel: "Request a Call",
   },
   programs: {
     eyebrow: "Programs",
-    heading: "Seven exam prep programs",
+    heading: "Seven exam prep programs.",
     items: [
       { name: "Selective Prep", body: "Year 5 and 6 students preparing for the Selective High School Placement Test. Reading, mathematical reasoning and thinking skills.", tag: "Years 5-6" },
       { name: "OC Prep", body: "Year 3 and 4 students preparing for Opportunity Class placement, with timed sections each week.", tag: "Years 3-4" },
