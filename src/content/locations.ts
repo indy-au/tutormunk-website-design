@@ -4,13 +4,13 @@ export const locations = {
     "Our Oran Park learning centre plus in-home tutoring across Gregory Hills, Leppington, Narellan, Harrington Park and nearby suburbs.",
   hero: {
     eyebrow: "Locations",
-    heading: "One centre, eight suburbs, in-home tutoring across the region",
+    heading: "One centre, eight suburbs, in-home tutoring across the region.",
     body: "Families visit our Oran Park centre or book a tutor to come to them.",
     ctaLabel: "Request a Call",
   },
   centre: {
     eyebrow: "Our centre",
-    heading: "TutorMunk Oran Park",
+    heading: "TutorMunk Oran Park.",
     address: "Suite 3, 12 Central Avenue, Oran Park NSW 2570",
     body: "Four quiet tutoring rooms, a group room for up to six students and a small waiting area for parents. Printed past papers and resources are kept on site.",
     details: [
@@ -23,7 +23,7 @@ export const locations = {
   },
   suburbGrid: {
     eyebrow: "In-home tutoring",
-    heading: "Suburbs we travel to",
+    heading: "Suburbs we travel to.",
     body: "Select a suburb to see local tutor availability.",
     items: [
       { name: "Oran Park", to: "/locations/oran-park" },
@@ -37,7 +37,7 @@ export const locations = {
     ],
   },
   cta: {
-    heading: "Ask about tutors in your suburb",
+    heading: "Ask about tutors in your suburb.",
     body: "Request a call and we will tell you who is available near you.",
     ctaLabel: "Request a Call",
   },
@@ -49,14 +49,14 @@ export const suburbOranPark = {
     "In-person tutoring in Oran Park for K-12 students, in your home or at our Oran Park centre, 1-to-1 or in small groups.",
   hero: {
     eyebrow: "Oran Park NSW 2570",
-    heading: "Tutoring in Oran Park",
+    heading: "Tutoring in Oran Park.",
     body: "Our centre is in Oran Park, so local families have the widest choice of times and tutors.",
     ctaLabel: "Request a Call",
     points: ["Home visits across Oran Park", "Centre sessions on Central Avenue", "K-12 subjects"],
   },
   whatWeCover: {
     eyebrow: "Local details",
-    heading: "What we offer in Oran Park",
+    heading: "What we offer in Oran Park.",
     items: [
       { title: "Stages", body: "Kindergarten to Year 12, including HSC courses in English, Maths and Science." },
       { title: "Delivery", body: "1-to-1 or small group, in your home or at our centre on Central Avenue." },
@@ -68,11 +68,11 @@ export const suburbOranPark = {
   },
   reviewsSection: {
     eyebrow: "Local reviews",
-    heading: "What Oran Park parents say",
+    heading: "What Oran Park parents say.",
     body: "Placeholder reviews shown for design purposes.",
   },
   cta: {
-    heading: "Book a call about Oran Park tutoring",
+    heading: "Book a call about Oran Park tutoring.",
     body: "Tell us the subject and preferred time. We will confirm a local tutor.",
     ctaLabel: "Request a Call",
     secondaryLabel: "All locations",

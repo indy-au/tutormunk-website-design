@@ -4,14 +4,14 @@ export const becomeTutor = {
     "Apply to tutor with TutorMunk in South-West Sydney. In-person work at our Oran Park centre or in family homes, K-12.",
   hero: {
     eyebrow: "Work with us",
-    heading: "Become a Munk",
+    heading: "Become a Munk.",
     body: "We hire tutors who teach in person, keep good notes and turn up on time. Senior tutors need a Band 6 in the course they teach.",
     ctaLabel: "Request a Call",
     points: ["In-person work only", "Oran Park centre or in-home", "Paid planning time"],
   },
   requirements: {
     eyebrow: "What we look for",
-    heading: "Requirements",
+    heading: "Requirements.",
     items: [
       { title: "Working with Children Check", body: "A valid NSW WWCC is required before your first session." },
       { title: "Subject strength", body: "Strong results in the subjects you want to tutor. Band 6 for HSC courses." },
@@ -20,7 +20,7 @@ export const becomeTutor = {
     ],
   },
   form: {
-    heading: "Tutor application",
+    heading: "Tutor application.",
     fields: [
       { label: "Full name", type: "text", placeholder: "Sam Patel" },
       { label: "Email", type: "email", placeholder: "sam@example.com.au" },

@@ -4,13 +4,13 @@ export const pricing = {
     "TutorMunk hourly rates for in-home and centre based tutoring in South-West Sydney, 1-to-1 and small group, K-12.",
   hero: {
     eyebrow: "Pricing",
-    heading: "Clear hourly rates, billed by the term",
+    heading: "Clear hourly rates, billed by the term.",
     body: "All rates below are placeholders for design review. No joining fee and no lock-in contract.",
     ctaLabel: "Request a Call",
   },
   table: {
     eyebrow: "Rate table",
-    heading: "Rates by delivery mode",
+    heading: "Rates by delivery mode.",
     columns: ["Delivery mode", "Primary K-6", "High School 7-10", "Senior 11-12"],
     rows: [
       { mode: "1-to-1 in your home", detail: "Tutor travels to you", rates: ["$XX/hr", "$XX/hr", "$XX/hr"] },

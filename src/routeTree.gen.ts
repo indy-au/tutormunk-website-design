@@ -21,6 +21,7 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as HighSchoolRouteImport } from './routes/high-school'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as HscMathsAdvancedRouteImport } from './routes/hsc-maths-advanced'
+import { Route as OurMunksRouteImport } from './routes/our-munks'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrimaryEnglishRouteImport } from './routes/primary-english'
 import { Route as PrimarySchoolRouteImport } from './routes/primary-school'
@@ -33,6 +34,7 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as LocationsIndexRouteImport } from './routes/locations.index'
 import { Route as LocationsOranParkRouteImport } from './routes/locations.oran-park'
+import { Route as TopicsSlugRouteImport } from './routes/topics.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -92,6 +94,11 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
 const HscMathsAdvancedRoute = HscMathsAdvancedRouteImport.update({
   id: '/hsc-maths-advanced',
   path: '/hsc-maths-advanced',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurMunksRoute = OurMunksRouteImport.update({
+  id: '/our-munks',
+  path: '/our-munks',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -154,6 +161,11 @@ const LocationsOranParkRoute = LocationsOranParkRouteImport.update({
   path: '/locations/oran-park',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TopicsSlugRoute = TopicsSlugRouteImport.update({
+  id: '/topics/$slug',
+  path: '/topics/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -168,6 +180,7 @@ export interface FileRoutesByFullPath {
   '/high-school': typeof HighSchoolRoute
   '/how-it-works': typeof HowItWorksRoute
   '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
+  '/our-munks': typeof OurMunksRoute
   '/pricing': typeof PricingRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
@@ -178,6 +191,7 @@ export interface FileRoutesByFullPath {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/locations/oran-park': typeof LocationsOranParkRoute
+  '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
 }
@@ -194,6 +208,7 @@ export interface FileRoutesByTo {
   '/high-school': typeof HighSchoolRoute
   '/how-it-works': typeof HowItWorksRoute
   '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
+  '/our-munks': typeof OurMunksRoute
   '/pricing': typeof PricingRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
@@ -204,6 +219,7 @@ export interface FileRoutesByTo {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/locations/oran-park': typeof LocationsOranParkRoute
+  '/topics/$slug': typeof TopicsSlugRoute
   '/blog': typeof BlogIndexRoute
   '/locations': typeof LocationsIndexRoute
 }
@@ -221,6 +237,7 @@ export interface FileRoutesById {
   '/high-school': typeof HighSchoolRoute
   '/how-it-works': typeof HowItWorksRoute
   '/hsc-maths-advanced': typeof HscMathsAdvancedRoute
+  '/our-munks': typeof OurMunksRoute
   '/pricing': typeof PricingRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
@@ -231,6 +248,7 @@ export interface FileRoutesById {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/locations/oran-park': typeof LocationsOranParkRoute
+  '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
 }
@@ -249,6 +267,7 @@ export interface FileRouteTypes {
     | '/high-school'
     | '/how-it-works'
     | '/hsc-maths-advanced'
+    | '/our-munks'
     | '/pricing'
     | '/primary-english'
     | '/primary-school'
@@ -259,6 +278,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/locations/oran-park'
+    | '/topics/$slug'
     | '/blog/'
     | '/locations/'
   fileRoutesByTo: FileRoutesByTo
@@ -275,6 +295,7 @@ export interface FileRouteTypes {
     | '/high-school'
     | '/how-it-works'
     | '/hsc-maths-advanced'
+    | '/our-munks'
     | '/pricing'
     | '/primary-english'
     | '/primary-school'
@@ -285,6 +306,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/locations/oran-park'
+    | '/topics/$slug'
     | '/blog'
     | '/locations'
   id:
@@ -301,6 +323,7 @@ export interface FileRouteTypes {
     | '/high-school'
     | '/how-it-works'
     | '/hsc-maths-advanced'
+    | '/our-munks'
     | '/pricing'
     | '/primary-english'
     | '/primary-school'
@@ -311,6 +334,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/locations/oran-park'
+    | '/topics/$slug'
     | '/blog/'
     | '/locations/'
   fileRoutesById: FileRoutesById
@@ -328,6 +352,7 @@ export interface RootRouteChildren {
   HighSchoolRoute: typeof HighSchoolRoute
   HowItWorksRoute: typeof HowItWorksRoute
   HscMathsAdvancedRoute: typeof HscMathsAdvancedRoute
+  OurMunksRoute: typeof OurMunksRoute
   PricingRoute: typeof PricingRoute
   PrimaryEnglishRoute: typeof PrimaryEnglishRoute
   PrimarySchoolRoute: typeof PrimarySchoolRoute
@@ -338,6 +363,7 @@ export interface RootRouteChildren {
   TestimonialsRoute: typeof TestimonialsRoute
   BlogSlugRoute: typeof BlogSlugRoute
   LocationsOranParkRoute: typeof LocationsOranParkRoute
+  TopicsSlugRoute: typeof TopicsSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
 }
@@ -428,6 +454,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HscMathsAdvancedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-munks': {
+      id: '/our-munks'
+      path: '/our-munks'
+      fullPath: '/our-munks'
+      preLoaderRoute: typeof OurMunksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pricing': {
       id: '/pricing'
       path: '/pricing'
@@ -512,6 +545,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsOranParkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/topics/$slug': {
+      id: '/topics/$slug'
+      path: '/topics/$slug'
+      fullPath: '/topics/$slug'
+      preLoaderRoute: typeof TopicsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -528,6 +568,7 @@ const rootRouteChildren: RootRouteChildren = {
   HighSchoolRoute: HighSchoolRoute,
   HowItWorksRoute: HowItWorksRoute,
   HscMathsAdvancedRoute: HscMathsAdvancedRoute,
+  OurMunksRoute: OurMunksRoute,
   PricingRoute: PricingRoute,
   PrimaryEnglishRoute: PrimaryEnglishRoute,
   PrimarySchoolRoute: PrimarySchoolRoute,
@@ -538,6 +579,7 @@ const rootRouteChildren: RootRouteChildren = {
   TestimonialsRoute: TestimonialsRoute,
   BlogSlugRoute: BlogSlugRoute,
   LocationsOranParkRoute: LocationsOranParkRoute,
+  TopicsSlugRoute: TopicsSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,
 }

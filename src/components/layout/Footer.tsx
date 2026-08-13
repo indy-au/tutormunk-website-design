@@ -4,7 +4,7 @@ import { Wordmark } from "./Wordmark";
 
 export function Footer() {
   return (
-    <footer className="mt-8 bg-surface text-surface-foreground">
+    <footer className="mt-8 border-t border-border bg-surface text-surface-foreground">
       <div className="container-page py-14">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_2.8fr]">
           <div className="max-w-sm">
@@ -29,7 +29,7 @@ export function Footer() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {footer.columns.map((column) => (
               <nav key={column.heading} aria-label={column.heading}>
-                <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-soft">
+                <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-primary">
                   {column.heading}
                 </h2>
                 <ul className="mt-3 space-y-2">

@@ -6,6 +6,7 @@ import { Wordmark } from "./Wordmark";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
@@ -26,8 +27,18 @@ export function Header() {
                     &#9662;
                   </span>
                 </Link>
-                <div className="invisible absolute left-0 top-full w-[34rem] pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  <div className="grid grid-cols-3 gap-5 rounded-2xl border border-border bg-card p-5 shadow-lift">
+                <div
+                  className={[
+                    "invisible absolute left-0 top-full pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
+                    item.wide ? "w-[42rem]" : "w-72",
+                  ].join(" ")}
+                >
+                  <div
+                    className={[
+                      "grid gap-5 rounded-3xl border border-border bg-card p-6 shadow-lift",
+                      item.wide ? "grid-cols-3" : "grid-cols-1",
+                    ].join(" ")}
+                  >
                     {item.groups.map((group) => (
                       <div key={group.heading}>
                         <p className="eyebrow">{group.heading}</p>
@@ -82,39 +93,56 @@ export function Header() {
       {mobileOpen ? (
         <div id="mobile-nav" className="border-t border-border bg-card lg:hidden">
           <nav aria-label="Mobile" className="container-page space-y-4 py-5">
-            {primaryNav.map((item) => (
-              <div key={item.label}>
+            {primaryNav.map((item) =>
+              item.groups ? (
+                <div key={item.label} className="border-b border-border pb-3">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenAccordion((current) => (current === item.label ? null : item.label))
+                    }
+                    aria-expanded={openAccordion === item.label}
+                    className="flex w-full items-center justify-between text-base font-semibold"
+                  >
+                    {item.label}
+                    <span aria-hidden="true" className="text-xs">
+                      {openAccordion === item.label ? "\u2212" : "+"}
+                    </span>
+                  </button>
+                  {openAccordion === item.label ? (
+                    <div className="mt-3 space-y-3 border-l border-border pl-4">
+                      {item.groups.map((group) => (
+                        <div key={group.heading}>
+                          <p className="eyebrow">{group.heading}</p>
+                          <ul className="mt-1 space-y-1.5">
+                            {group.links.map((link) => (
+                              <li key={link.label}>
+                                <Link
+                                  to={link.to}
+                                  onClick={() => setMobileOpen(false)}
+                                  className="text-sm text-muted-foreground"
+                                >
+                                  {link.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ) : (
                 <Link
+                  key={item.label}
                   to={item.to}
                   onClick={() => setMobileOpen(false)}
                   className="block text-base font-semibold"
                 >
                   {item.label}
                 </Link>
-                {item.groups ? (
-                  <div className="mt-2 space-y-3 border-l border-border pl-4">
-                    {item.groups.map((group) => (
-                      <div key={group.heading}>
-                        <p className="eyebrow">{group.heading}</p>
-                        <ul className="mt-1 space-y-1">
-                          {group.links.map((link) => (
-                            <li key={link.label}>
-                              <Link
-                                to={link.to}
-                                onClick={() => setMobileOpen(false)}
-                                className="text-sm text-muted-foreground"
-                              >
-                                {link.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            ))}
+              ),
+            )}
             <CallbackButton label="Request a Call" />
           </nav>
         </div>

@@ -4,7 +4,7 @@ export const hscMathsAdvanced = {
     "In-person HSC Maths Advanced tutoring in South-West Sydney, taught by Band 6 tutors with past paper practice and marked feedback.",
   hero: {
     eyebrow: "HSC Course, Years 11-12",
-    heading: "HSC Maths Advanced",
+    heading: "HSC Maths Advanced.",
     body: "Full course coverage with weekly past paper questions, marked and returned with working notes.",
     ctaLabel: "Request a Call",
     facts: [
@@ -16,7 +16,7 @@ export const hscMathsAdvanced = {
   },
   modules: {
     eyebrow: "Course modules",
-    heading: "What the course covers",
+    heading: "What the course covers.",
     body: "Modules follow the NESA Mathematics Advanced syllabus.",
     items: [
       { title: "Functions", body: "Working with functions, graphing techniques and further functions." },
@@ -29,7 +29,7 @@ export const hscMathsAdvanced = {
   },
   tutorPitch: {
     eyebrow: "Your tutor",
-    heading: "Taught by Band 6 Maths Advanced tutors",
+    heading: "Taught by Band 6 Maths Advanced tutors.",
     body: "Every tutor on this course achieved a Band 6 in Mathematics Advanced and has tutored the current syllabus. They know which questions carry the marks and where students lose them.",
     points: [
       "Band 6 in Mathematics Advanced",
@@ -39,7 +39,7 @@ export const hscMathsAdvanced = {
     ],
   },
   cta: {
-    heading: "Start Maths Advanced tutoring this term",
+    heading: "Start Maths Advanced tutoring this term.",
     body: "Request a call and we will match a Band 6 tutor to your preferred time.",
     ctaLabel: "Request a Call",
     secondaryLabel: "All HSC courses",

@@ -4,43 +4,104 @@ export const brand = {
   phone: "02 4000 0000",
   email: "hello@tutormunk.com.au",
   centreAddress: "Suite 3, 12 Central Avenue, Oran Park NSW 2570",
+  ratingLine: "4.9 from 180+ Google reviews",
 };
 
 export type NavItem = {
   label: string;
   to: string;
+  wide?: boolean;
   groups?: { heading: string; links: { label: string; to: string }[] }[];
 };
 
 export const primaryNav: NavItem[] = [
-  { label: "Primary School", to: "/primary-school" },
-  { label: "High School", to: "/high-school" },
+  {
+    label: "Primary School",
+    to: "/primary-school",
+    groups: [
+      {
+        heading: "Primary K-6",
+        links: [
+          { label: "Primary overview", to: "/primary-school" },
+          { label: "English Tutoring", to: "/primary-english" },
+          { label: "Maths Tutoring", to: "/topics/primary-maths" },
+          { label: "Selective School Prep", to: "/topics/selective-school-prep" },
+          { label: "OC Prep", to: "/topics/oc-prep" },
+          { label: "NAPLAN", to: "/topics/naplan" },
+          { label: "Writing Program", to: "/topics/writing-program" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "High School",
+    to: "/high-school",
+    groups: [
+      {
+        heading: "Years 7-10",
+        links: [
+          { label: "High School overview", to: "/high-school" },
+          { label: "English Tutoring", to: "/topics/high-school-english" },
+          { label: "Maths Tutoring", to: "/topics/high-school-maths" },
+          { label: "Science Tutoring", to: "/topics/high-school-science" },
+          { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9" },
+        ],
+      },
+    ],
+  },
   {
     label: "Senior School",
     to: "/senior-school",
+    wide: true,
     groups: [
       {
         heading: "English",
         links: [
-          { label: "HSC Advanced English", to: "/senior-school" },
-          { label: "HSC Standard English", to: "/senior-school" },
-          { label: "HSC Extension 1", to: "/senior-school" },
+          { label: "English Studies", to: "/topics/english-studies" },
+          { label: "English Std", to: "/topics/english-standard" },
+          { label: "English Advanced", to: "/topics/english-advanced" },
+          { label: "English Ext 1", to: "/topics/english-extension-1" },
+          { label: "English Ext 2", to: "/topics/english-extension-2" },
+          { label: "English EAL-D", to: "/topics/english-eal-d" },
         ],
       },
       {
         heading: "Maths",
         links: [
-          { label: "HSC Maths Advanced", to: "/hsc-maths-advanced" },
-          { label: "HSC Maths Standard 2", to: "/senior-school" },
-          { label: "HSC Extension 1 Maths", to: "/senior-school" },
+          { label: "Maths Std", to: "/topics/maths-standard" },
+          { label: "Maths Std 1", to: "/topics/maths-standard-1" },
+          { label: "Maths Std 2", to: "/topics/maths-standard-2" },
+          { label: "Maths Advanced", to: "/hsc-maths-advanced" },
+          { label: "Maths Ext 1", to: "/topics/maths-extension-1" },
+          { label: "Maths Ext 2", to: "/topics/maths-extension-2" },
         ],
       },
       {
         heading: "Science",
         links: [
-          { label: "HSC Biology", to: "/senior-school" },
-          { label: "HSC Chemistry", to: "/senior-school" },
-          { label: "HSC Physics", to: "/senior-school" },
+          { label: "Biology", to: "/topics/biology" },
+          { label: "Chemistry", to: "/topics/chemistry" },
+          { label: "Physics", to: "/topics/physics" },
+          { label: "Earth and Environmental", to: "/topics/earth-and-environmental" },
+          { label: "Investigating Science", to: "/topics/investigating-science" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Exam Prep",
+    to: "/exam-prep",
+    groups: [
+      {
+        heading: "Programs",
+        links: [
+          { label: "Selective School Prep", to: "/topics/selective-school-prep" },
+          { label: "OC Prep", to: "/topics/oc-prep" },
+          { label: "Writing", to: "/topics/writing-program" },
+          { label: "NAPLAN", to: "/topics/naplan" },
+          { label: "ICAS", to: "/topics/icas" },
+          { label: "HSC Sprint", to: "/topics/hsc-sprint" },
+          { label: "Ask Munk", to: "/topics/ask-munk" },
         ],
       },
     ],
@@ -94,6 +155,7 @@ export const footer = {
       heading: "Company",
       links: [
         { label: "About", to: "/about" },
+        { label: "Our Munks", to: "/our-munks" },
         { label: "Testimonials", to: "/testimonials" },
         { label: "Blog", to: "/blog" },
         { label: "Become a Tutor", to: "/become-a-tutor" },

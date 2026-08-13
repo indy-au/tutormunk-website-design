@@ -1,4 +1,17 @@
 import { CallbackButton, LinkButton } from "../CtaButton";
+import heroImage from "@/assets/hero-tutoring.jpg";
+import { brand } from "@/content/site";
+
+function RatingRow() {
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      <span aria-hidden="true" className="text-base tracking-[0.15em] text-accent-foreground">
+        &#9733;&#9733;&#9733;&#9733;&#9733;
+      </span>
+      <p className="text-sm font-medium text-muted-foreground">{brand.ratingLine}</p>
+    </div>
+  );
+}
 
 export function Hero({
   eyebrow,
@@ -7,7 +20,7 @@ export function Hero({
   ctaLabel,
   points,
   secondary,
-  illustrationLabel = "Illustration placeholder: tutor and student working at a table",
+  illustrationLabel = "A tutor working through an exercise book with a primary school student at a kitchen table",
 }: {
   eyebrow?: string | undefined;
   heading: string;
@@ -18,43 +31,39 @@ export function Hero({
   illustrationLabel?: string | undefined;
 }) {
   return (
-    <section className="border-b border-border bg-primary-soft/60">
-      <div className="container-page grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-          <h1 className="mt-3 text-4xl leading-[1.08] md:text-5xl lg:text-6xl">{heading}</h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">{body}</p>
+    <section className="bg-background">
+      <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="w-full px-5 py-14 md:py-24 lg:pr-12 lg:pl-[max(1.25rem,calc((100vw-78rem)/2+1.25rem))]">
+          <RatingRow />
+          {eyebrow ? <p className="eyebrow mt-6">{eyebrow}</p> : null}
+          <h1 className="mt-4 text-4xl leading-[1.05] md:text-5xl lg:text-6xl">{heading}</h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{body}</p>
           {points?.length ? (
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="mt-7 flex flex-wrap gap-2">
               {points.map((point) => (
                 <li
                   key={point}
-                  className="rounded-full border border-border bg-card px-3.5 py-1.5 text-sm font-medium"
+                  className="rounded-full border border-border bg-secondary px-3.5 py-1.5 text-sm font-medium"
                 >
                   {point}
                 </li>
               ))}
             </ul>
           ) : null}
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-9 flex flex-wrap gap-3">
             {ctaLabel ? <CallbackButton label={ctaLabel} /> : null}
             {secondary ? <LinkButton label={secondary.label} to={secondary.to} /> : null}
           </div>
         </div>
 
-        <div className="relative">
-          <div
-            role="img"
-            aria-label={illustrationLabel}
-            className="aspect-4/3 w-full rounded-3xl bg-surface shadow-lift"
-          >
-            <div className="grid h-full grid-cols-3 gap-3 p-5">
-              <div className="col-span-2 rounded-2xl bg-accent/85" />
-              <div className="rounded-2xl bg-surface-foreground/15" />
-              <div className="rounded-2xl bg-surface-foreground/15" />
-              <div className="col-span-2 rounded-2xl bg-primary-soft/80" />
-            </div>
-          </div>
+        <div className="relative min-h-[20rem] lg:min-h-[34rem]">
+          <img
+            src={heroImage}
+            alt={illustrationLabel}
+            width={1200}
+            height={1200}
+            className="h-full w-full rounded-t-[2rem] object-cover lg:absolute lg:inset-0 lg:rounded-l-[2.5rem] lg:rounded-tr-none"
+          />
         </div>
       </div>
     </section>

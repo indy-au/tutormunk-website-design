@@ -4,13 +4,13 @@ export const howItWorks = {
     "How TutorMunk works: tell us what your child needs, get matched with tutors, choose your tutor, book sessions and start learning in person.",
   hero: {
     eyebrow: "How it works",
-    heading: "From first call to first session in about a week",
+    heading: "From first call to first session in about a week.",
     body: "No sign-up wall and no long contracts. You meet the tutor before you commit.",
     ctaLabel: "Request a Call",
   },
   steps: {
     eyebrow: "Five steps",
-    heading: "The process, step by step",
+    heading: "The process, step by step.",
     items: [
       { title: "Tell us what your child needs", body: "A ten minute call about year level, subjects, recent reports and what is getting in the way." },
       { title: "We match you with the right Munks", body: "We shortlist tutors by subject, stage, suburb and availability, then send you their profiles." },
@@ -21,7 +21,7 @@ export const howItWorks = {
   },
   delivery: {
     eyebrow: "Delivery modes",
-    heading: "Four ways to learn, all in person",
+    heading: "Four ways to learn, all in person.",
     body: "Rates are placeholders for design review. You can change mode between terms.",
   },
   cta: {
