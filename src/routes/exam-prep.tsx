@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { examPrep } from "@/content/examPrep";
-import { PageIntro } from "@/components/sections/PageIntro";
-import { ProgramCards } from "@/components/sections/ProgramCards";
-import { CtaBand } from "@/components/sections/CtaBand";
+import { HubPage } from "@/components/templates/HubPage";
 
 export const Route = createFileRoute("/exam-prep")({
   head: () => ({
@@ -21,9 +19,7 @@ export const Route = createFileRoute("/exam-prep")({
 function ExamPrepPage() {
   return (
     <>
-      <PageIntro {...examPrep.hero} />
-      <ProgramCards {...examPrep.programs} />
-      <CtaBand {...examPrep.cta} />
+      <HubPage content={examPrep} />
     </>
   );
 }

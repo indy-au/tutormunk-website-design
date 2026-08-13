@@ -20,6 +20,7 @@ export function Hero({
   ctaLabel,
   points,
   secondary,
+  image,
   illustrationLabel = "A tutor working through an exercise book with a primary school student at a kitchen table",
 }: {
   eyebrow?: string | undefined;
@@ -28,6 +29,7 @@ export function Hero({
   ctaLabel?: string | undefined;
   points?: string[] | undefined;
   secondary?: { label: string; to: string };
+  image?: string | undefined;
   illustrationLabel?: string | undefined;
 }) {
   return (
@@ -58,7 +60,7 @@ export function Hero({
 
         <div className="relative min-h-[20rem] lg:min-h-[34rem]">
           <img
-            src={heroImage}
+            src={image ?? heroImage}
             alt={illustrationLabel}
             width={1200}
             height={1200}

@@ -30,7 +30,7 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 | `/locations/oran-park` | Tutoring in Oran Park | Suburb page template |
 | `/pricing` | Pricing rate table | Composed sections |
 | `/enrol` | Enrol Now, 5 step form shell | Composed sections |
-| `/become-a-tutor` | Become a Tutor, application shell with file upload | Composed sections |
+| `/become-a-tutor` | Become a Munk, application shell with file upload | Composed sections |
 | `/blog` | Blog index | Composed sections |
 | `/blog/$slug` | Blog post | Blog article template |
 | `/about` | About Us | Composed sections |
@@ -78,7 +78,7 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 | `SuburbGrid.tsx` | Locations |
 | `PricingTable.tsx` | Pricing |
 | `MultiStepFormShell.tsx` | Enrol Now |
-| `ApplicationFormShell.tsx` | Become a Tutor |
+| `ApplicationFormShell.tsx` | Become a Munk |
 | `ContactSection.tsx` | Contact |
 | `TextPageSection.tsx` | Policy pages |
 | `BlogList.tsx` | Blog index |

@@ -52,7 +52,7 @@ export const contact = {
     body: "Call during centre hours or send an enquiry and we will reply within one business day.",
   },
   details: [
-    { label: "Phone", value: "02 4000 0000" },
+    { label: "Phone", value: "1300 00MUNK" },
     { label: "Email", value: "hello@tutormunk.com.au" },
     { label: "Centre", value: "Suite 3, 12 Central Avenue, Oran Park NSW 2570" },
     { label: "Hours", value: "Monday to Friday 3pm to 8pm, Saturday 9am to 2pm" },

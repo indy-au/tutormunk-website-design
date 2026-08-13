@@ -1,4 +1,5 @@
 import type { StagePageContent } from "./types";
+import heroPrimary from "@/assets/hero-primary.jpg";
 
 export const primarySchool: StagePageContent = {
   title: "Primary School Tutoring K-6 in South-West Sydney | TutorMunk",
@@ -10,7 +11,15 @@ export const primarySchool: StagePageContent = {
     body: "Our primary tutors work through the NSW syllabus at your child's pace. Sessions are calm, structured and always in person.",
     ctaLabel: "Request a Call",
     points: ["Kindergarten to Year 6", "OC and Selective preparation", "Weekly written feedback"],
+    image: heroPrimary,
+    imageAlt: "A tutor helping a primary school student with an exercise book at a dining table",
   },
+  trustTicks: [
+    "In person only, never online",
+    "NSW NESA aligned",
+    "Working with Children Checked",
+    "Notes after every session",
+  ],
   subjects: {
     eyebrow: "Subjects",
     heading: "What we tutor in primary school.",

@@ -1,4 +1,4 @@
-import { CompactHero } from "../sections/CompactHero";
+import { Hero } from "../sections/Hero";
 import { CourseModules } from "../sections/CourseModules";
 import { TutorPitch } from "../sections/TutorPitch";
 import { CtaBand } from "../sections/CtaBand";
@@ -13,7 +13,13 @@ type CoursePageContent = {
 export function CoursePage({ content }: { content: CoursePageContent }) {
   return (
     <>
-      <CompactHero {...content.hero} />
+      <Hero
+        eyebrow={content.hero.eyebrow}
+        heading={content.hero.heading}
+        body={content.hero.body}
+        ctaLabel={content.hero.ctaLabel}
+        points={content.hero.facts?.map((fact) => `${fact.label}: ${fact.value}`)}
+      />
       <CourseModules {...content.modules} />
       <TutorPitch {...content.tutorPitch} />
       <CtaBand {...content.cta} />

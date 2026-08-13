@@ -17,7 +17,7 @@ export const locations = {
       { label: "Hours", value: "Monday to Friday 3pm to 8pm, Saturday 9am to 2pm" },
       { label: "Parking", value: "Free off-street parking at the rear" },
       { label: "Rooms", value: "Four 1-to-1 rooms and one group room" },
-      { label: "Phone", value: "02 4000 0000" },
+      { label: "Phone", value: "1300 00MUNK" },
     ],
     mapLabel: "Map placeholder: TutorMunk Oran Park centre",
   },

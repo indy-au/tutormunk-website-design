@@ -1,4 +1,5 @@
 import type { StagePageContent } from "./types";
+import heroHighSchool from "@/assets/hero-high-school.jpg";
 
 export const highSchool: StagePageContent = {
   title: "High School Tutoring Years 7-10 | TutorMunk",
@@ -10,7 +11,15 @@ export const highSchool: StagePageContent = {
     body: "We work to your child's school program, not a generic workbook. Tutors review class notes, upcoming tasks and past marks.",
     ctaLabel: "Request a Call",
     points: ["Years 7 to 10", "Task and exam preparation", "Study skills built in"],
+    image: heroHighSchool,
+    imageAlt: "A high school student and tutor reviewing class notes together",
   },
+  trustTicks: [
+    "In person only, never online",
+    "NSW NESA aligned",
+    "Working with Children Checked",
+    "Notes after every session",
+  ],
   subjects: {
     eyebrow: "Subjects",
     heading: "What we tutor in Years 7-10.",

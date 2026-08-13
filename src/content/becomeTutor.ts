@@ -1,5 +1,5 @@
 export const becomeTutor = {
-  title: "Become a Tutor with TutorMunk | Tutor Jobs South-West Sydney",
+  title: "Become a Munk with TutorMunk | Tutor Jobs South-West Sydney",
   metaDescription:
     "Apply to tutor with TutorMunk in South-West Sydney. In-person work at our Oran Park centre or in family homes, K-12.",
   hero: {
@@ -20,7 +20,7 @@ export const becomeTutor = {
     ],
   },
   form: {
-    heading: "Tutor application.",
+    heading: "Apply to become a Munk.",
     fields: [
       { label: "Full name", type: "text", placeholder: "Sam Patel" },
       { label: "Email", type: "email", placeholder: "sam@example.com.au" },
