@@ -7,6 +7,10 @@ import { DeliveryModesBand } from "@/components/sections/DeliveryModesBand";
 import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
 import { SuburbsStrip } from "@/components/sections/SuburbsStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { StatsBand } from "@/components/sections/StatsBand";
+import { MunkCards } from "@/components/sections/MunkCards";
+import { GuaranteeCard } from "@/components/sections/GuaranteeCard";
+import { munks, munksSection, guarantee, statsSection } from "@/content/munks";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,8 +31,11 @@ function HomePage() {
     <>
       <Hero {...home.hero} />
       <StageCards {...home.stages} />
+      <StatsBand {...statsSection} />
       <StepsStrip {...home.steps} />
       <DeliveryModesBand {...home.delivery} />
+      <MunkCards {...munksSection} items={munks} />
+      <GuaranteeCard {...guarantee} />
       <ReviewsCarousel {...home.reviewsSection} />
       <SuburbsStrip {...home.suburbsSection} />
       <CtaBand {...home.cta} />
