@@ -14,8 +14,9 @@ export const home = {
     heading: "Support for every stage of school.",
     items: [
       {
-        stage: "Primary",
+        stage: "Primary School",
         years: "K-6",
+        icon: "graduation-cap",
         body: "Reading, writing and number skills, plus OC, Selective and NAPLAN preparation.",
         to: "/primary-school",
         linkLabel: "Primary School K-6",
@@ -23,13 +24,15 @@ export const home = {
       {
         stage: "High School",
         years: "Years 7-10",
+        icon: "school",
         body: "English, Maths and Science aligned to school assessment tasks and reports.",
         to: "/high-school",
         linkLabel: "High School 7-10",
       },
       {
-        stage: "Senior",
+        stage: "Senior School",
         years: "Years 11-12",
+        icon: "award",
         body: "HSC courses taught by Band 6 tutors, with past papers and marking feedback.",
         to: "/senior-school",
         linkLabel: "Senior School HSC",
