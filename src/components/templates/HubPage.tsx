@@ -2,8 +2,9 @@ import type { StagePageContent } from "@/content/types";
 import { Hero } from "../sections/Hero";
 import { TrustTicks } from "../sections/TrustTicks";
 import { SubjectCards } from "../sections/SubjectCards";
+import { ProgramCards } from "../sections/ProgramCards";
 import { WhyUsList } from "../sections/WhyUsList";
-import { PricingTeaser } from "../sections/PricingTeaser";
+import { TalkToUsBand } from "../sections/TalkToUsBand";
 import { GuaranteeCard } from "../sections/GuaranteeCard";
 import { CtaBand } from "../sections/CtaBand";
 import { guarantee } from "@/content/munks";
@@ -24,9 +25,13 @@ export function HubPage({ content }: { content: StagePageContent }) {
         illustrationLabel={content.hero.imageAlt}
       />
       <TrustTicks items={content.trustTicks ?? defaultTicks} />
-      <SubjectCards {...content.subjects} />
+      {content.programs ? (
+        <ProgramCards {...content.programs} />
+      ) : (
+        <SubjectCards {...content.subjects} />
+      )}
       <WhyUsList {...content.whyUs} />
-      <PricingTeaser {...content.pricingTeaser} />
+      <TalkToUsBand />
       <GuaranteeCard {...guarantee} />
       <CtaBand {...content.cta} />
     </>

@@ -49,6 +49,7 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
+            { label: "Primary overview", to: "/primary-school", icon: "graduation-cap", description: "How our K-6 tutoring works, term by term" },
             { label: "English Tutoring", to: "/primary-english", icon: "book", description: "Year 2 to 6 reading, writing and comprehension" },
             { label: "Maths Tutoring", to: "/topics/primary-maths", icon: "calculator", description: "Number, fractions and word problems to Year 6" },
             { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Thinking skills and reasoning for the Year 6 test" },
@@ -75,6 +76,7 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
+            { label: "High School overview", to: "/high-school", icon: "school", description: "Years 7 to 10 support across English, Maths and Science" },
             { label: "English Tutoring", to: "/topics/high-school-english", icon: "book", description: "Text analysis and essay structure for Years 7 to 10" },
             { label: "Maths Tutoring", to: "/topics/high-school-maths", icon: "calculator", description: "Algebra, geometry and trigonometry to Stage 5.3" },
           ],
