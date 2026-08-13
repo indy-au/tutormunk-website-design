@@ -1,31 +1,46 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { ChevronDown, Menu, Plus, Minus, X } from "lucide-react";
 import { brand, primaryNav } from "@/content/site";
 import type { MegaLink } from "@/content/site";
+import { getIcon } from "../icons";
 import { CallbackButton } from "../CtaButton";
 import { Wordmark } from "./Wordmark";
 
-function MegaIcon({ icon }: { icon: string }) {
+function IconTile({ name, size = "md" }: { name: string; size?: "sm" | "md" }) {
+  const Icon = getIcon(name);
   return (
     <span
       aria-hidden="true"
-      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary-soft text-xs font-bold text-primary"
+      className={[
+        "flex shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent-ink",
+        size === "sm" ? "h-7 w-7" : "h-9 w-9",
+      ].join(" ")}
     >
-      {icon}
+      <Icon className={size === "sm" ? "h-4 w-4" : "h-5 w-5"} />
     </span>
   );
 }
 
-function MegaRow({ link, compact }: { link: MegaLink; compact?: boolean | undefined }) {
+function MegaRow({
+  link,
+  compact,
+  onNavigate,
+}: {
+  link: MegaLink;
+  compact?: boolean | undefined;
+  onNavigate: () => void;
+}) {
   return (
     <Link
       to={link.to}
+      onClick={onNavigate}
       className={[
         "flex items-start gap-3 rounded-2xl transition-colors hover:bg-secondary",
         compact ? "px-2 py-1.5" : "p-3",
       ].join(" ")}
     >
-      <MegaIcon icon={link.icon} />
+      {compact ? null : <IconTile name={link.icon} />}
       <span className="min-w-0">
         <span className="block text-sm font-semibold text-foreground">{link.label}</span>
         {link.description && !compact ? (
@@ -41,6 +56,7 @@ function MegaRow({ link, compact }: { link: MegaLink; compact?: boolean | undefi
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [openPanel, setOpenPanel] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
@@ -50,20 +66,32 @@ export function Header() {
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           {primaryNav.map((item) =>
             item.panel ? (
-              <div key={item.label} className="group relative">
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setOpenPanel(item.label)}
+                onMouseLeave={() => setOpenPanel(null)}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                    setOpenPanel(null);
+                  }
+                }}
+              >
                 <Link
                   to={item.to}
+                  onClick={() => setOpenPanel(null)}
+                  onFocus={() => setOpenPanel(item.label)}
+                  aria-expanded={openPanel === item.label}
                   className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
                   activeProps={{ className: "bg-primary-soft" }}
                 >
                   {item.label}
-                  <span aria-hidden="true" className="text-[0.6rem]">
-                    &#9662;
-                  </span>
+                  <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
                 </Link>
                 <div
                   className={[
-                    "invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
+                    "absolute left-1/2 top-full -translate-x-1/2 pt-3 transition-opacity",
+                    openPanel === item.label ? "visible opacity-100" : "invisible opacity-0",
                     item.panel.width === "extra" ? "w-[52rem]" : "w-[38rem]",
                   ].join(" ")}
                 >
@@ -77,12 +105,19 @@ export function Header() {
                       {item.panel.columns.map((column, index) => (
                         <div key={column.heading ?? index}>
                           {column.heading ? (
-                            <p className="eyebrow mb-2 px-2">{column.heading}</p>
+                            <p className="mb-2 flex items-center gap-2 px-2">
+                              {column.icon ? <IconTile name={column.icon} size="sm" /> : null}
+                              <span className="eyebrow">{column.heading}</span>
+                            </p>
                           ) : null}
                           <ul className={item.panel?.compact ? "space-y-0.5" : "space-y-1"}>
                             {column.links.map((link) => (
                               <li key={link.label}>
-                                <MegaRow link={link} compact={item.panel?.compact} />
+                                <MegaRow
+                                  link={link}
+                                  compact={item.panel?.compact}
+                                  onNavigate={() => setOpenPanel(null)}
+                                />
                               </li>
                             ))}
                           </ul>
@@ -93,7 +128,8 @@ export function Header() {
                       <p className="text-xs text-muted-foreground">{item.panel.note}</p>
                       <Link
                         to={item.panel.footerTo}
-                        className="text-sm font-semibold text-accent-foreground underline decoration-accent decoration-2 underline-offset-4"
+                        onClick={() => setOpenPanel(null)}
+                        className="text-sm font-semibold text-accent-ink underline decoration-accent decoration-2 underline-offset-4"
                       >
                         {item.panel.footerLabel}
                       </Link>
@@ -115,7 +151,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={`tel:${brand.phoneDial}`} className="text-sm font-semibold text-muted-foreground">
+          <a href={`tel:${brand.phoneDial}`} className="text-sm font-semibold text-foreground">
             {brand.phone}
           </a>
           <CallbackButton label="Request a Call" />
@@ -126,8 +162,10 @@ export function Header() {
           onClick={() => setMobileOpen((value) => !value)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
-          className="rounded-full border border-border px-4 py-2 text-sm font-semibold lg:hidden"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold lg:hidden"
         >
+          {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           {mobileOpen ? "Close" : "Menu"}
         </button>
       </div>
@@ -138,19 +176,30 @@ export function Header() {
             {primaryNav.map((item) =>
               item.panel ? (
                 <div key={item.label} className="border-b border-border pb-3">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setOpenAccordion((current) => (current === item.label ? null : item.label))
-                    }
-                    aria-expanded={openAccordion === item.label}
-                    className="flex w-full items-center justify-between text-base font-semibold"
-                  >
-                    {item.label}
-                    <span aria-hidden="true" className="text-xs">
-                      {openAccordion === item.label ? "\u2212" : "+"}
-                    </span>
-                  </button>
+                  <div className="flex items-center justify-between gap-3">
+                    <Link
+                      to={item.to}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-base font-semibold"
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenAccordion((current) => (current === item.label ? null : item.label))
+                      }
+                      aria-expanded={openAccordion === item.label}
+                      aria-label={`${openAccordion === item.label ? "Hide" : "Show"} ${item.label} links`}
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-border"
+                    >
+                      {openAccordion === item.label ? (
+                        <Minus className="h-4 w-4" />
+                      ) : (
+                        <Plus className="h-4 w-4" />
+                      )}
+                    </button>
+                  </div>
                   {openAccordion === item.label ? (
                     <div className="mt-3 space-y-3 border-l border-border pl-4">
                       {item.panel.columns.map((column, index) => (
@@ -174,7 +223,7 @@ export function Header() {
                       <Link
                         to={item.panel.footerTo}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-sm font-semibold text-accent-foreground"
+                        className="block text-sm font-semibold text-accent-ink"
                       >
                         {item.panel.footerLabel}
                       </Link>
