@@ -5,7 +5,16 @@ export type SubjectGroup = { heading: string; body?: string | undefined; items: 
 export type StagePageContent = {
   title: string;
   metaDescription: string;
-  hero: { eyebrow: string; heading: string; body: string; ctaLabel: string; points?: string[] };
+  hero: {
+    eyebrow: string;
+    heading: string;
+    body: string;
+    ctaLabel: string;
+    points?: string[];
+    image?: string | undefined;
+    imageAlt?: string | undefined;
+  };
+  trustTicks?: string[] | undefined;
   subjects: {
     eyebrow: string;
     heading: string;
