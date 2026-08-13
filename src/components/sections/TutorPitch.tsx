@@ -30,12 +30,12 @@ export function TutorPitch({
         <div
           role="img"
           aria-label="Illustration placeholder: tutor marking a past exam paper"
-          className="aspect-4/3 rounded-3xl bg-surface p-6 shadow-lift"
+          className="aspect-4/3 rounded-3xl border border-border bg-secondary p-6 shadow-card"
         >
           <div className="grid h-full grid-rows-3 gap-3">
-            <div className="rounded-2xl bg-accent/85" />
-            <div className="rounded-2xl bg-surface-foreground/15" />
-            <div className="rounded-2xl bg-primary-soft/80" />
+            <div className="rounded-2xl bg-accent/80" />
+            <div className="rounded-2xl bg-primary-soft" />
+            <div className="rounded-2xl bg-accent-soft" />
           </div>
         </div>
       </div>
