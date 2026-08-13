@@ -93,39 +93,56 @@ export function Header() {
       {mobileOpen ? (
         <div id="mobile-nav" className="border-t border-border bg-card lg:hidden">
           <nav aria-label="Mobile" className="container-page space-y-4 py-5">
-            {primaryNav.map((item) => (
-              <div key={item.label}>
+            {primaryNav.map((item) =>
+              item.groups ? (
+                <div key={item.label} className="border-b border-border pb-3">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenAccordion((current) => (current === item.label ? null : item.label))
+                    }
+                    aria-expanded={openAccordion === item.label}
+                    className="flex w-full items-center justify-between text-base font-semibold"
+                  >
+                    {item.label}
+                    <span aria-hidden="true" className="text-xs">
+                      {openAccordion === item.label ? "\u2212" : "+"}
+                    </span>
+                  </button>
+                  {openAccordion === item.label ? (
+                    <div className="mt-3 space-y-3 border-l border-border pl-4">
+                      {item.groups.map((group) => (
+                        <div key={group.heading}>
+                          <p className="eyebrow">{group.heading}</p>
+                          <ul className="mt-1 space-y-1.5">
+                            {group.links.map((link) => (
+                              <li key={link.label}>
+                                <Link
+                                  to={link.to}
+                                  onClick={() => setMobileOpen(false)}
+                                  className="text-sm text-muted-foreground"
+                                >
+                                  {link.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ) : (
                 <Link
+                  key={item.label}
                   to={item.to}
                   onClick={() => setMobileOpen(false)}
                   className="block text-base font-semibold"
                 >
                   {item.label}
                 </Link>
-                {item.groups ? (
-                  <div className="mt-2 space-y-3 border-l border-border pl-4">
-                    {item.groups.map((group) => (
-                      <div key={group.heading}>
-                        <p className="eyebrow">{group.heading}</p>
-                        <ul className="mt-1 space-y-1">
-                          {group.links.map((link) => (
-                            <li key={link.label}>
-                              <Link
-                                to={link.to}
-                                onClick={() => setMobileOpen(false)}
-                                className="text-sm text-muted-foreground"
-                              >
-                                {link.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            ))}
+              ),
+            )}
             <CallbackButton label="Request a Call" />
           </nav>
         </div>
