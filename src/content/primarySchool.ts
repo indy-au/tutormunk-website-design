@@ -44,23 +44,9 @@ export const primarySchool: StagePageContent = {
       { title: "No lock-in terms", body: "Book by the term or week. Pause during school holidays if you prefer." },
     ],
   },
-  pricingTeaser: {
-    eyebrow: "Pricing",
-    heading: "Simple hourly rates.",
-    body: "Rates below are placeholders for design review.",
-    rows: [
-      { name: "1-to-1 in your home", rate: "$XX per hour" },
-      { name: "1-to-1 at our centre", rate: "$XX per hour" },
-      { name: "Small group at our centre", rate: "$XX per student per hour" },
-    ],
-    ctaLabel: "See full pricing",
-    ctaTo: "/pricing",
-  },
   cta: {
     heading: "Talk to us about your child's primary years.",
     body: "We will suggest a tutor, a session length and a starting point based on your child's last report.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "How it works",
-    secondaryTo: "/how-it-works",
   },
 };

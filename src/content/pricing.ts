@@ -28,7 +28,5 @@ export const pricing = {
     heading: "Want a quote for your child?",
     body: "Request a call and we will confirm the rate for the mode and stage you need.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "Enrol now",
-    secondaryTo: "/enrol",
   },
 };

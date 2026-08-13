@@ -28,7 +28,5 @@ export const howItWorks = {
     heading: "Have a question about the process?",
     body: "Request a call and we will walk you through it.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "View pricing",
-    secondaryTo: "/pricing",
   },
 };

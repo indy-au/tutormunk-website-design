@@ -42,23 +42,9 @@ export const highSchool: StagePageContent = {
       { title: "Consistent tutor", body: "Your child keeps the same tutor across the term where possible." },
     ],
   },
-  pricingTeaser: {
-    eyebrow: "Pricing",
-    heading: "Hourly rates for Years 7-10.",
-    body: "Rates below are placeholders for design review.",
-    rows: [
-      { name: "1-to-1 in your home", rate: "$XX per hour" },
-      { name: "1-to-1 at our centre", rate: "$XX per hour" },
-      { name: "Small group at our centre", rate: "$XX per student per hour" },
-    ],
-    ctaLabel: "See full pricing",
-    ctaTo: "/pricing",
-  },
   cta: {
     heading: "Book a call about Years 7-10.",
     body: "Tell us the subject and the next task. We will match a tutor this week.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "Exam prep programs",
-    secondaryTo: "/exam-prep",
   },
 };

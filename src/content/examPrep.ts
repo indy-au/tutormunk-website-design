@@ -44,23 +44,9 @@ export const examPrep: StagePageContent = {
       { title: "Honest advice", body: "If a program is not the right fit for your child, we will say so." },
     ],
   },
-  pricingTeaser: {
-    eyebrow: "Pricing",
-    heading: "Program hourly rates.",
-    body: "Rates below are placeholders for design review.",
-    rows: [
-      { name: "1-to-1 in your home", rate: "$XX per hour" },
-      { name: "1-to-1 at our centre", rate: "$XX per hour" },
-      { name: "Small group at our centre", rate: "$XX per student per hour" },
-    ],
-    ctaLabel: "See full pricing",
-    ctaTo: "/pricing",
-  },
   cta: {
     heading: "Not sure which program fits?",
     body: "Request a call and we will recommend a program based on your child's year and goals.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "See pricing",
-    secondaryTo: "/pricing",
   },
 };
