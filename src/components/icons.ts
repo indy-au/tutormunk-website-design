@@ -20,7 +20,9 @@ import {
   Timer,
   Trophy,
   UserCheck,
+  UserRound,
   Users,
+  UsersRound,
   type LucideIcon,
 } from "lucide-react";
 
@@ -47,6 +49,8 @@ export const iconMap = {
   trophy: Trophy,
   "user-check": UserCheck,
   users: Users,
+  "one-to-one": UserRound,
+  "small-group": UsersRound,
 } satisfies Record<string, LucideIcon>;
 
 export type IconKey = keyof typeof iconMap;
