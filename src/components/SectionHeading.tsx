@@ -15,18 +15,18 @@ export function SectionHeading({
     <div
       className={[
         align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl",
-        tone === "dark" ? "text-surface-foreground" : "text-foreground",
+        tone === "dark" ? "text-primary-foreground" : "text-foreground",
       ].join(" ")}
     >
       {eyebrow ? (
-        <p className={tone === "dark" ? "eyebrow text-accent-soft" : "eyebrow"}>{eyebrow}</p>
+        <p className={tone === "dark" ? "eyebrow text-accent" : "eyebrow"}>{eyebrow}</p>
       ) : null}
       <h2 className="mt-3 text-3xl md:text-4xl">{heading}</h2>
       {body ? (
         <p
           className={[
             "mt-4 text-base leading-relaxed",
-            tone === "dark" ? "text-surface-foreground/80" : "text-muted-foreground",
+            tone === "dark" ? "text-primary-foreground/80" : "text-muted-foreground",
           ].join(" ")}
         >
           {body}
