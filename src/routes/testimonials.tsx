@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { testimonialsPage } from "@/content/faq";
 import { PageIntro } from "@/components/sections/PageIntro";
-import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
+import { ReviewWall } from "@/components/sections/ReviewWall";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const Route = createFileRoute("/testimonials")({
@@ -22,7 +22,7 @@ function TestimonialsPage() {
   return (
     <>
       <PageIntro {...testimonialsPage.hero} />
-      <ReviewsCarousel {...testimonialsPage.reviewsSection} />
+      <ReviewWall />
       <CtaBand {...testimonialsPage.cta} />
     </>
   );
