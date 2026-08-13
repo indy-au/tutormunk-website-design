@@ -208,7 +208,7 @@ export const footer = {
         { label: "Our Munks", to: "/our-munks" },
         { label: "Testimonials", to: "/testimonials" },
         { label: "Blog", to: "/blog" },
-        { label: "Become a Tutor", to: "/become-a-tutor" },
+        { label: "Become a Munk", to: "/become-a-tutor" },
         { label: "FAQ", to: "/faq" },
       ],
     },
