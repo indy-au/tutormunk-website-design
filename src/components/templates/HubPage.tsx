@@ -4,10 +4,7 @@ import { TrustTicks } from "../sections/TrustTicks";
 import { SubjectCards } from "../sections/SubjectCards";
 import { ProgramCards } from "../sections/ProgramCards";
 import { WhyUsList } from "../sections/WhyUsList";
-import { TalkToUsBand } from "../sections/TalkToUsBand";
-import { GuaranteeCard } from "../sections/GuaranteeCard";
 import { CtaBand } from "../sections/CtaBand";
-import { guarantee } from "@/content/munks";
 
 const defaultTicks = [
   "In person only, never online",
@@ -31,8 +28,6 @@ export function HubPage({ content }: { content: StagePageContent }) {
         <SubjectCards {...content.subjects} />
       )}
       <WhyUsList {...content.whyUs} />
-      <TalkToUsBand />
-      <GuaranteeCard {...guarantee} />
       <CtaBand {...content.cta} />
     </>
   );
