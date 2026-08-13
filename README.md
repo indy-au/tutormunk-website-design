@@ -28,7 +28,6 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 | `/exam-prep` | Exam Prep hub (7 programs) | Composed sections |
 | `/locations` | Locations: our centre plus 8 suburbs | Composed sections |
 | `/locations/oran-park` | Tutoring in Oran Park | Suburb page template |
-| `/pricing` | Pricing rate table | Composed sections |
 | `/enrol` | Enrol Now, 5 step form shell | Composed sections |
 | `/become-a-tutor` | Become a Munk, application shell with file upload | Composed sections |
 | `/blog` | Blog index | Composed sections |
@@ -59,24 +58,25 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 | --- | --- |
 | `Hero.tsx` | Home, stage, subject, suburb, about, become a tutor |
 | `CompactHero.tsx` | HSC course pages |
-| `PageIntro.tsx` | Exam prep, locations, pricing, enrol, blog, contact, FAQ, testimonials, policies |
+| `PageIntro.tsx` | Exam prep, locations, enrol, blog, contact, FAQ, testimonials, policies |
 | `StageCards.tsx` | Home |
 | `StepsStrip.tsx` | Home (strip), How It Works and subject pages (detailed) |
-| `DeliveryModesBand.tsx` | Home, How It Works, Pricing |
+| `DeliveryModesBand.tsx` | Home, How It Works, topic pages |
 | `ReviewsCarousel.tsx` | Home, Testimonials, Suburb pages |
 | `SuburbsStrip.tsx` | Home |
 | `CtaBand.tsx` | Most pages |
 | `SubjectCards.tsx` | Stage pages (flat cards and grouped sections) |
 | `WhyUsList.tsx` | Stage pages |
 | `FeatureGrid.tsx` | Subject pages, suburb pages, about values, tutor requirements |
-| `PricingTeaser.tsx` | Stage pages |
+| `TalkToUsBand.tsx` | Hub pages, home, How It Works |
 | `FaqAccordion.tsx` | Subject pages, FAQ page |
 | `CourseModules.tsx` | HSC course pages |
 | `TutorPitch.tsx` | HSC course pages |
 | `ProgramCards.tsx` | Exam prep hub |
 | `CentreSection.tsx` | Locations |
 | `SuburbGrid.tsx` | Locations |
-| `PricingTable.tsx` | Pricing |
+| `JourneySteps.tsx` | How It Works |
+| `ProgramCards.tsx` | Exam Prep |
 | `MultiStepFormShell.tsx` | Enrol Now |
 | `ApplicationFormShell.tsx` | Become a Munk |
 | `ContactSection.tsx` | Contact |
@@ -100,7 +100,7 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 
 ## Content files (`src/content`)
 
-`site.ts` (brand, nav, footer, delivery modes, reviews, suburbs, callback modal), `home.ts`, `howItWorks.ts`, `primarySchool.ts`, `highSchool.ts`, `seniorSchool.ts`, `primaryEnglish.ts`, `hscMathsAdvanced.ts`, `examPrep.ts`, `locations.ts` (locations hub plus Oran Park suburb page), `pricing.ts`, `enrol.ts`, `becomeTutor.ts`, `blog.ts` (index plus post), `about.ts` (about plus contact), `faq.ts` (FAQ plus testimonials), `policies.ts` (all 5 policy pages), `types.ts` (shared content types).
+`site.ts` (brand, nav, footer, delivery modes, reviews, suburbs, callback modal), `home.ts`, `howItWorks.ts`, `primarySchool.ts`, `highSchool.ts`, `seniorSchool.ts`, `primaryEnglish.ts`, `hscMathsAdvanced.ts`, `examPrep.ts`, `locations.ts` (locations hub plus Oran Park suburb page), `enrol.ts`, `becomeTutor.ts`, `blog.ts` (index plus post), `about.ts` (about plus contact), `faq.ts` (FAQ plus testimonials), `policies.ts` (all 5 policy pages), `types.ts` (shared content types).
 
 ## Copy rules applied
 
@@ -112,7 +112,7 @@ There is no backend, no auth, no CMS and no database. All forms are visual shell
 
 ## Update: light restyle, full navigation, new sections
 
-- Palette: white background, dark green text, one fresh-green accent. Tokens only in `src/styles.css`. Typography is Outfit for all text (no serif).
+- Palette: warm off-white background, deep forest green text and bands, warm amber gold accent for buttons and highlights. Pricing is never published, it is discussed on the phone only. Tokens only in `src/styles.css`. Typography is Outfit for all text (no serif).
 - Header nav: Primary School, High School, Senior School (three-column panel), Exam Prep, How It Works. Mobile menu mirrors this as accordions.
 - Subject and program pages are served by `src/routes/topics.$slug.tsx` with copy in `src/content/topics.ts`.
 - New home sections: `StatsBand`, `MunkCards`, `GuaranteeCard` (content in `src/content/munks.ts`).

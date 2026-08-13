@@ -68,7 +68,5 @@ export const home = {
     heading: "Ready to talk about your child's next term?",
     body: "Request a call and we will discuss goals, timing and the right tutor for your family.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "View pricing",
-    secondaryTo: "/pricing",
   },
 };

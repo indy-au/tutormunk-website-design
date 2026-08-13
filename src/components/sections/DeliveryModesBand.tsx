@@ -1,41 +1,39 @@
 import { SectionHeading } from "../SectionHeading";
 import { deliveryModes } from "@/content/site";
+import { getIcon } from "../icons";
 
 export function DeliveryModesBand({
   eyebrow,
   heading,
   body,
-  showRates = true,
 }: {
   eyebrow?: string | undefined;
   heading: string;
   body?: string | undefined;
-  showRates?: boolean | undefined;
 }) {
   return (
-    <section className="section-y bg-surface text-foreground">
+    <section className="section-y bg-secondary">
       <div className="container-page">
         <SectionHeading eyebrow={eyebrow} heading={heading} body={body} />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {deliveryModes.map((mode) => (
-            <article
-              key={mode.name}
-              className="flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-card"
-            >
-              <div
-                role="img"
-                aria-label={`Colour block for ${mode.name}`}
-                className="h-14 rounded-2xl bg-accent-soft"
-              />
-              <h3 className="mt-5 text-xl">{mode.name}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {mode.detail}
-              </p>
-              {showRates ? (
-                <p className="mt-5 text-sm font-semibold text-primary">{mode.rate}</p>
-              ) : null}
-            </article>
-          ))}
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {deliveryModes.map((mode) => {
+            const Icon = getIcon(mode.icon);
+            return (
+              <article
+                key={mode.name}
+                className="flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-card"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent-ink"
+                >
+                  <Icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-xl">{mode.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{mode.detail}</p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

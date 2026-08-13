@@ -8,7 +8,7 @@ function Card({ item }: { item: SubjectCard }) {
       <div
         role="img"
         aria-label={`Colour block for ${item.name}`}
-        className="h-12 w-12 rounded-xl bg-primary-soft"
+        className="h-12 w-12 rounded-xl bg-accent-soft"
       />
       <h3 className="mt-5 text-xl">{item.name}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.body}</p>

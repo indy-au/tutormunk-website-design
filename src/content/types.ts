@@ -2,6 +2,15 @@ export type SubjectCard = { name: string; body: string; to?: string | undefined;
 
 export type SubjectGroup = { heading: string; body?: string | undefined; items: SubjectCard[] };
 
+export type ProgramCard = {
+  name: string;
+  icon: string;
+  chip: string;
+  body: string;
+  to: string;
+  linkLabel?: string | undefined;
+};
+
 export type StagePageContent = {
   title: string;
   metaDescription: string;
@@ -23,14 +32,9 @@ export type StagePageContent = {
     groups?: SubjectGroup[] | undefined;
   };
   whyUs: { eyebrow: string; heading: string; items: { title: string; body: string }[] };
-  pricingTeaser: {
-    eyebrow: string;
-    heading: string;
-    body: string;
-    rows: { name: string; rate: string }[];
-    ctaLabel: string;
-    ctaTo: string;
-  };
+  programs?:
+    | { eyebrow: string; heading: string; body?: string | undefined; items: ProgramCard[] }
+    | undefined;
   cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string };
 };
 

@@ -64,23 +64,9 @@ export const seniorSchool: StagePageContent = {
       { title: "ATAR context", body: "We explain how each assessment affects rank, without the scare tactics." },
     ],
   },
-  pricingTeaser: {
-    eyebrow: "Pricing",
-    heading: "Senior hourly rates.",
-    body: "Rates below are placeholders for design review.",
-    rows: [
-      { name: "1-to-1 in your home", rate: "$XX per hour" },
-      { name: "1-to-1 at our centre", rate: "$XX per hour" },
-      { name: "Small group at our centre", rate: "$XX per student per hour" },
-    ],
-    ctaLabel: "See full pricing",
-    ctaTo: "/pricing",
-  },
   cta: {
     heading: "Plan the rest of the HSC year.",
     body: "Request a call and we will map the remaining assessments and match a Band 6 tutor.",
     ctaLabel: "Request a Call",
-    secondaryLabel: "HSC Sprint",
-    secondaryTo: "/exam-prep",
   },
 };

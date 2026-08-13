@@ -31,8 +31,6 @@ function OurMunksPage() {
         heading="Want to meet a Munk before you book?"
         body="Request a call and we will introduce the tutor who fits your child's year and subjects."
         ctaLabel="Request a Call"
-        secondaryLabel="View pricing"
-        secondaryTo="/pricing"
       />
     </>
   );

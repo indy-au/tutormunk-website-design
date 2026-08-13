@@ -43,8 +43,6 @@ function TopicPage() {
         heading="Ready to talk about this course?"
         body="Request a call and we will match your child with the right Munk."
         ctaLabel="Request a Call"
-        secondaryLabel="View pricing"
-        secondaryTo="/pricing"
       />
     </>
   );
