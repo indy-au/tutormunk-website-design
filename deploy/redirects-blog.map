@@ -1,4 +1,4 @@
-# TutorMunk blog redirect map (groundwork, 14 Aug 2026)
+# TutorMunk blog redirect map (updated 14 Aug 2026)
 #
 # One line per migrated post: old sproutsacademy.com.au URL -> new
 # tutormunk.com.au blog URL. Generated from the sourceUrl field in each
@@ -11,10 +11,26 @@
 # manages the Sprouts Academy hosting needs this file at that point, it
 # does nothing sitting in this repo on its own.
 #
-# Currently empty of real redirects: the one migrated post
-# (selective-test-timeline) has no sourceUrl on file yet, its real old
-# Sprouts Academy URL was not supplied, and none has been invented here.
-# Add a line below in this format once a post's frontmatter sourceUrl is
-# filled in:
-#
-# https://sproutsacademy.com.au/blog/old-post-slug -> https://tutormunk.com.au/blog/new-post-slug
+# selective-test-timeline and naplan-writing are original TutorMunk posts
+# with no Sprouts source, so they have no redirect lines.
+
+https://sproutsacademy.com.au/after-school-tutoring-gregory-hills/ -> https://tutormunk.com.au/blog/after-school-tutoring-gregory-hills
+https://sproutsacademy.com.au/child-needs-private-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/child-needs-private-tutoring-in-sydney
+https://sproutsacademy.com.au/group-classes-tutoring/ -> https://tutormunk.com.au/blog/group-classes-tutoring
+https://sproutsacademy.com.au/improve-naplan-performance/ -> https://tutormunk.com.au/blog/improve-naplan-performance
+https://sproutsacademy.com.au/oc-test-preparation-tutoring/ -> https://tutormunk.com.au/blog/oc-test-preparation-tutoring
+https://sproutsacademy.com.au/secondary-school-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/secondary-school-tutoring-in-sydney
+https://sproutsacademy.com.au/sydney-hsc-tutoring/ -> https://tutormunk.com.au/blog/sydney-hsc-tutoring
+https://sproutsacademy.com.au/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills/ -> https://tutormunk.com.au/blog/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills
+https://sproutsacademy.com.au/sprouts-academy-best/ -> https://tutormunk.com.au/blog/what-makes-tutormunk-different
+https://sproutsacademy.com.au/why-private-tutoring-is-important-for-your-child/ -> https://tutormunk.com.au/blog/why-private-tutoring-is-important-for-your-child
+https://sproutsacademy.com.au/beneficial-for-senior-high-school-students/ -> https://tutormunk.com.au/blog/beneficial-for-senior-high-school-students
+https://sproutsacademy.com.au/best-time-to-start-tutoring/ -> https://tutormunk.com.au/blog/best-time-to-start-tutoring
+https://sproutsacademy.com.au/boost-your-childs-english-skills/ -> https://tutormunk.com.au/blog/boost-your-childs-english-skills
+https://sproutsacademy.com.au/comprehensive-primary-to-k6-private-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/comprehensive-primary-to-k6-private-tutoring-in-sydney
+https://sproutsacademy.com.au/helping-a-child-overcome-difficulty-in-one-subject/ -> https://tutormunk.com.au/blog/helping-a-child-overcome-difficulty-in-one-subject
+https://sproutsacademy.com.au/naplan-tutoring-for-childs/ -> https://tutormunk.com.au/blog/naplan-tutoring-boost-your-childs-performance
+https://sproutsacademy.com.au/sprouts-academy-naplan-tutoring/ -> https://tutormunk.com.au/blog/naplan-tutoring
+https://sproutsacademy.com.au/sprouts-academy-one-on-one-english-tutoring/ -> https://tutormunk.com.au/blog/one-on-one-english-tutoring
+https://sproutsacademy.com.au/role-of-naplan-tutors/ -> https://tutormunk.com.au/blog/role-of-naplan-tutors
+https://sproutsacademy.com.au/what-is-the-average-atar/ -> https://tutormunk.com.au/blog/what-is-the-average-atar

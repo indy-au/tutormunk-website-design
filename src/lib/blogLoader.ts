@@ -40,6 +40,13 @@ export type BlogFrontmatter = {
   category: string;
   date: string;
   stage: BlogStage;
+  /**
+   * Optional per-post hero image path (e.g. "/images/blog/slug.jpg",
+   * served from public/). When present it wins over the stage fallback,
+   * so every post can carry its own topic-specific image while older
+   * posts keep inheriting their stage photo until one is added.
+   */
+  image: string;
   sourceUrl: string;
   draft: boolean;
 };
@@ -68,6 +75,7 @@ function toFrontmatter(data: Record<string, string>, filePath: string): BlogFron
     category: data["category"] ?? "",
     date: data["date"] ?? "",
     stage,
+    image: data["image"] ?? "",
     sourceUrl: data["sourceUrl"] ?? "",
     draft: data["draft"] === "true",
   };
@@ -89,7 +97,7 @@ const parsedPosts: BlogPost[] = Object.entries(rawFiles).map(([filePath, raw]) =
     frontmatter,
     body: parseMarkdownBody(body),
     readingTime: estimateReadingTime(body),
-    heroImage: stageImages[frontmatter.stage],
+    heroImage: frontmatter.image || stageImages[frontmatter.stage],
   };
 });
 

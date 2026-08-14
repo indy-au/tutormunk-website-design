@@ -6,6 +6,7 @@ slug: naplan-writing
 category: naplan
 date: 2026-03-02
 stage: primary
+image: "/images/blog/naplan-writing.jpg"
 sourceUrl:
 draft: true
 ---

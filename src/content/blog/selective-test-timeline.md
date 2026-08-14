@@ -6,6 +6,7 @@ slug: selective-test-timeline
 category: selective-prep
 date: 2026-03-12
 stage: primary
+image: "/images/blog/selective-test-timeline.jpg"
 sourceUrl:
 draft: false
 ---
