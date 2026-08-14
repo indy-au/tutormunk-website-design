@@ -67,3 +67,14 @@ export const allReviews: ReviewEntry[] = rawReviews
   }))
   .sort((a, b) => a.ageDays - b.ageDays)
   .map(({ ageDays: _ageDays, ...review }) => review);
+
+// Suburb pages prefer reviews whose own text mentions that suburb, then
+// fill the rest with the same real reviews everyone else sees (newest
+// first). Never invents a suburb label for a review that doesn't mention
+// it, there simply isn't one shown here beyond the reviewer's own words.
+export function reviewsForSuburb(suburbName: string): ReviewEntry[] {
+  const needle = suburbName.toLowerCase();
+  const mentions = allReviews.filter((review) => review.quote.toLowerCase().includes(needle));
+  const rest = allReviews.filter((review) => !mentions.includes(review));
+  return [...mentions, ...rest];
+}

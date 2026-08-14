@@ -1,11 +1,11 @@
 export const home = {
   title: "In-Person Tutoring in South-West Sydney | TutorMunk",
   metaDescription:
-    "TutorMunk provides in-person K-12 tutoring in South-West Sydney, in your home or at our Oran Park centre, 1-to-1 or in small groups.",
+    "TutorMunk provides in-person K-12 tutoring in South-West Sydney, in your home or at our Gregory Hills centre, 1-to-1 or in small groups.",
   hero: {
     eyebrow: "In-home and centre based, K to Year 12",
     heading: "Tutoring that happens in the room, not on a screen.",
-    body: "We match your child with a tutor who teaches face to face, follows the NESA syllabus and reports back to you every term. Sessions run in your home or at our Oran Park centre.",
+    body: "We match your child with a tutor who teaches face to face, follows the NESA syllabus and reports back to you every term. Sessions run in your home or at our Gregory Hills centre.",
     ctaLabel: "Request a Call",
     points: ["No online lessons", "Tutors from local schools", "1-to-1 or small groups"],
   },
@@ -65,7 +65,7 @@ export const home = {
   suburbsSection: {
     eyebrow: "Suburbs we serve",
     heading: "Tutors across South-West Sydney.",
-    body: "We travel to homes in these suburbs and welcome families at our Oran Park centre.",
+    body: "We travel to homes in these suburbs and welcome families at our Gregory Hills centre.",
   },
   cta: {
     heading: "Ready to talk about your child's next term?",

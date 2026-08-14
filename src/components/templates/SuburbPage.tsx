@@ -1,22 +1,56 @@
 import { Hero } from "../sections/Hero";
-import { FeatureGrid } from "../sections/FeatureGrid";
+import { ProseSection } from "../sections/ProseSection";
+import { DeliverySection } from "../sections/DeliverySection";
 import { ReviewsCarousel } from "../sections/ReviewsCarousel";
 import { CtaBand } from "../sections/CtaBand";
+import { LocalBusinessSchema } from "../LocalBusinessSchema";
+import { reviewsForSuburb } from "@/content/reviews";
+import type { SuburbLocation } from "@/content/locations";
 
-type SuburbPageContent = {
-  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; points?: string[] };
-  whatWeCover: { eyebrow?: string | undefined; heading: string; items: { title: string; body: string }[] };
-  reviewsSection: { eyebrow?: string | undefined; heading: string; body?: string };
-  cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string };
-};
+export function SuburbPage({ suburb }: { suburb: SuburbLocation }) {
+  const reviews = reviewsForSuburb(suburb.suburbName);
+  // First section is the general "what we offer" prose. The last section
+  // ("how sessions run") pairs with the centre fact card in DeliverySection
+  // instead of running as its own block, so the two don't repeat each other.
+  const [offerSection, deliverySection] = suburb.bodySections;
 
-export function SuburbPage({ content }: { content: SuburbPageContent }) {
   return (
     <>
-      <Hero {...content.hero} />
-      <FeatureGrid {...content.whatWeCover} tone="muted" />
-      <ReviewsCarousel {...content.reviewsSection} />
-      <CtaBand {...content.cta} />
+      <LocalBusinessSchema areaServed={[suburb.suburbName]} />
+      <Hero
+        eyebrow="In-home tutoring"
+        heading={`In-home tutoring in ${suburb.suburbName}.`}
+        body={suburb.heroIntro}
+        ctaLabel="Request a Call"
+        points={
+          suburb.centre
+            ? ["Home visits or our Gregory Hills centre", "K-12 subjects", "1-to-1 or small group"]
+            : [`Home visits across ${suburb.suburbName}`, "K-12 subjects", "1-to-1 or small group"]
+        }
+      />
+      {offerSection ? (
+        <ProseSection heading={offerSection.heading} paragraphs={offerSection.paragraphs} tone="light" />
+      ) : null}
+      {deliverySection ? (
+        <DeliverySection
+          eyebrow="How sessions run"
+          heading={deliverySection.heading}
+          body={deliverySection.paragraphs.join(" ")}
+        />
+      ) : null}
+      <ReviewsCarousel
+        eyebrow="Google reviews"
+        heading="What families say."
+        body="Real reviews from our Google Business Profile."
+        reviews={reviews}
+      />
+      <CtaBand
+        heading={`Book a call about ${suburb.suburbName} tutoring.`}
+        body="Tell us the subject and preferred time. We will confirm a local tutor."
+        ctaLabel="Request a Call"
+        secondaryLabel="All locations"
+        secondaryTo="/locations"
+      />
     </>
   );
 }

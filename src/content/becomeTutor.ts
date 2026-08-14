@@ -1,13 +1,13 @@
 export const becomeTutor = {
   title: "Become a Munk with TutorMunk | Tutor Jobs South-West Sydney",
   metaDescription:
-    "Apply to tutor with TutorMunk in South-West Sydney. In-person work at our Oran Park centre or in family homes, K-12.",
+    "Apply to tutor with TutorMunk in South-West Sydney. In-person work at our Gregory Hills centre or in family homes, K-12.",
   hero: {
     eyebrow: "Work with us",
     heading: "Become a Munk.",
     body: "We hire tutors who teach in person, keep good notes and turn up on time. Senior tutors need a Band 6 in the course they teach.",
     ctaLabel: "Request a Call",
-    points: ["In-person work only", "Oran Park centre or in-home", "Paid planning time"],
+    points: ["In-person work only", "Gregory Hills centre or in-home", "Paid planning time"],
   },
   requirements: {
     eyebrow: "What we look for",

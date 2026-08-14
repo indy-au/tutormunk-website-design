@@ -3,10 +3,12 @@ import { FormField, type FieldSpec } from "./FormField";
 export function ContactSection({
   details,
   mapLabel,
+  mapEmbedUrl,
   form,
 }: {
   details: { label: string; value: string }[];
   mapLabel: string;
+  mapEmbedUrl: string;
   form: { heading: string; fields: FieldSpec[]; submitLabel: string; note: string };
 }) {
   return (
@@ -21,12 +23,15 @@ export function ContactSection({
               </div>
             ))}
           </dl>
-          <div
-            role="img"
-            aria-label={mapLabel}
-            className="mt-6 min-h-56 rounded-3xl border border-border bg-primary-soft/70 p-6"
-          >
-            <p className="text-sm font-semibold text-primary">{mapLabel}</p>
+          <div className="mt-6 min-h-56 overflow-hidden rounded-3xl border border-border">
+            <iframe
+              src={mapEmbedUrl}
+              title={mapLabel}
+              aria-label={mapLabel}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-full min-h-56 w-full border-0"
+            />
           </div>
         </div>
 

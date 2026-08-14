@@ -2,16 +2,18 @@ import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeading } from "../SectionHeading";
 import { GoogleMark, Stars, ReviewCard } from "./ReviewCard";
-import { allReviews, reviewSummary } from "@/content/reviews";
+import { allReviews, reviewSummary, type ReviewEntry } from "@/content/reviews";
 
 export function ReviewsCarousel({
   eyebrow,
   heading,
   body,
+  reviews = allReviews,
 }: {
   eyebrow?: string | undefined;
   heading: string;
   body?: string | undefined;
+  reviews?: ReviewEntry[] | undefined;
 }) {
   const trackRef = useRef<HTMLUListElement>(null);
 
@@ -58,7 +60,7 @@ export function ReviewsCarousel({
           ref={trackRef}
           className="mt-10 flex snap-x snap-mandatory items-stretch gap-5 overflow-x-auto pb-4"
         >
-          {allReviews.map((review, index) => (
+          {reviews.map((review, index) => (
             <li
               key={`${review.name}-${review.when}-${index}`}
               className="flex w-[19rem] shrink-0 snap-start"

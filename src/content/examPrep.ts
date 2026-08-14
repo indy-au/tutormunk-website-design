@@ -40,7 +40,7 @@ export const examPrep: StagePageContent = {
     body: "Choose one program, or combine a program with weekly subject tutoring.",
     items: [
       { name: "Selective School Prep", icon: "trophy", chip: "Year 5 to 6", body: "Reading, mathematical reasoning and thinking skills for the Selective High School Placement Test. Students sit a timed section every week.", to: "/topics/selective-school-prep" },
-      { name: "OC Prep", icon: "target", chip: "Year 3 to 4", body: "Preparation for Opportunity Class placement, taught in small groups at our Oran Park centre. Timed practice from the first session.", to: "/topics/oc-prep" },
+      { name: "OC Prep", icon: "target", chip: "Year 3 to 4", body: "Preparation for Opportunity Class placement, taught in small groups at our Gregory Hills centre. Timed practice from the first session.", to: "/topics/oc-prep" },
       { name: "Writing", icon: "pen", chip: "Year 3 to 10", body: "One marked writing piece each week across narrative, persuasive and informative styles. Feedback is written against the marking criteria.", to: "/topics/writing-program" },
       { name: "NAPLAN", icon: "clipboard-check", chip: "Years 3, 5, 7 and 9", body: "Familiarisation with question types from past tests, plus timing and technique. Sessions run for 60 minutes.", to: "/topics/naplan" },
       { name: "ICAS", icon: "medal", chip: "Year 3 to 10", body: "Extension style questions in English, Maths and Science for students sitting ICAS. Tutors work through problem solving step by step.", to: "/topics/icas" },

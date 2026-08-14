@@ -17,7 +17,7 @@ export const enrol = {
           { label: "Parent or carer name", type: "text", placeholder: "Jane Nguyen" },
           { label: "Email", type: "email", placeholder: "jane@example.com.au" },
           { label: "Phone", type: "tel", placeholder: "0400 000 000" },
-          { label: "Suburb", type: "text", placeholder: "Oran Park" },
+          { label: "Suburb", type: "text", placeholder: "Camden" },
         ],
       },
       {
@@ -38,7 +38,7 @@ export const enrol = {
       {
         title: "Delivery mode",
         fields: [
-          { label: "Where should sessions run?", type: "select", options: ["Your home", "Our Oran Park centre"] },
+          { label: "Where should sessions run?", type: "select", options: ["Your home", "Our Gregory Hills centre"] },
           { label: "Session type", type: "select", options: ["1-to-1", "Small group"] },
         ],
       },

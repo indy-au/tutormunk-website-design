@@ -11,7 +11,7 @@ export const faqPage = {
     eyebrow: "Questions",
     heading: "Everything parents ask us.",
     items: [
-      { question: "Do you offer online tutoring?", answer: "No. Every session is in person, either in your home or at our Oran Park centre." },
+      { question: "Do you offer online tutoring?", answer: "No. Every session is in person, either in your home or at our Gregory Hills centre." },
       { question: "How do you match tutors?", answer: "We shortlist by subject, stage, suburb and availability, then send you profiles so you can choose." },
       { question: "What if the tutor is not the right fit?", answer: "Tell us after the first session and we will match you with another tutor at no cost." },
       { question: "How do we talk about fees?", answer: "We discuss fees on the phone, because the plan depends on the stage, the subjects and the delivery mode. Request a call and we will explain the options." },
@@ -33,11 +33,11 @@ export const faqPage = {
 export const testimonialsPage = {
   title: "Parent Testimonials and Reviews | TutorMunk",
   metaDescription:
-    "Reviews from South-West Sydney parents about in-person tutoring with TutorMunk in Oran Park and surrounding suburbs.",
+    "Reviews from South-West Sydney parents about in-person tutoring with TutorMunk in Gregory Hills and surrounding suburbs.",
   hero: {
     eyebrow: "Testimonials",
     heading: "What families tell us.",
-    body: "Reviews from parents in Oran Park, Narellan, Gregory Hills and nearby suburbs.",
+    body: "Reviews from parents in Gregory Hills, Narellan, Camden and nearby suburbs.",
   },
   cta: {
     heading: "Join the families we tutor.",

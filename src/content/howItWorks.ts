@@ -27,7 +27,7 @@ export const howItWorks = {
       { title: "Tell us what your child needs", icon: "clipboard-list", body: "A ten minute call about year level, subjects and recent reports. We ask what is getting in the way at school." },
       { title: "We match you with the right Munks", icon: "users", body: "We shortlist tutors by subject, stage, suburb and availability. You receive their profiles the same week." },
       { title: "Choose your Munk", icon: "user-check", body: "You pick the tutor, not us. If the fit is not right after the first session, we will match you again at no cost." },
-      { title: "Book your sessions", icon: "calendar-check", body: "Choose a weekly time at home or at our Oran Park centre, 1-to-1 or in a small group. Sessions run for 60 minutes." },
+      { title: "Book your sessions", icon: "calendar-check", body: "Choose a weekly time at home or at our Gregory Hills centre, 1-to-1 or in a small group. Sessions run for 60 minutes." },
       { title: "Start learning in person", icon: "sparkles", body: "The first session starts with the current school work. You receive written notes afterwards and a short report each term." },
     ],
   },

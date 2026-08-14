@@ -29,10 +29,10 @@ import { Route as SeniorSchoolRouteImport } from './routes/senior-school'
 import { Route as StudentAgreementRouteImport } from './routes/student-agreement'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as TutoringInChar123suburbSlugChar125RouteImport } from './routes/tutoring-in-{$suburbSlug}'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as LocationsIndexRouteImport } from './routes/locations.index'
-import { Route as LocationsOranParkRouteImport } from './routes/locations.oran-park'
 import { Route as TopicsSlugRouteImport } from './routes/topics.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -135,6 +135,12 @@ const TestimonialsRoute = TestimonialsRouteImport.update({
   path: '/testimonials',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TutoringInChar123suburbSlugChar125Route =
+  TutoringInChar123suburbSlugChar125RouteImport.update({
+    id: '/tutoring-in-{$suburbSlug}',
+    path: '/tutoring-in-{$suburbSlug}',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -148,11 +154,6 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 const LocationsIndexRoute = LocationsIndexRouteImport.update({
   id: '/locations/',
   path: '/locations/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LocationsOranParkRoute = LocationsOranParkRouteImport.update({
-  id: '/locations/oran-park',
-  path: '/locations/oran-park',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TopicsSlugRoute = TopicsSlugRouteImport.update({
@@ -182,8 +183,8 @@ export interface FileRoutesByFullPath {
   '/student-agreement': typeof StudentAgreementRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
+  '/tutoring-in-{$suburbSlug}': typeof TutoringInChar123suburbSlugChar125Route
   '/blog/$slug': typeof BlogSlugRoute
-  '/locations/oran-park': typeof LocationsOranParkRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
@@ -209,8 +210,8 @@ export interface FileRoutesByTo {
   '/student-agreement': typeof StudentAgreementRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
+  '/tutoring-in-{$suburbSlug}': typeof TutoringInChar123suburbSlugChar125Route
   '/blog/$slug': typeof BlogSlugRoute
-  '/locations/oran-park': typeof LocationsOranParkRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/blog': typeof BlogIndexRoute
   '/locations': typeof LocationsIndexRoute
@@ -237,8 +238,8 @@ export interface FileRoutesById {
   '/student-agreement': typeof StudentAgreementRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
+  '/tutoring-in-{$suburbSlug}': typeof TutoringInChar123suburbSlugChar125Route
   '/blog/$slug': typeof BlogSlugRoute
-  '/locations/oran-park': typeof LocationsOranParkRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
@@ -266,8 +267,8 @@ export interface FileRouteTypes {
     | '/student-agreement'
     | '/terms'
     | '/testimonials'
+    | '/tutoring-in-{$suburbSlug}'
     | '/blog/$slug'
-    | '/locations/oran-park'
     | '/topics/$slug'
     | '/blog/'
     | '/locations/'
@@ -293,8 +294,8 @@ export interface FileRouteTypes {
     | '/student-agreement'
     | '/terms'
     | '/testimonials'
+    | '/tutoring-in-{$suburbSlug}'
     | '/blog/$slug'
-    | '/locations/oran-park'
     | '/topics/$slug'
     | '/blog'
     | '/locations'
@@ -320,8 +321,8 @@ export interface FileRouteTypes {
     | '/student-agreement'
     | '/terms'
     | '/testimonials'
+    | '/tutoring-in-{$suburbSlug}'
     | '/blog/$slug'
-    | '/locations/oran-park'
     | '/topics/$slug'
     | '/blog/'
     | '/locations/'
@@ -348,8 +349,8 @@ export interface RootRouteChildren {
   StudentAgreementRoute: typeof StudentAgreementRoute
   TermsRoute: typeof TermsRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  TutoringInChar123suburbSlugChar125Route: typeof TutoringInChar123suburbSlugChar125Route
   BlogSlugRoute: typeof BlogSlugRoute
-  LocationsOranParkRoute: typeof LocationsOranParkRoute
   TopicsSlugRoute: typeof TopicsSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
@@ -497,6 +498,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TestimonialsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tutoring-in-{$suburbSlug}': {
+      id: '/tutoring-in-{$suburbSlug}'
+      path: '/tutoring-in-{$suburbSlug}'
+      fullPath: '/tutoring-in-{$suburbSlug}'
+      preLoaderRoute: typeof TutoringInChar123suburbSlugChar125RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -516,13 +524,6 @@ declare module '@tanstack/react-router' {
       path: '/locations'
       fullPath: '/locations/'
       preLoaderRoute: typeof LocationsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/oran-park': {
-      id: '/locations/oran-park'
-      path: '/locations/oran-park'
-      fullPath: '/locations/oran-park'
-      preLoaderRoute: typeof LocationsOranParkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/topics/$slug': {
@@ -556,8 +557,9 @@ const rootRouteChildren: RootRouteChildren = {
   StudentAgreementRoute: StudentAgreementRoute,
   TermsRoute: TermsRoute,
   TestimonialsRoute: TestimonialsRoute,
+  TutoringInChar123suburbSlugChar125Route:
+    TutoringInChar123suburbSlugChar125Route,
   BlogSlugRoute: BlogSlugRoute,
-  LocationsOranParkRoute: LocationsOranParkRoute,
   TopicsSlugRoute: TopicsSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,

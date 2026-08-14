@@ -56,7 +56,7 @@ export function CtaBand({
                 {guarantee.body}
               </p>
               <ul className="mt-6 space-y-2 border-t border-primary-foreground/15 pt-5 text-sm text-primary-foreground/80">
-                <li>In person only, in your home or at our Oran Park centre</li>
+                <li>In person only, in your home or at our Gregory Hills centre</li>
                 <li>Working with Children Checked tutors</li>
                 <li>Written notes after every session</li>
               </ul>

@@ -42,6 +42,11 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 5. How It Works: 5-step vertical journey with numbered navy circle badges, connector line, alternating cards on desktop; step icons clipboard-list, users, user-check, calendar-check, sparkles. Then delivery modes as a 2x2 icon card grid (house, users, building, school). No pricing.
 6. Exam Prep hub: 7 equal designed cards with icon tile, year-range chip, two-line description, navy Learn more link; "On demand" chip on Ask Munk, "Intensive" chip on HSC Sprint.
 
+## Business-critical priorities (owner statement, 14 Aug 2026)
+
+1. SEO is existential: "Google builds our business. We can't lose it." Every change must be SEO-friendly: unique titles and meta descriptions per page, semantic HTML, clean URLs, unique content per page. The SSG conversion (below) is a NON-NEGOTIABLE roadmap milestone because a client-side SPA is invisible to Google's fast path and AI crawlers. When relevant, prefer the SEO-stronger option without being asked.
+2. Forms are essential launch features (currently visual shells only): the small lead form (name, phone, email), the parent enrolment form (50-field structure exists from the owner's previous business), a PAYMENT LINK capability (to be designed later; options and costs go to the owner first), and the Become a Munk tutor application form (27-field with file upload). Do not wire form backends without the owner approving the chosen service and its cost.
+
 ## Architecture plan (the bigger picture)
 
 - This SPA must eventually be converted to a statically generated site (SSG) because client-side-only React is invisible to Google's fast path and to AI crawlers. Do not fight the current stack for now; keep content in src/content/*.ts data files with title and metaDescription fields so the conversion stays painless.

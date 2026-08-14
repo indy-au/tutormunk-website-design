@@ -38,7 +38,7 @@ export const primaryEnglish = {
     items: [
       { question: "How long are sessions?", answer: "Most primary students do one hour a week. Some do 90 minutes when we cover English and Maths together." },
       { question: "Do you set home practice?", answer: "Yes, around 15 to 20 minutes a week. It is short on purpose so it gets done." },
-      { question: "Can sessions run at our home?", answer: "Yes. We tutor in homes across South-West Sydney and at our Oran Park centre." },
+      { question: "Can sessions run at our home?", answer: "Yes. We tutor in homes across South-West Sydney and at our Gregory Hills centre." },
       { question: "Do you help with NAPLAN writing?", answer: "Yes. We mark narrative and persuasive writing against the NAPLAN criteria in Years 3 and 5." },
       { question: "What if my child is well ahead?", answer: "We extend with harder texts and OC or Selective style questions." },
     ],

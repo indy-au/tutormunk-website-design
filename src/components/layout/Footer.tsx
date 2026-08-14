@@ -26,7 +26,7 @@ export function Footer() {
             </dl>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {footer.columns.map((column) => (
               <nav key={column.heading} aria-label={column.heading}>
                 <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-primary">

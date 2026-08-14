@@ -1,0 +1,98 @@
+# ==========================================================================
+# TutorMunk .htaccess — Apache configuration for the Hostinger deployment
+# (tutormunk.com.au)
+#
+# Plain-language guide: each numbered block below does ONE job. Read the
+# comment above a block before changing anything inside it. If something
+# on the live site looks broken after an edit here, the fastest fix is to
+# revert this file to the last known-good version.
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# 1) FORCE HTTPS
+# Sends visitors from the http:// version of a page to the https:// version
+# of the same page, so nobody browses the site unencrypted.
+# --------------------------------------------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --------------------------------------------------------------------------
+# 2) CANONICAL DOMAIN
+# Redirects every domain variant that might point at this hosting account
+# (www.tutormunk.com.au, or anything else) to the one address we want
+# Google and visitors to use: https://tutormunk.com.au (no www).
+# --------------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} !^tutormunk\.com\.au$ [NC]
+RewriteRule ^(.*)$ https://tutormunk.com.au/$1 [L,R=301]
+
+# --------------------------------------------------------------------------
+# 3) CUSTOM 404 PAGE
+# Tells Apache which page to show a visitor who lands on a URL that
+# doesn't exist (a mistyped suburb page, an old removed link, etc).
+# NOTE: 404.html itself is not part of this repo yet. It's produced later,
+# alongside every other page, by the static-site (SSG) build. Until that
+# build exists and is deployed, leave this line in but be aware the file
+# it points to won't be there, Apache will fall back to its own default
+# error page if 404.html is missing.
+# --------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# --------------------------------------------------------------------------
+# 4) LONG-LIVED CACHING FOR STATIC FILES
+# Tells visitors' browsers to keep images, fonts, CSS and JS for a good
+# while before checking back with the server. Makes repeat visits to the
+# site noticeably faster. Filenames for CSS/JS are expected to change
+# (via a build hash) whenever we ship new code, so a long cache here is
+# safe, visitors won't get stuck on an old version.
+# --------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# --------------------------------------------------------------------------
+# 5) COMPRESSION
+# Shrinks text-based files (HTML, CSS, JS, JSON, SVG) before sending them
+# over the network, so pages load faster, especially on mobile data.
+# --------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --------------------------------------------------------------------------
+# 6) SPA FALLBACK — TEMPORARY TESTING ONLY, DISABLED BY DEFAULT
+# This block is commented out on purpose. It is ONLY needed if we ever
+# deploy the current client-side React build (before the SSG conversion)
+# somewhere for a temporary test, where every URL needs to fall back to
+# index.html so the in-browser router can take over.
+#
+# Once the SSG conversion ships, every page (including all 23 suburb
+# pages) is its own real static HTML file at its own real URL, and this
+# fallback must stay OFF, turning it on would hide real 404s behind a
+# blank or wrong page. Uncomment only for a short-lived SPA test, then
+# remove it again before the real launch.
+# --------------------------------------------------------------------------
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ index.html [L]

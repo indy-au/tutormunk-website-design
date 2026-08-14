@@ -1,0 +1,27 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { suburbPages } from "@/content/locations";
+import { SuburbPage } from "@/components/templates/SuburbPage";
+
+const content = suburbPages["catherine-field"];
+
+export const Route = createFileRoute("/tutoring-in-catherine-field")({
+  head: () => ({
+    meta: [
+      { title: content.title },
+      { name: "description", content: content.metaDescription },
+      { property: "og:title", content: content.title },
+      { property: "og:description", content: content.metaDescription },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: CatherineFieldPage,
+});
+
+function CatherineFieldPage() {
+  return (
+    <>
+      <SuburbPage content={content} />
+    </>
+  );
+}

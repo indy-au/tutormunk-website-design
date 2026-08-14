@@ -1,3 +1,5 @@
+import { suburbs } from "./locations";
+
 export type MunkCard = {
   firstName: string;
   subjects: string;
@@ -58,7 +60,7 @@ export const statsSection = {
   heading: "The numbers behind our tutoring.",
   items: [
     { value: "500+", label: "students tutored across South-West Sydney" },
-    { value: "8", label: "suburbs served for in-home sessions" },
+    { value: String(suburbs.length), label: "suburbs served for in-home sessions" },
     { value: "95%", label: "parent satisfaction from our term surveys" },
     { value: "4.9", label: "average Google review rating" },
   ],

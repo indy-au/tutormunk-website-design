@@ -1,0 +1,27 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { suburbPages } from "@/content/locations";
+import { SuburbPage } from "@/components/templates/SuburbPage";
+
+const content = suburbPages["gledswood-hills"];
+
+export const Route = createFileRoute("/tutoring-in-gledswood-hills")({
+  head: () => ({
+    meta: [
+      { title: content.title },
+      { name: "description", content: content.metaDescription },
+      { property: "og:title", content: content.title },
+      { property: "og:description", content: content.metaDescription },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: GledswoodHillsPage,
+});
+
+function GledswoodHillsPage() {
+  return (
+    <>
+      <SuburbPage content={content} />
+    </>
+  );
+}

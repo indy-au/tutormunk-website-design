@@ -7,6 +7,7 @@ export function CentreSection({
   body,
   details,
   mapLabel,
+  mapEmbedUrl,
 }: {
   eyebrow?: string | undefined;
   heading: string;
@@ -14,6 +15,7 @@ export function CentreSection({
   body: string;
   details: { label: string; value: string }[];
   mapLabel: string;
+  mapEmbedUrl: string;
 }) {
   return (
     <section className="section-y">
@@ -31,12 +33,15 @@ export function CentreSection({
             ))}
           </dl>
         </div>
-        <div
-          role="img"
-          aria-label={mapLabel}
-          className="min-h-64 rounded-3xl border border-border bg-primary-soft/70 p-6"
-        >
-          <p className="text-sm font-semibold text-primary">{mapLabel}</p>
+        <div className="min-h-64 overflow-hidden rounded-3xl border border-border">
+          <iframe
+            src={mapEmbedUrl}
+            title={mapLabel}
+            aria-label={mapLabel}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="h-full min-h-64 w-full border-0"
+          />
         </div>
       </div>
     </section>

@@ -36,7 +36,7 @@ const placeholderSections = (topic: string) => [
   {
     heading: "Contact.",
     paragraphs: [
-      "Questions about this page can be sent to hello@tutormunk.com.au or raised at our Oran Park centre during opening hours.",
+      "Questions about this page can be sent to hello@tutormunk.com.au or raised at our Gregory Hills centre by appointment.",
     ],
   },
 ];

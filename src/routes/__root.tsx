@@ -83,14 +83,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Premium in-person tutoring for K-12 students in South-West Sydney, in your home or at our Oran Park centre.",
+          "Premium in-person tutoring for K-12 students in South-West Sydney, in your home or at our Gregory Hills centre.",
       },
       { name: "author", content: "TutorMunk" },
       { property: "og:title", content: "TutorMunk | In-Person Tutoring in South-West Sydney" },
       {
         property: "og:description",
         content:
-          "1-to-1 and small group tutoring for K-12 students, in your home or at our Oran Park centre.",
+          "1-to-1 and small group tutoring for K-12 students, in your home or at our Gregory Hills centre.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

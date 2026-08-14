@@ -187,7 +187,7 @@ export const topics: Record<string, TopicContent> = {
   "ask-munk": topic(
     "Exam prep",
     "Ask Munk for quick help between sessions.",
-    "Students bring one hard question to a short drop in session at our Oran Park centre.",
+    "Students bring one hard question to a short drop in session at our Gregory Hills centre.",
     "Ask Munk",
   ),
 };

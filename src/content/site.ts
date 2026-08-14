@@ -5,7 +5,7 @@ export const brand = {
   phoneDial: "1300006865",
   phoneDialDisplay: "1300 006 865",
   email: "hello@tutormunk.com.au",
-  centreAddress: "Suite 3, 12 Central Avenue, Oran Park NSW 2570",
+  centreAddress: "The HUB, 31 Lasso Road, Gregory Hills NSW 2557",
   ratingLine: "4.9 from 73 Google reviews",
 };
 
@@ -157,7 +157,7 @@ export const primaryNav: NavItem[] = [
           links: [
             { label: "ICAS", to: "/topics/icas", icon: "medal", description: "Extension style questions in English, Maths and Science" },
             { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "timer", description: "An intensive block before trials and the HSC" },
-            { label: "Ask Munk", to: "/topics/ask-munk", icon: "message-circle-question", description: "Drop-in homework help at our Oran Park centre" },
+            { label: "Ask Munk", to: "/topics/ask-munk", icon: "message-circle-question", description: "Drop-in homework help at our Gregory Hills centre" },
           ],
         },
       ],
@@ -180,7 +180,7 @@ export const callbackModal = {
 
 export const footer = {
   blurb:
-    "In-person tutoring for K-12 students across South-West Sydney, in your home or at our Oran Park centre. We do not run online lessons.",
+    "In-person tutoring for K-12 students across South-West Sydney, in your home or at our Gregory Hills centre. We do not run online lessons.",
   columns: [
     {
       heading: "Programs",
@@ -196,23 +196,11 @@ export const footer = {
       ],
     },
     {
-      heading: "Locations",
-      links: [
-        { label: "Oran Park", to: "/locations/oran-park" },
-        { label: "Gregory Hills", to: "/locations" },
-        { label: "Leppington", to: "/locations" },
-        { label: "Gledswood Hills", to: "/locations" },
-        { label: "Kirkham", to: "/locations" },
-        { label: "Narellan", to: "/locations" },
-        { label: "Catherine Field", to: "/locations" },
-        { label: "Harrington Park", to: "/locations" },
-      ],
-    },
-    {
       heading: "Company",
       links: [
         { label: "About", to: "/about" },
         { label: "Our Munks", to: "/our-munks" },
+        { label: "Locations", to: "/locations" },
         { label: "Testimonials", to: "/testimonials" },
         { label: "Blog", to: "/blog" },
         { label: "Become a Munk", to: "/become-a-tutor" },
@@ -256,7 +244,7 @@ export const deliveryModes = [
     setting: "Our centre",
     settingIcon: "building",
     format: "1-to-1",
-    detail: "Quiet rooms at Oran Park, with printed resources and past papers on hand.",
+    detail: "Sessions at our Gregory Hills centre, with printed resources and past papers on hand.",
   },
   {
     name: "Our centre group",
@@ -273,24 +261,5 @@ export const talkToUs = {
   heading: "Every family is different.",
   body: "Call us and we will tailor a plan and walk you through the options. We talk through session times, delivery mode and tutor matching on the phone.",
 };
-
-export const reviews = [
-  { name: "Melissa T.", suburb: "Oran Park", rating: 5, quote: "Our Year 5 daughter went from avoiding maths homework to asking for extra questions. The tutor is patient and very organised." },
-  { name: "Hasan A.", suburb: "Gregory Hills", rating: 5, quote: "We started six weeks before the Selective test. The practice papers and feedback each week made a real difference." },
-  { name: "Priya S.", suburb: "Narellan", rating: 5, quote: "Sessions at the centre suit us better than home. Our son is focused there and the reports are clear and honest." },
-  { name: "Daniel W.", suburb: "Leppington", rating: 5, quote: "Our Year 11 son needed help with Maths Advanced. His marks lifted a full band by the trial exams." },
-  { name: "Jess M.", suburb: "Harrington Park", rating: 5, quote: "Booking was simple and we met the tutor before committing. No pressure, no long contracts." },
-];
-
-export const suburbs = [
-  "Oran Park",
-  "Gregory Hills",
-  "Leppington",
-  "Gledswood Hills",
-  "Kirkham",
-  "Narellan",
-  "Catherine Field",
-  "Harrington Park",
-];
 
 export const primaryCta = { label: "Request a Call", modal: true };

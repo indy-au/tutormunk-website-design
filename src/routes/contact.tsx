@@ -21,7 +21,12 @@ function ContactPage() {
   return (
     <>
       <PageIntro {...contact.hero} />
-      <ContactSection details={contact.details} mapLabel={contact.mapLabel} form={contact.form} />
+      <ContactSection
+        details={contact.details}
+        mapLabel={contact.mapLabel}
+        mapEmbedUrl={contact.mapEmbedUrl}
+        form={contact.form}
+      />
     </>
   );
 }
