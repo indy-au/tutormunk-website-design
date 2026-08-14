@@ -11,7 +11,7 @@ export const hscMathsAdvanced = {
       { label: "Stage", value: "Years 11 and 12" },
       { label: "Format", value: "1-to-1 or small group" },
       { label: "Where", value: "Your home or our centre" },
-      { label: "Rate", value: "$XX per hour" },
+      { label: "Sessions", value: "60 minutes" },
     ],
   },
   modules: {

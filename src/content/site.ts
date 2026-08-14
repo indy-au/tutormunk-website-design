@@ -32,6 +32,8 @@ export type NavItem = {
     note: string;
     footerLabel: string;
     footerTo: string;
+    /** Icon for the stage-overview footer link, e.g. graduation-cap. */
+    footerIcon?: string | undefined;
   };
 };
 
@@ -46,6 +48,7 @@ export const primaryNav: NavItem[] = [
       note: nesaNote,
       footerLabel: "View all primary school",
       footerTo: "/primary-school",
+      footerIcon: "graduation-cap",
       columns: [
         {
           links: [
@@ -72,6 +75,7 @@ export const primaryNav: NavItem[] = [
       note: nesaNote,
       footerLabel: "View all high school",
       footerTo: "/high-school",
+      footerIcon: "school",
       columns: [
         {
           links: [
@@ -97,6 +101,7 @@ export const primaryNav: NavItem[] = [
       note: nesaNote,
       footerLabel: "View all senior school",
       footerTo: "/senior-school",
+      footerIcon: "award",
       columns: [
         {
           heading: "English",
@@ -224,33 +229,29 @@ export const footer = {
 export const deliveryModes = [
   {
     name: "Your home 1-to-1",
-    icon: "one-to-one",
+    icon: "house",
     setting: "Your home",
-    settingIcon: "house",
     format: "1-to-1",
     detail: "A tutor comes to you for a 60-minute session. Full attention on one student, with no travel for the family.",
   },
   {
     name: "Your home group",
-    icon: "small-group",
+    icon: "users",
     setting: "Your home",
-    settingIcon: "house",
     format: "Small group",
     detail: "Up to three students, often siblings or neighbours, taught together at your kitchen table.",
   },
   {
     name: "Our centre 1-to-1",
-    icon: "one-to-one",
+    icon: "building",
     setting: "Our centre",
-    settingIcon: "building",
     format: "1-to-1",
     detail: "Sessions at our Gregory Hills centre, with printed resources and past papers on hand.",
   },
   {
     name: "Our centre group",
-    icon: "small-group",
+    icon: "school",
     setting: "Our centre",
-    settingIcon: "building",
     format: "Small group",
     detail: "Groups of four to six students in the same stage, grouped by ability.",
   },

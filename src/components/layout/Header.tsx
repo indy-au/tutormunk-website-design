@@ -76,6 +76,9 @@ export function Header() {
                     setOpenPanel(null);
                   }
                 }}
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") setOpenPanel(null);
+                }}
               >
                 <Link
                   to={item.to}
@@ -129,8 +132,9 @@ export function Header() {
                       <Link
                         to={item.panel.footerTo}
                         onClick={() => setOpenPanel(null)}
-                        className="text-sm font-semibold text-accent-ink underline decoration-accent decoration-2 underline-offset-4"
+                        className="flex items-center gap-2 text-sm font-semibold text-accent-ink underline decoration-accent decoration-2 underline-offset-4"
                       >
+                        {item.panel.footerIcon ? <IconTile name={item.panel.footerIcon} size="sm" /> : null}
                         {item.panel.footerLabel}
                       </Link>
                     </div>
@@ -226,8 +230,9 @@ export function Header() {
                       <Link
                         to={item.panel.footerTo}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-sm font-semibold text-accent-ink"
+                        className="flex items-center gap-2 text-sm font-semibold text-accent-ink"
                       >
+                        {item.panel.footerIcon ? <IconTile name={item.panel.footerIcon} size="sm" /> : null}
                         {item.panel.footerLabel}
                       </Link>
                     </div>

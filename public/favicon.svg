@@ -1,0 +1,20 @@
+<!--
+  Temporary TutorMunk favicon. Colours are the resolved values of the
+  primary and accent theme tokens in src/styles.css (14 Aug 2026
+  palette). This is a placeholder mark only, replace once the real logo
+  and brand palette are decided, see CLAUDE.md "Design direction".
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#113623" />
+  <text
+    x="32"
+    y="34"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700"
+    font-size="28"
+    letter-spacing="-1"
+    fill="#eaac48"
+  >TM</text>
+</svg>

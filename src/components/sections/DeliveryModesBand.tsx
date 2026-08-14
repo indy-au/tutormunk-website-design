@@ -15,10 +15,9 @@ export function DeliveryModesBand({
     <section className="section-y bg-secondary">
       <div className="container-page">
         <SectionHeading eyebrow={eyebrow} heading={heading} body={body} />
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {deliveryModes.map((mode) => {
             const Icon = getIcon(mode.icon);
-            const SettingIcon = getIcon(mode.settingIcon);
             return (
               <article
                 key={mode.name}
@@ -31,8 +30,7 @@ export function DeliveryModesBand({
                   >
                     <Icon className="h-6 w-6" />
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground">
-                    <SettingIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                  <span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground">
                     {mode.setting}
                   </span>
                 </div>
