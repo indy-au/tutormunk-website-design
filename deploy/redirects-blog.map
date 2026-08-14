@@ -1,0 +1,20 @@
+# TutorMunk blog redirect map (groundwork, 14 Aug 2026)
+#
+# One line per migrated post: old sproutsacademy.com.au URL -> new
+# tutormunk.com.au blog URL. Generated from the sourceUrl field in each
+# post's markdown frontmatter (src/content/blog/*.md).
+#
+# IMPORTANT: this file deploys on the SPROUTS ACADEMY domain's server at
+# switchover (sproutsacademy.com.au), not on TutorMunk's own
+# deploy/.htaccess. It tells the OLD domain where to send visitors who
+# still have an old article URL bookmarked or ranked in Google. Whoever
+# manages the Sprouts Academy hosting needs this file at that point, it
+# does nothing sitting in this repo on its own.
+#
+# Currently empty of real redirects: the one migrated post
+# (selective-test-timeline) has no sourceUrl on file yet, its real old
+# Sprouts Academy URL was not supplied, and none has been invented here.
+# Add a line below in this format once a post's frontmatter sourceUrl is
+# filled in:
+#
+# https://sproutsacademy.com.au/blog/old-post-slug -> https://tutormunk.com.au/blog/new-post-slug
