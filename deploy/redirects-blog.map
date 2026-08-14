@@ -1,4 +1,4 @@
-# TutorMunk blog redirect map (updated 14 Aug 2026)
+# TutorMunk blog redirect map (updated 14 Aug 2026, full content bank)
 #
 # One line per migrated post: old sproutsacademy.com.au URL -> new
 # tutormunk.com.au blog URL. Generated from the sourceUrl field in each
@@ -7,30 +7,195 @@
 # IMPORTANT: this file deploys on the SPROUTS ACADEMY domain's server at
 # switchover (sproutsacademy.com.au), not on TutorMunk's own
 # deploy/.htaccess. It tells the OLD domain where to send visitors who
-# still have an old article URL bookmarked or ranked in Google. Whoever
-# manages the Sprouts Academy hosting needs this file at that point, it
-# does nothing sitting in this repo on its own.
+# still have an old article URL bookmarked or ranked in Google.
 #
 # selective-test-timeline and naplan-writing are original TutorMunk posts
-# with no Sprouts source, so they have no redirect lines.
+# with no Sprouts source, so they have no redirect lines. Most targets are
+# staged as drafts until switchover; flip drafts live BEFORE deploying
+# these redirects so no redirect lands on a 404.
 
+https://sproutsacademy.com.au/3-mistakes-to-avoid-in-your-school-studies/ -> https://tutormunk.com.au/blog/3-mistakes-to-avoid-in-your-school-studies
+https://sproutsacademy.com.au/5-key-benefits-of-personalized-learning-with-sprouts-academy-tutors/ -> https://tutormunk.com.au/blog/5-key-benefits-of-personalised-learning
+https://sproutsacademy.com.au/5-tips-for-getting-prepared-for-school-in-2024/ -> https://tutormunk.com.au/blog/5-tips-for-getting-prepared-for-school-in-2024
+https://sproutsacademy.com.au/a-guide-on-how-to-help-your-child-plan-their-future/ -> https://tutormunk.com.au/blog/a-guide-on-how-to-help-your-child-plan-their-future
+https://sproutsacademy.com.au/about-college/ -> https://tutormunk.com.au/blog/about-college
+https://sproutsacademy.com.au/accelerate-your-child-progress/ -> https://tutormunk.com.au/blog/accelerate-your-child-progress
+https://sproutsacademy.com.au/advantages-of-learning-english/ -> https://tutormunk.com.au/blog/advantages-of-learning-english
+https://sproutsacademy.com.au/advantages-of-studying-with-sprouts-tutors/ -> https://tutormunk.com.au/blog/advantages-of-studying-with-tutormunk-tutors
 https://sproutsacademy.com.au/after-school-tutoring-gregory-hills/ -> https://tutormunk.com.au/blog/after-school-tutoring-gregory-hills
-https://sproutsacademy.com.au/child-needs-private-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/child-needs-private-tutoring-in-sydney
-https://sproutsacademy.com.au/group-classes-tutoring/ -> https://tutormunk.com.au/blog/group-classes-tutoring
-https://sproutsacademy.com.au/improve-naplan-performance/ -> https://tutormunk.com.au/blog/improve-naplan-performance
-https://sproutsacademy.com.au/oc-test-preparation-tutoring/ -> https://tutormunk.com.au/blog/oc-test-preparation-tutoring
-https://sproutsacademy.com.au/secondary-school-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/secondary-school-tutoring-in-sydney
-https://sproutsacademy.com.au/sydney-hsc-tutoring/ -> https://tutormunk.com.au/blog/sydney-hsc-tutoring
-https://sproutsacademy.com.au/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills/ -> https://tutormunk.com.au/blog/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills
-https://sproutsacademy.com.au/sprouts-academy-best/ -> https://tutormunk.com.au/blog/what-makes-tutormunk-different
-https://sproutsacademy.com.au/why-private-tutoring-is-important-for-your-child/ -> https://tutormunk.com.au/blog/why-private-tutoring-is-important-for-your-child
+https://sproutsacademy.com.au/art-of-homework/ -> https://tutormunk.com.au/blog/art-of-homework
+https://sproutsacademy.com.au/basic-math-concepts/ -> https://tutormunk.com.au/blog/basic-math-concepts
+https://sproutsacademy.com.au/become-a-tutor-in-australia/ -> https://tutormunk.com.au/blog/become-a-tutor-in-australia
+https://sproutsacademy.com.au/become-an-excellent-tutor/ -> https://tutormunk.com.au/blog/become-an-excellent-tutor
 https://sproutsacademy.com.au/beneficial-for-senior-high-school-students/ -> https://tutormunk.com.au/blog/beneficial-for-senior-high-school-students
+https://sproutsacademy.com.au/benefits-of-learning-math/ -> https://tutormunk.com.au/blog/benefits-of-learning-math
+https://sproutsacademy.com.au/benefits-of-primary-school-tutoring/ -> https://tutormunk.com.au/blog/benefits-of-primary-school-tutoring
+https://sproutsacademy.com.au/benefits-of-private-tutoring-in-gregory-hills/ -> https://tutormunk.com.au/blog/benefits-of-private-tutoring-in-gregory-hills
+https://sproutsacademy.com.au/best-creative-writing-courses-in-sydney/ -> https://tutormunk.com.au/blog/best-creative-writing-courses-in-sydney
 https://sproutsacademy.com.au/best-time-to-start-tutoring/ -> https://tutormunk.com.au/blog/best-time-to-start-tutoring
+https://sproutsacademy.com.au/boost-productivity-in-study/ -> https://tutormunk.com.au/blog/boost-productivity-in-study
 https://sproutsacademy.com.au/boost-your-childs-english-skills/ -> https://tutormunk.com.au/blog/boost-your-childs-english-skills
+https://sproutsacademy.com.au/can-tutors-help-with-assignments/ -> https://tutormunk.com.au/blog/can-tutors-help-with-assignments
+https://sproutsacademy.com.au/can-you-learn-math-on-your-own/ -> https://tutormunk.com.au/blog/can-you-learn-math-on-your-own
+https://sproutsacademy.com.au/canberra-math-tutor/ -> https://tutormunk.com.au/blog/canberra-math-tutor
+https://sproutsacademy.com.au/child-be-more-confident-at-school/ -> https://tutormunk.com.au/blog/child-be-more-confident-at-school
+https://sproutsacademy.com.au/child-needs-a-productive-hobby/ -> https://tutormunk.com.au/blog/child-needs-a-productive-hobby
+https://sproutsacademy.com.au/child-needs-private-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/child-needs-private-tutoring-in-sydney
+https://sproutsacademy.com.au/child-needs-tutor/ -> https://tutormunk.com.au/blog/child-needs-tutor
+https://sproutsacademy.com.au/child-struggling-in-school/ -> https://tutormunk.com.au/blog/child-struggling-in-school
+https://sproutsacademy.com.au/childs-learning-needs/ -> https://tutormunk.com.au/blog/childs-learning-needs
+https://sproutsacademy.com.au/choose-the-right-tutor/ -> https://tutormunk.com.au/blog/choose-the-right-tutor
+https://sproutsacademy.com.au/complete-private-tutoring-sydney/ -> https://tutormunk.com.au/blog/complete-private-tutoring-sydney
+https://sproutsacademy.com.au/compliment-and-complement/ -> https://tutormunk.com.au/blog/compliment-and-complement
 https://sproutsacademy.com.au/comprehensive-primary-to-k6-private-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/comprehensive-primary-to-k6-private-tutoring-in-sydney
+https://sproutsacademy.com.au/contact-with-your-childs-tutor/ -> https://tutormunk.com.au/blog/contact-with-your-childs-tutor
+https://sproutsacademy.com.au/create-a-effective-study-plan/ -> https://tutormunk.com.au/blog/create-a-effective-study-plan
+https://sproutsacademy.com.au/critical-thinking-and-problem-solving-skills/ -> https://tutormunk.com.au/blog/critical-thinking-and-problem-solving-skills
+https://sproutsacademy.com.au/critical-thinking-skills-in-students/ -> https://tutormunk.com.au/blog/critical-thinking-skills-in-students
+https://sproutsacademy.com.au/customer-testimonials/ -> https://tutormunk.com.au/blog/customer-testimonials
+https://sproutsacademy.com.au/difference-between-private-tutoring-and-online-tutoring/ -> https://tutormunk.com.au/blog/difference-between-private-tutoring-and-online-tutoring
+https://sproutsacademy.com.au/do-tutors-help-with-homework/ -> https://tutormunk.com.au/blog/do-tutors-help-with-homework
+https://sproutsacademy.com.au/dropping-a-subject/ -> https://tutormunk.com.au/blog/dropping-a-subject
+https://sproutsacademy.com.au/early-intervention-in-literac/ -> https://tutormunk.com.au/blog/early-intervention-in-literac
+https://sproutsacademy.com.au/easiest-way-for-effective-note-taking-during-class/ -> https://tutormunk.com.au/blog/easiest-way-for-effective-note-taking-during-class
+https://sproutsacademy.com.au/education/activities-for-easy-math/ -> https://tutormunk.com.au/blog/activities-for-easy-math
+https://sproutsacademy.com.au/education/advantages-of-studying/ -> https://tutormunk.com.au/blog/advantages-of-studying
+https://sproutsacademy.com.au/education/motivated-to-teach/ -> https://tutormunk.com.au/blog/motivated-to-teach
+https://sproutsacademy.com.au/education/social-media-mental-health/ -> https://tutormunk.com.au/blog/social-media-mental-health
+https://sproutsacademy.com.au/education/work-smarter-not-harder/ -> https://tutormunk.com.au/blog/work-smarter-not-harder
+https://sproutsacademy.com.au/educational-therapist/ -> https://tutormunk.com.au/blog/educational-therapist
+https://sproutsacademy.com.au/english-exam-preparation/ -> https://tutormunk.com.au/blog/english-exam-preparation
+https://sproutsacademy.com.au/english-for-global-economy/ -> https://tutormunk.com.au/blog/english-for-global-economy
+https://sproutsacademy.com.au/english-tutor-for-year-12/ -> https://tutormunk.com.au/blog/english-tutor-for-year-12
+https://sproutsacademy.com.au/enhance-your-intelligence-thinking-skills/ -> https://tutormunk.com.au/blog/enhance-your-intelligence-thinking-skills
+https://sproutsacademy.com.au/face-to-face-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/face-to-face-tutoring-in-sydney
+https://sproutsacademy.com.au/find-good-tutor-near-you/ -> https://tutormunk.com.au/blog/find-good-tutor-near-you
+https://sproutsacademy.com.au/find-tutor-in-gregory-hills/ -> https://tutormunk.com.au/blog/find-tutor-in-gregory-hills
+https://sproutsacademy.com.au/get-ready-for-final-exams/ -> https://tutormunk.com.au/blog/get-ready-for-final-exams
+https://sproutsacademy.com.au/group-classes-tutoring/ -> https://tutormunk.com.au/blog/group-classes-tutoring
+https://sproutsacademy.com.au/guide-to-choosing-the-best-school-for-your-child/ -> https://tutormunk.com.au/blog/guide-to-choosing-the-best-school-for-your-child
+https://sproutsacademy.com.au/guiding-the-young-generation-to-success/ -> https://tutormunk.com.au/blog/guiding-the-young-generation-to-success
+https://sproutsacademy.com.au/habits-of-successful-students/ -> https://tutormunk.com.au/blog/habits-of-successful-students
 https://sproutsacademy.com.au/helping-a-child-overcome-difficulty-in-one-subject/ -> https://tutormunk.com.au/blog/helping-a-child-overcome-difficulty-in-one-subject
+https://sproutsacademy.com.au/helping-your-child-bounce-back/ -> https://tutormunk.com.au/blog/helping-your-child-bounce-back
+https://sproutsacademy.com.au/high-school-math-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/high-school-math-tutoring-in-sydney
+https://sproutsacademy.com.au/highly-successful-students/ -> https://tutormunk.com.au/blog/highly-successful-students
+https://sproutsacademy.com.au/hings-to-consider-when-choosing-a-private-tutor/ -> https://tutormunk.com.au/blog/hings-to-consider-when-choosing-a-private-tutor
+https://sproutsacademy.com.au/history-of-sprouts-academy/ -> https://tutormunk.com.au/blog/our-story
+https://sproutsacademy.com.au/homework-is-important/ -> https://tutormunk.com.au/blog/homework-is-important
+https://sproutsacademy.com.au/homework-overload/ -> https://tutormunk.com.au/blog/homework-overload
+https://sproutsacademy.com.au/homework-struggles/ -> https://tutormunk.com.au/blog/homework-struggles
+https://sproutsacademy.com.au/how-can-i-help-my-child-make-career-choices/ -> https://tutormunk.com.au/blog/how-can-i-help-my-child-make-career-choices
+https://sproutsacademy.com.au/how-one-to-one-english-tutoring-in-leppington-boosts-confidence-and-communication-skills/ -> https://tutormunk.com.au/blog/how-one-to-one-english-tutoring-boosts-confidence
+https://sproutsacademy.com.au/how-private-tutoring-helps-children-develop/ -> https://tutormunk.com.au/blog/how-private-tutoring-helps-children-develop
+https://sproutsacademy.com.au/how-to-become-a-math-tutor-in-sydney/ -> https://tutormunk.com.au/blog/how-to-become-a-math-tutor-in-sydney
+https://sproutsacademy.com.au/how-to-become-an-english-tutor/ -> https://tutormunk.com.au/blog/how-to-become-an-english-tutor
+https://sproutsacademy.com.au/how-to-know-if-your-child-is-learning/ -> https://tutormunk.com.au/blog/how-to-know-if-your-child-is-learning
+https://sproutsacademy.com.au/how-to-learn-math-effectively/ -> https://tutormunk.com.au/blog/how-to-learn-math-effectively
+https://sproutsacademy.com.au/how-to-study-effectively/ -> https://tutormunk.com.au/blog/how-to-study-effectively
+https://sproutsacademy.com.au/how-to-study-for-finals/ -> https://tutormunk.com.au/blog/how-to-study-for-finals
+https://sproutsacademy.com.au/how-to-teach-a-child-to-think/ -> https://tutormunk.com.au/blog/how-to-teach-a-child-to-think
+https://sproutsacademy.com.au/hsc-students-study/ -> https://tutormunk.com.au/blog/hsc-students-study
+https://sproutsacademy.com.au/importance-of-english-learning/ -> https://tutormunk.com.au/blog/importance-of-english-learning
+https://sproutsacademy.com.au/importance-of-study-in-students-life/ -> https://tutormunk.com.au/blog/importance-of-study-in-students-life
+https://sproutsacademy.com.au/importance-of-thinking-skills-in-students/ -> https://tutormunk.com.au/blog/importance-of-thinking-skills-in-students
+https://sproutsacademy.com.au/importance-of-tutor-in-life/ -> https://tutormunk.com.au/blog/importance-of-tutor-in-life
+https://sproutsacademy.com.au/improve-childrens-social-skills/ -> https://tutormunk.com.au/blog/improve-childrens-social-skills
+https://sproutsacademy.com.au/improve-naplan-performance/ -> https://tutormunk.com.au/blog/improve-naplan-performance
+https://sproutsacademy.com.au/improve-your-critical-thinking-skills/ -> https://tutormunk.com.au/blog/improve-your-critical-thinking-skills
+https://sproutsacademy.com.au/informal-and-formal-language/ -> https://tutormunk.com.au/blog/informal-and-formal-language
+https://sproutsacademy.com.au/learn-math/ -> https://tutormunk.com.au/blog/learn-math
+https://sproutsacademy.com.au/learning-and-personal-growth/ -> https://tutormunk.com.au/blog/learning-and-personal-growth
+https://sproutsacademy.com.au/learning-to-your-child/ -> https://tutormunk.com.au/blog/learning-to-your-child
+https://sproutsacademy.com.au/mastering-math-with-private-tutoring-in-gregory-hills/ -> https://tutormunk.com.au/blog/mastering-math-with-private-tutoring-in-gregory-hills
+https://sproutsacademy.com.au/math-anxiety/ -> https://tutormunk.com.au/blog/math-anxiety
+https://sproutsacademy.com.au/math-challenges-faced-by-sydney-students/ -> https://tutormunk.com.au/blog/math-challenges-faced-by-sydney-students
+https://sproutsacademy.com.au/math-english-affordable-tutor/ -> https://tutormunk.com.au/blog/math-english-affordable-tutor
+https://sproutsacademy.com.au/math-exam-score/ -> https://tutormunk.com.au/blog/math-exam-score
+https://sproutsacademy.com.au/math-tutoring-helps-develop-critical-thinking/ -> https://tutormunk.com.au/blog/math-tutoring-helps-develop-critical-thinking
+https://sproutsacademy.com.au/mathematics-important-for-children/ -> https://tutormunk.com.au/blog/mathematics-important-for-children
+https://sproutsacademy.com.au/motivation-to-keep-teaching-everyday/ -> https://tutormunk.com.au/blog/motivation-to-keep-teaching-everyday
+https://sproutsacademy.com.au/naplan-test/ -> https://tutormunk.com.au/blog/naplan-test
 https://sproutsacademy.com.au/naplan-tutoring-for-childs/ -> https://tutormunk.com.au/blog/naplan-tutoring-boost-your-childs-performance
+https://sproutsacademy.com.au/naplan-tutors/ -> https://tutormunk.com.au/blog/naplan-tutors
+https://sproutsacademy.com.au/new-schools-and-teachers/ -> https://tutormunk.com.au/blog/new-schools-and-teachers
+https://sproutsacademy.com.au/oc-test-preparation-tutoring/ -> https://tutormunk.com.au/blog/oc-test-preparation-tutoring
+https://sproutsacademy.com.au/one-to-one-english-and-math-tutoring/ -> https://tutormunk.com.au/blog/one-to-one-english-and-math-tutoring
+https://sproutsacademy.com.au/one-to-one-math-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/one-to-one-math-tutoring-in-sydney
+https://sproutsacademy.com.au/one-to-one-tutoring-boosts-confidence/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-boosts-confidence
+https://sproutsacademy.com.au/one-to-one-tutoring-for-child/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-for-child
+https://sproutsacademy.com.au/one-to-one-tutoring-in-leppington/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-in-leppington
+https://sproutsacademy.com.au/one-to-one-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-in-sydney
+https://sproutsacademy.com.au/one-to-one-tutoring-is-the-best-choice/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-is-the-best-choice
+https://sproutsacademy.com.au/one-to-one-tutoring-primary/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-primary
+https://sproutsacademy.com.au/one-to-one-tutoring-services-oran-park/ -> https://tutormunk.com.au/blog/one-to-one-tutoring-services-oran-park
+https://sproutsacademy.com.au/other-private-tutors/ -> https://tutormunk.com.au/blog/other-private-tutors
+https://sproutsacademy.com.au/parents-trust-sprouts-academy/ -> https://tutormunk.com.au/blog/why-parents-trust-tutormunk
+https://sproutsacademy.com.au/perfect-study-environment-for-kids/ -> https://tutormunk.com.au/blog/perfect-study-environment-for-kids
+https://sproutsacademy.com.au/perfect-study-environment/ -> https://tutormunk.com.au/blog/perfect-study-environment
+https://sproutsacademy.com.au/positive-environment-for-your-child/ -> https://tutormunk.com.au/blog/positive-environment-for-your-child
+https://sproutsacademy.com.au/prepare-for-naplan/ -> https://tutormunk.com.au/blog/prepare-for-naplan
+https://sproutsacademy.com.au/prepare-for-the-hsc/ -> https://tutormunk.com.au/blog/prepare-for-the-hsc
+https://sproutsacademy.com.au/prepare-your-kids-for-school-camp/ -> https://tutormunk.com.au/blog/prepare-your-kids-for-school-camp
+https://sproutsacademy.com.au/preschool-tutoring-in-sydney-by-sprouts/ -> https://tutormunk.com.au/blog/preschool-tutoring-in-sydney
+https://sproutsacademy.com.au/primary-school-students-in-sydney/ -> https://tutormunk.com.au/blog/primary-school-students-in-sydney
+https://sproutsacademy.com.au/private-math-tutor-make-your-child-excel-in-mathematics/ -> https://tutormunk.com.au/blog/private-math-tutor-make-your-child-excel-in-mathematics
+https://sproutsacademy.com.au/private-mathematics-tutor/ -> https://tutormunk.com.au/blog/private-mathematics-tutor
+https://sproutsacademy.com.au/private-maths-tutoring/ -> https://tutormunk.com.au/blog/private-maths-tutoring
+https://sproutsacademy.com.au/private-tutoring-in-leppington-is-essential/ -> https://tutormunk.com.au/blog/private-tutoring-in-leppington-is-essential
+https://sproutsacademy.com.au/private-tutoring-is-better-than-group-tutoring/ -> https://tutormunk.com.au/blog/private-tutoring-is-better-than-group-tutoring
+https://sproutsacademy.com.au/private-tutoring-is-the-best-investment/ -> https://tutormunk.com.au/blog/private-tutoring-is-the-best-investment
+https://sproutsacademy.com.au/private-tutoring-learning-centers/ -> https://tutormunk.com.au/blog/private-tutoring-learning-centers
+https://sproutsacademy.com.au/private-tutoring-vs-learning-centers/ -> https://tutormunk.com.au/blog/private-tutoring-vs-learning-centers
+https://sproutsacademy.com.au/reading-and-writing-skills/ -> https://tutormunk.com.au/blog/reading-and-writing-skills
+https://sproutsacademy.com.au/reward-your-child/ -> https://tutormunk.com.au/blog/reward-your-child
+https://sproutsacademy.com.au/right-tutor-for-high-school-students/ -> https://tutormunk.com.au/blog/right-tutor-for-high-school-students
+https://sproutsacademy.com.au/right-way-to-memorise-an-essay/ -> https://tutormunk.com.au/blog/right-way-to-memorise-an-essay
+https://sproutsacademy.com.au/role-of-naplan-tutors/ -> https://tutormunk.com.au/blog/role-of-naplan-tutors
+https://sproutsacademy.com.au/role-of-positive-reinforcement/ -> https://tutormunk.com.au/blog/role-of-positive-reinforcement
+https://sproutsacademy.com.au/role-of-tutors-in-gregory-hills/ -> https://tutormunk.com.au/blog/role-of-tutors-in-gregory-hills
+https://sproutsacademy.com.au/school-eating-and-homework-routines/ -> https://tutormunk.com.au/blog/school-eating-and-homework-routines
+https://sproutsacademy.com.au/secondary-school-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/secondary-school-tutoring-in-sydney
+https://sproutsacademy.com.au/select-subjects-for-year-11-and-12/ -> https://tutormunk.com.au/blog/select-subjects-for-year-11-and-12
+https://sproutsacademy.com.au/sprouts-academy-best/ -> https://tutormunk.com.au/blog/what-makes-tutormunk-different
+https://sproutsacademy.com.au/sprouts-academy-different/ -> https://tutormunk.com.au/blog/how-tutormunk-stands-out
+https://sproutsacademy.com.au/sprouts-academy-high-school-tutoring-services/ -> https://tutormunk.com.au/blog/tutormunk-high-school-tutoring-services
 https://sproutsacademy.com.au/sprouts-academy-naplan-tutoring/ -> https://tutormunk.com.au/blog/naplan-tutoring
 https://sproutsacademy.com.au/sprouts-academy-one-on-one-english-tutoring/ -> https://tutormunk.com.au/blog/one-on-one-english-tutoring
-https://sproutsacademy.com.au/role-of-naplan-tutors/ -> https://tutormunk.com.au/blog/role-of-naplan-tutors
+https://sproutsacademy.com.au/sprouts-academy-one-on-one-tutoring/ -> https://tutormunk.com.au/blog/tutormunk-one-on-one-tutoring
+https://sproutsacademy.com.au/sprouts-academy-tutors-in-developing/ -> https://tutormunk.com.au/blog/tutormunk-tutors-in-developing-study-habits
+https://sproutsacademy.com.au/start-tutoring-early-in-the-year/ -> https://tutormunk.com.au/blog/start-tutoring-early-in-the-year
+https://sproutsacademy.com.au/strategies-to-help-young-learners/ -> https://tutormunk.com.au/blog/strategies-to-help-young-learners
+https://sproutsacademy.com.au/strong-reader-and-writer/ -> https://tutormunk.com.au/blog/strong-reader-and-writer
+https://sproutsacademy.com.au/study-habits-guide-for-the-student/ -> https://tutormunk.com.au/blog/study-habits-guide-for-the-student
+https://sproutsacademy.com.au/study-smart-not-hard-the-key-to-effective-learning/ -> https://tutormunk.com.au/blog/study-smart-not-hard-the-key-to-effective-learning
+https://sproutsacademy.com.au/subject-specific-private-tutoring-in-sydney/ -> https://tutormunk.com.au/blog/subject-specific-private-tutoring-in-sydney
+https://sproutsacademy.com.au/sydney-hsc-tutoring/ -> https://tutormunk.com.au/blog/sydney-hsc-tutoring
+https://sproutsacademy.com.au/the-impact-of-sleep-on-childrens-learning-and-behavior/ -> https://tutormunk.com.au/blog/the-impact-of-sleep-on-childrens-learning-and-behavior
+https://sproutsacademy.com.au/the-role-of-outdoor-education-in-early-childhood-development/ -> https://tutormunk.com.au/blog/the-role-of-outdoor-education-in-early-childhood-development
+https://sproutsacademy.com.au/thinking-skills-for-kids/ -> https://tutormunk.com.au/blog/thinking-skills-for-kids
+https://sproutsacademy.com.au/thinking-skills-selective-test-blog/ -> https://tutormunk.com.au/blog/thinking-skills-selective-test-blog
+https://sproutsacademy.com.au/tips-for-primary-class-students/ -> https://tutormunk.com.au/blog/tips-for-primary-class-students
+https://sproutsacademy.com.au/top-private-tutors/ -> https://tutormunk.com.au/blog/top-private-tutors
+https://sproutsacademy.com.au/top-qualities-to-look-for-in-a-professional-tutor/ -> https://tutormunk.com.au/blog/top-qualities-to-look-for-in-a-professional-tutor
+https://sproutsacademy.com.au/tutoring-cost/ -> https://tutormunk.com.au/blog/tutoring-cost
+https://sproutsacademy.com.au/tutoring-helps/ -> https://tutormunk.com.au/blog/tutoring-helps
+https://sproutsacademy.com.au/tutoring-in-gregory-hills-success/ -> https://tutormunk.com.au/blog/tutoring-in-gregory-hills-success
+https://sproutsacademy.com.au/tutoring-in-harrington-park-2/ -> https://tutormunk.com.au/blog/tutoring-in-harrington-park-2
+https://sproutsacademy.com.au/tutoring-requirements/ -> https://tutormunk.com.au/blog/tutoring-requirements
+https://sproutsacademy.com.au/tutoring-vs-teaching/ -> https://tutormunk.com.au/blog/tutoring-vs-teaching
+https://sproutsacademy.com.au/tutors-loves-tutoring-with-us/ -> https://tutormunk.com.au/blog/tutors-loves-tutoring-with-us
+https://sproutsacademy.com.au/understanding-learning-disabilities-in-children/ -> https://tutormunk.com.au/blog/understanding-learning-disabilities-in-children
+https://sproutsacademy.com.au/understanding-why-early-childhood/ -> https://tutormunk.com.au/blog/understanding-why-early-childhood
+https://sproutsacademy.com.au/unveiling-our-mission-in-tutoring/ -> https://tutormunk.com.au/blog/unveiling-our-mission-in-tutoring
+https://sproutsacademy.com.au/what-can-you-do-with-a-math-degree/ -> https://tutormunk.com.au/blog/what-can-you-do-with-a-math-degree
 https://sproutsacademy.com.au/what-is-the-average-atar/ -> https://tutormunk.com.au/blog/what-is-the-average-atar
+https://sproutsacademy.com.au/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills/ -> https://tutormunk.com.au/blog/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills
+https://sproutsacademy.com.au/why-children-often-learn-more-effectively-with-a-tutor-than-at-home/ -> https://tutormunk.com.au/blog/why-children-often-learn-more-effectively-with-a-tutor-than-at-home
+https://sproutsacademy.com.au/why-private-tutoring-is-essential/ -> https://tutormunk.com.au/blog/why-private-tutoring-is-essential
+https://sproutsacademy.com.au/why-private-tutoring-is-important-for-your-child/ -> https://tutormunk.com.au/blog/why-private-tutoring-is-important-for-your-child
+https://sproutsacademy.com.au/why-sprouts-private-tutoring-is-the-best-option-for-you-in-sydney/ -> https://tutormunk.com.au/blog/why-tutormunk-private-tutoring-is-the-best-option-in-sydney
+https://sproutsacademy.com.au/why-you-shouldnt-drop-out-of-high-school/ -> https://tutormunk.com.au/blog/why-you-shouldnt-drop-out-of-high-school
+https://sproutsacademy.com.au/write-effective-math-notes/ -> https://tutormunk.com.au/blog/write-effective-math-notes
+https://sproutsacademy.com.au/writing-workshops-for-kids/ -> https://tutormunk.com.au/blog/writing-workshops-for-kids
+https://sproutsacademy.com.au/young-writer-holiday-programs/ -> https://tutormunk.com.au/blog/young-writer-holiday-programs
