@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useCallbackModal } from "./CallbackModal";
+import { cn } from "@/lib/utils";
 
 const base =
   "inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
@@ -16,13 +17,15 @@ export type CtaVariant = keyof typeof styles;
 export function CallbackButton({
   label,
   variant = "primary",
+  className,
 }: {
   label: string;
   variant?: CtaVariant | undefined;
+  className?: string | undefined;
 }) {
   const { open } = useCallbackModal();
   return (
-    <button type="button" onClick={open} className={styles[variant]}>
+    <button type="button" onClick={open} className={cn(styles[variant], className)}>
       {label}
     </button>
   );

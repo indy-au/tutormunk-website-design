@@ -60,10 +60,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
-      <div className="container-page flex h-18 items-center justify-between gap-6 py-3">
-        <Wordmark />
+      <div className="container-page flex h-24 items-center justify-between gap-4 py-4">
+        <Wordmark size="lg" />
 
-        <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-1 xl:flex">
           {primaryNav.map((item) =>
             item.panel ? (
               <div
@@ -82,7 +82,7 @@ export function Header() {
                   onClick={() => setOpenPanel(null)}
                   onFocus={() => setOpenPanel(item.label)}
                   aria-expanded={openPanel === item.label}
-                  className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+                  className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2.5 text-base font-semibold text-foreground transition-colors hover:bg-muted"
                   activeProps={{ className: "bg-primary-soft" }}
                 >
                   {item.label}
@@ -141,7 +141,7 @@ export function Header() {
               <Link
                 key={item.label}
                 to={item.to}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+                className="whitespace-nowrap rounded-full px-3 py-2.5 text-base font-semibold text-foreground transition-colors hover:bg-muted"
                 activeProps={{ className: "bg-primary-soft" }}
               >
                 {item.label}
@@ -150,11 +150,14 @@ export function Header() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a href={`tel:${brand.phoneDial}`} className="text-sm font-semibold text-foreground">
+        <div className="hidden items-center gap-3 xl:flex">
+          <a
+            href={`tel:${brand.phoneDial}`}
+            className="whitespace-nowrap text-base font-semibold text-foreground"
+          >
             {brand.phone}
           </a>
-          <CallbackButton label="Request a Call" />
+          <CallbackButton label="Request a Call" className="whitespace-nowrap px-6 py-4 text-base" />
         </div>
 
         <button
@@ -163,7 +166,7 @@ export function Header() {
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold lg:hidden"
+          className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold xl:hidden"
         >
           {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           {mobileOpen ? "Close" : "Menu"}
@@ -171,7 +174,7 @@ export function Header() {
       </div>
 
       {mobileOpen ? (
-        <div id="mobile-nav" className="border-t border-border bg-card lg:hidden">
+        <div id="mobile-nav" className="border-t border-border bg-card xl:hidden">
           <nav aria-label="Mobile" className="container-page space-y-4 py-5">
             {primaryNav.map((item) =>
               item.panel ? (

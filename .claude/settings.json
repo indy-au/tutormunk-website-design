@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8080/)",
+      "Bash(command -v chromium-cli)",
+      "Read(//usr/local/bin/**)",
+      "Bash(npx --no-install playwright --version)",
+      "Read(//Applications/**)",
+      "Read(//Users/dhody/Library/Caches/**)",
+      "Bash(sips -g pixelWidth -g pixelHeight header-390.png header-1024.png)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"home: %{http_code}\\\\n\" http://localhost:8080/)",
+      "Bash(curl -s -o /dev/null -w \"testimonials: %{http_code}\\\\n\" http://localhost:8080/testimonials)"
+    ]
+  }
+}

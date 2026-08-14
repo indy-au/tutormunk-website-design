@@ -37,7 +37,7 @@ export const testimonialsPage = {
   hero: {
     eyebrow: "Testimonials",
     heading: "What families tell us.",
-    body: "Reviews from parents in Oran Park, Narellan, Gregory Hills and nearby suburbs. Placeholder copy shown for design review.",
+    body: "Reviews from parents in Oran Park, Narellan, Gregory Hills and nearby suburbs.",
   },
   cta: {
     heading: "Join the families we tutor.",

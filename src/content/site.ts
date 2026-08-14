@@ -6,7 +6,7 @@ export const brand = {
   phoneDialDisplay: "1300 006 865",
   email: "hello@tutormunk.com.au",
   centreAddress: "Suite 3, 12 Central Avenue, Oran Park NSW 2570",
-  ratingLine: "4.9 from 180+ Google reviews",
+  ratingLine: "4.9 from 73 Google reviews",
 };
 
 export type MegaLink = {

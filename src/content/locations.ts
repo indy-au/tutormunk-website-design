@@ -69,7 +69,7 @@ export const suburbOranPark = {
   reviewsSection: {
     eyebrow: "Local reviews",
     heading: "What Oran Park parents say.",
-    body: "Placeholder reviews shown for design purposes.",
+    body: "Reviews from families across South-West Sydney.",
   },
   cta: {
     heading: "Book a call about Oran Park tutoring.",
