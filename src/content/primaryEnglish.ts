@@ -1,3 +1,5 @@
+import { stageImages } from "./stageImages";
+
 export const primaryEnglish = {
   title: "Primary English Tutoring K-6 | TutorMunk",
   metaDescription:
@@ -8,6 +10,7 @@ export const primaryEnglish = {
     body: "Comprehension, grammar and writing taught in a set order, so each session builds on the last.",
     ctaLabel: "Request a Call",
     points: ["Reading and writing", "Marked writing samples", "Years K to 6"],
+    image: stageImages.primary,
   },
   whatWeCover: {
     eyebrow: "What we cover",

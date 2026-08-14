@@ -1,8 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { brand, footer } from "@/content/site";
 import { Wordmark } from "./Wordmark";
 
 export function Footer() {
+  const pathname = useLocation({ select: (location) => location.pathname });
+
   return (
     <footer className="mt-8 border-t border-border bg-surface text-surface-foreground">
       <div className="container-page py-14">
@@ -37,6 +39,13 @@ export function Footer() {
                     <li key={link.label}>
                       <Link
                         to={link.to}
+                        onClick={() => {
+                          // Cross-page navigation already resets scroll on its own.
+                          // Same-page clicks are a router no-op, so scroll up ourselves.
+                          if (link.to === pathname) {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }
+                        }}
                         className="text-sm text-surface-foreground/80 transition-colors hover:text-surface-foreground"
                       >
                         {link.label}

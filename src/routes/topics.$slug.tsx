@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { topics } from "@/content/topics";
-import { PageIntro } from "@/components/sections/PageIntro";
+import { Hero } from "@/components/sections/Hero";
 import { DeliveryModesBand } from "@/components/sections/DeliveryModesBand";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { seoHead } from "@/lib/seo";
@@ -29,7 +29,13 @@ function TopicPage() {
   const { topic } = Route.useLoaderData();
   return (
     <>
-      <PageIntro eyebrow={topic.eyebrow} heading={topic.heading} body={topic.intro} />
+      <Hero
+        eyebrow={topic.eyebrow}
+        heading={topic.heading}
+        body={topic.intro}
+        ctaLabel="Request a Call"
+        image={topic.heroImage}
+      />
       <DeliveryModesBand
         eyebrow="Four ways to learn"
         heading="Your home or our centre, 1-to-1 or small group."

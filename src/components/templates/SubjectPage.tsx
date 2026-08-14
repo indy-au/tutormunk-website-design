@@ -6,7 +6,7 @@ import { CtaBand } from "../sections/CtaBand";
 import type { FaqItem } from "@/content/types";
 
 type SubjectPageContent = {
-  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; points?: string[] };
+  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; points?: string[]; image?: string | undefined };
   whatWeCover: { eyebrow?: string | undefined; heading: string; items: { title: string; body: string }[] };
   howSessions: { eyebrow?: string | undefined; heading: string; steps: { title: string; body: string }[] };
   faq: { eyebrow?: string | undefined; heading: string; items: FaqItem[] };

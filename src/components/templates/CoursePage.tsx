@@ -4,7 +4,7 @@ import { TutorPitch } from "../sections/TutorPitch";
 import { CtaBand } from "../sections/CtaBand";
 
 type CoursePageContent = {
-  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; facts?: { label: string; value: string }[] };
+  hero: { eyebrow?: string | undefined; heading: string; body: string; ctaLabel?: string | undefined; facts?: { label: string; value: string }[]; image?: string | undefined };
   modules: { eyebrow?: string | undefined; heading: string; body?: string | undefined; items: { title: string; body: string }[] };
   tutorPitch: { eyebrow?: string | undefined; heading: string; body: string; points: string[] };
   cta: { heading: string; body: string; ctaLabel: string; secondaryLabel?: string | undefined; secondaryTo?: string };
@@ -19,6 +19,7 @@ export function CoursePage({ content }: { content: CoursePageContent }) {
         body={content.hero.body}
         ctaLabel={content.hero.ctaLabel}
         points={content.hero.facts?.map((fact) => `${fact.label}: ${fact.value}`)}
+        image={content.hero.image}
       />
       <CourseModules {...content.modules} />
       <TutorPitch {...content.tutorPitch} />

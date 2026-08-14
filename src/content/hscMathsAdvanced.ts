@@ -1,3 +1,5 @@
+import { stageImages } from "./stageImages";
+
 export const hscMathsAdvanced = {
   title: "HSC Maths Advanced Tutoring | TutorMunk",
   metaDescription:
@@ -13,6 +15,7 @@ export const hscMathsAdvanced = {
       { label: "Where", value: "Your home or our centre" },
       { label: "Sessions", value: "60 minutes" },
     ],
+    image: stageImages.senior,
   },
   modules: {
     eyebrow: "Course modules",
