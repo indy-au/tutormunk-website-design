@@ -1,18 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { privacyPolicy } from "@/content/policies";
 import { TextPage } from "@/components/templates/TextPage";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: privacyPolicy.title },
-      { name: "description", content: privacyPolicy.metaDescription },
-      { property: "og:title", content: privacyPolicy.title },
-      { property: "og:description", content: privacyPolicy.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: privacyPolicy.title, description: privacyPolicy.metaDescription, path: "/privacy" }),
   component: PrivacyPage,
 });
 

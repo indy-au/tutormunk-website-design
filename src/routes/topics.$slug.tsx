@@ -3,28 +3,24 @@ import { topics } from "@/content/topics";
 import { PageIntro } from "@/components/sections/PageIntro";
 import { DeliveryModesBand } from "@/components/sections/DeliveryModesBand";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { seoHead } from "@/lib/seo";
 
+// Object key lookup is already case-sensitive, so an uppercase slug variant
+// naturally misses and 404s below. Explicit check kept for the same reason
+// as the suburb route: never silently render a duplicate at another case.
 export const Route = createFileRoute("/topics/$slug")({
   loader: ({ params }) => {
+    if (/[A-Z]/.test(params.slug)) throw notFound();
     const topic = topics[params.slug];
     if (!topic) throw notFound();
-    return { topic };
+    return { topic, slug: params.slug };
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
       return { meta: [{ title: "Not found | TutorMunk" }, { name: "robots", content: "noindex" }] };
     }
-    const { topic } = loaderData;
-    return {
-      meta: [
-        { title: topic.title },
-        { name: "description", content: topic.metaDescription },
-        { property: "og:title", content: topic.title },
-        { property: "og:description", content: topic.metaDescription },
-        { property: "og:type", content: "website" },
-        { name: "twitter:card", content: "summary_large_image" },
-      ],
-    };
+    const { topic, slug } = loaderData;
+    return seoHead({ title: topic.title, description: topic.metaDescription, path: `/topics/${slug}` });
   },
   component: TopicPage,
 });

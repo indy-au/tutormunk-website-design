@@ -1,20 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { munks, ourMunksPage } from "@/content/munks";
 import { PageIntro } from "@/components/sections/PageIntro";
 import { MunkCards } from "@/components/sections/MunkCards";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const Route = createFileRoute("/our-munks")({
-  head: () => ({
-    meta: [
-      { title: ourMunksPage.title },
-      { name: "description", content: ourMunksPage.metaDescription },
-      { property: "og:title", content: ourMunksPage.title },
-      { property: "og:description", content: ourMunksPage.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: ourMunksPage.title, description: ourMunksPage.metaDescription, path: "/our-munks" }),
   component: OurMunksPage,
 });
 

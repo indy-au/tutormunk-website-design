@@ -1,9 +1,15 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { locations } from "@/content/locations";
 import { SuburbPage } from "@/components/templates/SuburbPage";
+import { seoHead } from "@/lib/seo";
 
+// Suburb URLs are locked to this exact lowercase, no-trailing-slash form.
+// Anything else (case variants, a trailing slash) is treated as a 404
+// rather than silently rendering a duplicate copy of the same page. The
+// production-level redirect for those variants lives in deploy/.htaccess.
 export const Route = createFileRoute("/tutoring-in-{$suburbSlug}")({
   loader: ({ params }) => {
+    if (/[A-Z]/.test(params.suburbSlug)) throw notFound();
     const suburb = locations.find((location) => location.slug === `tutoring-in-${params.suburbSlug}`);
     if (!suburb) throw notFound();
     return { suburb };
@@ -13,16 +19,7 @@ export const Route = createFileRoute("/tutoring-in-{$suburbSlug}")({
       return { meta: [{ title: "Page not found | TutorMunk" }, { name: "robots", content: "noindex" }] };
     }
     const { suburb } = loaderData;
-    return {
-      meta: [
-        { title: suburb.titleTag },
-        { name: "description", content: suburb.metaDescription },
-        { property: "og:title", content: suburb.titleTag },
-        { property: "og:description", content: suburb.metaDescription },
-        { property: "og:type", content: "website" },
-        { name: "twitter:card", content: "summary_large_image" },
-      ],
-    };
+    return seoHead({ title: suburb.titleTag, description: suburb.metaDescription, path: `/${suburb.slug}` });
   },
   component: SuburbRoutePage,
 });

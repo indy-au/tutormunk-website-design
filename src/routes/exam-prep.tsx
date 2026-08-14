@@ -1,18 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { examPrep } from "@/content/examPrep";
 import { HubPage } from "@/components/templates/HubPage";
 
 export const Route = createFileRoute("/exam-prep")({
-  head: () => ({
-    meta: [
-      { title: examPrep.title },
-      { name: "description", content: examPrep.metaDescription },
-      { property: "og:title", content: examPrep.title },
-      { property: "og:description", content: examPrep.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: examPrep.title, description: examPrep.metaDescription, path: "/exam-prep" }),
   component: ExamPrepPage,
 });
 

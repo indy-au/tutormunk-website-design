@@ -1,18 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { primaryEnglish } from "@/content/primaryEnglish";
 import { SubjectPage } from "@/components/templates/SubjectPage";
 
 export const Route = createFileRoute("/primary-english")({
-  head: () => ({
-    meta: [
-      { title: primaryEnglish.title },
-      { name: "description", content: primaryEnglish.metaDescription },
-      { property: "og:title", content: primaryEnglish.title },
-      { property: "og:description", content: primaryEnglish.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: primaryEnglish.title, description: primaryEnglish.metaDescription, path: "/primary-english" }),
   component: PrimaryEnglishPage,
 });
 

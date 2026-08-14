@@ -1,19 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { blogIndex } from "@/content/blog";
 import { PageIntro } from "@/components/sections/PageIntro";
 import { BlogList } from "@/components/sections/BlogList";
 
 export const Route = createFileRoute("/blog/")({
-  head: () => ({
-    meta: [
-      { title: blogIndex.title },
-      { name: "description", content: blogIndex.metaDescription },
-      { property: "og:title", content: blogIndex.title },
-      { property: "og:description", content: blogIndex.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: blogIndex.title, description: blogIndex.metaDescription, path: "/blog" }),
   component: BlogIndexPage,
 });
 

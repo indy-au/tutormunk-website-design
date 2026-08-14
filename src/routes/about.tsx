@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { about } from "@/content/about";
 import { Hero } from "@/components/sections/Hero";
 import { StorySection } from "@/components/sections/StorySection";
@@ -6,16 +7,7 @@ import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: about.title },
-      { name: "description", content: about.metaDescription },
-      { property: "og:title", content: about.title },
-      { property: "og:description", content: about.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: about.title, description: about.metaDescription, path: "/about" }),
   component: AboutPage,
 });
 

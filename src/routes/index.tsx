@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { home } from "@/content/home";
 import { Hero } from "@/components/sections/Hero";
 import { StageCards } from "@/components/sections/StageCards";
@@ -12,16 +13,7 @@ import { MunkCards } from "@/components/sections/MunkCards";
 import { munks, munksSection, statsSection } from "@/content/munks";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: home.title },
-      { name: "description", content: home.metaDescription },
-      { property: "og:title", content: home.title },
-      { property: "og:description", content: home.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: home.title, description: home.metaDescription, path: "/" }),
   component: HomePage,
 });
 

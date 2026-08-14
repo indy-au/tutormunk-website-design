@@ -1,19 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { contact } from "@/content/about";
 import { PageIntro } from "@/components/sections/PageIntro";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: contact.title },
-      { name: "description", content: contact.metaDescription },
-      { property: "og:title", content: contact.title },
-      { property: "og:description", content: contact.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: contact.title, description: contact.metaDescription, path: "/contact" }),
   component: ContactPage,
 });
 

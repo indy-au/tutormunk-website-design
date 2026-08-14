@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoHead } from "@/lib/seo";
 import { locationsPage, locations } from "@/content/locations";
 import { PageIntro } from "@/components/sections/PageIntro";
 import { CentreSection } from "@/components/sections/CentreSection";
@@ -7,16 +8,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 
 export const Route = createFileRoute("/locations/")({
-  head: () => ({
-    meta: [
-      { title: locationsPage.title },
-      { name: "description", content: locationsPage.metaDescription },
-      { property: "og:title", content: locationsPage.title },
-      { property: "og:description", content: locationsPage.metaDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => seoHead({ title: locationsPage.title, description: locationsPage.metaDescription, path: "/locations" }),
   component: LocationsPage,
 });
 
