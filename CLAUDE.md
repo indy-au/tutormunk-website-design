@@ -55,6 +55,7 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 - REVIEWS (real data): src/content/reviews.real.json holds 73 real Google reviews (avg 4.9). Display only 4-5 star reviews with text; aggregate numbers stay the real totals. Never invent, edit or categorise reviews.
 - Content bank: the Sprouts Academy website backup (owner's other company) provides source material that must be REWRITTEN fresh, never copied as-is.
 - Final hosting: static files on Hostinger at tutormunk.com.au (domain transfer in progress).
+- Blog pagination (added 14 Aug 2026): /blog shows 1 featured post plus a grid of 9 (page 1 only), /blog/page/2, /blog/page/3 etc. show a plain grid of 9. Real pages exist for every page number, each with real anchor links in the markup, this is how Google reaches all posts, not just the first 10. A "Load more" link enhances this for humans (intercepted by JS, appends in place, updates the URL via router.navigate with replace) but the underlying pages must keep working with JavaScript off. Each paginated page canonicals to ITSELF (never back to /blog), carries rel=prev/next, and stays indexable. Page 1 has exactly one URL (/blog); /blog/page/1 404s. Pagination maths lives in src/lib/blogPagination.ts (FEATURED_COUNT, PAGE_SIZE constants), title/description copy in src/content/blogIndex.ts. At the SSG conversion, every paginated page must be pre-rendered and listed in sitemap.xml, same as every post.
 
 ## Working style with Indy
 
