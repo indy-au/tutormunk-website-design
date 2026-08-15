@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronDown, Menu, Plus, Minus, X } from "lucide-react";
 import { brand, primaryNav } from "@/content/site";
 import type { MegaLink } from "@/content/site";
@@ -58,10 +58,36 @@ export function Header() {
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const [openPanel, setOpenPanel] = useState<string | null>(null);
 
+  // Single place that closes the mobile menu, used by every path that can
+  // close it (a menu link, the logo, the header's own Close button, and the
+  // route-change safety net below). Always resetting openAccordion here too
+  // means a closed menu can never reopen mid-expanded, no matter which of
+  // those paths closed it.
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setOpenAccordion(null);
+  };
+
+  // Safety net: close the mobile menu whenever the route actually changes,
+  // not just on a menu-link click. This covers the browser back/forward
+  // buttons and any future link rendered outside the mobile menu. It does
+  // NOT cover tapping the logo while already on the home page, since the
+  // path does not change there, that case is handled by Wordmark's own
+  // onNavigate below.
+  //
+  // This also runs once on mount, closing a menu that is already closed.
+  // That is harmless and cannot fight the menu open: it only re-runs when
+  // `pathname` changes, and opening the menu does not change the pathname.
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  useEffect(() => {
+    closeMobileMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
       <div className="container-page flex h-24 items-center justify-between gap-4 py-4">
-        <Wordmark size="lg" />
+        <Wordmark size="lg" onNavigate={closeMobileMenu} />
 
         <nav aria-label="Main" className="hidden items-center gap-1 xl:flex">
           {primaryNav.map((item) =>
@@ -166,7 +192,7 @@ export function Header() {
 
         <button
           type="button"
-          onClick={() => setMobileOpen((value) => !value)}
+          onClick={() => (mobileOpen ? closeMobileMenu() : setMobileOpen(true))}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -177,6 +203,13 @@ export function Header() {
         </button>
       </div>
 
+      {/*
+        Known behaviour, not fixed here: the page behind this panel is not
+        scroll-locked, so a visitor can still scroll the background page
+        while the mobile menu is open. Flagged for the owner to decide on
+        separately, out of scope for the "menu stays open after the logo"
+        fix this block was touched for.
+      */}
       {mobileOpen ? (
         <div id="mobile-nav" className="border-t border-border bg-card xl:hidden">
           <nav aria-label="Mobile" className="container-page space-y-4 py-5">
@@ -186,7 +219,7 @@ export function Header() {
                   <div className="flex items-center justify-between gap-3">
                     <Link
                       to={item.to}
-                      onClick={() => setMobileOpen(false)}
+                      onClick={closeMobileMenu}
                       className="text-base font-semibold"
                     >
                       {item.label}
@@ -217,7 +250,7 @@ export function Header() {
                               <li key={link.label}>
                                 <Link
                                   to={link.to}
-                                  onClick={() => setMobileOpen(false)}
+                                  onClick={closeMobileMenu}
                                   className="text-sm text-muted-foreground"
                                 >
                                   {link.label}
@@ -229,7 +262,7 @@ export function Header() {
                       ))}
                       <Link
                         to={item.panel.footerTo}
-                        onClick={() => setMobileOpen(false)}
+                        onClick={closeMobileMenu}
                         className="flex items-center gap-2 text-sm font-semibold text-accent-ink"
                       >
                         {item.panel.footerIcon ? <IconTile name={item.panel.footerIcon} size="sm" /> : null}
@@ -242,7 +275,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   to={item.to}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobileMenu}
                   className="block text-base font-semibold"
                 >
                   {item.label}
