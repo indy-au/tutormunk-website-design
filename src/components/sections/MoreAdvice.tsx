@@ -21,7 +21,7 @@ export function MoreAdvice({ posts }: { posts: BlogPost[] }) {
                   <img src={post.heroImage} alt="" className="h-full w-full object-cover" />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <p className="eyebrow">{categoryLabel(post.frontmatter.category)}</p>
+                  <p className="eyebrow-sm">{categoryLabel(post.frontmatter.category)}</p>
                   <h3 className="mt-2 text-base leading-snug">{post.frontmatter.heading}</h3>
                   <p className="mt-auto pt-3 text-xs text-muted-foreground">
                     {formatBlogDate(post.frontmatter.date)}

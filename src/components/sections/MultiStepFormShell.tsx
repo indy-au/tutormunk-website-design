@@ -50,7 +50,7 @@ export function MultiStepFormShell({
             className="rounded-3xl border border-border bg-card p-6 shadow-card md:p-8"
             onSubmit={(event) => event.preventDefault()}
           >
-            <p className="eyebrow">
+            <p className="eyebrow-sm">
               Step {active + 1} of {steps.length}
             </p>
             <h3 className="mt-2 text-2xl">{step.title}</h3>

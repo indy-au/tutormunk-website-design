@@ -1,5 +1,6 @@
 import type { StagePageContent } from "./types";
 import heroExamPrep from "@/assets/hero-exam-prep.jpg";
+import heroTutoring from "@/assets/hero-tutoring.jpg";
 
 export const examPrep: StagePageContent = {
   title: "Exam Prep Programs: Selective, OC, NAPLAN, ICAS, HSC | TutorMunk",
@@ -49,7 +50,7 @@ export const examPrep: StagePageContent = {
     ],
   },
   whyUs: {
-    eyebrow: "Why parents choose TutorMunk",
+    eyebrow: "Why parents and students choose TutorMunk",
     heading: "Preparation that matches the real test.",
     items: [
       { title: "Timed from week one", body: "Students sit sections under time, so the real test day feels familiar." },
@@ -57,6 +58,8 @@ export const examPrep: StagePageContent = {
       { title: "Small groups stay small", body: "Program groups at our centre are capped at six students in the same stage." },
       { title: "Honest advice", body: "If a program is not the right fit for your child, we will say so." },
     ],
+    image: heroTutoring,
+    imageAlt: "A tutor pointing to a page in an exercise book while a young student looks on, seated together at a wooden table with coloured pencils nearby.",
   },
   cta: {
     heading: "Not sure which program fits?",

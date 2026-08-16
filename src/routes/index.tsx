@@ -9,8 +9,9 @@ import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
 import { SuburbsStrip } from "@/components/sections/SuburbsStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { StatsBand } from "@/components/sections/StatsBand";
-import { MunkCards } from "@/components/sections/MunkCards";
-import { munks, munksSection, statsSection } from "@/content/munks";
+import { MunkRail } from "@/components/sections/MunkRail";
+import { munkProfiles, munksSection, statsSection } from "@/content/munks";
+import { reviewSummary } from "@/content/reviews";
 
 export const Route = createFileRoute("/")({
   head: () => seoHead({ title: home.title, description: home.metaDescription, path: "/" }),
@@ -22,10 +23,16 @@ function HomePage() {
     <>
       <Hero {...home.hero} />
       <StageCards {...home.stages} />
-      <StatsBand {...statsSection} />
+      <StatsBand
+        {...statsSection}
+        photo={home.stats.photo}
+        photoAlt={home.stats.photoAlt}
+        reviewScore={reviewSummary.score}
+        reviewCount={reviewSummary.total}
+      />
       <StepsStrip {...home.steps} />
       <DeliveryModesBand {...home.delivery} />
-      <MunkCards {...munksSection} items={munks} />
+      <MunkRail profiles={munkProfiles} {...munksSection} variant="teaser" />
       <ReviewsCarousel {...home.reviewsSection} />
       <SuburbsStrip {...home.suburbsSection} />
       <CtaBand {...home.cta} />

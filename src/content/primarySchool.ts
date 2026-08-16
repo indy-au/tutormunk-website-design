@@ -1,5 +1,6 @@
 import type { StagePageContent } from "./types";
 import heroPrimary from "@/assets/hero-primary.jpg";
+import heroTutoring from "@/assets/hero-tutoring.jpg";
 
 export const primarySchool: StagePageContent = {
   title: "Primary School Tutoring K-6 in South-West Sydney | TutorMunk",
@@ -34,7 +35,7 @@ export const primarySchool: StagePageContent = {
     ],
   },
   whyUs: {
-    eyebrow: "Why families choose us",
+    eyebrow: "Why parents and students choose TutorMunk",
     heading: "Practical tutoring, no gimmicks.",
     items: [
       { title: "In person only", body: "Every session is face to face, so tutors can see the working, not just the answer." },
@@ -42,7 +43,10 @@ export const primarySchool: StagePageContent = {
       { title: "One page after every session", body: "You receive a short note covering what was taught and what to practise." },
       { title: "Small groups stay small", body: "Group sessions at the centre are capped at six students in the same stage." },
       { title: "No lock-in terms", body: "Book by the term or week. Pause during school holidays if you prefer." },
+      { title: "NESA aligned", body: "Sessions follow the NSW NESA syllabus for your child's stage, so tutoring matches what is being taught at school." },
     ],
+    image: heroTutoring,
+    imageAlt: "A tutor pointing to a page in an exercise book while a young student looks on, seated together at a wooden table with coloured pencils nearby.",
   },
   cta: {
     heading: "Talk to us about your child's primary years.",

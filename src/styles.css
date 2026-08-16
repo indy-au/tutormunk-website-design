@@ -100,10 +100,59 @@
   }
 }
 
+/* Section and page-level eyebrow labels (approved size, 15 Aug 2026): 15px,
+   tighter tracking than the small version below, or 0.14em reads stretched
+   at this size, and a heavier weight so it holds up against the headline it
+   introduces. Used by Hero, SectionHeading (which many section components
+   render through), PageIntro, StatsBand and DeliverySection. */
 @utility eyebrow {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-accent-foreground);
+}
+
+/* Small eyebrow labels: card, nav and list contexts where the bigger
+   section-level size above would be too loud. This carries the ORIGINAL
+   eyebrow values unchanged, kept as its own utility rather than folded away
+   so these labels do not silently grow the next time the section-level
+   size changes again. */
+@utility eyebrow-sm {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent-foreground);
+}
+
+/* Our Munks poster rail (/our-munks). The track renders two copies of the
+   card list back to back and this slides it exactly -50%, one copy's
+   width, to loop. That only lands EXACTLY on the seam if every card sits
+   in an identical card-width-plus-spacing cell with no extra gap anywhere,
+   which is why MunkRail.tsx puts spacing on each card (a right margin)
+   instead of a flex `gap` on the track. A `gap` adds one extra gap between
+   the two sets that a flat 50% split does not account for, which used to
+   make this loop jump by a few pixels on every cycle. */
+@keyframes munk-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-munk-marquee {
+  animation: munk-marquee 90s linear infinite;
+}
+
+/* Hides the scrollbar on the rail's native horizontal scroller (used for
+   touch swipe and, under prefers-reduced-motion, as the only way to move
+   through the cards) without disabling scrolling itself. */
+@utility munk-rail-scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -72,7 +72,7 @@ export function BlogArticle({
       </div>
 
       <div className="container-page max-w-2xl pt-9 pb-14 md:pb-20">
-        <p className="eyebrow">{category}</p>
+        <p className="eyebrow-sm">{category}</p>
         <h1 className="mt-3 text-3xl leading-tight md:text-4xl">{heading}</h1>
         <p className="mt-4 text-sm text-muted-foreground">
           {date} · {readingTime}

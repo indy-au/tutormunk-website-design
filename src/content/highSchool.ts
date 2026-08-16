@@ -1,5 +1,6 @@
 import type { StagePageContent } from "./types";
 import heroHighSchool from "@/assets/hero-high-school.jpg";
+import heroTutoring from "@/assets/hero-tutoring.jpg";
 
 export const highSchool: StagePageContent = {
   title: "High School Tutoring Years 7-10 | TutorMunk",
@@ -33,7 +34,7 @@ export const highSchool: StagePageContent = {
     ],
   },
   whyUs: {
-    eyebrow: "Why families choose us",
+    eyebrow: "Why parents and students choose TutorMunk",
     heading: "Tutoring built around school work.",
     items: [
       { title: "Task first", body: "Sessions start with the next assessment task and its marking criteria." },
@@ -41,6 +42,8 @@ export const highSchool: StagePageContent = {
       { title: "Honest reporting", body: "If progress stalls, we tell you and change the plan." },
       { title: "Consistent tutor", body: "Your child keeps the same tutor across the term where possible." },
     ],
+    image: heroTutoring,
+    imageAlt: "A tutor pointing to a page in an exercise book while a young student looks on, seated together at a wooden table with coloured pencils nearby.",
   },
   cta: {
     heading: "Book a call about Years 7-10.",

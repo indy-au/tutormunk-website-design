@@ -23,7 +23,7 @@ export function StageCards({
     <section className="section-y">
       <div className="container-page">
         <SectionHeading eyebrow={eyebrow} heading={heading} />
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => {
             const Icon = getIcon(item.icon ?? "school");
             return (

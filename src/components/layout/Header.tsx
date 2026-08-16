@@ -136,7 +136,7 @@ export function Header() {
                           {column.heading ? (
                             <p className="mb-2 flex items-center gap-2 px-2">
                               {column.icon ? <IconTile name={column.icon} size="sm" /> : null}
-                              <span className="eyebrow">{column.heading}</span>
+                              <span className="eyebrow-sm">{column.heading}</span>
                             </p>
                           ) : null}
                           <ul className={item.panel?.compact ? "space-y-0.5" : "space-y-1"}>
@@ -244,7 +244,7 @@ export function Header() {
                     <div className="mt-3 space-y-3 border-l border-border pl-4">
                       {item.panel.columns.map((column, index) => (
                         <div key={column.heading ?? index}>
-                          {column.heading ? <p className="eyebrow">{column.heading}</p> : null}
+                          {column.heading ? <p className="eyebrow-sm">{column.heading}</p> : null}
                           <ul className="mt-1 space-y-1.5">
                             {column.links.map((link) => (
                               <li key={link.label}>

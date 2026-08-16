@@ -1,3 +1,5 @@
+import heroHowItWorks from "@/assets/hero-how-it-works.jpg";
+
 export const home = {
   title: "In-Person Tutoring in South-West Sydney | TutorMunk",
   metaDescription:
@@ -37,7 +39,23 @@ export const home = {
         to: "/senior-school",
         linkLabel: "Senior School HSC",
       },
+      {
+        stage: "Exam Prep",
+        years: "Years 3-12",
+        icon: "target",
+        body: "Selective, OC, NAPLAN and HSC programs run on real past papers and timed practice.",
+        to: "/exam-prep",
+        linkLabel: "Exam Prep programs",
+      },
     ],
+  },
+  // Photo for the "Trusted by local families" stats section. Reuses an
+  // asset already in the project (how-it-works' own hero photo) rather
+  // than sourcing a new one, per the design brief. The four numbers
+  // themselves stay in src/content/munks.ts (statsSection), unchanged.
+  stats: {
+    photo: heroHowItWorks,
+    photoAlt: "A tutor and a student working through a textbook together at a home dining table.",
   },
   steps: {
     eyebrow: "How it works",

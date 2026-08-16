@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Check } from "lucide-react";
 import { seoHead } from "@/lib/seo";
-import { munks, ourMunksPage } from "@/content/munks";
+import { munkProfiles, munkTrustChips, ourMunksPage } from "@/content/munks";
 import { PageIntro } from "@/components/sections/PageIntro";
-import { MunkCards } from "@/components/sections/MunkCards";
+import { MunkRail } from "@/components/sections/MunkRail";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const Route = createFileRoute("/our-munks")({
@@ -18,10 +19,22 @@ function OurMunksPage() {
         heading={ourMunksPage.heading}
         body={ourMunksPage.intro}
       />
-      <MunkCards heading="Our current team." items={munks} />
+      <div className="container-page">
+        <ul className="flex flex-wrap gap-2 pt-8">
+          {munkTrustChips.map((chip) => (
+            <li key={chip}>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-foreground">
+                <Check className="h-3.5 w-3.5 text-accent-ink" aria-hidden="true" />
+                {chip}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <MunkRail profiles={munkProfiles} />
       <CtaBand
-        heading="Want to meet a Munk before you book?"
-        body="Request a call and we will introduce the tutor who fits your child's year and subjects."
+        heading="Not sure which Munk suits your child?"
+        body="Tell us the year, the subject and what is getting in the way. We will match you and you choose from there."
         ctaLabel="Request a Call"
       />
     </>

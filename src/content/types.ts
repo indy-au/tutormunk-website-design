@@ -31,7 +31,17 @@ export type StagePageContent = {
     items?: SubjectCard[] | undefined;
     groups?: SubjectGroup[] | undefined;
   };
-  whyUs: { eyebrow: string; heading: string; items: { title: string; body: string }[] };
+  whyUs: {
+    eyebrow: string;
+    heading: string;
+    items: { title: string; body: string }[];
+    // Optional for now: only hero-tutoring.jpg is available as a stand-in
+    // (see WhyUsList.tsx), so every page currently supplies the same
+    // photo. Once the owner sends four real photos, each file only needs
+    // its own image/imageAlt here, no component change.
+    image?: string | undefined;
+    imageAlt?: string | undefined;
+  };
   programs?:
     | { eyebrow: string; heading: string; body?: string | undefined; items: ProgramCard[] }
     | undefined;

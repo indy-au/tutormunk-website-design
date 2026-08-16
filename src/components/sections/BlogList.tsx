@@ -25,7 +25,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
         <img src={post.heroImage} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="flex flex-col justify-center p-7 md:p-9">
-        <p className="eyebrow">{categoryLabel(frontmatter.category)}</p>
+        <p className="eyebrow-sm">{categoryLabel(frontmatter.category)}</p>
         <h2 className="mt-3 text-2xl md:text-3xl">{frontmatter.heading}</h2>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">{frontmatter.metaDescription}</p>
         <p className="mt-5 text-xs text-muted-foreground">{formatBlogDate(frontmatter.date)}</p>
@@ -46,7 +46,7 @@ function PostCard({ post }: { post: BlogPost }) {
         <img src={post.heroImage} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <p className="eyebrow">{categoryLabel(frontmatter.category)}</p>
+        <p className="eyebrow-sm">{categoryLabel(frontmatter.category)}</p>
         <h3 className="mt-2 text-xl leading-snug">{frontmatter.heading}</h3>
         <p className="mt-2 line-clamp-1 text-sm leading-relaxed text-muted-foreground">
           {frontmatter.metaDescription}

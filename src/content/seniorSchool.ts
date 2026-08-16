@@ -1,5 +1,6 @@
 import type { StagePageContent } from "./types";
 import heroSenior from "@/assets/hero-senior.jpg";
+import heroTutoring from "@/assets/hero-tutoring.jpg";
 
 export const seniorSchool: StagePageContent = {
   title: "Senior School and HSC Tutoring Years 11-12 | TutorMunk",
@@ -55,14 +56,17 @@ export const seniorSchool: StagePageContent = {
     ],
   },
   whyUs: {
-    eyebrow: "Why senior students stay",
+    eyebrow: "Why parents and students choose TutorMunk",
     heading: "Marks move when feedback is specific.",
     items: [
       { title: "Band 6 tutors only", body: "Senior tutors must have achieved a Band 6 in the course they teach." },
       { title: "Marked to criteria", body: "Responses are marked with the NESA criteria and returned with notes." },
       { title: "Past papers each term", body: "Timed practice from Year 11 through to the trial and HSC exams." },
       { title: "ATAR context", body: "We explain how each assessment affects rank, without the scare tactics." },
+      { title: "NESA aligned", body: "Every course follows the NESA syllabus and the current HSC assessment requirements." },
     ],
+    image: heroTutoring,
+    imageAlt: "A tutor pointing to a page in an exercise book while a young student looks on, seated together at a wooden table with coloured pencils nearby.",
   },
   cta: {
     heading: "Plan the rest of the HSC year.",

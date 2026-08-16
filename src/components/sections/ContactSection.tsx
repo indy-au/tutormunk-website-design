@@ -18,7 +18,7 @@ export function ContactSection({
           <dl className="grid gap-4 sm:grid-cols-2">
             {details.map((detail) => (
               <div key={detail.label} className="rounded-2xl border border-border bg-card p-5 shadow-card">
-                <dt className="eyebrow">{detail.label}</dt>
+                <dt className="eyebrow-sm">{detail.label}</dt>
                 <dd className="mt-1.5 text-sm font-medium">{detail.value}</dd>
               </div>
             ))}
