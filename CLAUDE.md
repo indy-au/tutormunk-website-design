@@ -98,10 +98,17 @@ WAITING ON INDY
 - Real tutor headshots for the Our Munks rail. Only Varsha has one. Ask for at least 1000
   pixels on the short side, the current one came in at 630 by 622 and is soft at card size.
   Files go in public/images/munks/, wired via the photo field on each MunkProfile.
-- Lighter overlay on the Munks rail cards. The current dark veil sits at 55 percent right
-  across the middle of the card, which is exactly where a face lands, and it makes skin
-  tones read muddy and green. A lighter version was previewed live in the browser and
-  looked much better, but has never been approved and is NOT in the code.
+  Card design note: the dark veil version is GONE, replaced 17 Aug 2026 by the approved
+  light card (photo on top at full brightness, white card below). Do not reintroduce a dark
+  wash over the photo.
+- Tutor photo cropping. The Munk card photo box is a 5 by 4 landscape. Varsha's stored
+  file (public/images/munks/varsha.jpg) was cropped to a 5 by 7 portrait for the earlier
+  dark card design, so in the new box it is cropped again and the top of her head is cut
+  off. She is still recognisable, so this is not urgent, but every tutor photo should be
+  cropped from its ORIGINAL for the 5 by 4 box, not from a previously cropped file. Do this
+  in one pass when the tutor photos arrive rather than one at a time.
+- Tutor email, one line to add before sending: ask for a little space above the head in the
+  photo, so it can be cropped to a wide box without cutting the top of the head off.
 
 SMALL, DO WHEN NEXT IN THE FILE
 - The gradient fading the photo into the dark card in WhyUsList.tsx is short, so there is a

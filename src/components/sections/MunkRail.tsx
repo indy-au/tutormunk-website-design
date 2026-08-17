@@ -1,13 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { CallbackButton, LinkButton } from "../CtaButton";
 import { SectionHeading } from "../SectionHeading";
 import type { MunkProfile } from "@/content/munks";
 
-// Fixed card footprint so every card is identical regardless of how much
-// text a tutor sends, the single most important detail in this design.
-// aspect-[5/7] means only the width needs to be set, height follows.
-const CARD_SIZE = "w-[clamp(250px,26vw,360px)] aspect-[5/7]";
+// Fixed card width so every card is identical regardless of how much text a
+// tutor sends, the single most important detail in this design. Height is
+// NOT fixed here (no aspect-ratio on the outer card): the photo box below is
+// a fixed 5:4 ratio of this width, and every text block in the lower
+// section has its own explicit height, so the total height falls out
+// identical across cards on its own, bottom up, without needing to force
+// it from the outside. That is also what lets a card grow taller when its
+// bio expands without ever touching this width.
+const CARD_WIDTH = "w-[clamp(250px,26vw,360px)]";
 
 // Spacing lives on each card (a right margin), not as a flex `gap` on the
 // track or on the two set wrappers. Every card, including the very last one
@@ -17,11 +22,10 @@ const CARD_SIZE = "w-[clamp(250px,26vw,360px)] aspect-[5/7]";
 // styles.css.
 const CARD_SPACING = "mr-5";
 
-// Three existing dark tokens, rotated so no two adjacent cards look the
-// same while a real headshot is still missing. primary and surface alone
-// read as near-identical, accent-ink adds real, visible variety without
-// introducing a new colour.
-const FALLBACK_TONES = ["bg-primary", "bg-accent-ink", "bg-surface"] as const;
+// Used for the no-photo fallback panel only. Every fallback uses the same
+// soft accent tint, on purpose, this is not a rotation of tones like the
+// previous dark design needed, a light card does not have that problem.
+const FALLBACK_TONE = "bg-accent-soft";
 
 function prefersReducedMotion(): boolean {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -34,22 +38,13 @@ function readTranslateX(el: HTMLElement): number {
   return new DOMMatrixReadOnly(value).m41;
 }
 
-function VerificationPill({
-  label,
-  tone,
-}: {
-  label: string;
-  tone: "solid" | "translucent";
-}) {
+function VerificationPill({ label }: { label: string }) {
+  // Solid, light background on every pill over the photo (this one and the
+  // stage pill below), never a translucent one, the photo now sits at full
+  // brightness with no dark wash to lean on for contrast, so the pill has
+  // to supply its own.
   return (
-    <span
-      className={[
-        "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold",
-        tone === "solid"
-          ? "bg-card text-foreground"
-          : "border border-primary-foreground/40 bg-primary-foreground/15 text-primary-foreground",
-      ].join(" ")}
-    >
+    <span className="inline-flex items-center gap-1 rounded-full bg-card px-2 py-0.5 text-[11px] font-semibold text-foreground shadow-sm">
       <Check className="h-3 w-3" aria-hidden="true" />
       {label}
     </span>
@@ -59,21 +54,22 @@ function VerificationPill({
 function MunkCardPoster({
   munk,
   id,
-  toneIndex,
   tabIndex,
   isCentered,
+  isExpanded,
   onActivate,
+  onToggleExpand,
 }: {
   munk: MunkProfile;
   id: string;
-  toneIndex: number;
   tabIndex?: number | undefined;
   isCentered: boolean;
-  onActivate: (event: React.MouseEvent<HTMLButtonElement> | React.KeyboardEvent<HTMLButtonElement>) => void;
+  isExpanded: boolean;
+  onActivate: (id: string, cardEl: HTMLElement | null) => void;
+  onToggleExpand: (id: string) => void;
 }) {
-  const fallbackTone = FALLBACK_TONES[toneIndex % FALLBACK_TONES.length];
-  // aria-labelledby references the visible name paragraph below rather
-  // than repeating the tutor's name in a separate aria-label string. Same
+  // aria-labelledby references the visible name text below rather than
+  // repeating the tutor's name in a separate aria-label string. Same
   // accessible name ("Bring Anne M. to the centre"), but the name itself
   // only ever exists once in the HTML, not twice. aria-labelledby splits
   // on whitespace, so the id has to be space-free even though names like
@@ -83,99 +79,144 @@ function MunkCardPoster({
   const prefixId = `munk-prefix-${slug}`;
   const suffixId = `munk-suffix-${slug}`;
 
+  const articleRef = useRef<HTMLElement>(null);
+  const bioRef = useRef<HTMLParagraphElement>(null);
+  const [bioOverflows, setBioOverflows] = useState(false);
+
+  // Whether "Read more" is needed is measured, never assumed: a short bio
+  // must never show it. Compares the clamped paragraph's scrollHeight (the
+  // full, unclamped content height the browser still tracks internally)
+  // against its clientHeight (the visible, clamped box), which is the
+  // standard, reliable way to detect line-clamp overflow. Only meaningful
+  // while collapsed, the clamp classes are not applied while expanded, so
+  // there is nothing to compare then, the previous measurement is left in
+  // place instead (see the render condition below).
+  useLayoutEffect(() => {
+    if (isExpanded) return;
+    function measure() {
+      const el = bioRef.current;
+      if (!el) return;
+      setBioOverflows(el.scrollHeight > el.clientHeight + 1);
+    }
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [munk.bio, isExpanded]);
+
   return (
-    <button
-      type="button"
-      onClick={onActivate}
-      tabIndex={tabIndex}
-      aria-labelledby={`${prefixId} ${nameId} ${suffixId}`}
-      aria-pressed={isCentered}
+    <article
+      ref={articleRef}
+      onClick={() => onActivate(id, articleRef.current)}
       className={[
-        "relative block shrink-0 overflow-hidden rounded-[30px] text-left",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-        CARD_SIZE,
+        "block shrink-0 overflow-hidden rounded-3xl border border-border bg-card shadow-card",
+        CARD_WIDTH,
         CARD_SPACING,
         "motion-reduce:snap-center",
         isCentered ? "ring-4 ring-accent" : "",
       ].join(" ")}
     >
-      {/* Photo layer, fills the card. */}
-      <div className="absolute inset-0">
+      {/* Photo box: fixed 5:4 ratio of the card's width, so it is identical
+          across every card. Full brightness, no dark wash, clipped by the
+          card's own top corners (rounded-t-[inherit] picks up the radius
+          set on the article above). */}
+      <div className="relative aspect-[5/4] w-full overflow-hidden rounded-t-[inherit]">
         {munk.photo ? (
           <img
             src={munk.photo}
             alt=""
             loading="lazy"
             width={360}
-            height={504}
+            height={288}
             className="h-full w-full object-cover"
           />
         ) : (
-          <div className={`flex h-full w-full items-center justify-center ${fallbackTone}`}>
-            <span
-              aria-hidden="true"
-              className="font-display text-[5rem] font-semibold text-primary-foreground/30"
-            >
+          <div className={`flex h-full w-full items-center justify-center ${FALLBACK_TONE}`}>
+            <span aria-hidden="true" className="font-display text-6xl font-semibold text-accent-ink">
               {munk.initials}
             </span>
           </div>
         )}
-      </div>
 
-      {/* Dark gradient veil so white text always passes contrast, even over
-          a photo, per CLAUDE.md's contrast rule. */}
-      <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/55 to-surface/5" />
-
-      {/* Top strip: stage pill left, verification pills right. Type sizes
-          unchanged from the original, larger card, only the padding
-          shrank to suit the smaller card. */}
-      <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-1.5 p-3">
-        <span className="rounded-full bg-accent px-2.5 py-1 text-[11px] font-bold tracking-wide text-accent-foreground uppercase">
-          {munk.stage}
-        </span>
-        <div className="flex items-center gap-1">
-          <VerificationPill label="WWCC verified" tone="solid" />
-          <VerificationPill label="NESA aligned" tone="translucent" />
+        {/* Top strip: stage pill left, verification pills right. */}
+        <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-1.5 p-3">
+          <span className="rounded-full bg-accent px-2.5 py-1 text-[11px] font-bold tracking-wide text-accent-foreground uppercase">
+            {munk.stage}
+          </span>
+          <div className="flex items-center gap-1">
+            <VerificationPill label="WWCC verified" />
+            <VerificationPill label="NESA aligned" />
+          </div>
         </div>
       </div>
 
-      {/* Bottom body block. Every line below has an EXPLICIT height equal
-          to its line-height times its clamped line count (not a guessed
-          min-height), so a one-word bio and a three-line bio produce the
-          exact same box. overflow-hidden plus line-clamp both apply:
-          line-clamp gives the "..." affordance, the explicit height is
-          what actually guarantees identical cards. */}
-      <div className="absolute inset-x-0 bottom-0 p-3">
+      {/* Lower body, on white. Every line below has an EXPLICIT height
+          equal to its line-height times its clamped line count (not a
+          guessed min-height), so a one-word bio and a three-line bio
+          produce the exact same box, and the card's overall height falls
+          out identical across every card as a result. */}
+      <div className="p-4">
         <span id={prefixId} className="sr-only">
           Bring
         </span>
-        <p
+        <button
+          type="button"
           id={nameId}
-          className="line-clamp-1 h-[24px] overflow-hidden text-xl leading-[24px] font-semibold text-primary-foreground"
+          tabIndex={tabIndex}
+          aria-pressed={isCentered}
+          aria-labelledby={`${prefixId} ${nameId} ${suffixId}`}
+          onClick={(event) => {
+            event.stopPropagation();
+            onActivate(id, articleRef.current);
+          }}
+          className="line-clamp-1 h-[24px] w-full overflow-hidden text-left text-xl leading-[24px] font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           {munk.firstName}
-        </p>
+        </button>
         <span id={suffixId} className="sr-only">
           to the centre
         </span>
-        <p className="mt-0.5 line-clamp-1 h-[20px] overflow-hidden text-sm leading-[20px] font-bold text-accent">
+        <p className="mt-0.5 line-clamp-1 h-[20px] overflow-hidden text-sm leading-[20px] font-bold text-accent-ink">
           {munk.years}
         </p>
-        <p className="mt-1.5 line-clamp-2 h-[32px] overflow-hidden text-xs leading-[16px] text-primary-foreground/80">
+        <p className="mt-1.5 line-clamp-2 h-[32px] overflow-hidden text-xs leading-[16px] text-muted-foreground">
           {munk.education}
         </p>
-        <p className="mt-1.5 line-clamp-3 h-[60px] overflow-hidden text-sm leading-[20px] text-primary-foreground/90">
+        <p
+          ref={bioRef}
+          className={
+            isExpanded
+              ? "mt-1.5 text-sm leading-[20px] text-muted-foreground"
+              : "mt-1.5 line-clamp-3 h-[60px] overflow-hidden text-sm leading-[20px] text-muted-foreground"
+          }
+        >
           {munk.bio}
         </p>
-        <div className="mt-3 border-t border-primary-foreground/20 pt-3">
-          <p className="text-[10px] font-bold tracking-[0.12em] text-primary-foreground/55 uppercase">
+        {bioOverflows || isExpanded ? (
+          <button
+            type="button"
+            tabIndex={tabIndex}
+            onClick={(event) => {
+              event.stopPropagation();
+              onToggleExpand(id);
+            }}
+            className="mt-1 text-xs font-semibold text-accent-ink hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            {isExpanded ? "Read less" : "Read more"}
+          </button>
+        ) : null}
+
+        <div className="mt-3 border-t border-border pt-3">
+          <p className="text-[10px] font-bold tracking-[0.12em] text-muted-foreground uppercase">
             Specialties
           </p>
-          <div className="mt-1.5 flex h-[22px] flex-wrap content-start gap-1 overflow-hidden">
+          {/* One row, always: extra chips are clipped by overflow-hidden,
+              not wrapped to a second line (flex-nowrap), so the row's
+              height never varies either. */}
+          <div className="mt-1.5 flex h-[22px] flex-nowrap items-center gap-1 overflow-hidden">
             {munk.specialties.map((specialty) => (
               <span
                 key={specialty}
-                className="rounded-full border border-primary-foreground/30 px-2 py-0.5 text-[11px] text-primary-foreground/90"
+                className="shrink-0 rounded-full bg-accent-soft px-2 py-0.5 text-[11px] text-accent-ink"
               >
                 {specialty}
               </span>
@@ -183,7 +224,7 @@ function MunkCardPoster({
           </div>
         </div>
       </div>
-    </button>
+    </article>
   );
 }
 
@@ -246,7 +287,13 @@ export function MunkRail({
   const [hovering, setHovering] = useState(false);
   const [focusedWithin, setFocusedWithin] = useState(false);
   const [touchActive, setTouchActive] = useState(false);
-  const isAutoPaused = hovering || focusedWithin || touchActive;
+  // A card expanded to show its full bio pauses rotation exactly like
+  // hover, focus or touch do, through the same isAutoPaused flag those
+  // already drive, rather than a new mechanism. Keyed by card id (real and
+  // duplicate ids are distinct strings), so expanding one card can never
+  // expand, or pause on behalf of, any other, including its own duplicate.
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set());
+  const isAutoPaused = hovering || focusedWithin || touchActive || expandedIds.size > 0;
 
   // The duplicate set only exists to make the CSS loop seamless, it is not
   // real content. Keeping it out of server-rendered markup entirely (not
@@ -328,7 +375,21 @@ export function MunkRail({
     setCenteredId(null);
   }
 
-  function activateCard(id: string, cardEl: HTMLButtonElement) {
+  function toggleExpand(id: string) {
+    setExpandedIds((current) => {
+      const next = new Set(current);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  }
+
+  function activateCard(id: string, cardEl: HTMLElement | null) {
+    if (!cardEl) return;
+
     if (prefersReducedMotion()) {
       if (centeredId === id) {
         setCenteredId(null);
@@ -441,40 +502,45 @@ export function MunkRail({
       >
         <div
           ref={trackRef}
-          className="flex w-max animate-munk-marquee motion-reduce:animate-none"
+          // items-start, not the flex default of stretch: a card with a
+          // longer bio (Read more showing, or expanded) must only grow
+          // itself, never pull its neighbours taller along with it.
+          className="flex w-max items-start animate-munk-marquee motion-reduce:animate-none"
           style={trackStyle}
         >
           {/* Real set: the only one screen readers and search engines
               see. */}
-          {profiles.map((munk, index) => (
+          {profiles.map((munk) => (
             <MunkCardPoster
               key={munk.firstName}
               munk={munk}
               id={munk.firstName}
-              toneIndex={index}
               isCentered={centeredId === munk.firstName}
-              onActivate={(event) => activateCard(munk.firstName, event.currentTarget)}
+              isExpanded={expandedIds.has(munk.firstName)}
+              onActivate={activateCard}
+              onToggleExpand={toggleExpand}
             />
           ))}
           {/* Duplicate set, purely visual, added client-side only (see
               showDuplicate above). aria-hidden as duplicate content, and
-              tabIndex -1 on every card so a keyboard user tabbing through
-              never reaches sixteen tutors, only eight. Hidden outright
-              under reduced motion, where the rail is a plain single-set
-              scrollable strip. */}
+              tabIndex -1 on every control inside each card so a keyboard
+              user tabbing through never reaches sixteen tutors, only
+              eight. Hidden outright under reduced motion, where the rail
+              is a plain single-set scrollable strip. */}
           {showDuplicate ? (
-            <div aria-hidden="true" className="flex motion-reduce:hidden">
-              {profiles.map((munk, index) => {
+            <div aria-hidden="true" className="flex items-start motion-reduce:hidden">
+              {profiles.map((munk) => {
                 const duplicateId = `${munk.firstName}-duplicate`;
                 return (
                   <MunkCardPoster
                     key={duplicateId}
                     munk={munk}
                     id={duplicateId}
-                    toneIndex={index}
                     tabIndex={-1}
                     isCentered={centeredId === duplicateId}
-                    onActivate={(event) => activateCard(duplicateId, event.currentTarget)}
+                    isExpanded={expandedIds.has(duplicateId)}
+                    onActivate={activateCard}
+                    onToggleExpand={toggleExpand}
                   />
                 );
               })}

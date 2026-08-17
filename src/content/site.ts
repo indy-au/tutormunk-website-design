@@ -55,13 +55,13 @@ export const primaryNav: NavItem[] = [
             { label: "English Tutoring", to: "/primary-english", icon: "book", description: "Year 2 to 6 reading, writing and comprehension" },
             { label: "Maths Tutoring", to: "/topics/primary-maths", icon: "calculator", description: "Number, fractions and word problems to Year 6" },
             { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Thinking skills and reasoning for the Year 6 test" },
-            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Timed practice for Opportunity Class placement" },
           ],
         },
         {
           links: [
             { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Question types and technique for Years 3 and 5" },
             { label: "Writing Program", to: "/topics/writing-program", icon: "pen", description: "A marked writing piece every week" },
+            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Timed practice for Opportunity Class placement" },
           ],
         },
       ],
@@ -153,14 +153,14 @@ export const primaryNav: NavItem[] = [
         {
           links: [
             { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Year 5 and 6 practice for the placement test" },
-            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Year 3 and 4 preparation for Opportunity Class" },
             { label: "Writing", to: "/topics/writing-program", icon: "pen", description: "Narrative, persuasive and informative writing" },
-            { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Years 3, 5, 7 and 9 familiarisation" },
+            { label: "ICAS", to: "/topics/icas", icon: "medal", description: "Extension style questions in English, Maths and Science" },
           ],
         },
         {
           links: [
-            { label: "ICAS", to: "/topics/icas", icon: "medal", description: "Extension style questions in English, Maths and Science" },
+            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Year 3 and 4 preparation for Opportunity Class" },
+            { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Years 3, 5, 7 and 9 familiarisation" },
             { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "timer", description: "An intensive block before trials and the HSC" },
           ],
         },
