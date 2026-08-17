@@ -30,3 +30,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local environment files. Never commit real secrets. .env.example may be
+# committed on purpose as a template with placeholder values only.
+.env
+.env.*
+!.env.example
+
+# OS generated files. .DS_Store is already listed above under editor files.
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local tool settings, per machine, not shared. Written by the coding
+# assistant and re-created automatically, so it never needs committing.
+.claude/settings.local.json

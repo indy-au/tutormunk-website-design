@@ -81,7 +81,60 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # --------------------------------------------------------------------------
-# 6) SPA FALLBACK — TEMPORARY TESTING ONLY, DISABLED BY DEFAULT
+# 6) SECURITY HEADERS
+# Four standard protections against common web attacks. These are response
+# headers, so they do not interact with the redirect rules in blocks 1 and
+# 2. Those run first, and this block stamps the headers onto whatever
+# response comes out the other side.
+#
+# Strict-Transport-Security (HSTS) tells a browser to only ever reach this
+# site over https for the next year, so a visitor cannot be downgraded to
+# an unencrypted connection. It has no effect on plain http responses,
+# browsers ignore it there, which is exactly why block 1 above matters.
+#
+# X-Frame-Options SAMEORIGIN stops another website from loading TutorMunk
+# inside a hidden frame on their own page and tricking a visitor into
+# clicking something they cannot see (clickjacking).
+#
+# X-Content-Type-Options nosniff stops a browser from guessing that a file
+# is something other than what the server said it was, which is a common
+# route to getting an uploaded file executed as a script.
+#
+# "always" is used so the headers are sent on error responses too, not
+# only on successful ones.
+#
+# WARNING about the preload keyword: it is a request to be added to a list
+# baked into browsers themselves. Once tutormunk.com.au is actually
+# SUBMITTED to that list, every subdomain must serve valid https, and
+# getting removed again takes months. The header sitting here does nothing
+# on its own, submission is a separate manual step. Do not submit the
+# domain until the site is live and every subdomain is on https.
+# --------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# --------------------------------------------------------------------------
+# 7) DIRECTORY LISTING OFF
+# Stops Apache from showing a browsable list of files when someone visits a
+# folder that has no index page, for example /images/blog/. Without this,
+# anyone can read the entire contents of an asset folder just by guessing
+# the folder name. Declared once at the top level, so it applies to this
+# directory and every folder beneath it, including all asset paths.
+#
+# NOTE: if the host does not permit Options in .htaccess (AllowOverride
+# set too tightly), Apache returns a 500 error for every page. If the site
+# goes blank right after deploying this file, comment out the Options line
+# below first, that is the most likely cause.
+# --------------------------------------------------------------------------
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+
+# --------------------------------------------------------------------------
+# 8) SPA FALLBACK — TEMPORARY TESTING ONLY, DISABLED BY DEFAULT
 # This block is commented out on purpose. It is ONLY needed if we ever
 # deploy the current client-side React build (before the SSG conversion)
 # somewhere for a temporary test, where every URL needs to fall back to
