@@ -1,6 +1,15 @@
-import type { StagePageContent } from "./types";
+import type { StagePageContent, SubjectCard } from "./types";
 import heroHighSchool from "@/assets/hero-high-school.jpg";
 import heroTutoring from "@/assets/hero-tutoring.jpg";
+
+// Removed from the live High School subjects.items on 16 Aug 2026 at the
+// owner's request. Kept here, not deleted, so they can be restored later.
+// Nothing imports this const, so it is stripped out of the browser bundle
+// and never reaches a visitor.
+export const archivedHighSchoolSubjects: SubjectCard[] = [
+  { name: "Study Skills", body: "Note taking, revision timetables and exam technique." },
+  { name: "Subject Selection", body: "Guidance on choosing Year 11 courses with the HSC in mind." },
+];
 
 export const highSchool: StagePageContent = {
   title: "High School Tutoring Years 7-10 | TutorMunk",
@@ -25,12 +34,10 @@ export const highSchool: StagePageContent = {
     eyebrow: "Subjects",
     heading: "What we tutor in Years 7-10.",
     items: [
-      { name: "English", body: "Text analysis, essay structure and creative writing for school tasks." },
-      { name: "Maths", body: "Algebra, geometry, trigonometry and problem solving to Stage 5.3." },
-      { name: "Science", body: "Working scientifically, plus biology, chemistry and physics basics." },
-      { name: "Writing", body: "Paragraph structure, evidence and editing across subjects." },
-      { name: "Study Skills", body: "Note taking, revision timetables and exam technique." },
-      { name: "Subject Selection", body: "Guidance on choosing Year 11 courses with the HSC in mind." },
+      { name: "English", body: "Text analysis, essay structure and creative writing for school tasks.", to: "/topics/high-school-english", linkLabel: "High School English Tutoring" },
+      { name: "Maths", body: "Algebra, geometry, trigonometry and problem solving to Stage 5.3.", to: "/topics/high-school-maths", linkLabel: "High School Maths Tutoring" },
+      { name: "Science", body: "Working scientifically, plus biology, chemistry and physics basics.", to: "/topics/high-school-science", linkLabel: "High School Science Tutoring" },
+      { name: "Writing", body: "Paragraph structure, evidence and editing across subjects.", to: "/topics/writing-program", linkLabel: "Writing Program" },
     ],
   },
   whyUs: {

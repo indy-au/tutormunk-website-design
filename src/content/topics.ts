@@ -216,6 +216,15 @@ export const topics: Record<string, TopicContent> = {
     "HSC Sprint",
     "examPrep",
   ),
+};
+
+// Archived on 16 Aug 2026 at the owner's request. Ask Munk (drop-in,
+// on-demand help) is a TutorGator concept, the owner's separate online
+// platform. TutorMunk is strictly in person, so it has no place here.
+// Not merged into the topics object above, so /topics/ask-munk returns a
+// real 404. Nothing imports this const, so it never reaches a visitor.
+// Kept, not deleted, so it can be restored if it is ever needed again.
+export const archivedTopics: Record<string, TopicContent> = {
   "ask-munk": topic(
     "Exam prep",
     "Ask Munk for quick help between sessions.",

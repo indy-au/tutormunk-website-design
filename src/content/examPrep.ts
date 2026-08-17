@@ -1,11 +1,32 @@
-import type { StagePageContent } from "./types";
+import type { StagePageContent, SubjectCard, ProgramCard } from "./types";
 import heroExamPrep from "@/assets/hero-exam-prep.jpg";
 import heroTutoring from "@/assets/hero-tutoring.jpg";
+
+// Archived on 16 Aug 2026 at the owner's request. Ask Munk (drop-in,
+// on-demand help) is a TutorGator concept, the owner's separate online
+// platform. TutorMunk is strictly in person, so it has no place here.
+// Nothing imports these, so they are stripped out of the browser bundle
+// and never reach a visitor. Kept, not deleted, so they can be restored
+// if the program is ever needed again.
+export const archivedAskMunkSubjectCard: SubjectCard = {
+  name: "Ask Munk",
+  body: "Drop-in homework help at our centre. Bring the questions you are stuck on.",
+  to: "/topics/ask-munk",
+  linkLabel: "Ask Munk",
+};
+
+export const archivedAskMunkProgramCard: ProgramCard = {
+  name: "Ask Munk",
+  icon: "message-circle-question",
+  chip: "On demand",
+  body: "Drop-in homework help at our centre. Bring the questions you are stuck on and a tutor will work through them with you.",
+  to: "/topics/ask-munk",
+};
 
 export const examPrep: StagePageContent = {
   title: "Exam Prep Programs: Selective, OC, NAPLAN, ICAS, HSC | TutorMunk",
   metaDescription:
-    "In-person exam preparation in South-West Sydney: Selective Prep, OC Prep, Writing, NAPLAN, ICAS, HSC Sprint and Ask Munk sessions.",
+    "In-person exam preparation in South-West Sydney: Selective Prep, OC Prep, Writing, NAPLAN, ICAS and HSC Sprint.",
   hero: {
     eyebrow: "Exam prep. Years 3 to 12",
     heading: "Preparation programs with real practice papers.",
@@ -23,7 +44,7 @@ export const examPrep: StagePageContent = {
   ],
   subjects: {
     eyebrow: "Programs",
-    heading: "Seven exam prep programs.",
+    heading: "Six exam prep programs.",
     body: "Choose one program, or combine a program with weekly subject tutoring.",
     items: [
       { name: "Selective Prep", body: "Year 5 and 6 students preparing for the Selective High School Placement Test. Reading, mathematical reasoning and thinking skills.", to: "/topics/selective-school-prep", linkLabel: "Selective School Prep" },
@@ -32,12 +53,11 @@ export const examPrep: StagePageContent = {
       { name: "NAPLAN", body: "Familiarisation and technique for Years 3, 5, 7 and 9, using question types from past tests.", to: "/topics/naplan", linkLabel: "NAPLAN" },
       { name: "ICAS", body: "Extension style questions in English, Maths and Science for students sitting ICAS.", to: "/topics/icas", linkLabel: "ICAS" },
       { name: "HSC Sprint", body: "An intensive block before trials and the HSC, focused on past papers and exam technique.", to: "/topics/hsc-sprint", linkLabel: "HSC Sprint" },
-      { name: "Ask Munk", body: "Drop-in homework help at our centre. Bring the questions you are stuck on.", to: "/topics/ask-munk", linkLabel: "Ask Munk" },
     ],
   },
   programs: {
     eyebrow: "Programs",
-    heading: "Seven exam prep programs.",
+    heading: "Six exam prep programs.",
     body: "Choose one program, or combine a program with weekly subject tutoring.",
     items: [
       { name: "Selective School Prep", icon: "trophy", chip: "Year 5 to 6", body: "Reading, mathematical reasoning and thinking skills for the Selective High School Placement Test. Students sit a timed section every week.", to: "/topics/selective-school-prep" },
@@ -46,7 +66,6 @@ export const examPrep: StagePageContent = {
       { name: "NAPLAN", icon: "clipboard-check", chip: "Years 3, 5, 7 and 9", body: "Familiarisation with question types from past tests, plus timing and technique. Sessions run for 60 minutes.", to: "/topics/naplan" },
       { name: "ICAS", icon: "medal", chip: "Year 3 to 10", body: "Extension style questions in English, Maths and Science for students sitting ICAS. Tutors work through problem solving step by step.", to: "/topics/icas" },
       { name: "HSC Sprint", icon: "timer", chip: "Intensive", body: "A short block before trials and the HSC, built around past papers and band descriptors. Runs during school holidays and after school.", to: "/topics/hsc-sprint" },
-      { name: "Ask Munk", icon: "message-circle-question", chip: "On demand", body: "Drop-in homework help at our centre. Bring the questions you are stuck on and a tutor will work through them with you.", to: "/topics/ask-munk" },
     ],
   },
   whyUs: {

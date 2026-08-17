@@ -30,9 +30,9 @@ export const seniorSchool: StagePageContent = {
         heading: "English.",
         body: "Module by module, with essay drafting and feedback against the marking criteria.",
         items: [
-          { name: "HSC Advanced English", body: "Common Module, Textual Conversations, Critical Study and Craft of Writing." },
-          { name: "HSC Standard English", body: "Common Module, Language, Identity and Culture, plus close study of text." },
-          { name: "English Extension 1", body: "Elective study, critical reading and extended response practice." },
+          { name: "HSC Advanced English", body: "Common Module, Textual Conversations, Critical Study and Craft of Writing.", to: "/topics/english-advanced", linkLabel: "HSC English Advanced" },
+          { name: "HSC Standard English", body: "Common Module, Language, Identity and Culture, plus close study of text.", to: "/topics/english-standard", linkLabel: "HSC English Standard" },
+          { name: "English Extension 1", body: "Elective study, critical reading and extended response practice.", to: "/topics/english-extension-1", linkLabel: "HSC English Extension 1" },
         ],
       },
       {
@@ -40,17 +40,17 @@ export const seniorSchool: StagePageContent = {
         body: "Worked examples first, then timed question sets from past HSC papers.",
         items: [
           { name: "HSC Maths Advanced", body: "Functions, calculus, statistical analysis and financial mathematics.", to: "/hsc-maths-advanced", linkLabel: "HSC Maths Advanced" },
-          { name: "HSC Maths Standard 2", body: "Algebra, measurement, financial mathematics and statistics." },
-          { name: "Mathematics Extension 1", body: "Proof, vectors, further calculus and combinatorics." },
+          { name: "HSC Maths Standard 2", body: "Algebra, measurement, financial mathematics and statistics.", to: "/topics/maths-standard-2", linkLabel: "HSC Mathematics Standard 2" },
+          { name: "Mathematics Extension 1", body: "Proof, vectors, further calculus and combinatorics.", to: "/topics/maths-extension-1", linkLabel: "HSC Mathematics Extension 1" },
         ],
       },
       {
         heading: "Science.",
         body: "Syllabus dot points, depth study support and long response structure.",
         items: [
-          { name: "HSC Biology", body: "Heredity, genetic technologies, infectious disease and non-infectious disease." },
-          { name: "HSC Chemistry", body: "Equilibrium, acids and bases, organic chemistry and applied chemistry." },
-          { name: "HSC Physics", body: "Advanced mechanics, electromagnetism, quanta and the standard model." },
+          { name: "HSC Biology", body: "Heredity, genetic technologies, infectious disease and non-infectious disease.", to: "/topics/biology", linkLabel: "HSC Biology" },
+          { name: "HSC Chemistry", body: "Equilibrium, acids and bases, organic chemistry and applied chemistry.", to: "/topics/chemistry", linkLabel: "HSC Chemistry" },
+          { name: "HSC Physics", body: "Advanced mechanics, electromagnetism, quanta and the standard model.", to: "/topics/physics", linkLabel: "HSC Physics" },
         ],
       },
     ],

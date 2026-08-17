@@ -10,7 +10,7 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 
 1. NO PRICING anywhere on the website. No dollar amounts, no rate tables, no "from $X per hour". Pricing is only discussed by phone. Use "Talk to us" bands with the Request a Call button instead.
 2. Phone number: display "1300 00MUNK", dial target 1300 006 865 (tel:1300006865). The floating CALL US NOW button appears on every page.
-3. Munk branding is deliberate: "Become a Munk" (tutor recruitment), "Our Munks" (tutor showcase), "Ask Munk" (on-demand program), "Choose your Munk" (step 3 of the How It Works journey). Never rename these back to generic terms.
+3. Munk branding is deliberate: "Become a Munk" (tutor recruitment), "Our Munks" (tutor showcase), "Choose your Munk" (step 3 of the How It Works journey). Never rename these back to generic terms.
 4. No login/portal features. Forms are visual shells until the forms backend phase.
 5. Never delete files or content without explicit approval. Archive instead.
 
@@ -38,9 +38,9 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 1. Top-level nav items (Primary School, High School, Senior School, Exam Prep) must NAVIGATE on click; dropdown panels open on hover only. Mobile: chevron expands accordion, name navigates.
 2. Remove every trace of pricing (see hard rule 1), including the delivery-mode cards on How It Works.
 3. (Palette change removed: original palette retained, see Design direction above.)
-4. Dropdown icons (lucide): English open-book, Maths calculator, Science flask, Selective trophy, OC target, NAPLAN clipboard-check, Writing pen, ICAS medal, HSC Sprint timer, Ask Munk message-circle-question, Primary overview graduation-cap, High School school, Senior award. Senior panel: 3 grouped columns (ENGLISH, MATHS, SCIENCE headings), compact rows.
+4. Dropdown icons (lucide): English open-book, Maths calculator, Science flask, Selective trophy, OC target, NAPLAN clipboard-check, Writing pen, ICAS medal, HSC Sprint timer, Primary overview graduation-cap, High School school, Senior award. Senior panel: 3 grouped columns (ENGLISH, MATHS, SCIENCE headings), compact rows.
 5. How It Works: 5-step vertical journey with numbered navy circle badges, connector line, alternating cards on desktop; step icons clipboard-list, users, user-check, calendar-check, sparkles. Then delivery modes as a 2x2 icon card grid (house, users, building, school). No pricing.
-6. Exam Prep hub: 7 equal designed cards with icon tile, year-range chip, two-line description, navy Learn more link; "On demand" chip on Ask Munk, "Intensive" chip on HSC Sprint.
+6. Exam Prep hub: 6 equal designed cards with icon tile, year-range chip, two-line description, navy Learn more link; "Intensive" chip on HSC Sprint.
 
 ## Business-critical priorities (owner statement, 14 Aug 2026)
 
@@ -66,6 +66,56 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 - Tutors are published as first name plus surname initial only (e.g. "Anne M."), never a full surname.
 - "NESA aligned" is the approved wording for the verification pill and trust chip. Never "NESA accredited": NESA accredits teachers and schools, not tutoring companies, so that wording would be misleading conduct. Keep this in mind if any other page ever mentions NESA.
 - This is a new, separate data shape (MunkProfile) from the older MunkCard type. MunkCards.tsx, the MunkCard type and the `munks` array in src/content/munks.ts are now UNUSED (the home page's old 4-card grid is gone, replaced by the rail) but were kept in place rather than deleted, per the standing rule of archiving instead of deleting. Safe to actually remove later once the owner confirms nothing still needs them.
+
+## Backlog, open items (owner approved list, 16 Aug 2026)
+
+These are agreed as outstanding, not forgotten. Do not action them without asking Indy
+first, and do not silently close one off. When an item is done, delete its line from here.
+
+ARCHIVED, DO NOT RE-ADD
+- Ask Munk (the drop-in, on-demand exam prep program) was archived on 16 Aug 2026 at the
+  owner's explicit instruction. Drop-in help is a TutorGator concept, the owner's separate
+  online platform, and TutorMunk is strictly in person, so it has no place on this site.
+  Removed from the Exam Prep hub (subject and program cards), the Exam Prep mega-menu
+  dropdown, the footer Programs column, and /topics/ask-munk, which now 404s. The original
+  copy is kept, not deleted, in archived consts alongside the live content it was removed
+  from: archivedTopics in src/content/topics.ts, archivedExamPrepMegaLink and
+  archivedFooterProgramLink in src/content/site.ts, and archivedAskMunkSubjectCard plus
+  archivedAskMunkProgramCard in src/content/examPrep.ts. Do not re-add Ask Munk anywhere
+  without asking Indy first.
+
+WAITING ON INDY
+- Tutor email to all Sprouts contractors and employees, drafted and approved, requesting
+  first name, years taught, qualifications, specialties, a short intro and a headshot.
+  Blocked on two blanks only: the return-by date, and Samantha's email address. Samantha
+  sends it, and it is written from her, not from Indy. It is framed entirely as TutorGator.
+  Do NOT mention TutorMunk in it.
+- The four hub pages (Primary, High, Senior, Exam Prep) each need their own photo for the
+  "Why parents and students choose TutorMunk" card. All four currently share
+  hero-tutoring.jpg, because each page's own stage photo is already used in its hero and
+  the same picture must never appear twice on one page. Swapping in real photos is a
+  one-line change per content file, via the whyUs image field.
+- Real tutor headshots for the Our Munks rail. Only Varsha has one. Ask for at least 1000
+  pixels on the short side, the current one came in at 630 by 622 and is soft at card size.
+  Files go in public/images/munks/, wired via the photo field on each MunkProfile.
+- Lighter overlay on the Munks rail cards. The current dark veil sits at 55 percent right
+  across the middle of the card, which is exactly where a face lands, and it makes skin
+  tones read muddy and green. A lighter version was previewed live in the browser and
+  looked much better, but has never been approved and is NOT in the code.
+
+SMALL, DO WHEN NEXT IN THE FILE
+- The gradient fading the photo into the dark card in WhyUsList.tsx is short, so there is a
+  slightly visible vertical seam where they meet. Lengthen it.
+- .claude/settings.local.json is untracked and shows up in every commit. Add it to
+  .gitignore so it stops appearing. Awaiting Indy's go-ahead.
+- Scroll-behind-mobile-menu: with the mobile menu open, the page behind it still scrolls.
+  Known and deliberately unfixed, logged so it is not rediscovered as a new bug.
+
+BLOG CONTENT, STILL DRAFT
+- 18 posts remain unpublished. 8 are waiting on images. 9 are on a watch list needing
+  Indy's editorial verdict, mostly near-duplicates on tutoring cost, private tutoring
+  versus learning centres, and how to become a tutor. 1 (naplan-writing) is a stub needing
+  real content.
 
 ## Working style with Indy
 

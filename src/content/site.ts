@@ -162,7 +162,6 @@ export const primaryNav: NavItem[] = [
           links: [
             { label: "ICAS", to: "/topics/icas", icon: "medal", description: "Extension style questions in English, Maths and Science" },
             { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "timer", description: "An intensive block before trials and the HSC" },
-            { label: "Ask Munk", to: "/topics/ask-munk", icon: "message-circle-question", description: "Drop-in homework help at our Gregory Hills centre" },
           ],
         },
       ],
@@ -170,6 +169,19 @@ export const primaryNav: NavItem[] = [
   },
   { label: "How It Works", to: "/how-it-works" },
 ];
+
+// Archived on 16 Aug 2026 at the owner's request. Ask Munk (drop-in,
+// on-demand help) is a TutorGator concept, the owner's separate online
+// platform. TutorMunk is strictly in person, so it has no place here.
+// Not merged into primaryNav above, so it never renders in the Exam Prep
+// mega-menu. Kept, not deleted, so it can be restored if it is ever
+// needed again.
+export const archivedExamPrepMegaLink: MegaLink = {
+  label: "Ask Munk",
+  to: "/topics/ask-munk",
+  icon: "message-circle-question",
+  description: "Drop-in homework help at our Gregory Hills centre",
+};
 
 export const callbackModal = {
   title: "Request a call",
@@ -197,7 +209,6 @@ export const footer = {
         { label: "NAPLAN", to: "/topics/naplan" },
         { label: "ICAS", to: "/topics/icas" },
         { label: "HSC Sprint", to: "/topics/hsc-sprint" },
-        { label: "Ask Munk", to: "/topics/ask-munk" },
       ],
     },
     {
@@ -225,6 +236,14 @@ export const footer = {
   ],
   legal: "TutorMunk Pty Ltd. Placeholder content for design review.",
 };
+
+// Archived on 16 Aug 2026 at the owner's request. Ask Munk (drop-in,
+// on-demand help) is a TutorGator concept, the owner's separate online
+// platform. TutorMunk is strictly in person, so it has no place here.
+// Not merged into footer above, so it never renders in the footer's
+// Programs column. Kept, not deleted, so it can be restored if it is
+// ever needed again.
+export const archivedFooterProgramLink = { label: "Ask Munk", to: "/topics/ask-munk" };
 
 export const deliveryModes = [
   {

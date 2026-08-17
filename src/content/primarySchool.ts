@@ -27,11 +27,11 @@ export const primarySchool: StagePageContent = {
     body: "Choose one subject or combine two in a longer session.",
     items: [
       { name: "English", body: "Reading comprehension, spelling, grammar and vocabulary building.", to: "/primary-english", linkLabel: "Primary English Tutoring" },
-      { name: "Maths", body: "Number, fractions, measurement and word problems, with mental strategies." },
-      { name: "Selective Prep", body: "Thinking skills, reading and mathematical reasoning for the Year 6 Selective test." },
-      { name: "OC Prep", body: "Timed practice for the Year 4 Opportunity Class placement test." },
-      { name: "NAPLAN", body: "Familiarisation with question types in Year 3 and Year 5 NAPLAN." },
-      { name: "Writing", body: "Narrative, persuasive and informative writing with marking against criteria." },
+      { name: "Maths", body: "Number, fractions, measurement and word problems, with mental strategies.", to: "/topics/primary-maths", linkLabel: "Primary Maths Tutoring" },
+      { name: "Selective Prep", body: "Thinking skills, reading and mathematical reasoning for the Year 6 Selective test.", to: "/topics/selective-school-prep", linkLabel: "Selective School Preparation" },
+      { name: "OC Prep", body: "Timed practice for the Year 4 Opportunity Class placement test.", to: "/topics/oc-prep", linkLabel: "OC Placement Preparation" },
+      { name: "NAPLAN", body: "Familiarisation with question types in Year 3 and Year 5 NAPLAN.", to: "/topics/naplan", linkLabel: "NAPLAN Preparation" },
+      { name: "Writing", body: "Narrative, persuasive and informative writing with marking against criteria.", to: "/topics/writing-program", linkLabel: "Writing Program" },
     ],
   },
   whyUs: {
