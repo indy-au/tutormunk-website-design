@@ -3,10 +3,15 @@ import { seoHead } from "@/lib/seo";
 import { becomeTutor } from "@/content/becomeTutor";
 import { Hero } from "@/components/sections/Hero";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
-import { ApplicationFormShell } from "@/components/sections/ApplicationFormShell";
+import { PhoneOnlyCtaBand } from "@/components/sections/PhoneOnlyCtaBand";
 
 export const Route = createFileRoute("/become-a-tutor")({
-  head: () => seoHead({ title: becomeTutor.title, description: becomeTutor.metaDescription, path: "/become-a-tutor" }),
+  head: () =>
+    seoHead({
+      title: becomeTutor.title,
+      description: becomeTutor.metaDescription,
+      path: "/become-a-tutor",
+    }),
   component: BecomeATutorPage,
 });
 
@@ -15,7 +20,7 @@ function BecomeATutorPage() {
     <>
       <Hero {...becomeTutor.hero} />
       <FeatureGrid {...becomeTutor.requirements} />
-      <ApplicationFormShell {...becomeTutor.form} />
+      <PhoneOnlyCtaBand {...becomeTutor.closing} />
     </>
   );
 }

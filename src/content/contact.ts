@@ -1,6 +1,11 @@
 import { centre, centreMapEmbedUrl } from "./locations";
 import { brand } from "./site";
 
+// Enquiry form removed 18 Aug 2026 (visual shell, no backend). The form
+// object that used to live here is archived, not deleted, at
+// archive/2026-08-18-placeholder-forms/archived-content.ts. hero.body was
+// rewritten so it no longer promises a reply to a form that no longer
+// exists, see CLAUDE.md.
 export const contact = {
   title: "Contact TutorMunk | Gregory Hills Learning Centre",
   metaDescription:
@@ -8,7 +13,7 @@ export const contact = {
   hero: {
     eyebrow: "Contact",
     heading: "Get in touch.",
-    body: "Call us or send an enquiry and we will reply within one business day.",
+    body: "Call us, email hello@tutormunk.com.au, or request a call and we will phone you back within one business day.",
   },
   details: [
     { label: "Phone", value: centre.phone },
@@ -19,20 +24,4 @@ export const contact = {
   ],
   mapLabel: `Map of ${centre.name} at ${centre.address}`,
   mapEmbedUrl: centreMapEmbedUrl,
-  form: {
-    heading: "Send an enquiry.",
-    fields: [
-      { label: "Your name", type: "text", placeholder: "Jane Nguyen" },
-      { label: "Email", type: "email", placeholder: "jane@example.com.au" },
-      { label: "Phone", type: "tel", placeholder: "0400 000 000" },
-      { label: "Suburb", type: "text", placeholder: "Camden" },
-      {
-        label: "How can we help?",
-        type: "textarea",
-        placeholder: "Tell us the year level and subject.",
-      },
-    ],
-    submitLabel: "Send enquiry",
-    note: "Visual shell only. Nothing is sent.",
-  },
 };

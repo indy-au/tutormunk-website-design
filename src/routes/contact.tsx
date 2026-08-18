@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo";
 import { contact } from "@/content/contact";
 import { PageIntro } from "@/components/sections/PageIntro";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { ContactDetails } from "@/components/sections/ContactDetails";
 
 export const Route = createFileRoute("/contact")({
   head: () =>
@@ -14,11 +14,10 @@ function ContactPage() {
   return (
     <>
       <PageIntro {...contact.hero} />
-      <ContactSection
+      <ContactDetails
         details={contact.details}
         mapLabel={contact.mapLabel}
         mapEmbedUrl={contact.mapEmbedUrl}
-        form={contact.form}
       />
     </>
   );

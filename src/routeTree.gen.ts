@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as R404RouteImport } from './routes/404'
 import { Route as BecomeATutorRouteImport } from './routes/become-a-tutor'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as EnrolRouteImport } from './routes/enrol'
 import { Route as ExamPrepRouteImport } from './routes/exam-prep'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as HighSchoolRouteImport } from './routes/high-school'
@@ -51,11 +50,6 @@ const BecomeATutorRoute = BecomeATutorRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EnrolRoute = EnrolRouteImport.update({
-  id: '/enrol',
-  path: '/enrol',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExamPrepRoute = ExamPrepRouteImport.update({
@@ -155,7 +149,6 @@ export interface FileRoutesByFullPath {
   '/404': typeof R404Route
   '/become-a-tutor': typeof BecomeATutorRoute
   '/contact': typeof ContactRoute
-  '/enrol': typeof EnrolRoute
   '/exam-prep': typeof ExamPrepRoute
   '/faq': typeof FaqRoute
   '/high-school': typeof HighSchoolRoute
@@ -180,7 +173,6 @@ export interface FileRoutesByTo {
   '/404': typeof R404Route
   '/become-a-tutor': typeof BecomeATutorRoute
   '/contact': typeof ContactRoute
-  '/enrol': typeof EnrolRoute
   '/exam-prep': typeof ExamPrepRoute
   '/faq': typeof FaqRoute
   '/high-school': typeof HighSchoolRoute
@@ -206,7 +198,6 @@ export interface FileRoutesById {
   '/404': typeof R404Route
   '/become-a-tutor': typeof BecomeATutorRoute
   '/contact': typeof ContactRoute
-  '/enrol': typeof EnrolRoute
   '/exam-prep': typeof ExamPrepRoute
   '/faq': typeof FaqRoute
   '/high-school': typeof HighSchoolRoute
@@ -233,7 +224,6 @@ export interface FileRouteTypes {
     | '/404'
     | '/become-a-tutor'
     | '/contact'
-    | '/enrol'
     | '/exam-prep'
     | '/faq'
     | '/high-school'
@@ -258,7 +248,6 @@ export interface FileRouteTypes {
     | '/404'
     | '/become-a-tutor'
     | '/contact'
-    | '/enrol'
     | '/exam-prep'
     | '/faq'
     | '/high-school'
@@ -283,7 +272,6 @@ export interface FileRouteTypes {
     | '/404'
     | '/become-a-tutor'
     | '/contact'
-    | '/enrol'
     | '/exam-prep'
     | '/faq'
     | '/high-school'
@@ -309,7 +297,6 @@ export interface RootRouteChildren {
   R404Route: typeof R404Route
   BecomeATutorRoute: typeof BecomeATutorRoute
   ContactRoute: typeof ContactRoute
-  EnrolRoute: typeof EnrolRoute
   ExamPrepRoute: typeof ExamPrepRoute
   FaqRoute: typeof FaqRoute
   HighSchoolRoute: typeof HighSchoolRoute
@@ -358,13 +345,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/enrol': {
-      id: '/enrol'
-      path: '/enrol'
-      fullPath: '/enrol'
-      preLoaderRoute: typeof EnrolRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/exam-prep': {
@@ -501,7 +481,6 @@ const rootRouteChildren: RootRouteChildren = {
   R404Route: R404Route,
   BecomeATutorRoute: BecomeATutorRoute,
   ContactRoute: ContactRoute,
-  EnrolRoute: EnrolRoute,
   ExamPrepRoute: ExamPrepRoute,
   FaqRoute: FaqRoute,
   HighSchoolRoute: HighSchoolRoute,

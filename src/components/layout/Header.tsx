@@ -83,6 +83,12 @@ export function Header() {
     closeMobileMenu();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
+  // Become a Munk is phone-only, by owner decision (18 Aug 2026): tutors
+  // call, they do not fill in a Request a Call form meant for parents. The
+  // phone number link next to it (and the floating call button) stay on
+  // this route, only the button is hidden. Header stays identical on
+  // every other route.
+  const showRequestACall = pathname !== "/become-a-tutor";
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
@@ -160,7 +166,9 @@ export function Header() {
                         onClick={() => setOpenPanel(null)}
                         className="flex items-center gap-2 text-sm font-semibold text-accent-ink underline decoration-accent decoration-2 underline-offset-4"
                       >
-                        {item.panel.footerIcon ? <IconTile name={item.panel.footerIcon} size="sm" /> : null}
+                        {item.panel.footerIcon ? (
+                          <IconTile name={item.panel.footerIcon} size="sm" />
+                        ) : null}
                         {item.panel.footerLabel}
                       </Link>
                     </div>
@@ -187,7 +195,12 @@ export function Header() {
           >
             {brand.phone}
           </a>
-          <CallbackButton label="Request a Call" className="whitespace-nowrap px-6 py-4 text-base" />
+          {showRequestACall ? (
+            <CallbackButton
+              label="Request a Call"
+              className="whitespace-nowrap px-6 py-4 text-base"
+            />
+          ) : null}
         </div>
 
         <button
@@ -265,7 +278,9 @@ export function Header() {
                         onClick={closeMobileMenu}
                         className="flex items-center gap-2 text-sm font-semibold text-accent-ink"
                       >
-                        {item.panel.footerIcon ? <IconTile name={item.panel.footerIcon} size="sm" /> : null}
+                        {item.panel.footerIcon ? (
+                          <IconTile name={item.panel.footerIcon} size="sm" />
+                        ) : null}
                         {item.panel.footerLabel}
                       </Link>
                     </div>
@@ -282,7 +297,7 @@ export function Header() {
                 </Link>
               ),
             )}
-            <CallbackButton label="Request a Call" />
+            {showRequestACall ? <CallbackButton label="Request a Call" /> : null}
           </nav>
         </div>
       ) : null}
