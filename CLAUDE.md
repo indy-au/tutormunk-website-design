@@ -85,6 +85,13 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 - The only live, working form on the site is Request a Call (CallbackModal.tsx). The Become a Munk application form, the Contact page enquiry form, and the whole /enrol enrolment page were visual shells with no backend and were removed before launch on 18 Aug 2026. They are archived at archive/2026-08-18-placeholder-forms/, with a README explaining what each one was and exactly how to restore it. Do not restore any of them without a real backend for it, see the README for why.
 - Become a Munk (/become-a-tutor) is phone-only by owner decision: no application form, no Request a Call button in the header on that one route (Header.tsx checks the pathname), just the phone number and the floating call button. Tutors call, they do not fill in a form meant for parents.
 
+## Form endpoint (added 18 Aug 2026, Phase 3B)
+
+- Request a Call actually sends somewhere now. The PHP endpoint lives at deploy/php/send.php, packaged into dist-static/send.php (site root) by `npm run build:static` alongside deploy/.htaccess, deploy/php/PHPMailer/ and deploy/php/mail.config.example.php. PHPMailer is vendored (no Composer on Hostinger), version pinned in a comment at the top of send.php.
+- deploy/php/mail.config.php holds the real Titan mailbox password and is never committed (confirmed with `git check-ignore`) and never packaged into dist-static/, even if it exists locally for testing. On the server it is created by hand from mail.config.example.php, see deploy/DEPLOY.md. send.php refuses to run (500, logged) if it is missing or the password is empty, so a forgotten password fails loudly instead of silently losing leads.
+- The three validators (name, phone, email) are ported faithfully from CallbackModal.tsx into send.php, in PHP. If you change validation, change it in all three places together: CallbackModal.tsx, scripts/test-callback-form.mjs, and send.php. They can drift silently otherwise, nothing currently checks the three stay in sync automatically.
+- The log and the rate-limit file live outside the web root, at `mail-data/` next to (not inside) public_html on the server, so neither is web-reachable. See deploy/DEPLOY.md for where that is in Hostinger's File Manager and what each log outcome means.
+
 ## Backlog, open items (owner approved list, 16 Aug 2026)
 
 These are agreed as outstanding, not forgotten. Do not action them without asking Indy

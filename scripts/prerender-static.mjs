@@ -25,8 +25,19 @@ const serverEntry = path.join(rootDir, ".output", "server", "index.mjs");
 const routesFile = path.join(rootDir, ".tanstack", "static-routes.json");
 const outDir = path.join(rootDir, "dist-static");
 const publicAssetsDir = path.join(rootDir, ".output", "public");
+const deployDir = path.join(rootDir, "deploy");
+const phpDir = path.join(deployDir, "php");
 const SITE_ORIGIN = "https://tutormunk.com.au";
 const SERVER_READY_TIMEOUT_MS = 20_000;
+
+async function pathExists(p) {
+  try {
+    await stat(p);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 async function findFreePort() {
   return new Promise((resolve, reject) => {
@@ -175,6 +186,29 @@ async function main() {
     robotsTxt = robotsTxt.replace(/\n?$/, "") + `\n\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`;
     await writeFile(robotsPath, robotsTxt);
   }
+
+  // ==========================================================================
+  // Phase 3B packaging: the mail endpoint and Apache config, so dist-static/
+  // is upload-ready as one folder (its own contents go straight into
+  // public_html, not the folder itself). mail.config.php (the real
+  // password) is deliberately never copied, even if it exists locally for
+  // testing, see the explicit check below, not just an omission.
+  // ==========================================================================
+  await cp(path.join(deployDir, ".htaccess"), path.join(outDir, ".htaccess"));
+  await cp(path.join(phpDir, "send.php"), path.join(outDir, "send.php"));
+  await cp(path.join(phpDir, "PHPMailer"), path.join(outDir, "PHPMailer"), { recursive: true });
+  await cp(
+    path.join(phpDir, "mail.config.example.php"),
+    path.join(outDir, "mail.config.example.php"),
+  );
+  if (await pathExists(path.join(outDir, "mail.config.php"))) {
+    throw new Error(
+      "mail.config.php ended up in dist-static/ output. It must never ship (real password), aborting the build.",
+    );
+  }
+  console.log(
+    "[prerender-static] packaged .htaccess, send.php, PHPMailer/, mail.config.example.php",
+  );
 
   console.log(`[prerender-static] wrote ${written.length} HTML files, 0 failures.`);
   console.log(`[prerender-static] sitemap.xml: ${urls.length} URLs.`);

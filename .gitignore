@@ -41,6 +41,17 @@ dist-static
 .env.*
 !.env.example
 
+# The real Titan mailbox password for send.php. Never committed.
+# deploy/php/mail.config.example.php is the template that DOES ship,
+# copy it to mail.config.php by hand (locally and on the server) and fill
+# in smtp_pass there. Confirmed with `git check-ignore deploy/php/mail.config.php`.
+deploy/php/mail.config.php
+
+# send.php's log and rate-limit file, created one level above wherever it
+# runs from (mirrors "one level above public_html" on Hostinger). When
+# tested locally with `php -S -t dist-static`, that lands at the repo root.
+/mail-data/
+
 # OS generated files. .DS_Store is already listed above under editor files.
 Thumbs.db
 ehthumbs.db
