@@ -52,16 +52,46 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
-            { label: "English Tutoring", to: "/primary-english", icon: "book", description: "Year 2 to 6 reading, writing and comprehension" },
-            { label: "Maths Tutoring", to: "/topics/primary-maths", icon: "calculator", description: "Number, fractions and word problems to Year 6" },
-            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Thinking skills and reasoning for the Year 6 test" },
+            {
+              label: "English Tutoring",
+              to: "/primary-english",
+              icon: "book",
+              description: "Year 2 to 6 reading, writing and comprehension",
+            },
+            {
+              label: "Maths Tutoring",
+              to: "/topics/primary-maths",
+              icon: "calculator",
+              description: "Number, fractions and word problems to Year 6",
+            },
+            {
+              label: "Selective School Prep",
+              to: "/topics/selective-school-prep",
+              icon: "trophy",
+              description: "Thinking skills and reasoning for the Year 6 test",
+            },
           ],
         },
         {
           links: [
-            { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Question types and technique for Years 3 and 5" },
-            { label: "Writing Program", to: "/topics/writing-program", icon: "pen", description: "A marked writing piece every week" },
-            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Timed practice for Opportunity Class placement" },
+            {
+              label: "NAPLAN",
+              to: "/topics/naplan",
+              icon: "clipboard-check",
+              description: "Question types and technique for Years 3 and 5",
+            },
+            {
+              label: "Writing Program",
+              to: "/topics/writing-program",
+              icon: "pen",
+              description: "A marked writing piece every week",
+            },
+            {
+              label: "OC Prep",
+              to: "/topics/oc-prep",
+              icon: "target",
+              description: "Timed practice for Opportunity Class placement",
+            },
           ],
         },
       ],
@@ -79,14 +109,34 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
-            { label: "English Tutoring", to: "/topics/high-school-english", icon: "book", description: "Text analysis and essay structure for Years 7 to 10" },
-            { label: "Maths Tutoring", to: "/topics/high-school-maths", icon: "calculator", description: "Algebra, geometry and trigonometry to Stage 5.3" },
+            {
+              label: "English Tutoring",
+              to: "/topics/high-school-english",
+              icon: "book",
+              description: "Text analysis and essay structure for Years 7 to 10",
+            },
+            {
+              label: "Maths Tutoring",
+              to: "/topics/high-school-maths",
+              icon: "calculator",
+              description: "Algebra, geometry and trigonometry to Stage 5.3",
+            },
           ],
         },
         {
           links: [
-            { label: "Science Tutoring", to: "/topics/high-school-science", icon: "flask", description: "Working scientifically, plus core biology and chemistry" },
-            { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9", icon: "clipboard-check", description: "Practice tests with marked writing feedback" },
+            {
+              label: "Science Tutoring",
+              to: "/topics/high-school-science",
+              icon: "flask",
+              description: "Working scientifically, plus core biology and chemistry",
+            },
+            {
+              label: "NAPLAN Years 7 and 9",
+              to: "/topics/naplan-years-7-and-9",
+              icon: "clipboard-check",
+              description: "Practice tests with marked writing feedback",
+            },
           ],
         },
       ],
@@ -134,7 +184,11 @@ export const primaryNav: NavItem[] = [
             { label: "Biology", to: "/topics/biology", icon: "flask" },
             { label: "Chemistry", to: "/topics/chemistry", icon: "flask" },
             { label: "Physics", to: "/topics/physics", icon: "flask" },
-            { label: "Earth and Environmental", to: "/topics/earth-and-environmental", icon: "flask" },
+            {
+              label: "Earth and Environmental",
+              to: "/topics/earth-and-environmental",
+              icon: "flask",
+            },
             { label: "Investigating Science", to: "/topics/investigating-science", icon: "flask" },
           ],
         },
@@ -152,16 +206,46 @@ export const primaryNav: NavItem[] = [
       columns: [
         {
           links: [
-            { label: "Selective School Prep", to: "/topics/selective-school-prep", icon: "trophy", description: "Year 5 and 6 practice for the placement test" },
-            { label: "Writing", to: "/topics/writing-program", icon: "pen", description: "Narrative, persuasive and informative writing" },
-            { label: "ICAS", to: "/topics/icas", icon: "medal", description: "Extension style questions in English, Maths and Science" },
+            {
+              label: "Selective School Prep",
+              to: "/topics/selective-school-prep",
+              icon: "trophy",
+              description: "Year 5 and 6 practice for the placement test",
+            },
+            {
+              label: "Writing",
+              to: "/topics/writing-program",
+              icon: "pen",
+              description: "Narrative, persuasive and informative writing",
+            },
+            {
+              label: "ICAS",
+              to: "/topics/icas",
+              icon: "medal",
+              description: "Extension style questions in English, Maths and Science",
+            },
           ],
         },
         {
           links: [
-            { label: "OC Prep", to: "/topics/oc-prep", icon: "target", description: "Year 3 and 4 preparation for Opportunity Class" },
-            { label: "NAPLAN", to: "/topics/naplan", icon: "clipboard-check", description: "Years 3, 5, 7 and 9 familiarisation" },
-            { label: "HSC Sprint", to: "/topics/hsc-sprint", icon: "timer", description: "An intensive block before trials and the HSC" },
+            {
+              label: "OC Prep",
+              to: "/topics/oc-prep",
+              icon: "target",
+              description: "Year 3 and 4 preparation for Opportunity Class",
+            },
+            {
+              label: "NAPLAN",
+              to: "/topics/naplan",
+              icon: "clipboard-check",
+              description: "Years 3, 5, 7 and 9 familiarisation",
+            },
+            {
+              label: "HSC Sprint",
+              to: "/topics/hsc-sprint",
+              icon: "timer",
+              description: "An intensive block before trials and the HSC",
+            },
           ],
         },
       ],
@@ -183,16 +267,49 @@ export const archivedExamPrepMegaLink: MegaLink = {
   description: "Drop-in homework help at our Gregory Hills centre",
 };
 
+export type CallbackField = {
+  // Doubles as the POST body key (name, phone, email) and the field's own
+  // validation slot in CallbackModal.tsx, not just a display label key.
+  name: "name" | "phone" | "email";
+  label: string;
+  type: "text" | "tel" | "email";
+  placeholder: string;
+  maxLength: number;
+};
+
 export const callbackModal = {
   title: "Request a call",
-  intro: "Leave your details and one of our team will call you back to talk through your child's needs.",
+  intro:
+    "Leave your details and one of our team will call you back to talk through your child's needs.",
   fields: [
-    { label: "Parent or carer name", type: "text", placeholder: "Jane Nguyen" },
-    { label: "Phone number", type: "tel", placeholder: "0400 000 000" },
-    { label: "Best time to call", type: "text", placeholder: "Weekdays after 4pm" },
-  ],
+    { name: "name", label: "Full name", type: "text", placeholder: "Jane Nguyen", maxLength: 80 },
+    {
+      name: "phone",
+      label: "Phone number",
+      type: "tel",
+      placeholder: "0412 345 678",
+      // The longest legitimate input is "+61 (0) 412 345 678", 19 chars.
+      maxLength: 19,
+    },
+    {
+      name: "email",
+      label: "Email",
+      type: "email",
+      placeholder: "jane@example.com",
+      maxLength: 254,
+    },
+  ] satisfies CallbackField[],
   submitLabel: "Request a call",
-  note: "This form is a visual placeholder. No details are sent.",
+};
+
+// Archived on 18 Aug 2026 to keep the first live version of the Request a
+// Call form minimal. Not merged into callbackModal.fields above, so it
+// never renders. See archive/2026-08-18-callback-form/README.md for why
+// and exactly how to restore it.
+export const archivedCallbackTimeField = {
+  label: "Best time to call",
+  type: "text",
+  placeholder: "Weekdays after 4pm",
 };
 
 export const footer = {
@@ -260,14 +377,16 @@ export const deliveryModes = [
     icon: "house",
     setting: "Your home",
     format: "1-to-1",
-    detail: "A tutor comes to you for a 60-minute session. Full attention on one student, with no travel for the family.",
+    detail:
+      "A tutor comes to you for a 60-minute session. Full attention on one student, with no travel for the family.",
   },
   {
     name: "Your home group",
     icon: "users",
     setting: "Your home",
     format: "Small group",
-    detail: "Up to three students, often siblings or neighbours, taught together at your kitchen table.",
+    detail:
+      "Up to three students, often siblings or neighbours, taught together at your kitchen table.",
   },
   {
     name: "Our centre 1-to-1",

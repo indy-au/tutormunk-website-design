@@ -67,6 +67,13 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 - "NESA aligned" is the approved wording for the verification pill and trust chip. Never "NESA accredited": NESA accredits teachers and schools, not tutoring companies, so that wording would be misleading conduct. Keep this in mind if any other page ever mentions NESA.
 - This is a new, separate data shape (MunkProfile) from the older MunkCard type. MunkCards.tsx, the MunkCard type and the `munks` array in src/content/munks.ts are now UNUSED (the home page's old 4-card grid is gone, replaced by the rail) but were kept in place rather than deleted, per the standing rule of archiving instead of deleting. Safe to actually remove later once the owner confirms nothing still needs them.
 
+## Request a Call form (added 18 Aug 2026)
+
+- The Request a Call modal (CallbackModal.tsx) collects exactly three mandatory fields: full name, phone, email. "Best time to call" was removed to keep the first live version minimal, and is archived at archive/2026-08-18-callback-form/, with exact restore steps.
+- The Australian phone validation rule (the normaliser and the `AU_PHONE` pattern) lives in CallbackModal.tsx. Mobiles are 04 plus 8 digits, landlines are 02, 03, 07 or 08 plus 8 digits, nothing else passes.
+- Browser side validation here is duplicated server side in send.php, which is built separately (not yet built at time of writing). Do not treat client side validation alone as sufficient.
+- Three real bugs were found and fixed in the phone validation on 18 Aug 2026: the normaliser stripped the leading zero off ANY "00"-prefixed number, not just a genuine "+61 (0)" case, so overseas numbers like UK "0044..." passed as valid Australian numbers; it silently stripped letters instead of rejecting them, so text like "hi@0412345678.com" passed; and the `AU_PHONE` pattern accepted a geographic subscriber number starting with 0 (the trunk prefix) or 1 (reserved for 13/1300/1800/1900), e.g. 0201234567. All three are covered by scripts/test-callback-phone.mjs, which now includes two exhaustive sweeps (every 0ab prefix, and every international country code 1-999 in three dial styles) rather than only named cases, because named cases alone let the third bug survive three rounds of review. Run it after touching normaliseAuPhone or AU_PHONE.
+
 ## Backlog, open items (owner approved list, 16 Aug 2026)
 
 These are agreed as outstanding, not forgotten. Do not action them without asking Indy

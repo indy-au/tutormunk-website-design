@@ -5,7 +5,8 @@ import { PageIntro } from "@/components/sections/PageIntro";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seoHead({ title: contact.title, description: contact.metaDescription, path: "/contact" }),
+  head: () =>
+    seoHead({ title: contact.title, description: contact.metaDescription, path: "/contact" }),
   component: ContactPage,
 });
 
