@@ -22,7 +22,7 @@ isn't a decision to be taken lightly, with so many options to choose from.
 
 We started this blog to help you make an informed decision when choosing the best teachers for your needs. we do this by looking at reviews and recommendations from local families.
 
-[TutorMunk](/about)
+[TutorMunk](/)
 , is a leading provider of high-quality one to one tutoring services in Oran Park, Sydney. When it comes to choosing the right service to help with your child's education, you expect nothing less than the best, and TutorMunk can deliver with ease. Our teachers are highly qualified and our services are professional, flexible, and affordable.
 
 ### We know that Choosing the right one to one tutoring can be a daunting task, however this blog will help guide you through that decision. Check all points below

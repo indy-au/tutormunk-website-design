@@ -198,12 +198,25 @@ export const callbackModal = {
 export const footer = {
   blurb:
     "In-person tutoring for K-12 students across South-West Sydney, in your home or at our Gregory Hills centre. We do not run online lessons.",
+  // Four columns, not three: About is gone (removed 18 Aug 2026, see
+  // src/content/about.ts), and Exam Prep is deliberately not repeated here
+  // as its own link, the six exam programs it leads to are already listed
+  // individually across columns 1 and 2. 5, 5, 4, 4, eighteen links total,
+  // uneven on purpose, not padded to make the last column match.
   columns: [
     {
-      heading: "Programs",
+      heading: "Tutoring",
       links: [
-        { label: "Exam Prep", to: "/exam-prep" },
+        { label: "Primary School", to: "/primary-school" },
+        { label: "High School", to: "/high-school" },
+        { label: "Senior School", to: "/senior-school" },
         { label: "Selective Prep", to: "/topics/selective-school-prep" },
+        { label: "How It Works", to: "/how-it-works" },
+      ],
+    },
+    {
+      heading: "Exam preparation",
+      links: [
         { label: "OC Prep", to: "/topics/oc-prep" },
         { label: "Writing", to: "/topics/writing-program" },
         { label: "NAPLAN", to: "/topics/naplan" },
@@ -214,27 +227,23 @@ export const footer = {
     {
       heading: "Company",
       links: [
-        { label: "About", to: "/about" },
         { label: "Our Munks", to: "/our-munks" },
         { label: "Locations", to: "/locations" },
         { label: "Testimonials", to: "/testimonials" },
-        { label: "Blog", to: "/blog" },
         { label: "Become a Munk", to: "/become-a-tutor" },
-        { label: "FAQ", to: "/faq" },
       ],
     },
     {
-      heading: "Policies",
+      heading: "More",
       links: [
-        { label: "Privacy", to: "/privacy" },
-        { label: "Terms", to: "/terms" },
-        { label: "Student Agreement", to: "/student-agreement" },
-        { label: "Cancellation & Refund", to: "/cancellation-and-refund" },
-        { label: "Data Collection", to: "/data-collection" },
+        { label: "Blog", to: "/blog" },
+        { label: "FAQ", to: "/faq" },
+        { label: "Contact", to: "/contact" },
+        { label: "Policies", to: "/policies" },
       ],
     },
   ],
-  legal: "TutorMunk Pty Ltd. Placeholder content for design review.",
+  legal: "Copyright © TutorMunk Pty Ltd 2026",
 };
 
 // Archived on 16 Aug 2026 at the owner's request. Ask Munk (drop-in,

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo";
-import { contact } from "@/content/about";
+import { contact } from "@/content/contact";
 import { PageIntro } from "@/components/sections/PageIntro";
 import { ContactSection } from "@/components/sections/ContactSection";
 

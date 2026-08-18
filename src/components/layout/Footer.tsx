@@ -28,12 +28,17 @@ export function Footer() {
             </dl>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {footer.columns.map((column) => (
               <nav key={column.heading} aria-label={column.heading}>
-                <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-primary">
-                  {column.heading}
-                </h2>
+                {/* Visually hidden, not deleted: text-primary on bg-surface
+                    is roughly 1.05 to 1, both dark greens, effectively
+                    invisible either way, so the owner asked for no visible
+                    heading at all rather than a contrast fix. The heading
+                    stays in the markup, sr-only, so a screen reader still
+                    hears four labelled groups instead of one run of
+                    eighteen links. */}
+                <h2 className="sr-only">{column.heading}</h2>
                 <ul className="mt-3 space-y-2">
                   {column.links.map((link) => (
                     <li key={link.label}>

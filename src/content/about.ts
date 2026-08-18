@@ -1,6 +1,19 @@
-import { centre, suburbs, centreMapEmbedUrl } from "./locations";
+// Archived on 18 Aug 2026 at the owner's request. The About page is removed
+// from the site, the owner decided it was not needed. This content is kept
+// for possible future use, nothing imports it. The `contact` export that
+// used to live in this file moved to src/content/contact.ts unchanged, the
+// Contact page depends on it and stays exactly as it was. The route file
+// that rendered this content, src/routes/about.tsx, is deleted, a copy is
+// kept at archive/2026-08-18-about-page/about.tsx.old. /about now 404s.
+//
+// src/components/sections/StorySection.tsx, the section this content
+// rendered through, is now unused for the same reason MunkCards.tsx was
+// left in place when the poster rail replaced it: kept, not deleted, safe
+// to remove later once confirmed nothing still needs it.
 
-export const about = {
+import { suburbs } from "./locations";
+
+export const archivedAboutPage = {
   title: "About TutorMunk | In-Person Tutoring in South-West Sydney",
   metaDescription:
     "TutorMunk is an in-person tutoring company in South-West Sydney offering 1-to-1 and small group sessions for K-12 students.",
@@ -41,36 +54,5 @@ export const about = {
     ctaLabel: "Request a Call",
     secondaryLabel: "Contact us",
     secondaryTo: "/contact",
-  },
-};
-
-export const contact = {
-  title: "Contact TutorMunk | Gregory Hills Learning Centre",
-  metaDescription:
-    "Contact TutorMunk in Gregory Hills by phone or email, or send an enquiry about in-person tutoring in South-West Sydney.",
-  hero: {
-    eyebrow: "Contact",
-    heading: "Get in touch.",
-    body: "Call us or send an enquiry and we will reply within one business day.",
-  },
-  details: [
-    { label: "Phone", value: centre.phone },
-    { label: "Email", value: "hello@tutormunk.com.au" },
-    { label: "Centre", value: centre.address },
-    { label: "Sessions", value: centre.sessionsNote },
-  ],
-  mapLabel: `Map of ${centre.name} at ${centre.address}`,
-  mapEmbedUrl: centreMapEmbedUrl,
-  form: {
-    heading: "Send an enquiry.",
-    fields: [
-      { label: "Your name", type: "text", placeholder: "Jane Nguyen" },
-      { label: "Email", type: "email", placeholder: "jane@example.com.au" },
-      { label: "Phone", type: "tel", placeholder: "0400 000 000" },
-      { label: "Suburb", type: "text", placeholder: "Camden" },
-      { label: "How can we help?", type: "textarea", placeholder: "Tell us the year level and subject." },
-    ],
-    submitLabel: "Send enquiry",
-    note: "Visual shell only. Nothing is sent.",
   },
 };

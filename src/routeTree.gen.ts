@@ -10,11 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as BecomeATutorRouteImport } from './routes/become-a-tutor'
-import { Route as CancellationAndRefundRouteImport } from './routes/cancellation-and-refund'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as DataCollectionRouteImport } from './routes/data-collection'
 import { Route as EnrolRouteImport } from './routes/enrol'
 import { Route as ExamPrepRouteImport } from './routes/exam-prep'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -24,15 +21,14 @@ import { Route as HscMathsAdvancedRouteImport } from './routes/hsc-maths-advance
 import { Route as OurMunksRouteImport } from './routes/our-munks'
 import { Route as PrimaryEnglishRouteImport } from './routes/primary-english'
 import { Route as PrimarySchoolRouteImport } from './routes/primary-school'
-import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SeniorSchoolRouteImport } from './routes/senior-school'
-import { Route as StudentAgreementRouteImport } from './routes/student-agreement'
-import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as TutoringInChar123suburbSlugChar125RouteImport } from './routes/tutoring-in-{$suburbSlug}'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as LocationsIndexRouteImport } from './routes/locations.index'
+import { Route as PoliciesIndexRouteImport } from './routes/policies.index'
+import { Route as PoliciesSlugRouteImport } from './routes/policies.$slug'
 import { Route as TopicsSlugRouteImport } from './routes/topics.$slug'
 import { Route as BlogPagePageRouteImport } from './routes/blog.page.$page'
 
@@ -41,29 +37,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BecomeATutorRoute = BecomeATutorRouteImport.update({
   id: '/become-a-tutor',
   path: '/become-a-tutor',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CancellationAndRefundRoute = CancellationAndRefundRouteImport.update({
-  id: '/cancellation-and-refund',
-  path: '/cancellation-and-refund',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DataCollectionRoute = DataCollectionRouteImport.update({
-  id: '/data-collection',
-  path: '/data-collection',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EnrolRoute = EnrolRouteImport.update({
@@ -111,24 +92,9 @@ const PrimarySchoolRoute = PrimarySchoolRouteImport.update({
   path: '/primary-school',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SeniorSchoolRoute = SeniorSchoolRouteImport.update({
   id: '/senior-school',
   path: '/senior-school',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentAgreementRoute = StudentAgreementRouteImport.update({
-  id: '/student-agreement',
-  path: '/student-agreement',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TestimonialsRoute = TestimonialsRouteImport.update({
@@ -157,6 +123,16 @@ const LocationsIndexRoute = LocationsIndexRouteImport.update({
   path: '/locations/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliciesIndexRoute = PoliciesIndexRouteImport.update({
+  id: '/policies/',
+  path: '/policies/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliciesSlugRoute = PoliciesSlugRouteImport.update({
+  id: '/policies/$slug',
+  path: '/policies/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TopicsSlugRoute = TopicsSlugRouteImport.update({
   id: '/topics/$slug',
   path: '/topics/$slug',
@@ -170,11 +146,8 @@ const BlogPagePageRoute = BlogPagePageRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/become-a-tutor': typeof BecomeATutorRoute
-  '/cancellation-and-refund': typeof CancellationAndRefundRoute
   '/contact': typeof ContactRoute
-  '/data-collection': typeof DataCollectionRoute
   '/enrol': typeof EnrolRoute
   '/exam-prep': typeof ExamPrepRoute
   '/faq': typeof FaqRoute
@@ -184,25 +157,21 @@ export interface FileRoutesByFullPath {
   '/our-munks': typeof OurMunksRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
-  '/privacy': typeof PrivacyRoute
   '/senior-school': typeof SeniorSchoolRoute
-  '/student-agreement': typeof StudentAgreementRoute
-  '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/tutoring-in-{$suburbSlug}': typeof TutoringInChar123suburbSlugChar125Route
   '/blog/$slug': typeof BlogSlugRoute
+  '/policies/$slug': typeof PoliciesSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
+  '/policies/': typeof PoliciesIndexRoute
   '/blog/page/$page': typeof BlogPagePageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/become-a-tutor': typeof BecomeATutorRoute
-  '/cancellation-and-refund': typeof CancellationAndRefundRoute
   '/contact': typeof ContactRoute
-  '/data-collection': typeof DataCollectionRoute
   '/enrol': typeof EnrolRoute
   '/exam-prep': typeof ExamPrepRoute
   '/faq': typeof FaqRoute
@@ -212,26 +181,22 @@ export interface FileRoutesByTo {
   '/our-munks': typeof OurMunksRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
-  '/privacy': typeof PrivacyRoute
   '/senior-school': typeof SeniorSchoolRoute
-  '/student-agreement': typeof StudentAgreementRoute
-  '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/tutoring-in-{$suburbSlug}': typeof TutoringInChar123suburbSlugChar125Route
   '/blog/$slug': typeof BlogSlugRoute
+  '/policies/$slug': typeof PoliciesSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/blog': typeof BlogIndexRoute
   '/locations': typeof LocationsIndexRoute
+  '/policies': typeof PoliciesIndexRoute
   '/blog/page/$page': typeof BlogPagePageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/become-a-tutor': typeof BecomeATutorRoute
-  '/cancellation-and-refund': typeof CancellationAndRefundRoute
   '/contact': typeof ContactRoute
-  '/data-collection': typeof DataCollectionRoute
   '/enrol': typeof EnrolRoute
   '/exam-prep': typeof ExamPrepRoute
   '/faq': typeof FaqRoute
@@ -241,27 +206,23 @@ export interface FileRoutesById {
   '/our-munks': typeof OurMunksRoute
   '/primary-english': typeof PrimaryEnglishRoute
   '/primary-school': typeof PrimarySchoolRoute
-  '/privacy': typeof PrivacyRoute
   '/senior-school': typeof SeniorSchoolRoute
-  '/student-agreement': typeof StudentAgreementRoute
-  '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/tutoring-in-{$suburbSlug}': typeof TutoringInChar123suburbSlugChar125Route
   '/blog/$slug': typeof BlogSlugRoute
+  '/policies/$slug': typeof PoliciesSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/locations/': typeof LocationsIndexRoute
+  '/policies/': typeof PoliciesIndexRoute
   '/blog/page/$page': typeof BlogPagePageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/become-a-tutor'
-    | '/cancellation-and-refund'
     | '/contact'
-    | '/data-collection'
     | '/enrol'
     | '/exam-prep'
     | '/faq'
@@ -271,25 +232,21 @@ export interface FileRouteTypes {
     | '/our-munks'
     | '/primary-english'
     | '/primary-school'
-    | '/privacy'
     | '/senior-school'
-    | '/student-agreement'
-    | '/terms'
     | '/testimonials'
     | '/tutoring-in-{$suburbSlug}'
     | '/blog/$slug'
+    | '/policies/$slug'
     | '/topics/$slug'
     | '/blog/'
     | '/locations/'
+    | '/policies/'
     | '/blog/page/$page'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/become-a-tutor'
-    | '/cancellation-and-refund'
     | '/contact'
-    | '/data-collection'
     | '/enrol'
     | '/exam-prep'
     | '/faq'
@@ -299,25 +256,21 @@ export interface FileRouteTypes {
     | '/our-munks'
     | '/primary-english'
     | '/primary-school'
-    | '/privacy'
     | '/senior-school'
-    | '/student-agreement'
-    | '/terms'
     | '/testimonials'
     | '/tutoring-in-{$suburbSlug}'
     | '/blog/$slug'
+    | '/policies/$slug'
     | '/topics/$slug'
     | '/blog'
     | '/locations'
+    | '/policies'
     | '/blog/page/$page'
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/become-a-tutor'
-    | '/cancellation-and-refund'
     | '/contact'
-    | '/data-collection'
     | '/enrol'
     | '/exam-prep'
     | '/faq'
@@ -327,26 +280,22 @@ export interface FileRouteTypes {
     | '/our-munks'
     | '/primary-english'
     | '/primary-school'
-    | '/privacy'
     | '/senior-school'
-    | '/student-agreement'
-    | '/terms'
     | '/testimonials'
     | '/tutoring-in-{$suburbSlug}'
     | '/blog/$slug'
+    | '/policies/$slug'
     | '/topics/$slug'
     | '/blog/'
     | '/locations/'
+    | '/policies/'
     | '/blog/page/$page'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   BecomeATutorRoute: typeof BecomeATutorRoute
-  CancellationAndRefundRoute: typeof CancellationAndRefundRoute
   ContactRoute: typeof ContactRoute
-  DataCollectionRoute: typeof DataCollectionRoute
   EnrolRoute: typeof EnrolRoute
   ExamPrepRoute: typeof ExamPrepRoute
   FaqRoute: typeof FaqRoute
@@ -356,16 +305,15 @@ export interface RootRouteChildren {
   OurMunksRoute: typeof OurMunksRoute
   PrimaryEnglishRoute: typeof PrimaryEnglishRoute
   PrimarySchoolRoute: typeof PrimarySchoolRoute
-  PrivacyRoute: typeof PrivacyRoute
   SeniorSchoolRoute: typeof SeniorSchoolRoute
-  StudentAgreementRoute: typeof StudentAgreementRoute
-  TermsRoute: typeof TermsRoute
   TestimonialsRoute: typeof TestimonialsRoute
   TutoringInChar123suburbSlugChar125Route: typeof TutoringInChar123suburbSlugChar125Route
   BlogSlugRoute: typeof BlogSlugRoute
+  PoliciesSlugRoute: typeof PoliciesSlugRoute
   TopicsSlugRoute: typeof TopicsSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
+  PoliciesIndexRoute: typeof PoliciesIndexRoute
   BlogPagePageRoute: typeof BlogPagePageRoute
 }
 
@@ -378,13 +326,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/become-a-tutor': {
       id: '/become-a-tutor'
       path: '/become-a-tutor'
@@ -392,25 +333,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BecomeATutorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cancellation-and-refund': {
-      id: '/cancellation-and-refund'
-      path: '/cancellation-and-refund'
-      fullPath: '/cancellation-and-refund'
-      preLoaderRoute: typeof CancellationAndRefundRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/data-collection': {
-      id: '/data-collection'
-      path: '/data-collection'
-      fullPath: '/data-collection'
-      preLoaderRoute: typeof DataCollectionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/enrol': {
@@ -476,32 +403,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrimarySchoolRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/senior-school': {
       id: '/senior-school'
       path: '/senior-school'
       fullPath: '/senior-school'
       preLoaderRoute: typeof SeniorSchoolRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student-agreement': {
-      id: '/student-agreement'
-      path: '/student-agreement'
-      fullPath: '/student-agreement'
-      preLoaderRoute: typeof StudentAgreementRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/testimonials': {
@@ -539,6 +445,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policies/': {
+      id: '/policies/'
+      path: '/policies'
+      fullPath: '/policies/'
+      preLoaderRoute: typeof PoliciesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policies/$slug': {
+      id: '/policies/$slug'
+      path: '/policies/$slug'
+      fullPath: '/policies/$slug'
+      preLoaderRoute: typeof PoliciesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/topics/$slug': {
       id: '/topics/$slug'
       path: '/topics/$slug'
@@ -558,11 +478,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   BecomeATutorRoute: BecomeATutorRoute,
-  CancellationAndRefundRoute: CancellationAndRefundRoute,
   ContactRoute: ContactRoute,
-  DataCollectionRoute: DataCollectionRoute,
   EnrolRoute: EnrolRoute,
   ExamPrepRoute: ExamPrepRoute,
   FaqRoute: FaqRoute,
@@ -572,17 +489,16 @@ const rootRouteChildren: RootRouteChildren = {
   OurMunksRoute: OurMunksRoute,
   PrimaryEnglishRoute: PrimaryEnglishRoute,
   PrimarySchoolRoute: PrimarySchoolRoute,
-  PrivacyRoute: PrivacyRoute,
   SeniorSchoolRoute: SeniorSchoolRoute,
-  StudentAgreementRoute: StudentAgreementRoute,
-  TermsRoute: TermsRoute,
   TestimonialsRoute: TestimonialsRoute,
   TutoringInChar123suburbSlugChar125Route:
     TutoringInChar123suburbSlugChar125Route,
   BlogSlugRoute: BlogSlugRoute,
+  PoliciesSlugRoute: PoliciesSlugRoute,
   TopicsSlugRoute: TopicsSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,
+  PoliciesIndexRoute: PoliciesIndexRoute,
   BlogPagePageRoute: BlogPagePageRoute,
 }
 export const routeTree = rootRouteImport

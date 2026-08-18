@@ -102,7 +102,6 @@ export const munkProfiles: MunkProfile[] = [
     education: "B.Ed (Primary)",
     bio: "Specialises in reading, spelling and handwriting for younger students. Builds routines parents can keep going between sessions.",
     specialties: ["Handwriting", "Spelling", "Reading", "Selective prep"],
-    photo: "/images/munks/varsha.jpg",
   },
   {
     firstName: "Maniraaj S.",

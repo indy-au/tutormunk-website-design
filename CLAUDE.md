@@ -124,6 +124,37 @@ BLOG CONTENT, STILL DRAFT
   versus learning centres, and how to become a tutor. 1 (naplan-writing) is a stub needing
   real content.
 
+## How prompts for Claude Code are written (added 17 Aug 2026)
+
+Indy does not write the prompts himself. They are written for him in the Cowork session and
+pasted into Claude Code. These rules exist because real mistakes were made and caught, and
+they are binding on whoever writes the next prompt.
+
+The failure pattern to guard against: assertions written from memory while composing a
+prompt, rather than checked. A wrong number in a prompt is not a harmless typo. Claude Code
+treats anything in the brief as a hard requirement and will break working code to satisfy
+it. That has already happened once, when an unachievable 320px column minimum was met by
+forcing the list out of the page container and cutting the column gutter to 4px.
+
+1. Every number in a prompt is computed before it is typed. Counts, totals, file lists,
+   widths, word counts. Run the command, then write the figure. Three of the four errors so
+   far would have been caught by this alone.
+2. Separate a hard requirement from a target. Say which is which. Where a value is a
+   preference, write it as "make it as close to X as the other constraints allow, and report
+   what you achieved". Every prompt carries a standing line telling Claude Code to stop and
+   report rather than satisfy conflicting constraints by breaking something.
+3. Judge a design in context, never in isolation. A section that looks right in a standalone
+   mockup can look foreign on the real page. Check what sits directly above and below it on
+   the running site before writing the spec.
+4. Before claiming something is absent, search the whole repo, including the navigation,
+   footer and layout files. A claim that nothing links to a page was wrong once because only
+   the page cards were checked and the mega-menu was not.
+
+Two things that are working and should be kept. Every prompt ends with a verification list
+that asks for pasted output rather than a summary, and every prompt gives Claude Code
+explicit permission to stop and challenge the brief. The 5 and 3 column split, the flexbox
+stretch bug and the scroll restoration leak were all found that way.
+
 ## Working style with Indy
 
 - Small steps, one at a time. Ask "any more changes?" before finalising a batch of work.

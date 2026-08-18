@@ -8,7 +8,10 @@ import type { Block } from "@/lib/markdown";
 // plain anchor with target/rel. Keeps the loader itself free of any JSX.
 const INLINE_PATTERN = /\*\*(.+?)\*\*|\[(.+?)\]\((.+?)\)/g;
 
-function renderInline(text: string): ReactNode[] {
+// Exported so PolicyArticle.tsx (src/routes/policies.$slug.tsx) can render
+// the same **bold** / [text](url) inline markdown inside policy body text
+// and table cells, rather than duplicating this pattern.
+export function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
@@ -111,6 +114,39 @@ export function BlogArticle({
                     <li key={itemIndex}>{renderInline(item)}</li>
                   ))}
                 </ul>
+              );
+            }
+            if (block.type === "table") {
+              // No blog post uses a table today, this only exists so the
+              // shared Block union (see src/lib/markdown.ts, added for the
+              // policy pages) stays exhaustively handled here too, rather
+              // than silently falling through to the plain-paragraph
+              // branch below, which would render "[object Object]".
+              return (
+                <div key={index} className="mt-7 overflow-x-auto rounded-2xl border border-border">
+                  <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
+                    <thead>
+                      <tr className="border-b border-border bg-muted">
+                        {block.header.map((cell, cellIndex) => (
+                          <th key={cellIndex} scope="col" className="p-3 font-semibold text-foreground">
+                            {renderInline(cell)}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, rowIndex) => (
+                        <tr key={rowIndex} className="border-b border-border last:border-b-0">
+                          {row.map((cell, cellIndex) => (
+                            <td key={cellIndex} className="p-3 align-top text-muted-foreground">
+                              {cell ? renderInline(cell) : null}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               );
             }
             return (

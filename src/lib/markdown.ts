@@ -6,7 +6,12 @@
 
 export type Block =
   | { type: "h2" | "h3" | "p" | "quote"; text: string }
-  | { type: "ul"; items: string[] };
+  | { type: "ul"; items: string[] }
+  // GitHub style table: a header row, a "|---|---|" separator row (never
+  // rendered itself, only used to recognise the table), then zero or more
+  // data rows. Cells can be empty (an unfilled register column, say), kept
+  // as "" rather than dropped, so every row still has one cell per header.
+  | { type: "table"; header: string[]; rows: string[][] };
 
 /**
  * Splits a raw markdown file into its frontmatter fields and body text.
@@ -52,12 +57,33 @@ export function parseFrontmatter(raw: string): { data: Record<string, string>; b
   return { data, body };
 }
 
+/** A line that opens and closes with "|", the shape every table row takes
+ * in this site's markdown (outer pipes always present, GFM's optional-outer-
+ * pipe form is not used here so it is not supported). */
+function isTableRowLine(trimmed: string): boolean {
+  return trimmed.length > 1 && trimmed.startsWith("|") && trimmed.endsWith("|");
+}
+
+/** The "|---|---|" (optionally ":---", "---:", ":---:") row directly under
+ * a table header. Never rendered itself, only used to recognise a table. */
+function isTableSeparatorLine(trimmed: string): boolean {
+  if (!isTableRowLine(trimmed)) return false;
+  const cells = splitTableRow(trimmed);
+  return cells.length > 0 && cells.every((cell) => /^:?-+:?$/.test(cell.trim()));
+}
+
+function splitTableRow(trimmed: string): string[] {
+  const inner = trimmed.slice(1, -1);
+  return inner.split("|").map((cell) => cell.trim());
+}
+
 /**
  * Converts markdown body text into a flat list of typed blocks. Supports
- * exactly what the site's article template renders: ## / ### headings,
- * blank-line-separated paragraphs, "- " bullet lists and "> " blockquotes.
- * Inline `**bold**` and `[text](url)` survive as raw text inside a block,
- * see renderInlineMarkdown() in BlogArticle.tsx for where those render.
+ * exactly what the site's article templates render: ## / ### headings,
+ * blank-line-separated paragraphs, "- " bullet lists, "> " blockquotes and
+ * GitHub style tables. Inline `**bold**` and `[text](url)` survive as raw
+ * text inside a block, see renderInlineMarkdown() in BlogArticle.tsx for
+ * where those render.
  */
 export function parseMarkdownBody(markdown: string): Block[] {
   const lines = markdown.split("\n");
@@ -78,41 +104,64 @@ export function parseMarkdownBody(markdown: string): Block[] {
     }
   };
 
-  for (const rawLine of lines) {
-    const line = rawLine.trimEnd();
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i]!.trimEnd();
     const trimmed = line.trim();
 
     if (trimmed === "") {
       flushParagraph();
       flushList();
+      i++;
       continue;
     }
     if (trimmed.startsWith("### ")) {
       flushParagraph();
       flushList();
       blocks.push({ type: "h3", text: trimmed.slice(4).trim() });
+      i++;
       continue;
     }
     if (trimmed.startsWith("## ")) {
       flushParagraph();
       flushList();
       blocks.push({ type: "h2", text: trimmed.slice(3).trim() });
+      i++;
       continue;
     }
     if (trimmed.startsWith("> ")) {
       flushParagraph();
       flushList();
       blocks.push({ type: "quote", text: trimmed.slice(2).trim() });
+      i++;
       continue;
     }
     if (trimmed.startsWith("- ")) {
       flushParagraph();
       listItems.push(trimmed.slice(2).trim());
+      i++;
+      continue;
+    }
+    // A table needs a header row immediately followed by a separator row,
+    // that pair is what distinguishes a real table from a paragraph that
+    // merely contains a "|" character.
+    if (isTableRowLine(trimmed) && i + 1 < lines.length && isTableSeparatorLine(lines[i + 1]!.trim())) {
+      flushParagraph();
+      flushList();
+      const header = splitTableRow(trimmed);
+      i += 2;
+      const rows: string[][] = [];
+      while (i < lines.length && isTableRowLine(lines[i]!.trim())) {
+        rows.push(splitTableRow(lines[i]!.trim()));
+        i++;
+      }
+      blocks.push({ type: "table", header, rows });
       continue;
     }
     // Plain text line: continues the current paragraph.
     flushList();
     paragraph.push(trimmed);
+    i++;
   }
   flushParagraph();
   flushList();
