@@ -41,8 +41,14 @@ function ageDaysFor(date: string): number {
 
 // Real totals as extracted from our Google Business Profile. These count
 // every review Google has, not just the ones with text we display below.
+// The review COUNT (reviewCount/total) is intentionally never rendered
+// anywhere on the site (see CLAUDE.md), kept here only so it can return
+// later. The rating stays visible everywhere and is always built from
+// averageRating, never hardcoded or rounded to 5.
+const score = rawReviewsFile.averageRating.toFixed(1);
+
 export const reviewSummary = {
-  score: rawReviewsFile.averageRating.toFixed(1),
+  score,
   total: String(rawReviewsFile.reviewCount),
   breakdown: [5, 4, 3, 2, 1].map((stars) => ({
     stars,
@@ -50,7 +56,7 @@ export const reviewSummary = {
       (rawReviews.filter((review) => review.rating === stars).length / rawReviews.length) * 100,
     ),
   })),
-  note: `Showing reviews with written feedback and a rating of 4 or 5, out of ${rawReviewsFile.reviewCount} total Google reviews averaging ${rawReviewsFile.averageRating.toFixed(1)}.`,
+  note: `Showing Google reviews with written feedback and a rating of 4 or 5. Our overall Google rating is ${score}.`,
 };
 
 // Only reviews with written text and a rating of 4 or 5 are shown on the

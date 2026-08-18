@@ -1,4 +1,5 @@
 import { centre, centreMapEmbedUrl } from "./locations";
+import { brand } from "./site";
 
 export const contact = {
   title: "Contact TutorMunk | Gregory Hills Learning Centre",
@@ -12,6 +13,7 @@ export const contact = {
   details: [
     { label: "Phone", value: centre.phone },
     { label: "Email", value: "hello@tutormunk.com.au" },
+    { label: "Head office", value: brand.headOfficeAddress },
     { label: "Centre", value: centre.address },
     { label: "Sessions", value: centre.sessionsNote },
   ],
@@ -24,7 +26,11 @@ export const contact = {
       { label: "Email", type: "email", placeholder: "jane@example.com.au" },
       { label: "Phone", type: "tel", placeholder: "0400 000 000" },
       { label: "Suburb", type: "text", placeholder: "Camden" },
-      { label: "How can we help?", type: "textarea", placeholder: "Tell us the year level and subject." },
+      {
+        label: "How can we help?",
+        type: "textarea",
+        placeholder: "Tell us the year level and subject.",
+      },
     ],
     submitLabel: "Send enquiry",
     note: "Visual shell only. Nothing is sent.",

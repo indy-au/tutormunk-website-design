@@ -11,7 +11,9 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_2.8fr]">
           <div className="max-w-sm">
             <Wordmark tone="dark" />
-            <p className="mt-4 text-sm leading-relaxed text-surface-foreground/75">{footer.blurb}</p>
+            <p className="mt-4 text-sm leading-relaxed text-surface-foreground/75">
+              {footer.blurb}
+            </p>
             <dl className="mt-6 space-y-1 text-sm">
               <div>
                 <dt className="sr-only">Phone</dt>
@@ -21,8 +23,22 @@ export function Footer() {
                 <dt className="sr-only">Email</dt>
                 <dd>{brand.email}</dd>
               </div>
-              <div>
-                <dt className="sr-only">Address</dt>
+              <div className="pt-1">
+                {/* Visible, not sr-only like Phone/Email above: with two
+                    addresses back to back, a visitor needs to know which is
+                    which. text-surface-foreground/60, not eyebrow-sm: that
+                    utility's colour is accent-foreground, a dark tone meant
+                    for the light accent background elsewhere, and would be
+                    close to invisible on this dark surface background. */}
+                <dt className="text-xs font-semibold uppercase tracking-wide text-surface-foreground/60">
+                  Head office
+                </dt>
+                <dd className="text-surface-foreground/75">{brand.headOfficeAddress}</dd>
+              </div>
+              <div className="pt-1">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-surface-foreground/60">
+                  Tutoring centre
+                </dt>
                 <dd className="text-surface-foreground/75">{brand.centreAddress}</dd>
               </div>
             </dl>

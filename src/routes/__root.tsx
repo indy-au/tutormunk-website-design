@@ -12,9 +12,18 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { PageShell } from "../components/layout/PageShell";
 import { CallbackModalProvider } from "../components/CallbackModal";
+import { OrganizationSchema } from "../components/OrganizationSchema";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-function NotFoundComponent() {
+// Exported so src/routes/404.tsx can render the exact same markup as a
+// normal, real (HTTP 200) route. Needed only for the static-export spike:
+// TanStack Start's prerenderer only writes a file for a 2xx response, so
+// the true router-level not-found response (a real 404 status, correct for
+// an actual broken link) can never be captured to disk as 404.html. A
+// plain route at /404 sharing this exact component gives Apache a real,
+// fully-rendered file to serve as its error document, with byte-identical
+// content to what a visitor sees when client-side routing hits a dead end.
+export function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -137,6 +146,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      {/* Rendered once, site-wide, unlike LocalBusinessSchema which is
+          per-page (only on /locations). See the comment on
+          OrganizationSchema for why the two schemas carry different
+          addresses on purpose. */}
+      <OrganizationSchema />
       <CallbackModalProvider>
         <PageShell>
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}

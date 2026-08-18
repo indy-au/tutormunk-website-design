@@ -28,7 +28,6 @@ function HomePage() {
         photo={home.stats.photo}
         photoAlt={home.stats.photoAlt}
         reviewScore={reviewSummary.score}
-        reviewCount={reviewSummary.total}
       />
       <StepsStrip {...home.steps} />
       <DeliveryModesBand {...home.delivery} />

@@ -22,7 +22,9 @@ function parseStatValue(value: string): {
 }
 
 function prefersReducedMotion(): boolean {
-  return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return (
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
 }
 
 /**
@@ -98,7 +100,6 @@ export function StatsBand({
   photo,
   photoAlt,
   reviewScore,
-  reviewCount,
 }: {
   eyebrow?: string | undefined;
   heading: string;
@@ -106,7 +107,6 @@ export function StatsBand({
   photo: string;
   photoAlt: string;
   reviewScore: string;
-  reviewCount: string;
 }) {
   return (
     <section className="section-y bg-secondary">
@@ -142,7 +142,7 @@ export function StatsBand({
             <Star className="h-5 w-5 shrink-0 fill-accent text-accent" aria-hidden="true" />
             <div>
               <p className="text-sm font-bold text-foreground">{reviewScore} on Google</p>
-              <p className="text-xs text-muted-foreground">from {reviewCount} local families</p>
+              <p className="text-xs text-muted-foreground">from local families</p>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ export function ReviewsCarousel({
               <span className="text-sm font-semibold">{reviewSummary.score}</span>
               <Stars rating={Math.round(Number(reviewSummary.score))} />
               <span className="text-sm text-muted-foreground">
-                {reviewSummary.total} Google reviews
+                Rated by local parents on Google
               </span>
             </div>
           </div>

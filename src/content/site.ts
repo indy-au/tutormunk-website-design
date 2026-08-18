@@ -5,8 +5,13 @@ export const brand = {
   phoneDial: "1300006865",
   phoneDialDisplay: "1300 006 865",
   email: "hello@tutormunk.com.au",
+  // Head office is the legal and postal address, used in the policies and
+  // the Organization schema. The centre is the tutoring location, used for
+  // the map and the LocalBusiness schema. Never merge them: they are
+  // deliberately two different addresses for two different purposes.
+  headOfficeAddress: "Level 27, International Towers, 100 Barangaroo Avenue, Sydney NSW 2000",
   centreAddress: "The HUB, 31 Lasso Road, Gregory Hills NSW 2557",
-  ratingLine: "4.9 from 73 Google reviews",
+  ratingLine: "4.9-star rated on Google by South-West Sydney parents",
 };
 
 export type MegaLink = {

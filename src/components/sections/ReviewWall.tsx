@@ -18,11 +18,13 @@ export function ReviewWall() {
               <p className="text-sm font-semibold text-muted-foreground">Google reviews</p>
             </div>
             <div className="mt-6 flex items-end gap-4">
-              <p className="text-6xl leading-none font-semibold text-primary">{reviewSummary.score}</p>
+              <p className="text-6xl leading-none font-semibold text-primary">
+                {reviewSummary.score}
+              </p>
               <div className="pb-1">
                 <Stars rating={Math.round(Number(reviewSummary.score))} />
                 <p className="mt-1 text-sm text-muted-foreground">
-                  {reviewSummary.total} reviews from local parents
+                  Our Google rating, from local parents
                 </p>
               </div>
             </div>
@@ -38,7 +40,9 @@ export function ReviewWall() {
                       />
                     </div>
                   </dd>
-                  <span className="w-10 text-right text-xs text-muted-foreground">{row.percent}%</span>
+                  <span className="w-10 text-right text-xs text-muted-foreground">
+                    {row.percent}%
+                  </span>
                 </div>
               ))}
             </dl>
