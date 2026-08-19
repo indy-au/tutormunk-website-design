@@ -92,6 +92,13 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 - The three validators (name, phone, email) are ported faithfully from CallbackModal.tsx into send.php, in PHP. If you change validation, change it in all three places together: CallbackModal.tsx, scripts/test-callback-form.mjs, and send.php. They can drift silently otherwise, nothing currently checks the three stay in sync automatically.
 - The log and the rate-limit file live outside the web root, at `mail-data/` next to (not inside) public_html on the server, so neither is web-reachable. See deploy/DEPLOY.md for where that is in Hostinger's File Manager and what each log outcome means.
 
+## Home page SEO and AEO (added 18 Aug 2026)
+
+- The home page title and meta description (src/content/home.ts) and the root-level fallback title/description/og:title (src/routes/__root.tsx) are worded for suburban-Sydney reach, deliberately different from every region page, which keeps "South-West Sydney". Do not change this wording without the owner: it is the Google-facing headline for the whole site.
+- The strapline (brand.ratingLine in site.ts, rendered by Hero.tsx's RatingRow) shows the 4.9 rating without a count, matching the review presentation rule above.
+- The home hero opens with one plain entity sentence ("TutorMunk is an in-person tutoring company for K-12 students...") ahead of the rest of hero.body, written for AI answer engines (AEO) to lift as a standalone description of the business. Keep it first in hero.body if hero.body is ever edited again.
+- The FAQ page (src/routes/faq.tsx) carries FAQPage JSON-LD (FaqSchema.tsx), generated from the same faqPage.faq.items the page renders. If FAQ questions are added or removed, the schema updates automatically, nothing to edit by hand.
+
 ## Backlog, open items (owner approved list, 16 Aug 2026)
 
 These are agreed as outstanding, not forgotten. Do not action them without asking Indy

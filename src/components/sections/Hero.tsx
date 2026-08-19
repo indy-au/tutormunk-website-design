@@ -5,10 +5,13 @@ import { brand } from "@/content/site";
 function RatingRow() {
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <span aria-hidden="true" className="text-base tracking-[0.15em] text-accent-foreground">
+      <span
+        aria-hidden="true"
+        className="text-lg tracking-[0.15em] text-accent-foreground md:text-xl"
+      >
         &#9733;&#9733;&#9733;&#9733;&#9733;
       </span>
-      <p className="text-sm font-medium text-muted-foreground">{brand.ratingLine}</p>
+      <p className="text-base font-semibold text-muted-foreground md:text-lg">{brand.ratingLine}</p>
     </div>
   );
 }

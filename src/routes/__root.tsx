@@ -88,14 +88,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TutorMunk | In-Person Tutoring in South-West Sydney" },
+      { title: "TutorMunk | In-Person Tutoring Across Suburban Sydney" },
       {
         name: "description",
         content:
-          "Premium in-person tutoring for K-12 students in South-West Sydney, in your home or at our Gregory Hills centre.",
+          "Face-to-face K-12 tutoring across suburban Sydney, in your home or at our Gregory Hills centre. Never online.",
       },
       { name: "author", content: "TutorMunk" },
-      { property: "og:title", content: "TutorMunk | In-Person Tutoring in South-West Sydney" },
+      { property: "og:title", content: "TutorMunk | In-Person Tutoring Across Suburban Sydney" },
       {
         property: "og:description",
         content:
