@@ -27,7 +27,61 @@ RewriteCond %{HTTP_HOST} !^tutormunk\.com\.au$ [NC]
 RewriteRule ^(.*)$ https://tutormunk.com.au/$1 [L,R=301]
 
 # --------------------------------------------------------------------------
-# 3) CUSTOM 404 PAGE
+# 3) NO TRAILING SLASH ON PAGE URLS
+# Every page in this build is a folder with its own index.html inside (for
+# example primary-school/index.html), and every canonical tag on the site
+# is written WITHOUT a trailing slash, e.g.
+# https://tutormunk.com.au/primary-school. Apache's own default behaviour
+# for a URL that maps to a folder is the opposite: it 301-redirects
+# /primary-school to /primary-school/ before even looking for the index
+# file inside (this is mod_dir's "DirectorySlash" setting, on by default).
+# Left on, every page would have two live addresses, with and without the
+# slash, exactly what the canonical tag says should not be true.
+#
+# Fixing that takes two parts, and both are needed together:
+#   1. DirectorySlash Off turns off Apache's own automatic redirect, so
+#      requesting /primary-school no longer gets bounced to add a slash.
+#   2. With that automatic behaviour off, Apache also stops automatically
+#      finding the index file inside the folder on its own, so the second
+#      RewriteRule below does that part by hand: for a request that is not
+#      already a real file, and does resolve to a real folder containing
+#      an index.html, it serves that index.html WITHOUT changing the URL
+#      the browser or Google sees (an internal rewrite, not a redirect).
+#      /primary-school stays /primary-school in the address bar and in
+#      search results, it is just quietly served from
+#      primary-school/index.html underneath.
+#
+# The first RewriteRule below handles the other direction: anyone who does
+# land on a URL WITH a trailing slash (an old link, a typo, a leftover
+# from before this block existed) is permanently redirected to the
+# slash-less canonical form, so there is exactly one live address per page
+# either way.
+#
+# Both rules deliberately leave alone: the root "/" (it has no "other"
+# form to redirect to or rewrite), and anything with a dot in its last
+# path segment, i.e. a real file such as .css, .js, .png, .xml or .php.
+# That last exclusion is what keeps /send.php (and every static asset)
+# untouched by any of this, on top of the "is this already a real file"
+# check each rule also makes.
+# --------------------------------------------------------------------------
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
+# Redirect: /page/ -> /page (skips "/" itself, and only for a real folder)
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{DOCUMENT_ROOT}/$1 -d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Internal rewrite: /page -> serves page/index.html, URL stays /page
+RewriteCond %{REQUEST_URI} !\.[^/]+$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*[^/])$ $1/index.html [L]
+
+# --------------------------------------------------------------------------
+# 4) CUSTOM 404 PAGE
 # Tells Apache which page to show a visitor who lands on a URL that
 # doesn't exist (a mistyped suburb page, an old removed link, etc).
 # NOTE: 404.html itself is not part of this repo yet. It's produced later,
@@ -39,7 +93,7 @@ RewriteRule ^(.*)$ https://tutormunk.com.au/$1 [L,R=301]
 ErrorDocument 404 /404.html
 
 # --------------------------------------------------------------------------
-# 4) LONG-LIVED CACHING FOR STATIC FILES
+# 5) LONG-LIVED CACHING FOR STATIC FILES
 # Tells visitors' browsers to keep images, fonts, CSS and JS for a good
 # while before checking back with the server. Makes repeat visits to the
 # site noticeably faster. Filenames for CSS/JS are expected to change
@@ -70,7 +124,7 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # --------------------------------------------------------------------------
-# 5) COMPRESSION
+# 6) COMPRESSION
 # Shrinks text-based files (HTML, CSS, JS, JSON, SVG) before sending them
 # over the network, so pages load faster, especially on mobile data.
 # --------------------------------------------------------------------------
@@ -81,7 +135,7 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # --------------------------------------------------------------------------
-# 6) SECURITY HEADERS
+# 7) SECURITY HEADERS
 # Four standard protections against common web attacks. These are response
 # headers, so they do not interact with the redirect rules in blocks 1 and
 # 2. Those run first, and this block stamps the headers onto whatever
@@ -117,7 +171,7 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # --------------------------------------------------------------------------
-# 7) DIRECTORY LISTING OFF
+# 8) DIRECTORY LISTING OFF
 # Stops Apache from showing a browsable list of files when someone visits a
 # folder that has no index page, for example /images/blog/. Without this,
 # anyone can read the entire contents of an asset folder just by guessing
@@ -134,7 +188,7 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # --------------------------------------------------------------------------
-# 8) SPA FALLBACK — TEMPORARY TESTING ONLY, DISABLED BY DEFAULT
+# 9) SPA FALLBACK — TEMPORARY TESTING ONLY, DISABLED BY DEFAULT
 # This block is commented out on purpose. It is ONLY needed if we ever
 # deploy the current client-side React build (before the SSG conversion)
 # somewhere for a temporary test, where every URL needs to fall back to
@@ -151,7 +205,7 @@ ErrorDocument 404 /404.html
 # RewriteRule ^ index.html [L]
 
 # --------------------------------------------------------------------------
-# 9) DENY ACCESS TO DOTFILES
+# 10) DENY ACCESS TO DOTFILES
 # Blocks web access to any file whose name starts with a dot, for example
 # .ftp-deploy-sync-state.json (a bookkeeping file the GitHub Actions
 # deploy writes into public_html to track what it has already uploaded)
