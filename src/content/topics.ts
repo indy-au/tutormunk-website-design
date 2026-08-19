@@ -414,34 +414,303 @@ export const topics: Record<string, TopicContent> = {
       { label: "Locations", to: "/locations" },
     ],
   },
-  "high-school-english": topic(
-    "High School Years 7 to 10",
-    "High school English tutoring tied to school tasks.",
-    "We work on essay structure, text analysis and creative writing using the texts your child studies at school.",
-    "High School English Tutoring",
-    "highSchool",
-  ),
-  "high-school-maths": topic(
-    "High School Years 7 to 10",
-    "High school maths tutoring from Year 7 to Year 10.",
-    "Tutors fill gaps in algebra, geometry and measurement while keeping pace with the current school topic.",
-    "High School Maths Tutoring",
-    "highSchool",
-  ),
-  "high-school-science": topic(
-    "High School Years 7 to 10",
-    "High school science tutoring with practical revision.",
-    "Sessions cover the working scientifically skills, topic notes and practice questions for school tests.",
-    "High School Science Tutoring",
-    "highSchool",
-  ),
-  "naplan-years-7-and-9": topic(
-    "High School Years 7 to 10",
-    "NAPLAN preparation for Year 7 and Year 9.",
-    "Short courses that focus on writing, reading and numeracy in the format students see on test day.",
-    "NAPLAN Years 7 and 9",
-    "highSchool",
-  ),
+  // ==========================================================================
+  // Content pass, batch 2 of 3 (19 Aug 2026). Six more of 27 topic pages,
+  // same shape as batch 1. See CLAUDE.md's "Topic pages" note for the plain
+  // English rule and the banned word list this batch added, and for which
+  // topics still use topic().
+  // ==========================================================================
+  "high-school-english": {
+    title: "High School English Tutoring | TutorMunk",
+    metaDescription:
+      "TutorMunk provides in-person high school English tutoring for Years 7 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    eyebrow: "High School Years 7 to 10",
+    heading: "High school English tutoring built around your child's own school work.",
+    intro:
+      "A tutor works from the texts, essays and tasks your child already has, in person, one to one or in a small group.",
+    heroImage: stageImages.highSchool,
+    targetKeywords: [
+      "high school English tutor",
+      "year 9 English tutoring",
+      "essay writing tutor for teenagers",
+      "English tutor near me Sydney",
+      "year 7 English tutor",
+      "text analysis tutor high school",
+    ],
+    entitySentence:
+      "TutorMunk provides in-person English tutoring for high school students in Years 7 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    sections: [
+      {
+        heading: "What high school English tutoring covers",
+        paragraphs: [
+          "Years 7 and 8 sit under Stage 4 of the NSW English syllabus, and Years 9 and 10 move into Stage 5. A tutor works from the texts, essays and assessment tasks your child already has from school, so sessions build the specific skill a task needs, whether that is identifying techniques in a set text, planning an essay before writing it, or turning a rough idea into a structured paragraph.",
+          "Creative writing gets the same attention as essay work. A tutor reads a draft with your child, points out where the structure or word choice could do more, and talks through the change with them instead of rewriting the sentence.",
+        ],
+      },
+      {
+        heading: "How high school English sessions run",
+        paragraphs: [
+          "A session lasts 60 minutes and runs one to one or in a small group, in your home or at our Gregory Hills centre. It usually opens with the most recent piece of school work, an essay draft, a comprehension task or a set text, and works through where your child is stuck before moving to anything new.",
+          "A note comes home after each session explaining what was covered and what to try before the next one. Small group sessions at the centre are capped at six students in the same stage, so a tutor still reads and responds to each student's own writing.",
+        ],
+      },
+      {
+        heading: "Who high school English tutoring suits",
+        paragraphs: [
+          "This suits a student who has fallen behind on one assessment task and needs to catch up before it is due, and a student who reads well but struggles to get ideas onto the page in a structured way. It also suits a student who has lost interest in English at school and is more likely to work through a hard text with someone other than a parent.",
+          "A short block of sessions can also give you a clearer picture of where your child's writing actually stands before a school report or a parent-teacher interview, rather than waiting for the next set of marks to find out.",
+        ],
+      },
+      {
+        heading: "What parents can expect",
+        paragraphs: [
+          "You get a note after each session covering the skill that was the focus and what to do before the next one, plus a wider conversation about progress every term. If a particular task or text is not clicking, we say so directly rather than sticking with an approach that is not working.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "My child says tutoring is boring. Will this be any different?",
+        answer:
+          "Sessions work from your child's own school texts and tasks, not a separate workbook, so the material is already familiar. Tutors also work one to one or in a small group rather than a large class, which tends to hold a teenager's attention better than a repeat of the school lesson.",
+      },
+      {
+        question: "Do you work on the actual texts my child is studying at school?",
+        answer:
+          "Yes, a tutor asks for the current text list and any assessment notice before the first session, and builds sessions around that material rather than a generic set of texts. This means your child is practising the exact skills their next task will test.",
+      },
+      {
+        question: "What if my child does not want to go to tutoring?",
+        answer:
+          "This is common at high school age, and we do not force enthusiasm your child does not feel. Most students settle once sessions start producing a result they can see, such as an essay plan that actually works or a mark that improves, and a tutor who is not a parent is often easier for a teenager to accept feedback from.",
+      },
+      {
+        question: "Can tutoring help with creative writing as well as essays?",
+        answer:
+          "Yes, both are covered in the same sessions. Creative writing and essay writing share the same underlying skills, structure, word choice and editing, so a tutor moves between the two depending on what your child's school is currently assessing that term.",
+      },
+    ],
+    related: [
+      { label: "High School", to: "/high-school" },
+      { label: "High School Maths Tutoring", to: "/topics/high-school-maths" },
+      { label: "Writing Program", to: "/topics/writing-program" },
+      { label: "Locations", to: "/locations" },
+    ],
+  },
+  "high-school-maths": {
+    title: "High School Maths Tutoring | TutorMunk",
+    metaDescription:
+      "TutorMunk provides in-person high school maths tutoring for Years 7 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    eyebrow: "High School Years 7 to 10",
+    heading: "High school maths tutoring that catches gaps before they add up.",
+    intro:
+      "A tutor works through algebra, geometry and trigonometry at your child's own pace, in person, one to one or in a small group.",
+    heroImage: stageImages.highSchool,
+    targetKeywords: [
+      "high school maths tutor",
+      "year 9 maths tutor",
+      "year 10 maths tutoring",
+      "stage 5 maths tutor",
+      "algebra tutor for teenagers",
+      "maths tutor near me Sydney",
+    ],
+    entitySentence:
+      "TutorMunk provides in-person maths tutoring for high school students in Years 7 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    sections: [
+      {
+        heading: "What high school maths tutoring covers",
+        paragraphs: [
+          "Years 7 and 8 sit under Stage 4 of the NSW maths syllabus, and Years 9 and 10 move into Stage 5, which splits into the 5.1, 5.2 and 5.3 pathways. A tutor works to Stage 5.3 where a student is on that pathway, covering algebra, geometry, trigonometry and the problem solving questions that combine several topics at once.",
+          "Maths builds on itself more than most subjects, so a gap in one topic tends to show up again a few topics later. Sessions check for that early, going back to fix the underlying gap rather than only practising the topic currently being taught at school.",
+        ],
+      },
+      {
+        heading: "How high school maths sessions run",
+        paragraphs: [
+          "Each maths session runs for 60 minutes, one to one or in a small group, in your home or at our Gregory Hills centre. A typical session reviews a recent test or homework set, works through the method behind any mistakes rather than just the correct answer, and finishes with a few questions your child completes without help.",
+          "A written note goes home after every session, and small group sessions at the centre are capped at six students working on a similar topic, so a tutor can still mark and discuss each student's own working.",
+        ],
+      },
+      {
+        heading: "Who high school maths tutoring suits",
+        paragraphs: [
+          "This suits a student on the wrong pathway for where they want to end up, most often a student on 5.2 who wants a shot at 5.3 for the HSC courses it opens up, as well as a student who understands a topic in class but freezes under test conditions. It also suits a student who has missed a run of lessons and is now behind on content the rest of the class has moved past.",
+        ],
+      },
+      {
+        heading: "What parents can expect",
+        paragraphs: [
+          "You get a note after each session outlining the topic covered and how your child went with it, plus a broader conversation about progress every term. If a change of pathway looks realistic or unrealistic based on where your child actually is, we tell you plainly rather than leaving it for the school to raise later.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What if my child is on a different maths pathway to their friends?",
+        answer:
+          "Pathways are set by the school based on how a student is tracking, and a tutor works to whichever pathway your child is currently on, 5.1, 5.2 or 5.3. If your child is aiming to move up a pathway, sessions can focus on the extra content that pathway needs.",
+      },
+      {
+        question: "How do you know which topics to focus on?",
+        answer:
+          "We start from recent test results and current school topics, and ask your child which areas feel shaky. Because maths topics build on each other, a tutor often traces a current problem back to an earlier gap and works on that first, rather than only drilling the topic being taught this week.",
+      },
+      {
+        question: "My child switches off in maths tutoring. What is different here?",
+        answer:
+          "Sessions are one to one or in a small group rather than a large class, and a tutor works at your child's own pace rather than the pace of thirty other students. Seeing a specific mistake corrected, rather than sitting through a general revision lesson, tends to hold attention better for this age group.",
+      },
+    ],
+    related: [
+      { label: "High School", to: "/high-school" },
+      { label: "High School Science Tutoring", to: "/topics/high-school-science" },
+      { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9" },
+      { label: "Locations", to: "/locations" },
+    ],
+  },
+  "high-school-science": {
+    title: "High School Science Tutoring | TutorMunk",
+    metaDescription:
+      "TutorMunk provides in-person high school science tutoring for Years 7 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    eyebrow: "High School Years 7 to 10",
+    heading: "High school science tutoring for topic tests and practical write-ups.",
+    intro:
+      "A tutor works through the working scientifically skills alongside biology, chemistry and physics content, in person, one to one or in a small group.",
+    heroImage: stageImages.highSchool,
+    targetKeywords: [
+      "high school science tutor",
+      "year 8 science tutor",
+      "chemistry tutor for teenagers",
+      "physics tutor year 9",
+      "science tutor near me",
+      "biology tutor high school",
+    ],
+    entitySentence:
+      "TutorMunk provides in-person science tutoring for high school students in Years 7 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    sections: [
+      {
+        heading: "What high school science tutoring covers",
+        paragraphs: [
+          "Years 7 to 10 science covers the working scientifically skills set out in the NSW syllabus, planning an investigation, collecting and analysing data, and writing up results, alongside core content in biology, chemistry and physics. A tutor works through whichever module your child's school is currently teaching, using the same terms and diagrams used in class.",
+          "Practical write-ups often lose marks on structure rather than on the experiment itself, an aim that is too vague, a conclusion that does not refer back to the results. Sessions go through a recent write-up line by line so your child can see exactly where the marks were lost and why.",
+        ],
+      },
+      {
+        heading: "How high school science sessions run",
+        paragraphs: [
+          "Science sessions run for 60 minutes, one to one or in a small group, in your home or at our Gregory Hills centre. A typical session opens with a recent test, prac report or homework set, works through the content or the write-up structure, and finishes with a short set of practice questions.",
+          "A written note goes home after every session, and groups at the centre stay to six students on the same topic, giving a tutor time to check each student's own answers individually.",
+        ],
+      },
+      {
+        heading: "Who high school science tutoring suits",
+        paragraphs: [
+          "This suits a student who understands the science in class but writes weak short-answer responses, since science exams mark on how an answer is written as much as whether it is correct. It also suits a student who has missed school and is behind on a topic, and a student getting ready for a specific topic test where the content is still shaky.",
+          "It also suits a student who wants to build stronger study habits before Stage 6 science subjects begin, since the note-taking and write-up skills used in Years 9 and 10 carry directly into Year 11.",
+        ],
+      },
+      {
+        heading: "What parents can expect",
+        paragraphs: [
+          "You get a note after each session covering the topic worked on and how your child performed on the practice questions, plus a broader conversation about progress every term. If one of the three sciences is consistently weaker than the others, we tell you and adjust the focus rather than spreading time evenly regardless of where it is needed.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you help with practical write-ups, not just theory?",
+        answer:
+          "Yes, write-ups are a large part of the marks in Years 7 to 10 science, and a tutor works through structure, method, results and conclusion with your child, using their own recent prac report as the example. This is often where marks are being lost even when the underlying science is understood.",
+      },
+      {
+        question: "What if my child has fallen behind after missing school?",
+        answer:
+          "A tutor can work through the missed content directly, using your child's class notes or the textbook chapter the school is up to, so sessions catch up the specific gap rather than repeating everything from the start of the topic. Most students catch up within a few sessions if the gap is one topic, not several.",
+      },
+      {
+        question: "Which sciences do you cover in Years 7 to 10?",
+        answer:
+          "Sessions cover the combined science course taught in Years 7 to 10, which includes biology, chemistry and physics content within the one subject, plus the working scientifically skills that run across all of it. A tutor can spend more time on whichever of the three your child finds hardest.",
+      },
+    ],
+    related: [
+      { label: "High School", to: "/high-school" },
+      { label: "High School Maths Tutoring", to: "/topics/high-school-maths" },
+      { label: "NAPLAN Years 7 and 9", to: "/topics/naplan-years-7-and-9" },
+      { label: "Locations", to: "/locations" },
+    ],
+  },
+  "naplan-years-7-and-9": {
+    title: "NAPLAN Tutoring, Years 7 and 9 | TutorMunk",
+    metaDescription:
+      "TutorMunk provides in-person NAPLAN preparation for Year 7 and 9 students across suburban Sydney, in your home or at our Gregory Hills centre.",
+    eyebrow: "High School Years 7 to 10",
+    heading: "NAPLAN preparation for Year 7 and Year 9, in the format students see on the day.",
+    intro:
+      "Short courses that work through reading, writing, conventions of language and numeracy under timed conditions.",
+    heroImage: stageImages.highSchool,
+    targetKeywords: [
+      "NAPLAN year 7 tutor",
+      "NAPLAN year 9 practice",
+      "NAPLAN tutoring high school",
+      "year 7 NAPLAN preparation",
+      "NAPLAN writing tutor high school",
+    ],
+    entitySentence:
+      "TutorMunk provides in-person NAPLAN preparation for Year 7 and Year 9 students across suburban Sydney, in your home or at our Gregory Hills centre.",
+    sections: [
+      {
+        heading: "What Years 7 and 9 NAPLAN preparation covers",
+        paragraphs: [
+          "NAPLAN for Year 7 and Year 9 students is assessed across four domains, Reading, Writing, Conventions of Language and Numeracy. Sessions work through each domain using the same question formats and timing students see on test day, with extra time on whichever domain your child finds hardest.",
+          "This is a separate program from our Year 3 and Year 5 NAPLAN preparation, since the reading passages, the writing task and the numeracy questions all step up in difficulty by high school. A tutor works to the Year 7 or Year 9 level specifically, not a scaled-up version of the primary material.",
+        ],
+      },
+      {
+        heading: "How Years 7 and 9 NAPLAN sessions run",
+        paragraphs: [
+          "Each session runs for 60 minutes, one to one or in a small group, over a short course in the final weeks before the test. A typical session works through a set of questions in one domain under timed conditions, then reviews every incorrect answer with your child so they understand why, not just what the right answer was.",
+          "A written note goes home after each session covering which domain was the focus and how your child performed. Group sessions at our centre stay capped at six students in the same year group, so a tutor still checks each student's own answers before moving on.",
+        ],
+      },
+      {
+        heading: "Who Years 7 and 9 NAPLAN preparation suits",
+        paragraphs: [
+          "This suits a student sitting NAPLAN for the first time in high school and unfamiliar with the format, as well as a student who did well in primary NAPLAN and wants to keep that up. It also suits a student whose writing is fine in class but runs out of structure under the shorter timed conditions of the actual test.",
+          "A short block of sessions can also help a family understand what a NAPLAN report actually measures, since the bands can be hard to interpret without context for what each one means at a high school level.",
+        ],
+      },
+      {
+        heading: "What parents can expect",
+        paragraphs: [
+          "You get a note after each session and a plain conversation about how your child is tracking against the timed sections. NAPLAN results are one piece of information about your child's literacy and numeracy, not a full picture of their ability at school, and we talk about the results with your child that way.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How is Year 7 and 9 NAPLAN different from primary NAPLAN?",
+        answer:
+          "The four domains stay the same, Reading, Writing, Conventions of Language and Numeracy, but the passages, questions and writing task step up in difficulty for high school students. This program works to the Year 7 or Year 9 level specifically, using practice material at the right level rather than primary material made slightly harder.",
+      },
+      {
+        question: "How long before the test should we start?",
+        answer:
+          "A short course of a few weeks is usually enough, since NAPLAN tests general literacy and numeracy rather than a separate syllabus. We can suggest a starting point once we know your child's most recent NAPLAN band, if they have sat it before, and how comfortable they already are with timed questions.",
+      },
+      {
+        question: "Does NAPLAN affect my child's school results?",
+        answer:
+          "NAPLAN does not count toward school marks or reports, and schools use it as one piece of information about literacy and numeracy across the state. Some families still prepare for it because the timed, formal test format is useful practice for exams that do count later in high school, including the HSC.",
+      },
+    ],
+    related: [
+      { label: "High School", to: "/high-school" },
+      { label: "High School English Tutoring", to: "/topics/high-school-english" },
+      { label: "High School Maths Tutoring", to: "/topics/high-school-maths" },
+      { label: "Locations", to: "/locations" },
+    ],
+  },
   "english-studies": topic(
     "HSC Years 11 to 12",
     "HSC English Studies tutoring for the common module.",
@@ -554,20 +823,154 @@ export const topics: Record<string, TopicContent> = {
     "HSC Investigating Science Tutoring",
     "senior",
   ),
-  icas: topic(
-    "Exam prep",
-    "ICAS preparation for primary and high school students.",
-    "Short courses that build the reasoning skills the ICAS papers ask for, with practice questions each week.",
-    "ICAS Preparation",
-    "examPrep",
-  ),
-  "hsc-sprint": topic(
-    "Exam prep",
-    "HSC Sprint for the weeks before the examinations.",
-    "Intensive in-person sessions that cover past papers, timing and the topics students still find shaky.",
-    "HSC Sprint",
-    "examPrep",
-  ),
+  icas: {
+    title: "ICAS Preparation Tutoring | TutorMunk",
+    metaDescription:
+      "TutorMunk provides in-person ICAS preparation for Years 3 to 10 students across suburban Sydney, in your home or at our Gregory Hills centre.",
+    eyebrow: "Exam prep",
+    heading: "ICAS preparation that builds the reasoning skills the papers ask for.",
+    intro:
+      "Short courses in English, maths, science and writing, working through problem solving step by step.",
+    heroImage: stageImages.examPrep,
+    targetKeywords: [
+      "ICAS preparation",
+      "ICAS tutor",
+      "ICAS maths practice",
+      "ICAS English preparation",
+      "ICAS tutoring Sydney",
+    ],
+    entitySentence:
+      "TutorMunk provides in-person ICAS preparation for students in Years 3 to 10 across suburban Sydney, in your home or at our Gregory Hills centre.",
+    sections: [
+      {
+        heading: "What ICAS preparation covers",
+        paragraphs: [
+          "ICAS is an optional competition-style assessment sat at school, with papers in subjects including English, Mathematics, Science and Writing. The questions are pitched harder than standard classroom work and often ask a student to apply a skill in an unfamiliar way, which is why practice with the question style matters as much as the underlying content.",
+          "Sessions work through past-style ICAS questions in the subject your child is sitting, going through the reasoning step by step rather than just checking whether the final answer is correct. This builds the problem solving approach the papers reward, not only the content knowledge behind each question.",
+        ],
+      },
+      {
+        heading: "How ICAS sessions run",
+        paragraphs: [
+          "ICAS sessions run for 60 minutes, one to one or in a small group, in the weeks leading up to the sitting. A typical session works through a set of practice questions at ICAS difficulty, then reviews the reasoning behind each one with your child.",
+          "A written note goes home after every session covering what was practised and how your child went. Group sessions at our centre are capped at six students preparing for the same subject.",
+        ],
+      },
+      {
+        heading: "Who ICAS preparation suits",
+        paragraphs: [
+          "This suits a student who is doing well at school and wants a harder set of questions than the regular classroom provides, as well as a family who is not sure whether to enter and wants a session or two to see how their child finds the question style first. It also suits a student who has sat ICAS before and wants focused practice on a subject where the result was lower than expected.",
+          "It suits a family preparing across more than one subject as much as a family focused on just one, since sessions can be booked around whichever ICAS papers your child is sitting that year.",
+        ],
+      },
+      {
+        heading: "What parents can expect",
+        paragraphs: [
+          "You get a note after each session and an honest read on how your child is finding the question style, since ICAS is a competition against other students rather than a pass or fail test, and no tutor can guarantee a particular result band. What sessions can do is give your child real practice with the format before the day.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is ICAS, and does my child have to sit it?",
+        answer:
+          "ICAS is an optional, competition-style assessment offered through schools in subjects including English, Mathematics, Science and Writing. It is not compulsory and does not affect school reports, families choose to enter if they want an external benchmark or an extra academic challenge for their child.",
+      },
+      {
+        question: "Which subjects can you help prepare for?",
+        answer:
+          "Sessions can cover English, Mathematics, Science or Writing, matched to whichever subject your child is sitting. Most families focus on one or two subjects rather than all four, based on where their child is strongest or where they want the extra challenge.",
+      },
+      {
+        question: "Will tutoring guarantee a high ICAS result?",
+        answer:
+          "No tutor can guarantee a particular ICAS result, since it is a competition scored against other students sitting the same paper. What sessions can do is build familiarity with the question style and the reasoning the papers reward, so your child goes in prepared rather than seeing the format for the first time on the day.",
+      },
+    ],
+    related: [
+      { label: "Exam Prep", to: "/exam-prep" },
+      { label: "Selective School Prep", to: "/topics/selective-school-prep" },
+      { label: "NAPLAN", to: "/topics/naplan" },
+      { label: "Locations", to: "/locations" },
+    ],
+  },
+  "hsc-sprint": {
+    title: "HSC Sprint Intensive Tutoring | TutorMunk",
+    metaDescription:
+      "TutorMunk runs an in-person HSC Sprint before trials and the HSC for Year 12 students across suburban Sydney, in your home or our Gregory Hills centre.",
+    eyebrow: "Exam prep",
+    heading: "HSC Sprint, a short block of sessions before trials and the HSC.",
+    intro:
+      "Built around past papers and band descriptors, in person, one to one or in a small group.",
+    heroImage: stageImages.examPrep,
+    targetKeywords: [
+      "HSC trial preparation",
+      "HSC Sprint tutoring",
+      "HSC past paper tutor",
+      "HSC intensive tutoring",
+      "year 12 exam preparation tutor",
+    ],
+    entitySentence:
+      "TutorMunk runs an in-person HSC Sprint, a short block of sessions before trials and the HSC, for Year 12 students across suburban Sydney, in your home or at our Gregory Hills centre.",
+    sections: [
+      {
+        heading: "What HSC Sprint covers",
+        paragraphs: [
+          "HSC Sprint is a short, intensive block of sessions built around past papers and the NESA band descriptors, run during school holidays and after school in the weeks before trials and the HSC itself. Rather than re-teaching a full year of content, sessions focus on the specific topics or question types your child is still unsure of.",
+          "A tutor works through a past paper section under timed conditions, then marks it against the same band descriptors NESA markers use, so your child can see exactly what separates one band from the next in their own answers.",
+        ],
+      },
+      {
+        heading: "How HSC Sprint sessions run",
+        paragraphs: [
+          "A Sprint session runs for 60 minutes, one to one or in a small group, in your home or at our Gregory Hills centre. A typical session works through a timed past paper section in the subject, then goes through the marking with your child, question by question, rather than only giving a total mark.",
+          "A written note goes home after every session, and groups at the centre stay small, no more than six students sitting the same subject, so each student's paper still gets individual attention.",
+        ],
+      },
+      {
+        heading: "Who HSC Sprint suits",
+        paragraphs: [
+          "This suits a student who has covered the year's content and wants structured, timed practice before trials or the HSC, and a student whose mark in one topic keeps letting down an otherwise solid paper. It also suits a student who wants an outside check on their exam technique, since a tutor marking against the actual band descriptors can be a different, useful perspective from a school teacher marking a full class set.",
+          "It also suits a student returning to a subject after a gap, for example after an illness before trials, who wants a fast, structured way to see where they now stand against the syllabus.",
+        ],
+      },
+      {
+        heading: "What parents can expect",
+        paragraphs: [
+          "You get a note after each session covering what was practised and how your child's answers were marked against the band descriptors. We give you a plain read on where your child's marks are tracking, without promising a particular band, since no tutor can guarantee an HSC result.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How is HSC Sprint different from regular tutoring?",
+        answer:
+          "HSC Sprint is a short, intensive block rather than ongoing weekly tutoring, built around past papers and timed practice in the weeks before trials or the HSC. Regular tutoring works through content across a term, while Sprint sessions assume the content is mostly covered and focus on exam technique and marking.",
+      },
+      {
+        question: "When should we book an HSC Sprint block?",
+        answer:
+          "Most families book in the school holidays or the weeks directly before trials, then again before the HSC itself. The right timing depends on your child's subject and how their trial results looked, so a call is the easiest way to work out a sensible starting point.",
+      },
+      {
+        question: "Can HSC Sprint cover more than one subject?",
+        answer:
+          "Yes, sessions can be booked across more than one subject, usually the ones where your child's marks are furthest from where they want to be. Most families prioritise one or two subjects for a Sprint block rather than spreading sessions thinly across everything.",
+      },
+      {
+        question: "Does HSC Sprint guarantee a band improvement?",
+        answer:
+          "No tutor can guarantee a particular HSC band, and we will not claim otherwise. What Sprint sessions can do is give your child focused, timed practice marked against the actual band descriptors, so they go into trials or the HSC having already seen where their answers are losing marks.",
+      },
+    ],
+    related: [
+      { label: "Exam Prep", to: "/exam-prep" },
+      { label: "Senior School", to: "/senior-school" },
+      { label: "HSC English Advanced Tutoring", to: "/topics/english-advanced" },
+      { label: "HSC Maths Standard 2 Tutoring", to: "/topics/maths-standard-2" },
+      { label: "Locations", to: "/locations" },
+    ],
+  },
 };
 
 // Archived on 16 Aug 2026 at the owner's request. Ask Munk (drop-in,
