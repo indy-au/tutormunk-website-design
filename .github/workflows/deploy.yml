@@ -66,7 +66,11 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist-static/
-          server-dir: public_html/
+          # The FTP account is scoped to the site's public_html already
+          # (confirmed after the first run: "public_html/" here created a
+          # nested public_html/public_html/ on the server), so the deploy
+          # root as seen over this FTP login is "./", not "public_html/".
+          server-dir: ./
           dangerous-clean-slate: false
           log-level: standard
           exclude: |

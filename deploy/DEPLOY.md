@@ -42,6 +42,13 @@ Actions → Repository secrets**, and add:
 Once these three secrets exist, every push to `main` deploys automatically.
 Nothing else needs to be configured.
 
+This FTP account is scoped to the site's `public_html` already, so the
+automatic deploy uploads straight into it (the workflow's `server-dir` is
+`./`, not `public_html/`, confirmed after the first run: setting it to
+`public_html/` created a nested `public_html/public_html/` on the server).
+Do not point it at a different, higher-level FTP account without updating
+that setting in `.github/workflows/deploy.yml` to match.
+
 ## The fallback way: manual upload
 
 Use this if GitHub Actions is unavailable, or for a one-off upload without
