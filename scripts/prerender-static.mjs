@@ -28,7 +28,12 @@ const publicAssetsDir = path.join(rootDir, ".output", "public");
 const deployDir = path.join(rootDir, "deploy");
 const phpDir = path.join(deployDir, "php");
 const SITE_ORIGIN = "https://tutormunk.com.au";
-const SERVER_READY_TIMEOUT_MS = 20_000;
+// 30s, not 20s: a GitHub Actions runner is a cold, shared machine, and can
+// take longer to get the spawned Node server listening than a local
+// machine does. The server itself is lightweight (nitro's node-server
+// output) and should still bind almost instantly either way, this is
+// margin for a loaded CI runner, not a sign the server is slow.
+const SERVER_READY_TIMEOUT_MS = 30_000;
 
 async function pathExists(p) {
   try {

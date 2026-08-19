@@ -1,0 +1,80 @@
+name: Deploy to Hostinger
+
+# Push to main is the normal trigger. workflow_dispatch adds a manual "Run
+# workflow" button in the Actions tab, for a re-deploy with no code change
+# (e.g. after fixing something directly on the server) or to retry a
+# failed run.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Only one deploy runs at a time, and a new push does not cancel one
+# already uploading (cancel-in-progress: false): an FTP sync cancelled
+# partway through can leave the live site in a half-uploaded state, worse
+# than a queued second deploy running a few minutes late. The second push
+# just waits its turn.
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      # No .nvmrc and no "engines" field in package.json, so there is no
+      # pinned Node version to read. 22 is current Node LTS, matches what
+      # this project already runs on locally.
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build:static
+
+      # dangerous-clean-slate stays false: with it true, the action deletes
+      # EVERY file in server-dir first, including ones matched by `exclude`
+      # (the action's own README says so explicitly under the
+      # dangerous-clean-slate row). Left false, `exclude` genuinely protects
+      # the listed patterns from both the upload AND the delete-sync
+      # comparison, so mail.config.php on the server (created by hand,
+      # never present in this repo or in dist-static/, see
+      # deploy/php/mail.config.example.php) is never uploaded, overwritten
+      # or deleted by any deploy, automatic or manual.
+      #
+      # `exclude` is a full replacement, not an addition: the action's own
+      # default value (**/.git*, **/.git*/**, **/node_modules/**) is
+      # dropped entirely the moment this option is set at all (the
+      # README's FAQ says so explicitly: "if you overwrite the default
+      # value you will probably want to respecify them"). All three
+      # defaults are re-listed below alongside mail.config.php so nothing
+      # is silently lost.
+      - name: Deploy to Hostinger over FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          protocol: ftps
+          port: 21
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: ./dist-static/
+          server-dir: public_html/
+          dangerous-clean-slate: false
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/mail.config.php
+
+      - name: Job summary
+        run: |
+          echo "Deployed commit \`${{ github.sha }}\` — $(find dist-static -type f | wc -l | tr -d ' ') files in dist-static/" >> "$GITHUB_STEP_SUMMARY"

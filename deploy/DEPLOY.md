@@ -3,7 +3,51 @@
 Plain-English steps. You do not need to know how any of this works, just
 follow the steps in order.
 
-## 1. Build the site
+## The normal way: push to main
+
+Once the one-time setup below has been done, deploying the site is just:
+
+```
+git add -A
+git commit -m "..."
+git push
+```
+
+Every push to the `main` branch on GitHub automatically builds the site and
+uploads it to Hostinger over FTPS, using
+`.github/workflows/deploy.yml`. It takes a few minutes. You can watch it
+run (and see a short summary when it finishes) under the **Actions** tab
+on the GitHub repository page.
+
+To re-run a deploy without changing any code (for example, to retry a
+failed run, or push again after fixing something directly on the server),
+open the **Actions** tab, choose the "Deploy to Hostinger" workflow, and
+use the **Run workflow** button.
+
+### One-time setup: the three GitHub secrets
+
+The automatic deploy needs the FTP login for Hostinger. These are stored
+as **GitHub secrets**, never as plain text in the project files, so they
+never end up in git history.
+
+In the GitHub repository, go to **Settings → Secrets and variables →
+Actions → Repository secrets**, and add:
+
+| Secret name | Value |
+|---|---|
+| `FTP_HOST` | The FTP hostname for the Hostinger account (from hPanel, under FTP Accounts) |
+| `FTP_USER` | The FTP username |
+| `FTP_PASS` | The FTP password |
+
+Once these three secrets exist, every push to `main` deploys automatically.
+Nothing else needs to be configured.
+
+## The fallback way: manual upload
+
+Use this if GitHub Actions is unavailable, or for a one-off upload without
+touching git at all. It is the same build, done by hand.
+
+### 1. Build the site
 
 On the computer with the project open, in a terminal, run:
 
@@ -15,7 +59,7 @@ Wait for it to finish. It creates a folder called `dist-static`. That
 folder is the whole website, every page, every image, and the form
 endpoint, all in one place, ready to upload.
 
-## 2. Upload it to Hostinger
+### 2. Upload it to Hostinger
 
 1. Log in to Hostinger, open **File Manager**.
 2. Go into `public_html`.
@@ -27,11 +71,19 @@ endpoint, all in one place, ready to upload.
    `primary-school`, `blog`, `PHPMailer` sitting directly inside it, not
    inside a `dist-static` folder.
 
-## 3. Create the mailbox password file
+The automatic deploy does the same thing, except it never touches
+`mail.config.php` on the server (see below), because it never exists in
+`dist-static` in the first place.
+
+## Create the mailbox password file (one-time, either way)
 
 The form endpoint (`send.php`) needs the email password to send messages.
 This is never uploaded automatically, on purpose, so the password never
-sits in the project files or in git.
+sits in the project files, in git, or in a GitHub secret.
+
+This only needs doing once. The automatic deploy is set up to always skip
+`mail.config.php`, on every future push, so it is never overwritten or
+deleted by a deploy once it exists.
 
 1. In File Manager, inside `public_html`, find `mail.config.example.php`.
 2. Make a copy of it in the same folder, and rename the copy to
@@ -47,7 +99,7 @@ went wrong" message to every visitor and will not send anything. That is
 deliberate: a forgotten password fails loudly and visibly, rather than
 silently losing enquiries.
 
-## 4. Test the form
+## Test the form
 
 1. Go to https://tutormunk.com.au and open the Request a Call form.
 2. Fill in a real name, a real Australian mobile or landline number, and an
@@ -75,4 +127,4 @@ Each line says what happened: `sent` (a real email went out),
 `invalid-name` / `invalid-phone` / `invalid-email` (someone typed something
 that didn't pass the form's own checks), `smtp-error` (the email server
 rejected the message, worth checking the password), or `config-error`
-(`mail.config.php` is missing or the password field is empty, see step 3).
+(`mail.config.php` is missing or the password field is empty, see above).

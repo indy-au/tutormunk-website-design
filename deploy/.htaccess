@@ -149,3 +149,29 @@ ErrorDocument 404 /404.html
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteRule ^ index.html [L]
+
+# --------------------------------------------------------------------------
+# 9) DENY ACCESS TO DOTFILES
+# Blocks web access to any file whose name starts with a dot, for example
+# .ftp-deploy-sync-state.json (a bookkeeping file the GitHub Actions
+# deploy writes into public_html to track what it has already uploaded)
+# and .htaccess itself. None of these are meant to be requested directly
+# by a browser, and the sync-state file in particular has no reason to be
+# world-readable.
+#
+# Two versions of the same rule, because Apache's access-control syntax
+# changed in 2.4: "Require all denied" is the modern (2.4+) directive,
+# inside mod_authz_core. The Order/Deny fallback is the older Apache
+# 2.2-style equivalent, in case Hostinger is ever running that instead.
+# Only one of the two <IfModule> blocks actually applies on any given
+# server, the other is silently skipped.
+# --------------------------------------------------------------------------
+<FilesMatch "^\.">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

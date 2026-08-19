@@ -99,6 +99,12 @@ TutorMunk is a premium IN-PERSON tutoring company in South-West Sydney (sister c
 - The home hero opens with one plain entity sentence ("TutorMunk is an in-person tutoring company for K-12 students...") ahead of the rest of hero.body, written for AI answer engines (AEO) to lift as a standalone description of the business. Keep it first in hero.body if hero.body is ever edited again.
 - The FAQ page (src/routes/faq.tsx) carries FAQPage JSON-LD (FaqSchema.tsx), generated from the same faqPage.faq.items the page renders. If FAQ questions are added or removed, the schema updates automatically, nothing to edit by hand.
 
+## Deployment (added 19 Aug 2026)
+
+- Pushes to main deploy automatically via .github/workflows/deploy.yml: builds the static site and uploads it to Hostinger over FTPS. See deploy/DEPLOY.md for the day-to-day steps and the manual fallback.
+- Never commit credentials. The FTP login lives only in GitHub repository secrets (FTP_HOST, FTP_USER, FTP_PASS), referenced in the workflow, never as literals.
+- mail.config.php is excluded from every deploy (both automatic and manual), so it is created by hand on the server once and never touched again by a push.
+
 ## Backlog, open items (owner approved list, 16 Aug 2026)
 
 These are agreed as outstanding, not forgotten. Do not action them without asking Indy
