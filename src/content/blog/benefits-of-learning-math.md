@@ -8,7 +8,7 @@ date: "2023-06-30"
 stage: "general"
 image: "/images/blog/benefits-of-learning-math.jpg"
 sourceUrl: "https://sproutsacademy.com.au/benefits-of-learning-math/"
-draft: false
+draft: true
 ---
 
 [Learning math](/topics/primary-maths) from an early age is more than just memorising numbers and equations. It is about developing critical thinking, problem-solving skills, and logical reasoning that can have a profound impact on a child's overall cognitive development. In this article, we will explore the numerous benefits of introducing math to children at an early age and how it sets them on a path to success in academics and beyond.

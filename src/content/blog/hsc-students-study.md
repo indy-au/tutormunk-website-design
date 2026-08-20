@@ -8,7 +8,7 @@ date: "2025-01-16"
 stage: "senior"
 image: "/images/blog/hsc-students-study.jpg"
 sourceUrl: "https://sproutsacademy.com.au/hsc-students-study/"
-draft: false
+draft: true
 ---
 
 The HSC (Higher School Certificate) is a pivotal period for students in New South Wales, demanding effective study habits to achieve academic success. A common question among students is:

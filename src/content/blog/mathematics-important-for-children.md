@@ -8,7 +8,7 @@ date: "2025-09-05"
 stage: "primary"
 image: "/images/blog/mathematics-important-for-children.jpg"
 sourceUrl: "https://sproutsacademy.com.au/mathematics-important-for-children/"
-draft: false
+draft: true
 ---
 
 A blog that delves into why learning math is a valuable skill and how it helps your child in the long run. Maths is a subject that's been around for a long time. It's been used by everyone from the ancient Egyptians, and Indians to the modern-day scientists and engineers.

@@ -8,7 +8,7 @@ date: "2023-03-15"
 stage: "general"
 image: "/images/blog/3-mistakes-to-avoid-in-your-school-studies.jpg"
 sourceUrl: "https://sproutsacademy.com.au/3-mistakes-to-avoid-in-your-school-studies/"
-draft: false
+draft: true
 ---
 
 *A blog about the common mistakes students make in school and how you can avoid them.*

@@ -8,7 +8,7 @@ date: "2024-03-25"
 stage: "general"
 image: "/images/blog/easiest-way-for-effective-note-taking-during-class.jpg"
 sourceUrl: "https://sproutsacademy.com.au/easiest-way-for-effective-note-taking-during-class/"
-draft: false
+draft: true
 ---
 
 Note-taking is a fundamental skill that lies at the core of academic success. Whether you're a student in high school, college, or pursuing higher education, the ability to capture and organise key information during class is essential for comprehension, retention, and future reference. However, note-taking can often feel overwhelming, especially when faced with a barrage of information in a fast-paced classroom environment.

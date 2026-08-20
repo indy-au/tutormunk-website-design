@@ -8,7 +8,7 @@ date: "2025-02-20"
 stage: "general"
 image: "/images/blog/can-you-learn-math-on-your-own.jpg"
 sourceUrl: "https://sproutsacademy.com.au/can-you-learn-math-on-your-own/"
-draft: false
+draft: true
 ---
 
 Mathematics is a subject that many find challenging, but with the right mindset and resources, self-learning is possible. Thanks to the vast availability of online courses, textbooks, and video tutorials, mastering math independently has become more accessible than ever. However, is self-learning the best approach for everyone? Let’s explore the possibilities and limitations of studying math on your own.

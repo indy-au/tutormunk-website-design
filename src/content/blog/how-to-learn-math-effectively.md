@@ -8,7 +8,7 @@ date: "2025-02-18"
 stage: "general"
 image: "/images/blog/how-to-learn-math-effectively.jpg"
 sourceUrl: "https://sproutsacademy.com.au/how-to-learn-math-effectively/"
-draft: false
+draft: true
 ---
 
 Mathematics is a subject that many students find challenging, but with the right approach, anyone can master it. Whether you're a student trying to improve your grades or an adult looking to sharpen your math skills, there are proven strategies to make learning math more effective.

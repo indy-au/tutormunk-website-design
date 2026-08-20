@@ -8,7 +8,7 @@ date: "2026-06-25"
 stage: "general"
 image: "/images/blog/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/what-is-the-best-way-to-improve-my-childs-maths-and-english-skills/"
-draft: false
+draft: true
 ---
 
 Maths and English are two of the most important subjects in a child’s school journey. Strong Maths skills help children solve problems, think logically and build confidence with numbers. Strong English skills help them read better, write clearly, understand questions and express their ideas with confidence.

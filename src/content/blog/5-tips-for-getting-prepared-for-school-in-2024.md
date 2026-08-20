@@ -8,7 +8,7 @@ date: "2024-03-18"
 stage: "general"
 image: "/images/blog/5-tips-for-getting-prepared-for-school-in-2024.jpg"
 sourceUrl: "https://sproutsacademy.com.au/5-tips-for-getting-prepared-for-school-in-2024/"
-draft: false
+draft: true
 ---
 
 As the academic year unfolds in 2024, students across the globe are gearing up for another chapter of **[learning and growth](/blog)**. Whether you're a seasoned scholar or a fresh-faced freshman, proper preparation is key to ensuring a successful academic journey.

@@ -29,7 +29,11 @@ export function renderInline(text: string): ReactNode[] {
       const isInternal = linkHref.startsWith("/");
       nodes.push(
         isInternal ? (
-          <Link key={key++} to={linkHref} className="font-semibold text-accent-ink underline underline-offset-2">
+          <Link
+            key={key++}
+            to={linkHref}
+            className="font-semibold text-accent-ink underline underline-offset-2"
+          >
             {linkText}
           </Link>
         ) : (
@@ -80,6 +84,13 @@ export function BlogArticle({
         <p className="mt-4 text-sm text-muted-foreground">
           {date} · {readingTime}
         </p>
+        {/* Owner-approved organisation-level attribution (added 20 Aug 2026
+            blog remediation, see CLAUDE.md's "Blog" note). Every post is
+            attributed to the TutorMunk team collectively, never a named,
+            invented author. */}
+        <p className="mt-1 text-sm text-muted-foreground">
+          Reviewed and updated by the TutorMunk team.
+        </p>
 
         <div className="mt-9">
           {body.map((block, index) => {
@@ -109,7 +120,10 @@ export function BlogArticle({
             }
             if (block.type === "ul") {
               return (
-                <ul key={index} className="mt-5 list-disc space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
+                <ul
+                  key={index}
+                  className="mt-5 list-disc space-y-2 pl-5 text-base leading-relaxed text-muted-foreground"
+                >
                   {block.items.map((item, itemIndex) => (
                     <li key={itemIndex}>{renderInline(item)}</li>
                   ))}
@@ -128,7 +142,11 @@ export function BlogArticle({
                     <thead>
                       <tr className="border-b border-border bg-muted">
                         {block.header.map((cell, cellIndex) => (
-                          <th key={cellIndex} scope="col" className="p-3 font-semibold text-foreground">
+                          <th
+                            key={cellIndex}
+                            scope="col"
+                            className="p-3 font-semibold text-foreground"
+                          >
                             {renderInline(cell)}
                           </th>
                         ))}

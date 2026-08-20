@@ -8,7 +8,7 @@ date: "2024-02-17"
 stage: "primary"
 image: "/images/blog/child-be-more-confident-at-school.jpg"
 sourceUrl: "https://sproutsacademy.com.au/child-be-more-confident-at-school/"
-draft: false
+draft: true
 ---
 
 Confidence is a key ingredient in a child's academic success and overall well-being. As a parent, there are various strategies you can employ to help boost your child's confidence at school. This article explores five effective ways to support and empower your child, fostering a positive and confident attitude towards learning.

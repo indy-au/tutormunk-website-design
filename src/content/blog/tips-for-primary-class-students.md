@@ -8,7 +8,7 @@ date: "2025-09-20"
 stage: "primary"
 image: "/images/blog/tips-for-primary-class-students.jpg"
 sourceUrl: "https://sproutsacademy.com.au/tips-for-primary-class-students/"
-draft: false
+draft: true
 ---
 
 *Primary school is challenging. Studying becomes a chore and many times, kids are left complaining about the studies or even not doing it at all. But it doesn't have to be this way. There are things you can do to make studying a little more fun and a lot less of a pain for your child.*

@@ -8,7 +8,7 @@ date: "2024-05-12"
 stage: "general"
 image: "/images/blog/art-of-homework.jpg"
 sourceUrl: "https://sproutsacademy.com.au/art-of-homework/"
-draft: false
+draft: true
 ---
 
 Homework is a fundamental aspect of a student's academic journey. It reinforces what is learned in the classroom, promotes independent learning, and develops crucial time management and organizational skills. To excel in your studies, mastering the art of homework is essential. In this article, we'll explore strategies to help you make the most of your homework and set yourself up for academic success.

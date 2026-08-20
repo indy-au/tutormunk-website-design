@@ -8,7 +8,7 @@ date: "2022-09-14"
 stage: "general"
 image: "/images/blog/right-way-to-memorise-an-essay.jpg"
 sourceUrl: "https://sproutsacademy.com.au/right-way-to-memorise-an-essay/"
-draft: false
+draft: true
 ---
 
 A blog about the best memory techniques for How To Memorise Essays Quickly and Easily even a single or multiple essay.

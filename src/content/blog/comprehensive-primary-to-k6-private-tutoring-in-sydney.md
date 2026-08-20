@@ -8,7 +8,7 @@ date: "2024-08-20"
 stage: "primary"
 image: "/images/blog/comprehensive-primary-to-k6-private-tutoring-in-sydney.jpg"
 sourceUrl: "https://sproutsacademy.com.au/comprehensive-primary-to-k6-private-tutoring-in-sydney/"
-draft: false
+draft: true
 ---
 
 Early education sets the foundation for a child's future academic and personal success. Providing personalised learning experiences during these formative years can make a significant difference in a child's development. TutorMunk in Sydney offers a comprehensive **[Primary to K6 private tutoring program](/primary-school)** that caters to the unique needs of each student, ensuring they receive the support and guidance necessary to excel. Here, we explore the importance of early education and personalised learning, detail the subjects and skills covered in TutorMunk's Primary to K6 tutoring program, and share feedback from students and parents about their experiences with the academy.

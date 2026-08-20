@@ -8,7 +8,7 @@ date: "2026-01-03"
 stage: "primary"
 image: "/images/blog/one-on-one-english-tutoring.jpg"
 sourceUrl: "https://sproutsacademy.com.au/sprouts-academy-one-on-one-english-tutoring/"
-draft: false
+draft: true
 ---
 
 Strong English skills form the foundation of academic success. From understanding complex texts to expressing ideas clearly in writing, students who excel in English are better equipped to perform well across all subjects. However, many students in Sydney struggle with reading fluency, writing structure, and comprehension due to large classroom sizes and limited individual attention. This is where TutorMunk’s one-on-one English tutoring in Sydney makes a measurable difference.

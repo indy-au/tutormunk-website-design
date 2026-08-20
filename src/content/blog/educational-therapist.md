@@ -8,7 +8,7 @@ date: "2020-06-24"
 stage: "general"
 image: "/images/blog/educational-therapist.jpg"
 sourceUrl: "https://sproutsacademy.com.au/educational-therapist/"
-draft: false
+draft: true
 ---
 
 The term educational therapist refers to qualified professionals who are both educationally-focused and psychologically-oriented in their services.

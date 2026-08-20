@@ -8,7 +8,7 @@ date: "2025-04-20"
 stage: "examPrep"
 image: "/images/blog/role-of-naplan-tutors.jpg"
 sourceUrl: "https://sproutsacademy.com.au/role-of-naplan-tutors/"
-draft: false
+draft: true
 ---
 
 [NAPLAN](/topics/naplan) (National Assessment Program, Literacy and Numeracy) is a significant event for students in Australia, as it measures their skills in key areas such as reading, writing, language conventions, and numeracy. While schools provide some level of preparation, private tutoring can play a crucial role in helping students achieve their best in NAPLAN. Tutors offer personalised guidance and targeted strategies to ensure students are fully prepared for this important assessment.

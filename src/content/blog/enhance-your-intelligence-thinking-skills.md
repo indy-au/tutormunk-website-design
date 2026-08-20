@@ -8,7 +8,7 @@ date: "2022-09-06"
 stage: "general"
 image: "/images/blog/enhance-your-intelligence-thinking-skills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/enhance-your-intelligence-thinking-skills/"
-draft: false
+draft: true
 ---
 
 A blog around tips and advice on how you can improve your thinking skills.

@@ -8,7 +8,7 @@ date: "2025-09-10"
 stage: "general"
 image: "/images/blog/one-to-one-english-and-math-tutoring.jpg"
 sourceUrl: "https://sproutsacademy.com.au/one-to-one-english-and-math-tutoring/"
-draft: false
+draft: true
 ---
 
 *A blog containing reasons in favor of and against one to one tutoring*.

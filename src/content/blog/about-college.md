@@ -8,7 +8,7 @@ date: "2023-05-16"
 stage: "general"
 image: "/images/blog/about-college.jpg"
 sourceUrl: "https://sproutsacademy.com.au/about-college/"
-draft: false
+draft: true
 ---
 
 Starting college can be an exciting but confusing time. With so many different options available, it can be overwhelming to plan out your education. However, with some careful planning and research, you can create a roadmap to guide you through your college years and set yourself up for success. 

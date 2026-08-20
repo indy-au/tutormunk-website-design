@@ -8,7 +8,7 @@ date: "2024-08-30"
 stage: "general"
 image: "/images/blog/importance-of-thinking-skills-in-students.jpg"
 sourceUrl: "https://sproutsacademy.com.au/importance-of-thinking-skills-in-students/"
-draft: false
+draft: true
 ---
 
 In the rapidly evolving world of the 21st century, the ability to think critically, creatively, and analytically is paramount. For students, developing strong thinking skills is not just about academic success; it's about equipping them with the tools they need to navigate a complex and ever-changing world.

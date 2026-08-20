@@ -8,7 +8,7 @@ date: "2023-10-20"
 stage: "general"
 image: "/images/blog/study-smart-not-hard-the-key-to-effective-learning.jpg"
 sourceUrl: "https://sproutsacademy.com.au/study-smart-not-hard-the-key-to-effective-learning/"
-draft: false
+draft: true
 ---
 
 In the world of academics, the old adage "work smarter, not harder" holds a great deal of truth. The concept of studying smart, rather than pushing oneself to the brink of exhaustion through endless hours of mindless cramming, is not only more efficient but also more effective. In this article, we'll explore the benefits of adopting a smart study approach and provide practical tips on how to do so.

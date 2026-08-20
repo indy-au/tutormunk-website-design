@@ -8,7 +8,7 @@ date: "2026-01-25"
 stage: "general"
 image: "/images/blog/why-private-tutoring-is-important-for-your-child.jpg"
 sourceUrl: "https://sproutsacademy.com.au/why-private-tutoring-is-important-for-your-child/"
-draft: false
+draft: true
 ---
 
 Every child learns differently. While schools follow a structured curriculum designed for large groups, many children struggle to keep pace, fully understand concepts, or gain confidence in a classroom setting. This is where private tutoring plays a vital role in a child’s academic and personal growth.

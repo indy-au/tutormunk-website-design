@@ -8,7 +8,7 @@ date: "2024-05-15"
 stage: "general"
 image: "/images/blog/thinking-skills-for-kids.jpg"
 sourceUrl: "https://sproutsacademy.com.au/thinking-skills-for-kids/"
-draft: false
+draft: true
 ---
 
 In today's fast-paced and ever-evolving world, preparing our children for success goes beyond traditional academics. While subjects like math, science, and language arts remain essential, **[developing thinking skills](/topics/selective-school-prep)** is equally crucial. These skills empower children to navigate life's challenges with creativity, critical thinking, and resilience. In this article, we will explore the significance of thinking skills for kids and how nurturing them can shape a brighter future.

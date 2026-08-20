@@ -8,7 +8,7 @@ date: "2024-09-19"
 stage: "primary"
 image: "/images/blog/child-needs-a-productive-hobby.jpg"
 sourceUrl: "https://sproutsacademy.com.au/child-needs-a-productive-hobby/"
-draft: false
+draft: true
 ---
 
 In today's fast-paced, technology-driven world, it’s more important than ever for children to engage in productive hobbies. While schoolwork and academic success are essential, having a meaningful hobby can significantly enhance your child’s overall development, helping them grow into well-rounded individuals. Here’s why encouraging your child to pursue a productive hobby is vital for their personal and academic growth.

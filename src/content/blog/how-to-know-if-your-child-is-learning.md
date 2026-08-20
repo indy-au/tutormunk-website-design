@@ -8,7 +8,7 @@ date: "2024-03-22"
 stage: "primary"
 image: "/images/blog/how-to-know-if-your-child-is-learning.jpg"
 sourceUrl: "https://sproutsacademy.com.au/how-to-know-if-your-child-is-learning/"
-draft: false
+draft: true
 ---
 
 As parents, we are deeply invested in our children's education and want to ensure they are thriving academically. While formal assessments and report cards provide valuable insights into their progress, there are numerous other indicators that can help us gauge if our children are learning and developing effectively.

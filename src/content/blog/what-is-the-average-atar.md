@@ -8,7 +8,7 @@ date: "2024-10-15"
 stage: "senior"
 image: "/images/blog/what-is-the-average-atar.jpg"
 sourceUrl: "https://sproutsacademy.com.au/what-is-the-average-atar/"
-draft: false
+draft: true
 ---
 
 Find out “What is the Average ATAR score in Australia?” But if you are still unsure of how ATAR scores work, check “ATAR Explained, A Comprehensive Breakdown.” Also find out about some interesting English games for high school students to enhance learning.

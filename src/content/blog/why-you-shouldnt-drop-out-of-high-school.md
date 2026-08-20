@@ -8,7 +8,7 @@ date: "2023-09-20"
 stage: "general"
 image: "/images/blog/why-you-shouldnt-drop-out-of-high-school.jpg"
 sourceUrl: "https://sproutsacademy.com.au/why-you-shouldnt-drop-out-of-high-school/"
-draft: false
+draft: true
 ---
 
 High School can be a challenging time for many students. Academic pressures, social dynamics, and personal struggles can make it tempting to consider dropping out. However, before you make that decision, it's crucial to understand the long-term consequences of leaving high school prematurely. In this article, we will explore several compelling reasons why you shouldn't drop out of high school and how completing your education can lead to a brighter future.

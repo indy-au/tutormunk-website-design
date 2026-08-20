@@ -8,7 +8,7 @@ date: "2025-12-03"
 stage: "general"
 image: "/images/blog/helping-a-child-overcome-difficulty-in-one-subject.jpg"
 sourceUrl: "https://sproutsacademy.com.au/helping-a-child-overcome-difficulty-in-one-subject/"
-draft: false
+draft: true
 ---
 
 It is not uncommon for children to perform confidently in most subjects yet feel completely stuck in one particular area of learning. Whether the challenge is mathematics, English, or another core subject, consistent difficulty can affect a child’s confidence, motivation, and academic self-belief. With the right approach, parents and educators can help children overcome these learning barriers and regain confidence.

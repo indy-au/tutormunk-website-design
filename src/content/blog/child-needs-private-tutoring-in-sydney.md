@@ -8,7 +8,7 @@ date: "2026-06-15"
 stage: "primary"
 image: "/images/blog/child-needs-private-tutoring-in-sydney.jpg"
 sourceUrl: "https://sproutsacademy.com.au/child-needs-private-tutoring-in-sydney/"
-draft: false
+draft: true
 ---
 
 Every child learns at a different speed. Some students understand classroom lessons quickly, while others need extra time, personal attention and regular guidance to build confidence. As a parent, it is not always easy to know whether your child is simply going through a short learning phase or whether they may need extra academic support.

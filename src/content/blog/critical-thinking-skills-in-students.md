@@ -8,7 +8,7 @@ date: "2023-03-06"
 stage: "general"
 image: "/images/blog/critical-thinking-skills-in-students.jpg"
 sourceUrl: "https://sproutsacademy.com.au/critical-thinking-skills-in-students/"
-draft: false
+draft: true
 ---
 
 ***A blog about the importance of critical thinking in daily life.***

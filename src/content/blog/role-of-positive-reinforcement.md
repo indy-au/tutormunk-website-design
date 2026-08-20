@@ -8,7 +8,7 @@ date: "2025-05-10"
 stage: "general"
 image: "/images/blog/role-of-positive-reinforcement.jpg"
 sourceUrl: "https://sproutsacademy.com.au/role-of-positive-reinforcement/"
-draft: false
+draft: true
 ---
 
 Learning can sometimes be challenging for children, especially when they face difficulties or feel overwhelmed. That’s why creating a positive and encouraging learning environment is crucial to help kids stay motivated and engaged. One of the most effective strategies tutors use to achieve this is **positive reinforcement**. At

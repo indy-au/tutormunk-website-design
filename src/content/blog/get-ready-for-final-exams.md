@@ -8,7 +8,7 @@ date: "2023-09-18"
 stage: "examPrep"
 image: "/images/blog/get-ready-for-final-exams.jpg"
 sourceUrl: "https://sproutsacademy.com.au/get-ready-for-final-exams/"
-draft: false
+draft: true
 ---
 
 Final exams can be a source of stress and anxiety for many students. As the culmination of an entire semester's worth of learning, these exams can have a significant impact on your overall academic performance. However, with the right preparation and strategies, you can approach final exams with confidence and achieve the success you deserve. In this article, we'll explore some of the best ways to get ready for final exams and set yourself up for excellence.

@@ -8,7 +8,7 @@ date: "2025-03-19"
 stage: "general"
 image: "/images/blog/homework-struggles.jpg"
 sourceUrl: "https://sproutsacademy.com.au/homework-struggles/"
-draft: false
+draft: true
 ---
 
 Homework is an essential part of a student’s academic journey, reinforcing concepts learned in class and fostering independent learning. However, many students struggle with completing homework due to a lack of understanding, time management issues, or difficulty grasping complex topics. This is where private tutors step in to provide personalised support. At

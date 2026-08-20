@@ -8,7 +8,7 @@ date: "2025-07-13"
 stage: "examPrep"
 image: "/images/blog/improve-naplan-performance.jpg"
 sourceUrl: "https://sproutsacademy.com.au/improve-naplan-performance/"
-draft: false
+draft: true
 ---
 
 Focused Exam Strategies & Long-Term Academic Support for Primary Students

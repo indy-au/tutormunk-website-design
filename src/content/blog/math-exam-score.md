@@ -8,7 +8,7 @@ date: "2023-12-18"
 stage: "examPrep"
 image: "/images/blog/math-exam-score.jpg"
 sourceUrl: "https://sproutsacademy.com.au/math-exam-score/"
-draft: false
+draft: true
 ---
 
 **[Mathematics](/topics/primary-maths)** can be a challenging subject for many students, but with the right strategies, anyone can improve their performance and earn higher marks on exams. Whether you're preparing for a mid-term, final, or standardised test, adopting effective study techniques can make a significant difference. In this article, we'll explore three proven ways to enhance your math exam scores and build a solid foundation for mathematical success.

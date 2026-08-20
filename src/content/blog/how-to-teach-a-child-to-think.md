@@ -8,7 +8,7 @@ date: "2025-02-17"
 stage: "primary"
 image: "/images/blog/how-to-teach-a-child-to-think.jpg"
 sourceUrl: "https://sproutsacademy.com.au/how-to-teach-a-child-to-think/"
-draft: false
+draft: true
 ---
 
 Helping children develop critical

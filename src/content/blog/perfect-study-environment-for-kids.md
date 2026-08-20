@@ -8,7 +8,7 @@ date: "2023-12-01"
 stage: "general"
 image: "/images/blog/perfect-study-environment-for-kids.jpg"
 sourceUrl: "https://sproutsacademy.com.au/perfect-study-environment-for-kids/"
-draft: false
+draft: true
 ---
 
 As parents, we all want the best for our children, and providing them with an environment conducive to learning is crucial for their academic success. The right study environment can make a significant difference in your child's focus, motivation, and overall performance. In this article, we'll explore five essential tips to help you craft the perfect study space for your kid.

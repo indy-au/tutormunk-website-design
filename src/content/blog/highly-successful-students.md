@@ -8,7 +8,7 @@ date: "2024-02-21"
 stage: "general"
 image: "/images/blog/highly-successful-students.jpg"
 sourceUrl: "https://sproutsacademy.com.au/highly-successful-students/"
-draft: false
+draft: true
 ---
 
 Achieving academic success is not solely about innate talent; it often hinges on the development of effective habits. As students navigate the challenges of their educational journey, adopting certain practices can make a significant difference in their outcomes.

@@ -11,48 +11,26 @@ sourceUrl: "https://sproutsacademy.com.au/how-to-study-effectively/"
 draft: false
 ---
 
-*A blog on how to study such as ways to focus and what to eat*
+Studying effectively is harder than it sounds, mostly because of distractions and the temptation to put things off. A few practical habits make a real difference.
 
-Students who want to study effectively face a lot of difficulties due to many distractions.
+### Create a study plan
 
-Sometimes they procrastinate constantly and don't study. However, it is achievable to get good grades in school and college if you learn how to study at the right direction.
+Start by writing down the topics that need covering, with rough dates against each one. The more specific the plan, the easier it is to see whether you are actually on track as a test gets closer.
 
-I am going to give some effective tips for students on how to study effectively from now on!
+### Study in short bursts
 
-## Create a study plan and schedule
+Long, unbroken study sessions are not as effective as they feel, especially for anything that needs memorising, like times tables or vocabulary. Studying in shorter bursts, around 30 minutes at a time, gives the brain time to absorb the material properly and makes it easier to recall later.
 
-The best way to begin studying is to create a study plan. This can be as simple as writing down the topics you need to cover, or it can be as complex as creating an elaborate spreadsheet with dates and times for each topic.
+### Take real breaks
 
-A study plan helps you organise your time and keep track of what needs to be done. The more detailed your plan is, the better prepared you'll be for the exam.
+Breaks prevent the tiredness and frustration that build up during a long session. Standing up, moving around or stretching for a few minutes, then coming back to the desk, usually produces more focused work than pushing straight through.
 
-## Study in short bursts
+### Study with others sometimes
 
-When you're learning something new, it's tempting to spend lots of time reading or watching videos all at once. But research shows that this approach isn't very effective, especially if it's something that requires memorisation or rote learning like math problems or vocabulary words.
+If a friend is strong in an area where you are not, studying together can help. Explaining something to someone else is also one of the best ways to check whether you actually understand it yourself.
 
-Instead, try studying in short bursts over a longer period of time (like 30 minutes here and there). This allows your brain time to absorb new information and makes it easier for you to recall details later on when it comes time for an exam or quiz.
+### Ask for help when something is not clicking
 
-## Take breaks
+Working alone is not always the fastest way through a difficult topic. A teacher, a classmate or a tutor can often explain a concept in a way that finally makes it click, and give you a chance to practise it properly rather than guessing.
 
-The first thing you can do is take breaks from your studying. This will help you avoid getting tired, frustrated and overwhelmed. It will also help you stay focused for longer periods of time so that you can get more done in less time.
-
-To take a break, stand up, move around and do some physical activity such as stretching or going for a walk outside. When you come back to your desk after taking a break, sit down and try focusing on what you're doing again. Your mind will be refreshed and ready to work!
-
-## Choose TutorMunk Private Tutoring
-
-If you want to improve your grades, then you should study effectively. There are several ways to do so, but one of the best methods is private tutoring. It not only helps you understand the concepts better, but also provides a platform for practice.
-
-Here are some of the benefits of choosing TutorMunk private tutoring:
-
-1) You can learn at your own pace
-
-2) You can ask questions whenever you feel like it
-
-3) You get personal attention from a professional
-
-4) It is cost effective
-
-## Study collaboratively with friends
-
-Do you have a friend who's really good at math? Or maybe you have a friend who's great at reading comprehension. If so, why not use that to your advantage?
-
-If there's something specific that you need to get better at, ask your friends if they can help you out. They might be able to point out things that you're missing or explain things in a way that makes sense. If nothing else, it's nice to have someone who understands what you're going through and can sympathise with your situation.
+Studying effectively is less about finding one perfect method and more about building a few of these habits into a routine that actually fits how you work.

@@ -8,7 +8,7 @@ date: "2022-05-12"
 stage: "general"
 image: "/images/blog/advantages-of-studying.jpg"
 sourceUrl: "https://sproutsacademy.com.au/education/advantages-of-studying/"
-draft: false
+draft: true
 ---
 
 Tutors are necessary because everyone learns differently, but not everyone has access to a teacher who applies an effective teaching style.

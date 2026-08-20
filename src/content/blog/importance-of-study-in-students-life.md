@@ -8,7 +8,7 @@ date: "2023-05-02"
 stage: "general"
 image: "/images/blog/importance-of-study-in-students-life.jpg"
 sourceUrl: "https://sproutsacademy.com.au/importance-of-study-in-students-life/"
-draft: false
+draft: true
 ---
 
 **Students are the future **of our society and are crucial to the development of our world. They are the ones who will shape the future, and their education is essential for this purpose.

@@ -8,7 +8,7 @@ date: "2025-10-02"
 stage: "examPrep"
 image: "/images/blog/oc-test-preparation-tutoring.jpg"
 sourceUrl: "https://sproutsacademy.com.au/oc-test-preparation-tutoring/"
-draft: false
+draft: true
 ---
 
 The **[Opportunity Class (OC) test](/topics/oc-prep)** is a pivotal milestone for students aiming to secure a place in a specialised OC program. These programs are designed for academically gifted students, offering them a challenging environment to enhance their learning potential. At TutorMunk, we understand the importance of the OC test and the preparation it demands. Our tailored OC Test Preparation Tutoring is here to support your child in achieving their best.

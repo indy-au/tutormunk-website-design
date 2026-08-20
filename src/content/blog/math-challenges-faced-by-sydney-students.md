@@ -8,7 +8,7 @@ date: "2026-01-10"
 stage: "general"
 image: "/images/blog/math-challenges-faced-by-sydney-students.jpg"
 sourceUrl: "https://sproutsacademy.com.au/math-challenges-faced-by-sydney-students/"
-draft: false
+draft: true
 ---
 
 Mathematics is one of the most important subjects in a student’s academic journey, yet it is also one of the most challenging. Many students in Sydney struggle with maths not because of a lack of ability, but due to gaps in foundational understanding, limited individual attention in classrooms, and a growing fear of the subject. At **TutorMunk**, expert one-on-one maths tutoring helps students overcome these challenges and build long-term confidence and competence.

@@ -8,7 +8,7 @@ date: "2025-04-03"
 stage: "primary"
 image: "/images/blog/one-to-one-tutoring-for-child.jpg"
 sourceUrl: "https://sproutsacademy.com.au/one-to-one-tutoring-for-child/"
-draft: false
+draft: true
 ---
 
 In today’s competitive academic environment, many children struggle to keep up in school, not due to a lack of intelligence, but because they need more personal attention than a busy classroom can offer. That’s where one-to-one tutoring makes a real difference.

@@ -8,7 +8,7 @@ date: "2023-08-08"
 stage: "general"
 image: "/images/blog/habits-of-successful-students.jpg"
 sourceUrl: "https://sproutsacademy.com.au/habits-of-successful-students/"
-draft: false
+draft: true
 ---
 
 Achieving academic excellence is a goal that many students aspire to, but it requires more than just intelligence or talent. Successful students cultivate certain habits and behaviors that enable them to excel in their studies and personal growth. Whether you're a high school student, university scholar, or lifelong learner, adopting these habits can help you unlock the path to academic success. In this article, we'll explore the key habits of successful students and how you can incorporate them into your own journey of learning and achievement.

@@ -8,7 +8,7 @@ date: "2024-06-21"
 stage: "primary"
 image: "/images/blog/the-role-of-outdoor-education-in-early-childhood-development.jpg"
 sourceUrl: "https://sproutsacademy.com.au/the-role-of-outdoor-education-in-early-childhood-development/"
-draft: false
+draft: true
 ---
 
 In an era increasingly dominated by screens and structured activities, the importance of outdoor education in early childhood development cannot be overstated. Outdoor activities not only provide children with a breath of fresh air but also play a pivotal role in fostering their physical health, cognitive development, and emotional well-being. From exploring nature to engaging in physical play, outdoor education offers a myriad of benefits that contribute to a well-rounded and resilient young mind.

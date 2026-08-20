@@ -8,7 +8,7 @@ date: "2025-10-23"
 stage: "general"
 image: "/images/blog/private-tutoring-is-better-than-group-tutoring.jpg"
 sourceUrl: "https://sproutsacademy.com.au/private-tutoring-is-better-than-group-tutoring/"
-draft: false
+draft: true
 ---
 
 When it comes to helping your child succeed academically, one of the biggest decisions parents face is choosing between private tutoring and group tutoring. While both have their advantages,

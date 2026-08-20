@@ -8,7 +8,7 @@ date: "2025-06-10"
 stage: "general"
 image: "/images/blog/after-school-tutoring-gregory-hills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/after-school-tutoring-gregory-hills/"
-draft: false
+draft: true
 ---
 
 In today’s competitive academic world, school hours aren’t always enough for every child to fully grasp new concepts or build strong foundational skills. That’s where [after school tutoring in Gregory Hills](/tutoring-in-gregory-hills), Sydney by TutorMunk steps in, offering students the extra support, attention, and confidence they need to succeed.

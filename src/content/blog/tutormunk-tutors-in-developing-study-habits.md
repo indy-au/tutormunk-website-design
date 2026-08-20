@@ -8,7 +8,7 @@ date: "2024-11-24"
 stage: "general"
 image: "/images/blog/tutormunk-tutors-in-developing-study-habits.jpg"
 sourceUrl: "https://sproutsacademy.com.au/sprouts-academy-tutors-in-developing/"
-draft: false
+draft: true
 ---
 
 Strong study habits are essential for academic success and lifelong learning. However, not all students are naturally equipped with the skills needed to study effectively. This is where TutorMunk tutors come into play, guiding students to develop and refine study habits that set the foundation for achievement. Here’s how our tutors play a transformative role in cultivating these skills:

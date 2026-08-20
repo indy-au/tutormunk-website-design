@@ -8,7 +8,7 @@ date: "2024-01-26"
 stage: "general"
 image: "/images/blog/critical-thinking-and-problem-solving-skills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/critical-thinking-and-problem-solving-skills/"
-draft: false
+draft: true
 ---
 
 In an increasingly complex and fast-paced world, the ability to think critically and solve problems efficiently stands out as a vital skill set for personal and professional success.

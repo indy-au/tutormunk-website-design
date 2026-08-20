@@ -8,7 +8,7 @@ date: "2022-05-12"
 stage: "general"
 image: "/images/blog/activities-for-easy-math.jpg"
 sourceUrl: "https://sproutsacademy.com.au/education/activities-for-easy-math/"
-draft: false
+draft: true
 ---
 
 It comes as no surprise that most students find mathematics boring due to the reason that teachers fail to bring innovation to the class. Mistakes that teachers often make is that they just ask the students to come and solve the problems on the board, which doesn’t develop any interest of the students towards mathematics. Therefore, following are various interactive activities that you, as a math teacher, can use to develop the interest of students in mathematics.

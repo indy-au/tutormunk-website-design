@@ -8,7 +8,7 @@ date: "2025-12-07"
 stage: "primary"
 image: "/images/blog/why-children-often-learn-more-effectively-with-a-tutor-than-at-home.jpg"
 sourceUrl: "https://sproutsacademy.com.au/why-children-often-learn-more-effectively-with-a-tutor-than-at-home/"
-draft: false
+draft: true
 ---
 
 Many parents dedicate time and effort to helping their children with schoolwork, yet still notice resistance, frustration, or limited progress. Interestingly, children often respond more positively and make faster academic gains when learning from someone outside the family. This does not reflect a lack of parental support; rather, it highlights how learning dynamics change depending on the teacher, student relationship.

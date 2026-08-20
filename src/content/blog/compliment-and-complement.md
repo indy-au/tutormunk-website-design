@@ -11,58 +11,30 @@ sourceUrl: "https://sproutsacademy.com.au/compliment-and-complement/"
 draft: false
 ---
 
-The [English language](/topics/primary-english) can sometimes be tricky, with words that sound similar but have distinct meanings. Two such words that often cause confusion are "compliment" and "complement." While they may sound alike, they have different definitions and functions in sentences.
+The English language has plenty of words that sound alike but mean different things. "Compliment" and "complement" are two of the most commonly mixed up, and it is an easy mistake to correct once the distinction is clear.
 
-In this article, we will explore the difference between compliment and complement, providing examples and clarifying their usage to help improve your understanding of these commonly misused words.
+### Definitions
 
-- ### Definitions:
+- **Compliment** is a positive remark, an expression of praise or admiration for someone's qualities, achievements or appearance.
+- **Complement** is something that completes or enhances another thing. It describes a part that brings balance to a whole.
 
-- Compliment: A compliment is an expression of praise, admiration, or approval given to someone. It is a positive statement or remark that acknowledges a person's qualities, achievements, or appearance.
+### In a sentence
 
-- Complement: Complement, on the other hand, refers to something that completes, enhances, or harmonises with another thing. It is a noun or verb that describes a component that brings completeness or balance to something else.
+- "She received a compliment on her artwork." The word describes the positive remark someone made about the artwork.
+- "The colours in the painting complement each other." The word describes how the colours work together to complete the overall effect.
 
-- ### Usage Examples:
+### More examples
 
-- Compliment: "She received a compliment on her beautiful artwork." Here, the word "compliment" is used to describe the positive remark given to acknowledge and appreciate the quality of someone's artwork.
+**Compliment:**
+- "I received a lovely compliment on my new haircut."
+- "She complimented him on his leadership."
 
-- Complement: "The colors of the painting complement each other perfectly." In this sentence, "complement" is used to describe how the colors in the painting enhance or complete each other, creating a harmonious visual effect.
+**Complement:**
+- "The red shoes complemented her blue dress."
+- "The sweet and savoury flavours complemented each other well."
 
-- ### Function in Sentences:
+### The quick way to remember it
 
-- Compliment: Compliments are typically used as nouns or verbs to convey positive feedback or appreciation towards someone. They can be standalone statements or part of a sentence.
+Compliment is about praise, said with an "i" for "I like it". Complement is about completing something, spelled with an "e" like "complete". If a sentence is about someone saying something nice, it is "compliment". If it is about two things fitting together, it is "complement".
 
-- Complement: Complements are most commonly used as nouns and can refer to objects, people, or qualities that enhance or complete something else. They are often used in relation to colors, flavors, design elements, or qualities that bring balance.
-
-- ### Examples of Compliment and Complement in Sentences:
-
-- Compliment:
-
- 	"I received a lovely compliment on my new haircut."
-
-- "She complimented him on his exceptional leadership skills."
-
-- "He paid her a heartfelt compliment for her outstanding performance."
-
-- Complement:
-
- 	"The red shoes complemented her blue dress perfectly."
-
-- "The sweet and savory flavors of the dish complemented each other well."
-
-- "The modern furniture complements the contemporary design of the room."
-
-- ### Key Takeaways:
-
-- Compliment refers to a positive remark or expression of praise towards someone.
-
-- Complement refers to something that completes, enhances, or harmonises with another thing.
-
-- Compliments are typically about people's qualities, achievements, or appearance.
-
-- Complements are often related to colors, flavors, design elements, or qualities that bring balance.
-
-- Understanding the difference between compliment and complement helps to use the correct word in the appropriate context.
-
-### Conclusion:
-
-Although "compliment" and "complement" may sound similar, they have distinct meanings and usage in the English language. Compliments express praise or admiration for someone, while complements refer to objects or qualities that enhance or complete something else. By understanding the difference between these two words, you can communicate more accurately and effectively, avoiding common language pitfalls and conveying your intended message with clarity.
+Mixing these up is one of the most common small errors in student writing, and it is an easy one to fix once a child knows to check for it.

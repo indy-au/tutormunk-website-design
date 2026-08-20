@@ -8,7 +8,7 @@ date: "2025-07-25"
 stage: "highSchool"
 image: "/images/blog/secondary-school-tutoring-in-sydney.jpg"
 sourceUrl: "https://sproutsacademy.com.au/secondary-school-tutoring-in-sydney/"
-draft: false
+draft: true
 ---
 
 The transition to secondary school marks a crucial stage in a student’s academic journey. Subjects get tougher, competition increases, and expectations rise. That’s why TutorMunk offers [specialised secondary school tutoring in Sydney](/high-school), designed to support students in Years 7 to 10 with personalised learning, confidence-building, and academic success.

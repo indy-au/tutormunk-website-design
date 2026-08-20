@@ -8,7 +8,7 @@ date: "2023-04-28"
 stage: "general"
 image: "/images/blog/how-to-study-for-finals.jpg"
 sourceUrl: "https://sproutsacademy.com.au/how-to-study-for-finals/"
-draft: false
+draft: true
 ---
 
 ***A blog around studying for college finals along with tips and tricks.***

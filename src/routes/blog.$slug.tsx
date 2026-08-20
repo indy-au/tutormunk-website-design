@@ -4,6 +4,7 @@ import { categoryLabel, formatBlogDate } from "@/lib/markdown";
 import { BlogArticle } from "@/components/sections/BlogArticle";
 import { MoreAdvice } from "@/components/sections/MoreAdvice";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { BlogPostingSchema } from "@/components/BlogPostingSchema";
 import { seoHead } from "@/lib/seo";
 
 // Same pattern as topics.$slug.tsx and the suburb route: look the post up
@@ -32,11 +33,18 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPostPage() {
-  const { post } = Route.useLoaderData();
+  const { post, slug } = Route.useLoaderData();
   const related = getRelatedPosts(post.frontmatter.slug);
 
   return (
     <>
+      <BlogPostingSchema
+        headline={post.frontmatter.heading}
+        description={post.frontmatter.metaDescription}
+        path={`/blog/${slug}`}
+        image={post.heroImage}
+        datePublished={post.frontmatter.date || undefined}
+      />
       <BlogArticle
         heading={post.frontmatter.heading}
         category={categoryLabel(post.frontmatter.category)}

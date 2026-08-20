@@ -8,7 +8,7 @@ date: "2023-01-23"
 stage: "general"
 image: "/images/blog/study-habits-guide-for-the-student.jpg"
 sourceUrl: "https://sproutsacademy.com.au/study-habits-guide-for-the-student/"
-draft: false
+draft: true
 ---
 
 Are you a student? Do you ever have issues remembering things? Or do you know someone who is struggling to grasp the concepts presented by their teachers? If so, this blog post is for you:

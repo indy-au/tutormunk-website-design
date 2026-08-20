@@ -8,7 +8,7 @@ date: "2024-08-13"
 stage: "general"
 image: "/images/blog/mastering-math-with-private-tutoring-in-gregory-hills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/mastering-math-with-private-tutoring-in-gregory-hills/"
-draft: false
+draft: true
 ---
 
 Mathematics can be a challenging subject for many students. The abstract concepts, complex problem-solving, and cumulative nature of math can make it difficult to keep up in a traditional classroom setting. For parents in [Gregory Hills](/tutoring-in-gregory-hills) looking to provide their children with the best possible support in math, private tutoring at TutorMunk is an excellent choice. Here, we discuss the common challenges students face in math, how private tutoring can help, the comprehensive

@@ -8,7 +8,7 @@ date: "2025-10-05"
 stage: "senior"
 image: "/images/blog/english-tutor-for-year-12.jpg"
 sourceUrl: "https://sproutsacademy.com.au/english-tutor-for-year-12/"
-draft: false
+draft: true
 ---
 
 Year 12 is undoubtedly one of the most important years in the life of the student and particularly when it comes to mastering English. English ranges from studying texts to writing essays, it calls for comprehension in language, writing structure and ability to think critically. When students yearn to achieve the best results in their

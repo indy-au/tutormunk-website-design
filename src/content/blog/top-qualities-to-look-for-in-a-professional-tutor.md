@@ -8,7 +8,7 @@ date: "2024-11-27"
 stage: "primary"
 image: "/images/blog/top-qualities-to-look-for-in-a-professional-tutor.jpg"
 sourceUrl: "https://sproutsacademy.com.au/top-qualities-to-look-for-in-a-professional-tutor/"
-draft: false
+draft: true
 ---
 
 Choosing the right tutor for your child is a significant decision that can greatly impact their academic success and personal development. A professional tutor does more than teach, they inspire, motivate, and guide students to reach their potential. Here are the top qualities to look for when selecting the **[perfect tutor for your child](/blog)**:

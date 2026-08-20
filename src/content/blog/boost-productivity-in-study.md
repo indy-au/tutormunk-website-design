@@ -8,7 +8,7 @@ date: "2023-06-26"
 stage: "general"
 image: "/images/blog/boost-productivity-in-study.jpg"
 sourceUrl: "https://sproutsacademy.com.au/boost-productivity-in-study/"
-draft: false
+draft: true
 ---
 
 Procrastination is a common challenge that many students face when it comes to studying. The tendency to delay or put off tasks can have a detrimental impact on academic performance and overall productivity. However, with the right strategies and mindset, it is possible to overcome procrastination and develop effective study habits. In this article, we will explore practical tips and techniques to help students avoid procrastination and stay focused on their studies. By implementing these strategies, students can enhance their productivity, reduce stress, and achieve academic success.

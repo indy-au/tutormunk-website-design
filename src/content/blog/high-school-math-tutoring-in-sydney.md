@@ -8,7 +8,7 @@ date: "2024-02-12"
 stage: "highSchool"
 image: "/images/blog/high-school-math-tutoring-in-sydney.jpg"
 sourceUrl: "https://sproutsacademy.com.au/high-school-math-tutoring-in-sydney/"
-draft: false
+draft: true
 ---
 
 High school mathematics can be a challenging terrain for many students, requiring a strong foundation and a clear understanding of fundamental concepts. In Sydney, investing in high school [math tutoring](/topics/primary-maths) has proven to be a strategic move for parents and students alike.

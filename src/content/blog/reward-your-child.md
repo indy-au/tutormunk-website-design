@@ -8,7 +8,7 @@ date: "2024-03-05"
 stage: "primary"
 image: "/images/blog/reward-your-child.jpg"
 sourceUrl: "https://sproutsacademy.com.au/reward-your-child/"
-draft: false
+draft: true
 ---
 
 Rewarding your child effectively is a delicate balance between acknowledgment, motivation, and instilling a sense of achievement. The right approach to rewards not only reinforces positive behaviour but also nurtures intrinsic motivation and a love for learning.

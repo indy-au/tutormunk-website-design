@@ -8,7 +8,7 @@ date: "2025-10-15"
 stage: "primary"
 image: "/images/blog/one-to-one-tutoring-boosts-confidence.jpg"
 sourceUrl: "https://sproutsacademy.com.au/one-to-one-tutoring-boosts-confidence/"
-draft: false
+draft: true
 ---
 
 Every child has a unique way of learning, and sometimes the traditional classroom setting can make it challenging for some students to keep up. This is where **one-to-one tutoring** plays a vital role in helping primary school children not only improve their academic skills but also boost their confidence.

@@ -8,7 +8,7 @@ date: "2023-10-13"
 stage: "general"
 image: "/images/blog/perfect-study-environment.jpg"
 sourceUrl: "https://sproutsacademy.com.au/perfect-study-environment/"
-draft: false
+draft: true
 ---
 
 Creating the perfect study environment is essential for **[maximising productivity and achieving academic success](/blog)**. Whether you're a student preparing for exams or someone looking to enhance their learning experience, a conducive study environment can make all the difference. In this article, we'll explore ten valuable tips to help you set up an ideal study space that fosters focus, motivation, and effective learning.

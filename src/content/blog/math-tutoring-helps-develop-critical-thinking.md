@@ -8,7 +8,7 @@ date: "2024-01-22"
 stage: "general"
 image: "/images/blog/math-tutoring-helps-develop-critical-thinking.jpg"
 sourceUrl: "https://sproutsacademy.com.au/math-tutoring-helps-develop-critical-thinking/"
-draft: false
+draft: true
 ---
 
 Mathematics is often seen as a subject of numbers and equations, but at its core, it's a discipline of logic, reasoning, and problem-solving. In a world that increasingly values critical thinking as a vital skill across all professions,

@@ -8,7 +8,7 @@ date: "2023-07-10"
 stage: "primary"
 image: "/images/blog/positive-environment-for-your-child.jpg"
 sourceUrl: "https://sproutsacademy.com.au/positive-environment-for-your-child/"
-draft: false
+draft: true
 ---
 
 Creating a positive environment for your child is crucial for their overall development, happiness, and success. A positive environment nurtures their emotional, social, and cognitive growth, enabling them to thrive in various aspects of their lives. In this article, we will explore practical strategies and techniques to create a positive environment that supports your child's well-being and helps them reach their full potential.

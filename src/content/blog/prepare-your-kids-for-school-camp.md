@@ -8,7 +8,7 @@ date: "2023-11-06"
 stage: "general"
 image: "/images/blog/prepare-your-kids-for-school-camp.jpg"
 sourceUrl: "https://sproutsacademy.com.au/prepare-your-kids-for-school-camp/"
-draft: false
+draft: true
 ---
 
 School camps are a fantastic opportunity for children to learn, grow, and create lasting memories. Whether it's their first time away from home or they're seasoned campers, preparing your kids for the experience is essential to ensure they have a safe and enjoyable time. Here are ten valuable tips to help you get your children ready for their upcoming school camp adventure.

@@ -8,7 +8,7 @@ date: "2022-07-12"
 stage: "general"
 image: "/images/blog/motivation-to-keep-teaching-everyday.jpg"
 sourceUrl: "https://sproutsacademy.com.au/motivation-to-keep-teaching-everyday/"
-draft: false
+draft: true
 ---
 
 Much like students lose interest in studies, teachers can also lose motivation to show up to class and teach the students continuously on a daily basis. However, motivation is one of the key factors in effective teaching.

@@ -8,7 +8,7 @@ date: "2024-03-20"
 stage: "primary"
 image: "/images/blog/understanding-learning-disabilities-in-children.jpg"
 sourceUrl: "https://sproutsacademy.com.au/understanding-learning-disabilities-in-children/"
-draft: false
+draft: true
 ---
 
 Education is a fundamental aspect of a child's development, but for some children, learning can be a complex and challenging process. Learning disabilities, characterised by difficulties in acquiring and processing information, can significantly impact a child's academic performance and overall well-being.

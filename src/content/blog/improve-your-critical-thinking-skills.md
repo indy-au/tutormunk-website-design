@@ -8,7 +8,7 @@ date: "2023-02-05"
 stage: "general"
 image: "/images/blog/improve-your-critical-thinking-skills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/improve-your-critical-thinking-skills/"
-draft: false
+draft: true
 ---
 
 Critical thinking is an essential skill for everyone and a powerful tool for problem-solving and decision-making. But how do you learn and improve your critical thinking skills? And how do you develop a critical thinking mind set? And what does critical thinking actually mean?

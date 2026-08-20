@@ -8,7 +8,7 @@ date: "2022-05-12"
 stage: "general"
 image: "/images/blog/motivated-to-teach.jpg"
 sourceUrl: "https://sproutsacademy.com.au/education/motivated-to-teach/"
-draft: false
+draft: true
 ---
 
 Much like students lose interest in studies, teachers can also lose motivation to show up to class and teach the students continuously on a daily basis. However, motivation is one of the key factors in effective teaching.

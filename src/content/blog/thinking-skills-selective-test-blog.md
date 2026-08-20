@@ -8,7 +8,7 @@ date: "2023-06-08"
 stage: "examPrep"
 image: "/images/blog/thinking-skills-selective-test-blog.jpg"
 sourceUrl: "https://sproutsacademy.com.au/thinking-skills-selective-test-blog/"
-draft: false
+draft: true
 ---
 
 The **

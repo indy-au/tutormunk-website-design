@@ -8,7 +8,7 @@ date: "2024-08-07"
 stage: "primary"
 image: "/images/blog/boost-your-childs-english-skills.jpg"
 sourceUrl: "https://sproutsacademy.com.au/boost-your-childs-english-skills/"
-draft: false
+draft: true
 ---
 
 In today's fast-paced world, strong English skills are essential for academic success and future career opportunities. For parents in [Gregory Hills](/tutoring-in-gregory-hills), ensuring their child receives the best possible support in English is a top priority. TutorMunk offers a comprehensive private **[English tutoring program](/topics/primary-english)** designed to help students excel. Here, we explore the advantages of private English tutoring in Gregory Hills, share success stories and case studies, and explain how TutorMunk tailors lessons to meet individual needs.

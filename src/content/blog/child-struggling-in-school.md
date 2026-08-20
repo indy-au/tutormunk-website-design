@@ -8,7 +8,7 @@ date: "2025-04-22"
 stage: "primary"
 image: "/images/blog/child-struggling-in-school.jpg"
 sourceUrl: "https://sproutsacademy.com.au/child-struggling-in-school/"
-draft: false
+draft: true
 ---
 
 As a parent, it can be concerning to see your child struggling in school. Whether they are falling behind in certain subjects, lacking confidence, or feeling overwhelmed by the pace of lessons, it’s important to address these issues before they have a lasting impact on their academic performance. **Tutoring can be a game-changer** for children who are facing difficulties in school. It provides

@@ -8,7 +8,7 @@ date: "2023-09-12"
 stage: "general"
 image: "/images/blog/create-a-effective-study-plan.jpg"
 sourceUrl: "https://sproutsacademy.com.au/create-a-effective-study-plan/"
-draft: false
+draft: true
 ---
 
 Effective studying is not just about spending countless hours with your textbooks; it's about having a well-structured study plan that maximises productivity and learning outcomes. A study plan serves as a roadmap to guide your academic journey, helping you stay organised, focused, and on track to achieve your goals. Whether you're a student preparing for exams, a professional seeking to upskill, or a lifelong learner embarking on a new subject, creating a study plan is a valuable skill that can lead you to academic success. In this article, we'll explore step-by-step guidelines to help you create an effective study plan.

@@ -8,7 +8,7 @@ date: "2024-04-09"
 stage: "general"
 image: "/images/blog/young-writer-holiday-programs.jpg"
 sourceUrl: "https://sproutsacademy.com.au/young-writer-holiday-programs/"
-draft: false
+draft: true
 ---
 
 The holiday season presents a valuable opportunity for young minds to explore their creativity, enhance their writing skills, and embark on exciting literary adventures. [Young Writer Holiday Programs](/topics/writing-program) have gained popularity as a platform that nurtures and encourages young aspiring writers, providing them with a supportive environment and expert guidance to unleash their imagination.

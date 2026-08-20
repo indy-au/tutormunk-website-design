@@ -8,7 +8,7 @@ date: "2024-02-25"
 stage: "primary"
 image: "/images/blog/a-guide-on-how-to-help-your-child-plan-their-future.jpg"
 sourceUrl: "https://sproutsacademy.com.au/a-guide-on-how-to-help-your-child-plan-their-future/"
-draft: false
+draft: true
 ---
 
 As a parent, playing an active role in guiding your child's future is both a privilege and a responsibility. In a rapidly evolving world, assisting your child in planning their future involves a mix of encouragement, exploration, and strategic support.

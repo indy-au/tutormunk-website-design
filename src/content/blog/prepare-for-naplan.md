@@ -8,7 +8,7 @@ date: "2023-11-09"
 stage: "examPrep"
 image: "/images/blog/prepare-for-naplan.jpg"
 sourceUrl: "https://sproutsacademy.com.au/prepare-for-naplan/"
-draft: false
+draft: true
 ---
 
 The National Assessment Program - Literacy and Numeracy ([NAPLAN](/topics/naplan)) is a standardised test administered to students in Australian schools to assess their proficiency in key subjects. While some may question the need for NAPLAN preparation, there are several compelling reasons why preparing your kids for this assessment is vital to their academic success and personal growth.

@@ -1,7 +1,7 @@
 ---
-titleTag: "What is NAPLAN Practice Test?"
-heading: "What is NAPLAN practice test."
-metaDescription: "Just a few weeks ago, my eight-year-old daughter sat for the NAPLAN Test. I couldn't believe that my child is no longer a kid."
+titleTag: "What Is NAPLAN? A Plain Guide for Parents"
+heading: "What is NAPLAN? A plain guide for parents."
+metaDescription: "NAPLAN is a national literacy and numeracy assessment sat by students in Years 3, 5, 7 and 9. Here is what it actually covers and how it runs."
 slug: "naplan-test"
 category: "naplan"
 date: "2022-07-15"
@@ -11,46 +11,22 @@ sourceUrl: "https://sproutsacademy.com.au/naplan-test/"
 draft: false
 ---
 
-Just a few weeks ago, my eight-year-old daughter sat for the [NAPLAN Test](/topics/naplan). I couldn't believe that my child is no longer a kid. It started me thinking about my own school days and how much things have changed since those days. The goal of this post is to share with you some tips for tackling the Naplan test.
+[NAPLAN](/topics/naplan), the National Assessment Program, Literacy and Numeracy, is a standardised test sat by students in Years 3, 5, 7 and 9 across Australia. It was introduced in 2008 to give a national picture of how students are progressing in core literacy and numeracy skills.
 
-### What is The NAPLAN test?
+### What NAPLAN actually tests
 
-The National Assessment Program, Literacy and Numeracy NAPLAN test is a standardised test that was introduced in 2008 and intended to provide a national baseline for measuring the performance of Australian students. The test is administered to all students in Years 3, 5, 7, and 9 across Australia and is designed to assess literacy and numeracy skills.
+NAPLAN is assessed across four domains: [reading, writing and conventions of language](/primary-english) (spelling, grammar and punctuation), and numeracy. It is run by the Australian Curriculum, Assessment and Reporting Authority (ACARA), the same body responsible for the Australian Curriculum.
 
-It is a standardised test that measures how students are progressing in the four key learning areas: reading, writing, grammar and punctuation, numeracy. It is designed to measure how well students have grasped the Australian Curriculum.
+The reading, conventions of language and numeracy tests are mostly multiple choice, drag and drop, or short written response. The writing test asks students to plan and produce a full piece within a set time.
 
-The purpose of the test is to provide a national benchmark of student performance, which can then be used to compare student performance across different states and territories. The results are used by schools and governments to help teachers improve instruction, parents make decisions about which school their child should attend, and the public understand how well their children are performing in school.
+### When it runs
 
-## What will be tested?
+NAPLAN is sat in March each year, within a test window set by ACARA. Schools schedule the exact days within that window, and the writing test is always the first one sat.
 
-The NAPLAN literacy tests are based on content in the [English learning](/topics/primary-english) area, and the numeracy tests based on[Mathematics area](/topics/primary-maths).
+### What NAPLAN results are used for
 
-In the reading, numeracy and conventions of language tests, questions may be multiple choice or drag and drop, or require a short-written response. In the writing test, students are expected to write a continuous text.
+Results give schools, teachers and parents a snapshot of how a student's literacy and numeracy skills compare to national standards at that point in time. Schools and governments also use aggregated results to help identify where teaching support is most needed. NAPLAN is one piece of information about a child's progress, not a full picture of their ability, and it does not affect school reports or grades.
 
-### Who and when it Organised?
+### How to help a child prepare
 
-NAPLAN tests are organised by the Australian Curriculum, Assessment and Reporting Authority.
-
-The first NAPLAN test is held in May of each year, and it is a national assessment that tests, It is held at different times in different states so that students are not disadvantaged.
-
-The second NAPLAN test is held in October of each year, and it assesses students' science skills.
-
-### How can We help your child prepare for the NAPLAN tests?
-
-[TutorMunk](/topics/naplan) offer simplified and integrated learning programs that reduce additional stresses on our young ones. Our NAPLAN tutor’s guidance will review your child’s strengths and weaknesses and enable him/her to get on track.
-
-### Why choose TutorMunk?
-
-- Because [TutorMunk](/blog) believe that education should be logical, interesting, and engaging, which is why we’ve developed NAPLAN exercise modules that are both challenging and fun. Our exercises are designed to engage the student’s imagination and help them learn in an active way.
-
-- Get access to a range of comprehensive study material for NAPLAN Practice Test.
-
-- Learn in small groups or privately from top NAPLAN tutors near you.
-
-- Witness improved results using our advanced NAPLAN strategies.
-
-- Get access to a range of comprehensive NAPLAN study material.
-
-- Do NAPLAN Practice in small groups or privately from top tutors.
-
-- Witness improved results using our advanced strategies.
+The most useful preparation is familiarity with the format and some practice under timed conditions, rather than new content. Working through practice questions in each domain, then reviewing mistakes together, helps a child feel less thrown by the test format on the day. For students who find the reading or numeracy sections particularly difficult, or who get anxious about sitting a formal test, [NAPLAN preparation](/topics/naplan) with a tutor can focus specifically on the domain that needs the most work.
