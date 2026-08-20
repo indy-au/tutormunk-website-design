@@ -30,7 +30,7 @@ export const examPrep: StagePageContent = {
   hero: {
     eyebrow: "Exam prep. Years 3 to 12",
     heading: "Preparation programs with real practice papers.",
-    body: "Each program runs in person, on a fixed timetable, with timed practice and marked feedback. Parents receive a short note after every session.",
+    body: "Across suburban Sydney, TutorMunk provides in-person exam preparation for K-12 students, in the family home or at our Gregory Hills centre. Each program runs in person, on a fixed timetable, with timed practice and marked feedback. Parents receive a short note after every session.",
     ctaLabel: "Request a Call",
     points: ["Timed practice papers", "Marked writing feedback", "Small groups at our centre"],
     image: heroExamPrep,

@@ -9,7 +9,7 @@ export const seniorSchool: StagePageContent = {
   hero: {
     eyebrow: "Senior School, Years 11-12",
     heading: "HSC courses taught by tutors who sat them recently.",
-    body: "Every senior tutor achieved a Band 6 in the course they teach. Sessions cover content, past papers and marking feedback.",
+    body: "TutorMunk provides in-person HSC tutoring for Years 11 and 12 students across suburban Sydney, in the family home or at our Gregory Hills centre. Every senior tutor achieved a Band 6 in the course they teach. Sessions cover content, past papers and marking feedback.",
     ctaLabel: "Request a Call",
     points: ["Band 6 tutors", "Past paper marking", "Trial and HSC preparation"],
     image: heroSenior,

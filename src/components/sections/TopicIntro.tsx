@@ -4,12 +4,15 @@
 // pages" note. Typographic scale matches PolicyArticle.tsx (the other
 // prose-heavy page on the site), so a long-form topic page reads like the
 // rest of the site rather than introducing a new style.
+// `sections` made optional in batch 4 (19 Aug 2026) so the suburb pages can
+// reuse this component for just the entitySentence paragraph, with no
+// h2/paragraph blocks of their own (SuburbPage.tsx).
 export function TopicIntro({
   entitySentence,
-  sections,
+  sections = [],
 }: {
   entitySentence: string;
-  sections: { heading: string; paragraphs: string[] }[];
+  sections?: { heading: string; paragraphs: string[] }[];
 }) {
   return (
     <section className="section-y">

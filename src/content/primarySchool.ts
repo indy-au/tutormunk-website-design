@@ -9,7 +9,7 @@ export const primarySchool: StagePageContent = {
   hero: {
     eyebrow: "Primary School, K-6",
     heading: "Strong foundations in reading, writing and number.",
-    body: "Our primary tutors work through the NSW syllabus at your child's pace. Sessions are calm, structured and always in person.",
+    body: "TutorMunk provides in-person tutoring for Kindergarten to Year 6 students across suburban Sydney, in your home or at our Gregory Hills centre. Our primary tutors work through the NSW syllabus at your child's pace. Sessions are calm, structured and always in person.",
     ctaLabel: "Request a Call",
     points: ["Kindergarten to Year 6", "OC and Selective preparation", "Weekly written feedback"],
     image: heroPrimary,

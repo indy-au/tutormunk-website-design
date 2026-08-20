@@ -18,7 +18,7 @@ export const highSchool: StagePageContent = {
   hero: {
     eyebrow: "High School, Years 7-10",
     heading: "Keep up with assessment tasks, term by term.",
-    body: "We work to your child's school program, not a generic workbook. Tutors review class notes, upcoming tasks and past marks.",
+    body: "For Years 7 to 10 students across suburban Sydney, TutorMunk provides in-person tutoring in the family home or at our Gregory Hills centre. We work to your child's school program, not a generic workbook. Tutors review class notes, upcoming tasks and past marks.",
     ctaLabel: "Request a Call",
     points: ["Years 7 to 10", "Task and exam preparation", "Study skills built in"],
     image: heroHighSchool,
